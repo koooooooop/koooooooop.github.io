@@ -1,204 +1,360 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhou Zhipeng's personal website</title>
+    <title>周志鹏 - 个人学术网站</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f7;
-            color: #333;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
         }
-
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 40px;
-            background-color: #ffffff;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url('head.jpg');
+            background-size: cover;
+            background-position: center;
         }
-
-        header .logo {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #333;
+        .section-fade {
+            background: linear-gradient(to bottom, #f8f9fa, #ffffff);
         }
-
-        header nav {
-            display: flex;
-            gap: 20px;
+        .publication-card {
+            transition: all 0.3s ease;
         }
-
-        header nav a {
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
+        .publication-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-
-        .hero {
-            background: url('my_photo.jpg') no-repeat center center/cover;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
+        .nav-link {
+            position: relative;
         }
-
-        .hero h1 {
-            font-size: 3em;
-            font-weight: 700;
-            margin: 0;
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #3B82F6;
+            transition: width 0.3s ease;
         }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 60px 0;
-        }
-
-        .section-title {
-            font-size: 2em;
-            margin-bottom: 20px;
-            text-align: center;
-            font-weight: 600;
-            color: #333;
-        }
-
-        .projects, .articles {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        .project, .article {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-
-        .project h3, .article h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .profile-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background-color: #ccc;
-            margin: 0 auto;
-        }
-
-        .resume-link {
-            display: inline-block;
-            margin-top: 20px;
-            font-weight: 600;
-            color: #333;
-            text-decoration: none;
-            padding: 10px 20px;
-            background-color: #f2f2f2;
-            border-radius: 5px;
-        }
-
-        .resume-link:hover {
-            background-color: #ddd;
-        }
-
-        @media (max-width: 768px) {
-            .projects, .articles {
-                grid-template-columns: 1fr;
-            }
+        .nav-link:hover::after {
+            width: 100%;
         }
     </style>
 </head>
-<body>
-
-<header>
-    <div class="logo">Zhou Zhipeng</div>
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#projects">Project</a>
-        <a href="#articles">Article</a>
-        <a href="#contact">Contact Me</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <h1>Welcome to my personal website</h1>
-</section>
-
-<div class="container">
-    <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <div style="text-align: center;">
-            <img src="head.jpg" alt="Zhou Zhipeng" class="profile-image">
+<body class="bg-gray-50 text-gray-800 antialiased">
+    <!-- 导航栏 - 类似苹果风格的透明导航 -->
+    <header class="fixed w-full bg-white bg-opacity-90 backdrop-blur-sm z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-xl font-bold text-gray-800">周志鹏</div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link font-medium text-gray-700 hover:text-blue-500">关于我</a>
+                    <a href="#research" class="nav-link font-medium text-gray-700 hover:text-blue-500">研究方向</a>
+                    <a href="#publications" class="nav-link font-medium text-gray-700 hover:text-blue-500">学术成果</a>
+                    <a href="#projects" class="nav-link font-medium text-gray-700 hover:text-blue-500">项目</a>
+                    <a href="#contact" class="nav-link font-medium text-gray-700 hover:text-blue-500">联系方式</a>
+                </nav>
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden">
+                    <button class="text-gray-700 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-        <p>My name is Zhou Zhipeng, I was born on October 18, 2004, and I attended Chongqing University's 23rd X Innovation as an undergraduate. I have a deep passion for software development and technology innovation. Feel free to learn more about me!</p>
-        <p>I am currently focused on developing software solutions that solve real-world problems. I have experience working with a variety of technologies and frameworks including Python, JavaScript, and machine learning libraries.</p>
-        <a href="your-resume.pdf" class="resume-link" target="_blank">Download My CV</a>
-    </section>
+    </header>
 
-    <section id="projects">
-        <h2 class="section-title">My Projects</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>This project focuses on creating a web application that helps users manage their daily tasks. Technologies used: React, Node.js, MongoDB. <a href="your-project-link1.com" target="_blank">View Project</a></p>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>This project is about building an AI-based recommendation system. Technologies used: Python, TensorFlow, Flask. <a href="your-project-link2.com" target="_blank">View Project</a></p>
-            </div>
-            <div class="project">
-                <h3>Project 3</h3>
-                <p>A mobile app developed for tracking personal health. Technologies used: React Native, Firebase. <a href="your-project-link3.com" target="_blank">View Project</a></p>
-            </div>
+    <!-- 英雄区域 - 大图背景，类似苹果产品展示页 -->
+    <section class="hero-gradient min-h-screen flex items-center justify-center text-white">
+        <div class="container mx-auto px-6 py-24 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">周志鹏</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed">
+                重庆大学 | 计算机科学与技术
+            </p>
+            <a href="#about" class="inline-block bg-blue-600 text-white py-3 px-8 rounded-full font-medium hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105">了解更多</a>
         </div>
     </section>
 
-    <section id="articles">
-        <h2 class="section-title">Articles & Blogs</h2>
-        <div class="articles">
-            <div class="article">
-                <h3><a href="your-article1-link.com" target="_blank">The Future of AI in Healthcare</a></h3>
-                <p>Exploring how artificial intelligence is revolutionizing the healthcare industry. <a href="your-article1-link.com" target="_blank">Read more</a></p>
-            </div>
-            <div class="article">
-                <h3><a href="your-article2-link.com" target="_blank">My Journey as a Software Developer</a></h3>
-                <p>A personal reflection on my experiences in the tech industry. <a href="your-article2-link.com" target="_blank">Read more</a></p>
+    <!-- 关于我部分 - 简约优雅的个人介绍 -->
+    <section id="about" class="section-fade py-20 md:py-32">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0">
+                    <img src="my_photo.jpg" alt="周志鹏" class="rounded-xl shadow-xl max-w-full h-auto mx-auto" style="max-width: 300px;">
+                </div>
+                <div class="md:w-2/3 md:pl-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">关于我</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        我是周志鹏，2004年10月18日出生，就读于重庆大学23级X创新实验班。我对软件开发和技术创新有浓厚的兴趣，目前专注于人工智能和深度学习领域的研究。
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        我的研究兴趣包括计算机视觉、自然语言处理以及机器学习模型的优化。我致力于开发能够解决实际问题的软件解决方案，有使用Python、JavaScript以及各种机器学习库的经验。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="cv.png" target="_blank" class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition duration-300">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            下载我的简历
+                        </a>
+                        <a href="#contact" class="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition duration-300">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            联系我
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2 class="section-title">Contact Details</h2>
-        <p>If you would like to contact me, please send an email to <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+    <!-- 研究方向 - 使用卡片布局和图标 -->
+    <section id="research" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">研究方向</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- 研究方向卡片1 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-blue-100 text-blue-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">深度学习</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        探索神经网络架构的优化和应用，专注于卷积神经网络(CNN)和变换器(Transformer)模型的研究，以及它们在计算机视觉和自然语言处理中的应用。
+                    </p>
+                </div>
+                
+                <!-- 研究方向卡片2 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-green-100 text-green-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">自然语言处理</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        研究文本生成、情感分析和语言理解技术，开发能够理解和生成人类语言的模型，关注大型语言模型(LLM)的优化和应用。
+                    </p>
+                </div>
+                
+                <!-- 研究方向卡片3 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-purple-100 text-purple-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">计算机视觉</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        研究图像识别、目标检测和图像分割技术，开发能够理解和解读视觉信息的算法，探索多模态学习和跨模态理解。
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
-</div>
 
-<footer>
-    <p>&copy; 2025 Zhou Zhipeng. All rights reserved.</p>
-</footer>
+    <!-- 学术成果 - 类似论文列表 -->
+    <section id="publications" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">学术成果</h2>
+            <div class="space-y-6">
+                <!-- 学术论文1 -->
+                <div class="publication-card bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-4/5">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">深度学习在医疗图像分析中的应用</h3>
+                            <p class="text-gray-500 mb-3"><strong>周志鹏</strong>, 李明, 张伟</p>
+                            <p class="text-gray-600 mb-4">
+                                本研究探讨了深度学习技术在医疗图像分析领域的应用，提出了一种新的卷积神经网络架构，用于医学影像的病变检测和分割。实验结果表明，该方法在准确性和效率方面均优于传统方法。
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">深度学习</span>
+                                <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">医疗图像</span>
+                                <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">卷积神经网络</span>
+                            </div>
+                        </div>
+                        <div class="md:w-1/5 mt-4 md:mt-0 flex items-center justify-end">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 flex items-center">
+                                <span class="mr-2">PDF</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- 学术论文2 -->
+                <div class="publication-card bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-4/5">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">基于注意力机制的自然语言处理模型研究</h3>
+                            <p class="text-gray-500 mb-3">王强, <strong>周志鹏</strong>, 陈雪</p>
+                            <p class="text-gray-600 mb-4">
+                                本文研究了注意力机制在自然语言处理任务中的应用，提出了一种改进的Transformer模型，该模型在多个NLP基准测试中表现出色，特别是在文本分类和情感分析任务中。
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">自然语言处理</span>
+                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">注意力机制</span>
+                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">Transformer</span>
+                            </div>
+                        </div>
+                        <div class="md:w-1/5 mt-4 md:mt-0 flex items-center justify-end">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 flex items-center">
+                                <span class="mr-2">PDF</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目部分 - 采用苹果风格的大图展示 -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">研究项目</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- 项目1 -->
+                <div class="transform transition-all duration-300 hover:scale-105">
+                    <div class="overflow-hidden rounded-xl shadow-lg">
+                        <div class="h-64 bg-gray-200 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">智能医疗辅助诊断系统</h3>
+                        <p class="text-gray-600">
+                            基于深度学习的医学影像分析系统，能够自动检测和标记医学影像中的异常区域，辅助医生进行诊断。
+                        </p>
+                        <div class="mt-4 flex space-x-3">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 flex items-center">
+                                <span class="mr-1">项目详情</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 项目2 -->
+                <div class="transform transition-all duration-300 hover:scale-105">
+                    <div class="overflow-hidden rounded-xl shadow-lg">
+                        <div class="h-64 bg-gray-200 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">智能对话系统</h3>
+                        <p class="text-gray-600">
+                            基于大型语言模型的智能对话系统，能够理解自然语言并生成连贯、相关的回复，适用于客户服务和个人助手场景。
+                        </p>
+                        <div class="mt-4 flex space-x-3">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 flex items-center">
+                                <span class="mr-1">项目详情</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 - 简约而直接 -->
+    <section id="contact" class="py-20 bg-gray-800 text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">联系方式</h2>
+                <p class="text-xl text-gray-300 mb-12">
+                    如果您对我的研究或合作机会有兴趣，请随时联系我
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-gray-700 p-4 rounded-full mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">电子邮件</h3>
+                        <a href="mailto:zhipeng.zhou@example.com" class="text-blue-300 hover:text-blue-100">zhipeng.zhou@example.com</a>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-gray-700 p-4 rounded-full mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">学术主页</h3>
+                        <a href="https://scholar.example.com/zhipeng-zhou" class="text-blue-300 hover:text-blue-100">Google Scholar</a>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-gray-700 p-4 rounded-full mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">社交媒体</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/koooooooop" class="text-blue-300 hover:text-blue-100">GitHub</a>
+                            <a href="https://twitter.com/zhipengzhou" class="text-blue-300 hover:text-blue-100">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚部分 -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <p>&copy; 2024 周志鹏. 保留所有权利.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition duration-300">隐私政策</a>
+                    <a href="#" class="hover:text-white transition duration-300">条款声明</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 滚动到顶部按钮 -->
+    <div id="to-top-button" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 cursor-pointer" style="display: none;">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </div>
+
+    <script>
+        // 滚动到顶部按钮
+        const toTopButton = document.getElementById('to-top-button');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                toTopButton.style.display = 'block';
+                setTimeout(() => {
+                    toTopButton.style.opacity = '1';
+                }, 50);
+            } else {
+                toTopButton.style.opacity = '0';
+                setTimeout(() => {
+                    toTopButton.style.display = 'none';
+                }, 300);
+            }
+        });
+        
+        toTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
-</html>
+</html> 

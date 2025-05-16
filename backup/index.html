@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhou Zhipeng's personal website</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f7;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .hero {
+            background: url('my_photo.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .projects, .articles {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .project, .article {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .project h3, .article h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin: 0 auto;
+        }
+
+        .resume-link {
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+        }
+
+        .resume-link:hover {
+            background-color: #ddd;
+        }
+
+        @media (max-width: 768px) {
+            .projects, .articles {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Zhou Zhipeng</div>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Project</a>
+        <a href="#articles">Article</a>
+        <a href="#contact">Contact Me</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Welcome to my personal website</h1>
+</section>
+
+<div class="container">
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div style="text-align: center;">
+            <img src="head.jpg" alt="Zhou Zhipeng" class="profile-image">
+        </div>
+        <p>My name is Zhou Zhipeng, I was born on October 18, 2004, and I attended Chongqing University's 23rd X Innovation as an undergraduate. I have a deep passion for software development and technology innovation. Feel free to learn more about me!</p>
+        <p>I am currently focused on developing software solutions that solve real-world problems. I have experience working with a variety of technologies and frameworks including Python, JavaScript, and machine learning libraries.</p>
+        <a href="your-resume.pdf" class="resume-link" target="_blank">Download My CV</a>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>This project focuses on creating a web application that helps users manage their daily tasks. Technologies used: React, Node.js, MongoDB. <a href="your-project-link1.com" target="_blank">View Project</a></p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>This project is about building an AI-based recommendation system. Technologies used: Python, TensorFlow, Flask. <a href="your-project-link2.com" target="_blank">View Project</a></p>
+            </div>
+            <div class="project">
+                <h3>Project 3</h3>
+                <p>A mobile app developed for tracking personal health. Technologies used: React Native, Firebase. <a href="your-project-link3.com" target="_blank">View Project</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="articles">
+        <h2 class="section-title">Articles & Blogs</h2>
+        <div class="articles">
+            <div class="article">
+                <h3><a href="your-article1-link.com" target="_blank">The Future of AI in Healthcare</a></h3>
+                <p>Exploring how artificial intelligence is revolutionizing the healthcare industry. <a href="your-article1-link.com" target="_blank">Read more</a></p>
+            </div>
+            <div class="article">
+                <h3><a href="your-article2-link.com" target="_blank">My Journey as a Software Developer</a></h3>
+                <p>A personal reflection on my experiences in the tech industry. <a href="your-article2-link.com" target="_blank">Read more</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact Details</h2>
+        <p>If you would like to contact me, please send an email to <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2025 Zhou Zhipeng. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
