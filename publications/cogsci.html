@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCF-B Level Paper in Cognitive Science | Zhipeng Zhou</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+            color: #2c3e50;
+        }
+        .navbar {
+            padding: 15px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        .nav-link {
+            color: #555;
+            font-weight: 600;
+            margin-left: 15px;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #4a6fa5;
+        }
+        .header-section {
+            padding: 100px 0 60px;
+            background-color: #fff;
+        }
+        .paper-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        .authors {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        .author {
+            display: inline-block;
+            margin-right: 15px;
+        }
+        .institution {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+        }
+        .paper-links {
+            margin: 25px 0;
+        }
+        .paper-link {
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: 600;
+            padding: 8px 20px;
+            color: #4a6fa5;
+            border: 2px solid #4a6fa5;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        .paper-link:hover {
+            background-color: #4a6fa5;
+            color: #fff;
+            text-decoration: none;
+        }
+        .content-section {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #2c3e50;
+        }
+        .abstract {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        .gallery {
+            margin: 40px 0;
+        }
+        .gallery-image {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .architecture-image {
+            width: 100%;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .bibtex {
+            background-color: #f5f7fa;
+            padding: 20px;
+            border-radius: 5px;
+            font-family: monospace;
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+        footer {
+            padding: 40px 0;
+            background-color: #f5f7fa;
+            text-align: center;
+            color: #6c757d;
+            margin-top: 60px;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        @media (max-width: 767.98px) {
+            .header-section {
+                padding: 70px 0 40px;
+            }
+            .paper-title {
+                font-size: 1.8rem;
+            }
+            .content-section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Zhipeng Zhou</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../index.html">Publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Competitions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header-section">
+        <div class="container">
+            <h1 class="paper-title">CCF-B Level Paper in Cognitive Science</h1>
+            <div class="authors">
+                <div class="author">Zhou, Z.</div>
+                <div class="author">et al.</div>
+            </div>
+            <div class="institution">
+                COGSCI (2023)
+            </div>
+            <div class="paper-links">
+                <a href="#" class="paper-link">Project Page</a>
+                <a href="#" class="paper-link">PDF</a>
+                <a href="#" class="paper-link">Code</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Abstract</h2>
+            <div class="abstract">
+                <p>
+                    Published in COGSCI, the research focuses on innovative methods and applications in the field of cognitive science. Includes detailed GitHub code implementation, paper content, and explanations.
+                </p>
+            </div>
+
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery row">
+                <div class="col-md-6">
+                    <img src="../images/cogsci-figure1.jpg" alt="COGSCI Paper Figure 1" class="gallery-image">
+                </div>
+                <div class="col-md-6">
+                    <img src="../images/cogsci-figure2.jpg" alt="COGSCI Paper Figure 2" class="gallery-image">
+                </div>
+            </div>
+
+            <h2 class="section-title">Research Highlights</h2>
+            <p>
+                Our research in cognitive science explores innovative methods and applications in the field. Key aspects include:
+            </p>
+            <ul>
+                <li>Novel computational frameworks for cognitive modeling</li>
+                <li>Application of advanced statistical methods to understand cognitive processes</li>
+                <li>Integration of theoretical models with empirical data</li>
+                <li>Development of open-source tools for cognitive science research</li>
+                <li>Interdisciplinary approaches combining cognitive science with related fields</li>
+            </ul>
+
+            <p>
+                The research contributes to our understanding of cognitive processes and provides practical tools for further investigation in the field.
+            </p>
+
+            <h2 class="section-title">Implementation</h2>
+            <p>
+                Our research includes detailed GitHub code implementation with comprehensive documentation:
+            </p>
+            <ol>
+                <li><strong>Data Processing:</strong> Scripts for preparing and preprocessing experimental data</li>
+                <li><strong>Model Implementation:</strong> Code for computational models described in the paper</li>
+                <li><strong>Analysis Tools:</strong> Statistical analysis scripts for evaluating results</li>
+                <li><strong>Visualization:</strong> Tools for generating figures and interactive visualizations</li>
+            </ol>
+            <img src="../images/cogsci-architecture.jpg" alt="Implementation Architecture" class="architecture-image">
+            <p>
+                The codebase is designed to be modular and extensible, allowing researchers to build upon our work and adapt it to their specific research questions in cognitive science.
+            </p>
+
+            <h2 class="section-title">BibTeX</h2>
+            <div class="bibtex">
+                <pre>@inproceedings{zhou2023ccfb,
+  title={CCF-B Level Paper in Cognitive Science},
+  author={Zhou, Z. and others},
+  booktitle={Proceedings of the Annual Meeting of the Cognitive Science Society},
+  year={2023}
+}</pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Zhipeng Zhou. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

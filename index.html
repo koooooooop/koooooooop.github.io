@@ -4,1038 +4,1298 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zhipeng Zhou - Academic Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap">
     <style>
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9;
         }
-        .hero-gradient {
-            background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url('my_photo.jpg');
-            background-size: cover;
-            background-position: center;
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
         }
-        .section-fade {
-            background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+        .container-fluid {
+            max-width: 1400px;
+            padding-left: 80px;
+            padding-right: 80px;
+            margin: 0 auto;
         }
-        .publication-card {
-            transition: all 0.3s ease;
+        .header-container {
+            padding: 30px 0;
+            border-bottom: 1px solid #e0e0e0;
+            background-color: #fff;
         }
-        .publication-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #f0f0f0;
         }
-        .nav-link {
-            position: relative;
+        h1 {
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #2c3e50;
         }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: #3B82F6;
-            transition: width 0.3s ease;
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e0e0e0;
+            color: #2c3e50;
         }
-        .nav-link:hover::after {
-            width: 100%;
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #34495e;
         }
-        .dropdown {
-            position: relative;
-            display: inline-block;
+        .main-container {
+            display: flex;
+            min-height: calc(100vh - 120px);
+            max-width: 1400px;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
         }
-        .dropdown-content {
+        .nav-container {
+            width: 280px;
+            background-color: #fff;
+            border-right: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: row;
+        }
+        .primary-nav {
+            width: 140px;
+            background-color: #f9f9f9;
+            border-right: 1px solid #e0e0e0;
+        }
+        .secondary-nav {
+            width: 140px;
+            background-color: #fff;
+        }
+        .nav-item {
+            padding: 12px 15px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #555;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid transparent;
+            border-left: 3px solid transparent;
+        }
+        .nav-item:hover {
+            background-color: #f1f5fd;
+            color: #4a6fa5;
+        }
+        .nav-item.active {
+            background-color: #f1f5fd;
+            color: #4a6fa5;
+            border-left: 3px solid #4a6fa5;
+        }
+        .nav-section-title {
+            font-weight: 700;
+            padding: 15px;
+            color: #2c3e50;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .secondary-nav-items {
             display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 200px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-            z-index: 1;
-            border-radius: 8px;
-            top: 100%;
-            margin-top: 10px;
         }
-        .dropdown:hover .dropdown-content {
+        .secondary-nav-items.active {
             display: block;
         }
-        .dropdown-content a {
-            color: #333;
-            padding: 12px 16px;
+        .sub-nav-item {
+            padding: 10px 15px;
+            font-size: 0.9rem;
+            color: #555;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .sub-nav-item:hover {
+            background-color: #f5f7fa;
+            color: #4a6fa5;
+        }
+        .sub-nav-item a {
+            color: inherit;
             text-decoration: none;
             display: block;
+        }
+        .content-area {
+            flex: 1;
+            padding: 30px 40px;
+            background-color: #fff;
+            overflow-y: auto;
+        }
+        .content-section {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .content-section.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .paper {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .paper-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-family: 'Lora', serif;
+            color: #2c3e50;
+        }
+        .paper-authors {
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        .highlight {
+            font-weight: bold;
+        }
+        .paper-venue {
+            color: #6c757d;
+            margin-bottom: 5px;
+        }
+        .paper-links a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #4a6fa5;
+            font-size: 0.9rem;
+        }
+        .paper-links a:hover {
+            text-decoration: underline;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #f1f5fd;
+            color: #4a6fa5;
+            padding: 3px 10px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+        .year {
+            color: #6c757d;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        footer {
+            padding: 20px 0;
+            font-size: 0.9rem;
+            color: #6c757d;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            background-color: #f9f9f9;
+        }
+        .project-card, .award-card {
+            margin-bottom: 25px;
+            background-color: #fff;
+            border-radius: 5px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+            padding: 0 !important;
+            overflow: hidden;
+        }
+        .project-card:hover, .award-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        .btn-outline-primary {
+            color: #4a6fa5;
+            border-color: #4a6fa5;
+        }
+        .btn-outline-primary:hover {
+            background-color: #4a6fa5;
+            border-color: #4a6fa5;
+        }
+        .social-icons a {
+            color: #4a6fa5;
+            margin-right: 15px;
+            font-size: 1.2rem;
             transition: all 0.2s ease;
         }
-        .dropdown-content a:hover {
-            background-color: #f1f5f9;
-            color: #3B82F6;
+        .social-icons a:hover {
+            color: #2c3e50;
+        }
+        .card-img-container {
+            padding: 0;
+            height: 100%;
+        }
+        .card-img-container img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .card-title {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .card-description {
+            flex-grow: 1;
+        }
+        @media (max-width: 767.98px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .nav-container {
+                width: 100%;
+                flex-direction: column;
+            }
+            .primary-nav, .secondary-nav {
+                width: 100%;
+            }
+            .primary-nav {
+                display: flex;
+                flex-wrap: wrap;
+                border-right: none;
+            }
+            .nav-item {
+                flex: 1 0 33.333%;
+                text-align: center;
+            }
+            .sub-nav-item {
+                text-align: center;
+            }
+            .card-img-container {
+                height: 200px;
+            }
+            .container-fluid {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased">
-    <!-- 导航栏 - 苹果风格的透明导航 Navigation bar - Apple-style transparent navigation -->
-    <header class="fixed w-full bg-white bg-opacity-90 backdrop-blur-sm z-50 shadow-sm">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="text-xl font-bold text-gray-800">Zhipeng Zhou</div>
-                <nav class="hidden md:flex space-x-6">
-                    <a href="#about" class="nav-link font-medium text-gray-700 hover:text-blue-500">About</a>
-                    
-                    <div class="dropdown">
-                        <a href="#projects" class="nav-link font-medium text-gray-700 hover:text-blue-500">Projects</a>
-                        <div class="dropdown-content">
-                            <a href="projects/engineering.html">Engineering Principles</a>
-                            <a href="projects/nature-design.html">Nature & Design + Medical Engineering</a>
-                            <a href="projects/writing.html">Academic Writing</a>
-                            <a href="projects/math-projects.html">Mathematical Projects</a>
-                            <a href="projects/robotics.html">Robotics Fundamentals</a>
-                            <a href="projects/qea1.html">QEA1</a>
-                            <a href="projects/qea2.html">QEA2</a>
-                            <a href="projects/engineering-design.html">Engineering Design</a>
-                            <a href="projects/probability.html">Probability & Statistics</a>
-                            <a href="projects/ai-intro.html">Introduction to AI</a>
-                            <a href="projects/software-design.html">Software Design</a>
-                            <a href="projects/linear-algebra.html">Linear Algebra</a>
-                            <a href="projects/product-design.html">Product Design</a>
-                            <a href="projects/humanities.html">Humanities</a>
-                        </div>
-                    </div>
-                    
-                    <div class="dropdown">
-                        <a href="#publications" class="nav-link font-medium text-gray-700 hover:text-blue-500">Publications</a>
-                        <div class="dropdown-content">
-                            <a href="research/ccf-b.html">CCF-B Paper</a>
-                            <a href="research/ccf-a-llm.html">CCF-A LLM Sparsification</a>
-                            <a href="research/ccf-a-mamba.html">CCF-A Mamba+MoE Time-Varying Load Prediction</a>
-                            <a href="research/auto-charging.html">Automatic Charging Robotic Arm</a>
-                            <a href="research/zju-project.html">Zhejiang University Project</a>
-                        </div>
-                    </div>
-                    
-                    <div class="dropdown">
-                        <a href="#competitions" class="nav-link font-medium text-gray-700 hover:text-blue-500">Competitions & Internships</a>
-                        <div class="dropdown-content">
-                            <a href="competitions/ai-challenge.html">AI Challenge Cup</a>
-                            <a href="competitions/xbotpark.html">Xbotpark Israel Innovation Park</a>
-                            <a href="competitions/aircraft-design.html">Aircraft Design Competition</a>
-                            <a href="competitions/startup-intern.html">Startup Internship</a>
-                            <a href="competitions/intelligent-manufacturing.html">Intelligent Manufacturing Competition</a>
-                            <a href="competitions/coursera.html">Coursera</a>
-                            <a href="competitions/kaggle.html">Kaggle</a>
-                            <a href="competitions/hands-on-dl.html">Hands-on Deep Learning</a>
-                            <a href="competitions/srtp.html">SRTP</a>
-                        </div>
-                    </div>
-                    
-                    <div class="dropdown">
-                        <a href="#activities" class="nav-link font-medium text-gray-700 hover:text-blue-500">Activities</a>
-                        <div class="dropdown-content">
-                            <a href="activities/football.html">Football</a>
-                            <a href="activities/badminton.html">Badminton</a>
-                            <a href="activities/cooking.html">Cooking</a>
-                            <a href="activities/teaching.html">Teaching Project</a>
-                            <a href="activities/art.html">Art</a>
-                            <a href="activities/music.html">Guitar & Singing</a>
-                            <a href="activities/outdoor.html">Cycling & Hiking</a>
-                        </div>
-                    </div>
-                    
-                    <div class="dropdown">
-                        <a href="#materials" class="nav-link font-medium text-gray-700 hover:text-blue-500">Study Materials</a>
-                        <div class="dropdown-content">
-                            <a href="materials/math1.html">Mathematics I</a>
-                            <a href="materials/math2.html">Mathematics II</a>
-                            <a href="materials/probability.html">Probability & Statistics</a>
-                            <a href="materials/linear-algebra.html">Linear Algebra</a>
-                        </div>
-                    </div>
-                    
-                    <a href="#contact" class="nav-link font-medium text-gray-700 hover:text-blue-500">Contact</a>
-                </nav>
-                <!-- 移动端菜单按钮 Mobile menu button -->
-                <div class="md:hidden">
-                    <button class="text-gray-700 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
+<body>
+    <div class="header-container">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-3 text-center">
+                    <img src="head.jpg" alt="Zhipeng Zhou" class="profile-img mb-3">
                 </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- 英雄区域 - 大图背景 Hero section with background image -->
-    <section class="hero-gradient min-h-screen flex items-center justify-center text-white">
-        <div class="container mx-auto px-6 py-24 text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Zhipeng Zhou</h1>
-            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed">
-                Chongqing University | Computer Science and Technology
-            </p>
-            <a href="#about" class="inline-block bg-blue-600 text-white py-3 px-8 rounded-full font-medium hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105">Learn More</a>
-        </div>
-    </section>
-
-    <!-- 关于我部分 About Me section -->
-    <section id="about" class="section-fade py-20 md:py-32">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/3 mb-10 md:mb-0">
-                    <img src="head.jpg" alt="Zhipeng Zhou" class="rounded-xl shadow-xl max-w-full h-auto mx-auto" style="max-width: 300px;">
-                </div>
-                <div class="md:w-2/3 md:pl-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">About Me</h2>
-                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        I'm Zhipeng Zhou, born on October 18, 2004, and currently a student in the X Innovation Experimental Class at Chongqing University. I have a strong interest in software development and technological innovation, with a current focus on research in artificial intelligence and deep learning.
-                    </p>
-                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        My research interests are diverse, encompassing engineering principles, artificial intelligence, software design, linear algebra, and more. In my spare time, I actively participate in various competitions and research projects, and enjoy sports such as football and badminton, as well as hobbies like cooking and music.
-                    </p>
-                    
-                    <!-- Education section (added from reference sites) -->
-                    <div class="mb-8">
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Education</h3>
-                        <ul class="list-disc pl-5 text-gray-600 space-y-2">
-                            <li><span class="font-medium">2023 - Present:</span> Chongqing University, X Innovation Experimental Class</li>
-                            <li><span class="font-medium">Computer Science and Technology</span></li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Research Interests (added from reference sites) -->
-                    <div class="mb-8">
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Research Interests</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Artificial Intelligence</span>
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Deep Learning</span>
-                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Computer Vision</span>
-                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Natural Language Processing</span>
-                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Robotics</span>
-                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Software Engineering</span>
-                        </div>
-                    </div>
-                    
-                    <div class="flex space-x-4">
-                        <a href="cv.png" target="_blank" class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition duration-300">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                            Download CV
-                        </a>
-                        <a href="#contact" class="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition duration-300">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            Contact Me
-                        </a>
+                <div class="col-md-9">
+                    <h1>Zhipeng Zhou</h1>
+                    <p class="lead text-muted">Undergraduate Student, Computer Science and Technology</p>
+                    <p class="mb-2">X Innovation Experimental Class, Chongqing University</p>
+                    <p class="mb-3"><i class="fas fa-envelope mr-2"></i>zhipeng.zhou@example.com</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/koooooooop" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="cv.png" target="_blank"><i class="fas fa-file-alt"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- 项目成果部分 Projects section -->
-    <section id="projects" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Engineering Principles -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="bg-blue-100 text-blue-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Engineering Principles</h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        Digital and analog circuits, PCB design and manufacturing, board soldering, and embedded systems with LiDAR direction.
-                    </p>
-                    <a href="projects/engineering.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                        View Details
-                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
-                    </a>
-                </div>
-                
-                <!-- Nature & Design + Medical Engineering -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="bg-green-100 text-green-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Nature & Design + Medical Engineering</h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        Research in biology and natural systems, combined with innovative applications and design concepts in medical engineering.
-                    </p>
-                    <a href="projects/nature-design.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                        View Details
-                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
-                    </a>
-                </div>
-                
-                <!-- Academic Writing -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="bg-purple-100 text-purple-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Academic Writing</h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        Public articles, presentation skills, and other content showcasing my writing ability and communication techniques.
-                    </p>
-                    <a href="projects/writing.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                        View Details
-                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
-                    </a>
-                </div>
-                
-                <!-- Mathematical Projects -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="bg-red-100 text-red-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Mathematical Projects</h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        Mathematical projects in presentation format, demonstrating the integration of mathematical theory with practical applications.
-                    </p>
-                    <a href="projects/math-projects.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                        View Details
-                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
-                    </a>
-                </div>
-                
-                <!-- Robotics Fundamentals -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="bg-yellow-100 text-yellow-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Robotics Fundamentals</h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        Applications and research of vision and embedded technologies in the field of robotics.
-                    </p>
-                    <a href="projects/robotics.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                        View Details
-                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
-                    </a>
-                </div>
-                
-                <!-- More Projects button -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300 flex flex-col justify-center items-center">
-                    <div class="bg-gray-200 text-gray-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800 text-center">View More Projects</h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed text-center">
-                        Explore more projects, including QEA1, QEA2, Engineering Design, Introduction to AI, and more.
-                    </p>
-                    <a href="#" id="showMoreProjects" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                        Show All
-                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9l-7 7-7-7"></path></svg>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Hidden additional projects -->
-            <div id="extraProjects" class="hidden mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Additional projects content is same structure but different content -->
-                <!-- QEA1 -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="bg-pink-100 text-pink-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">QEA1</h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        Ship building project research and practice, demonstrating design and engineering implementation capabilities.
-                    </p>
-                    <a href="projects/qea1.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                        View Details
-                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
-                    </a>
-                </div>
-                
-                <!-- QEA2 -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">QEA2</h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        Signals and systems, research and development of ECG measurement devices.
-                    </p>
-                    <a href="projects/qea2.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                        View Details
-                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
-                    </a>
-                </div>
-                
-                <!-- Engineering Design -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="bg-blue-100 text-blue-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Engineering Design</h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        Design, implementation, and iterative optimization of a Stirling engine.
-                    </p>
-                    <a href="projects/engineering-design.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                        View Details
-                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 科研成果部分 Publications section -->
-    <section id="publications" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">Publications</h2>
-            <div class="space-y-6">
-                <!-- CCF-B Paper -->
-                <div class="publication-card bg-white rounded-xl p-6 shadow-md">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-4/5">
-                            <h3 class="text-xl font-semibold mb-2 text-gray-800">CCF-B Level Paper</h3>
-                            <p class="text-gray-500 mb-3"><strong>Zhou, Z.</strong>, et al.</p>
-                            <p class="text-gray-600 mb-4">
-                                Published in COGSCI, the research focuses on innovative methods and applications in the field of cognitive science. Includes detailed GitHub code implementation, paper content, and explanations.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">Cognitive Science</span>
-                                <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">CCF-B</span>
-                                <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">GitHub</span>
-                            </div>
-                        </div>
-                        <div class="md:w-1/5 mt-4 md:mt-0 flex items-center justify-end">
-                            <a href="research/ccf-b.html" class="text-blue-600 hover:text-blue-800 flex items-center">
-                                <span class="mr-2">Details</span>
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CCF-A LLM Sparsification -->
-                <div class="publication-card bg-white rounded-xl p-6 shadow-md">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-4/5">
-                            <h3 class="text-xl font-semibold mb-2 text-gray-800">CCF-A LLM Sparsification Research</h3>
-                            <p class="text-gray-500 mb-3">Tsinghua-Lenovo AAAI, <strong>Zhou, Z.</strong></p>
-                            <p class="text-gray-600 mb-4">
-                                In collaboration with Tsinghua University and Lenovo Group, this research on large language model sparsification technology was presented at the AAAI conference, significantly improving model efficiency and reducing computational resource requirements.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">Large Language Models</span>
-                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">Sparsification</span>
-                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">CCF-A</span>
-                            </div>
-                        </div>
-                        <div class="md:w-1/5 mt-4 md:mt-0 flex items-center justify-end">
-                            <a href="research/ccf-a-llm.html" class="text-blue-600 hover:text-blue-800 flex items-center">
-                                <span class="mr-2">Details</span>
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- CCF-A Mamba+MoE Time-Varying Load Prediction -->
-                <div class="publication-card bg-white rounded-xl p-6 shadow-md">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-4/5">
-                            <h3 class="text-xl font-semibold mb-2 text-gray-800">CCF-A Mamba+MoE Time-Varying Load Prediction</h3>
-                            <p class="text-gray-500 mb-3">Chongqing University Laboratory, <strong>Zhou, Z.</strong>, AAAI</p>
-                            <p class="text-gray-600 mb-4">
-                                This temporal model research presented at the AAAI conference combines Mamba state space models with Mixture of Experts (MoE) for high-precision prediction of time-varying loads, achieving leading results in multiple benchmark tests.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Mamba</span>
-                                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Mixture of Experts</span>
-                                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Time Series Prediction</span>
-                            </div>
-                        </div>
-                        <div class="md:w-1/5 mt-4 md:mt-0 flex items-center justify-end">
-                            <a href="research/ccf-a-mamba.html" class="text-blue-600 hover:text-blue-800 flex items-center">
-                                <span class="mr-2">Details</span>
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Automatic Charging Robotic Arm -->
-                <div class="publication-card bg-white rounded-xl p-6 shadow-md">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-4/5">
-                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Automatic Charging Robotic Arm</h3>
-                            <p class="text-gray-500 mb-3"><strong>Zhou, Z.</strong>, Patent</p>
-                            <p class="text-gray-600 mb-4">
-                                Developed automatic charging robotic arm technology with patent protection. This project includes a complete solution design and engineering implementation, addressing key technical challenges in automatic electric vehicle charging.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">Patent</span>
-                                <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">Robotic Arm</span>
-                                <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">Automation</span>
-                            </div>
-                        </div>
-                        <div class="md:w-1/5 mt-4 md:mt-0 flex items-center justify-end">
-                            <a href="research/auto-charging.html" class="text-blue-600 hover:text-blue-800 flex items-center">
-                                <span class="mr-2">Details</span>
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Zhejiang University Project -->
-                <div class="publication-card bg-white rounded-xl p-6 shadow-md">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-4/5">
-                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Zhejiang University Data Science Project</h3>
-                            <p class="text-gray-500 mb-3">Zhejiang University, <strong>Zhou, Z.</strong></p>
-                            <p class="text-gray-600 mb-4">
-                                Data science research project in collaboration with Zhejiang University, focusing on innovative applications of big data analysis and processing technologies to provide efficient solutions for practical problems.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Data Science</span>
-                                <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Zhejiang University</span>
-                                <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Collaborative Research</span>
-                            </div>
-                        </div>
-                        <div class="md:w-1/5 mt-4 md:mt-0 flex items-center justify-end">
-                            <a href="research/zju-project.html" class="text-blue-600 hover:text-blue-800 flex items-center">
-                                <span class="mr-2">Details</span>
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 比赛与实习部分 Competitions and Internships section -->
-    <section id="competitions" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">Competitions & Internships</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <!-- AI Challenge Cup -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="h-48 bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center p-6">
-                        <h3 class="text-2xl font-bold text-white">AI Challenge Cup</h3>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 mb-4">
-                            Participated in the AI Challenge Cup, developing a diffusion model-based image generation system with the goal of submitting to CVPR 2026.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">AI Application</span>
-                            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">Diffusion</span>
-                            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">CVPR</span>
-                        </div>
-                        <a href="competitions/ai-challenge.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                            View Details
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Xbotpark Israel Innovation Park -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="h-48 bg-gradient-to-r from-green-500 to-teal-600 flex items-center justify-center p-6">
-                        <h3 class="text-2xl font-bold text-white">Xbotpark Innovation Park Summer Camp</h3>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 mb-4">
-                            Participated in a one-month market research, product development, and iterative optimization project at the Israel Innovation Park in Changzhou, gaining valuable entrepreneurial experience.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">Innovation & Entrepreneurship</span>
-                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">Market Research</span>
-                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">Product Development</span>
-                        </div>
-                        <a href="competitions/xbotpark.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                            View Details
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Aircraft Design Competition -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center p-6">
-                        <h3 class="text-2xl font-bold text-white">Aircraft Design Competition</h3>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 mb-4">
-                            Participated in the China University Aircraft Design Innovation Competition, responsible for visual algorithms, AI hardware, flight control system integration, and fixed-wing fabrication.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Aircraft Design</span>
-                            <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Vision Algorithms</span>
-                            <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Flight Control</span>
-                        </div>
-                        <a href="competitions/aircraft-design.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                            View Details
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Startup Internship -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="h-48 bg-gradient-to-r from-red-500 to-orange-600 flex items-center justify-center p-6">
-                        <h3 class="text-2xl font-bold text-white">Startup Internship</h3>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 mb-4">
-                            During my internship at a startup, I focused on fixture design for products, gaining practical experience in industrial design and product development.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">Product Design</span>
-                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">Fixture Design</span>
-                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">Startup</span>
-                        </div>
-                        <a href="competitions/startup-intern.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                            View Details
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Additional competitions and courses -->
-            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Intelligent Manufacturing Competition -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="bg-blue-100 text-blue-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2">Intelligent Manufacturing Competition</h3>
-                    <p class="text-gray-600 mb-4">Participated in the Intelligent Manufacturing Competition, demonstrating innovative thinking and teamwork.</p>
-                    <a href="competitions/intelligent-manufacturing.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                        View Details
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </a>
-                </div>
-                
-                <!-- Coursera -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="bg-green-100 text-green-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2">Coursera Courses</h3>
-                    <p class="text-gray-600 mb-4">Completed online courses on Coursera to enhance professional skills and knowledge.</p>
-                    <a href="competitions/coursera.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                        View Details
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </a>
-                </div>
-                
-                <!-- Kaggle -->
-                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="bg-purple-100 text-purple-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2">Kaggle Competitions</h3>
-                    <p class="text-gray-600 mb-4">Participated in Kaggle competitions to improve data analysis and machine learning skills.</p>
-                    <a href="competitions/kaggle.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                        View Details
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 兴趣活动部分 Activities section -->
-    <section id="activities" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">Activities</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <!-- Football -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
-                    <div class="h-48 overflow-hidden">
-                        <div class="bg-blue-500 h-full flex items-center justify-center transition-all duration-500 group-hover:scale-110">
-                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path></svg>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2 text-gray-800">Football</h3>
-                        <p class="text-gray-600 text-sm mb-3">Served as team captain, participated in Chongqing University's internal football competitions, demonstrating teamwork and leadership.</p>
-                        <a href="activities/football.html" class="text-blue-600 hover:text-blue-800 text-sm inline-flex items-center">
-                            View Details
-                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Badminton -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
-                    <div class="h-48 overflow-hidden">
-                        <div class="bg-green-500 h-full flex items-center justify-center transition-all duration-500 group-hover:scale-110">
-                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2 text-gray-800">Badminton</h3>
-                        <p class="text-gray-600 text-sm mb-3">Participated in men's singles and doubles badminton competitions, maintaining physical fitness and competitive spirit.</p>
-                        <a href="activities/badminton.html" class="text-blue-600 hover:text-blue-800 text-sm inline-flex items-center">
-                            View Details
-                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Cooking -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
-                    <div class="h-48 overflow-hidden">
-                        <div class="bg-red-500 h-full flex items-center justify-center transition-all duration-500 group-hover:scale-110">
-                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path></svg>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2 text-gray-800">Cooking</h3>
-                        <p class="text-gray-600 text-sm mb-3">Passionate about cooking, skilled in various cuisines, constantly exploring new cooking techniques and ingredient combinations.</p>
-                        <a href="activities/cooking.html" class="text-blue-600 hover:text-blue-800 text-sm inline-flex items-center">
-                            View Details
-                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Teaching Project -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
-                    <div class="h-48 overflow-hidden">
-                        <div class="bg-purple-500 h-full flex items-center justify-center transition-all duration-500 group-hover:scale-110">
-                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2 text-gray-800">Teaching Project</h3>
-                        <p class="text-gray-600 text-sm mb-3">Participated in the AI general education teaching project organized by Shanghai Jiao Tong University, spreading knowledge and giving back to society.</p>
-                        <a href="activities/teaching.html" class="text-blue-600 hover:text-blue-800 text-sm inline-flex items-center">
-                            View Details
-                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Art -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
-                    <div class="h-48 overflow-hidden">
-                        <div class="bg-yellow-500 h-full flex items-center justify-center transition-all duration-500 group-hover:scale-110">
-                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2 text-gray-800">Art</h3>
-                        <p class="text-gray-600 text-sm mb-3">Studied drawing since childhood, continuously improving artistic skills, participating in various artistic creation activities.</p>
-                        <a href="activities/art.html" class="text-blue-600 hover:text-blue-800 text-sm inline-flex items-center">
-                            View Details
-                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Guitar & Singing -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
-                    <div class="h-48 overflow-hidden">
-                        <div class="bg-indigo-500 h-full flex items-center justify-center transition-all duration-500 group-hover:scale-110">
-                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2 text-gray-800">Music</h3>
-                        <p class="text-gray-600 text-sm mb-3">Rich musical experience, playing guitar and singing, passionate about music creation.</p>
-                        <a href="activities/music.html" class="text-blue-600 hover:text-blue-800 text-sm inline-flex items-center">
-                            View Details
-                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Cycling & Hiking -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
-                    <div class="h-48 overflow-hidden">
-                        <div class="bg-pink-500 h-full flex items-center justify-center transition-all duration-500 group-hover:scale-110">
-                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2 text-gray-800">Outdoor Activities</h3>
-                        <p class="text-gray-600 text-sm mb-3">Enjoy cycling and hiking outdoor activities, challenging myself and demonstrating perseverance and determination.</p>
-                        <a href="activities/outdoor.html" class="text-blue-600 hover:text-blue-800 text-sm inline-flex items-center">
-                            View Details
-                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 学习资料分享部分 Study Materials section -->
-    <section id="materials" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">Study Materials</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <!-- Mathematics I -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
-                    <div class="h-40 bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center p-6 relative overflow-hidden">
-                        <h3 class="text-2xl font-bold text-white z-10">Mathematics I</h3>
-                        <div class="absolute top-0 left-0 w-full h-full bg-white opacity-20 transform -skew-y-6 group-hover:skew-y-0 transition-all duration-500"></div>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 mb-4">
-                            Compilation of study materials for Mathematics I, including class notes, exercise solutions, and key formula summaries to help you quickly grasp core concepts.
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">Calculus</span>
-                                <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">Exercises</span>
-                            </div>
-                            <a href="materials/math1.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                                View Materials
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Mathematics II -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
-                    <div class="h-40 bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center p-6 relative overflow-hidden">
-                        <h3 class="text-2xl font-bold text-white z-10">Mathematics II</h3>
-                        <div class="absolute top-0 left-0 w-full h-full bg-white opacity-20 transform -skew-y-6 group-hover:skew-y-0 transition-all duration-500"></div>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 mb-4">
-                            Compilation of essential content for Mathematics II, covering advanced calculus, differential equations, and more, with detailed examples and solutions.
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">Differential Equations</span>
-                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">Case Studies</span>
-                            </div>
-                            <a href="materials/math2.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                                View Materials
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Probability & Statistics -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
-                    <div class="h-40 bg-gradient-to-r from-purple-500 to-violet-500 flex items-center justify-center p-6 relative overflow-hidden">
-                        <h3 class="text-2xl font-bold text-white z-10">Probability & Statistics</h3>
-                        <div class="absolute top-0 left-0 w-full h-full bg-white opacity-20 transform -skew-y-6 group-hover:skew-y-0 transition-all duration-500"></div>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 mb-4">
-                            Review materials for Probability and Statistics, covering probability distributions, random variables, statistical inference, and practical calculation methods.
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Probability Distributions</span>
-                                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Statistical Inference</span>
-                            </div>
-                            <a href="materials/probability.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                                View Materials
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Linear Algebra -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
-                    <div class="h-40 bg-gradient-to-r from-red-500 to-orange-500 flex items-center justify-center p-6 relative overflow-hidden">
-                        <h3 class="text-2xl font-bold text-white z-10">Linear Algebra</h3>
-                        <div class="absolute top-0 left-0 w-full h-full bg-white opacity-20 transform -skew-y-6 group-hover:skew-y-0 transition-all duration-500"></div>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 mb-4">
-                            Study materials for Linear Algebra, with in-depth explanations of matrix operations, eigenvalues, vector spaces, and more, combined with machine learning application cases.
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">Matrix Operations</span>
-                                <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">Machine Learning Applications</span>
-                            </div>
-                            <a href="materials/linear-algebra.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-                                View Materials
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Honors and Awards section (added from reference sites) -->
-    <section id="honors" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">Honors & Awards</h2>
-            <div class="max-w-3xl mx-auto">
-                <div class="space-y-4">
-                    <div class="bg-white p-6 rounded-xl shadow-md">
-                        <div class="flex items-start">
-                            <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-semibold mb-1">Outstanding Freshman Scholarship</h3>
-                                <p class="text-gray-500 text-sm mb-2">Chongqing University, 2023</p>
-                                <p class="text-gray-600">Awarded to top-performing freshmen based on academic excellence and extracurricular activities.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-xl shadow-md">
-                        <div class="flex items-start">
-                            <div class="bg-green-100 text-green-600 rounded-full p-3 mr-4">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-semibold mb-1">First Prize, Innovation Competition</h3>
-                                <p class="text-gray-500 text-sm mb-2">National Level, 2023</p>
-                                <p class="text-gray-600">Recognized for innovative project design and implementation in a national competition.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-xl shadow-md">
-                        <div class="flex items-start">
-                            <div class="bg-purple-100 text-purple-600 rounded-full p-3 mr-4">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-semibold mb-1">X Innovation Class Selection</h3>
-                                <p class="text-gray-500 text-sm mb-2">Chongqing University, 2023</p>
-                                <p class="text-gray-600">Selected for the prestigious X Innovation Experimental Class, reserved for top 5% of students.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-xl shadow-md">
-                        <div class="flex items-start">
-                            <div class="bg-yellow-100 text-yellow-600 rounded-full p-3 mr-4">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-semibold mb-1">Outstanding Student Leader</h3>
-                                <p class="text-gray-500 text-sm mb-2">Chongqing University, 2023</p>
-                                <p class="text-gray-600">Recognized for leadership skills and contributions to student community.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 联系方式部分 Contact section -->
-    <section id="contact" class="py-20 bg-gray-800 text-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-2xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-8">Contact Me</h2>
-                <p class="text-xl text-gray-300 mb-12">
-                    If you're interested in my research, projects, or collaboration opportunities, feel free to contact me
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="flex flex-col items-center">
-                        <div class="bg-gray-700 p-4 rounded-full mb-4">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        </div>
-                        <h3 class="text-lg font-semibold mb-2">Email</h3>
-                        <a href="mailto:zhipeng.zhou@example.com" class="text-blue-300 hover:text-blue-100">zhipeng.zhou@example.com</a>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="bg-gray-700 p-4 rounded-full mb-4">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </div>
-                        <h3 class="text-lg font-semibold mb-2">Academic Profile</h3>
-                        <a href="https://github.com/koooooooop" class="text-blue-300 hover:text-blue-100">GitHub</a>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="bg-gray-700 p-4 rounded-full mb-4">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
-                        </div>
-                        <h3 class="text-lg font-semibold mb-2">Social Media</h3>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/koooooooop" class="text-blue-300 hover:text-blue-100">GitHub</a>
-                            <a href="#" class="text-blue-300 hover:text-blue-100">WeChat</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 页脚部分 Footer section -->
-    <footer class="bg-gray-900 text-gray-400 py-12">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <p>&copy; 2024 Zhipeng Zhou. All rights reserved.</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scroll to top button -->
-    <div id="to-top-button" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 cursor-pointer" style="display: none;">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
     </div>
 
-    <script>
-        // 滚动到顶部按钮 Scroll to top button
-        const toTopButton = document.getElementById('to-top-button');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                toTopButton.style.display = 'block';
-                setTimeout(() => {
-                    toTopButton.style.opacity = '1';
-                }, 50);
-            } else {
-                toTopButton.style.opacity = '0';
-                setTimeout(() => {
-                    toTopButton.style.display = 'none';
-                }, 300);
-            }
-        });
-        
-        toTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // 平滑滚动 Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // 显示更多项目 Show more projects
-        document.getElementById('showMoreProjects').addEventListener('click', function(e) {
-            e.preventDefault();
-            const extraProjects = document.getElementById('extraProjects');
-            extraProjects.classList.toggle('hidden');
+    <div class="main-container">
+        <div class="nav-container">
+            <div class="primary-nav">
+                <div class="nav-section-title">Main</div>
+                <div class="nav-item active" data-target="about">About</div>
+                <div class="nav-item" data-target="projects">Projects</div>
+                <div class="nav-item" data-target="publications">Publications</div>
+                <div class="nav-item" data-target="competitions">Competitions</div>
+                <div class="nav-item" data-target="activities">Activities</div>
+                <div class="nav-item" data-target="materials">Study Materials</div>
+                <div class="nav-item" data-target="contact">Contact</div>
+            </div>
             
-            this.innerHTML = extraProjects.classList.contains('hidden') 
-                ? 'Show All <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9l-7 7-7-7"></path></svg>' 
-                : 'Collapse <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15l7-7 7 7"></path></svg>';
+            <div class="secondary-nav">
+                <!-- About subcategories -->
+                <div class="secondary-nav-items active" id="about-subnav">
+                    <div class="sub-nav-item">Biography</div>
+                    <div class="sub-nav-item">Education</div>
+                    <div class="sub-nav-item">Research Interests</div>
+                    <div class="sub-nav-item">Honors & Awards</div>
+                </div>
+                
+                <!-- Projects subcategories -->
+                <div class="secondary-nav-items" id="projects-subnav">
+                    <div class="sub-nav-item"><a href="projects/engineering.html">Engineering Principles</a></div>
+                    <div class="sub-nav-item"><a href="projects/nature-design.html">Nature & Design</a></div>
+                    <div class="sub-nav-item"><a href="projects/writing.html">Academic Writing</a></div>
+                    <div class="sub-nav-item"><a href="projects/math-projects.html">Mathematical Projects</a></div>
+                    <div class="sub-nav-item"><a href="projects/robotics.html">Robotics Fundamentals</a></div>
+                    <div class="sub-nav-item"><a href="projects/qea1.html">QEA1</a></div>
+                    <div class="sub-nav-item"><a href="projects/qea2.html">QEA2</a></div>
+                    <div class="sub-nav-item"><a href="projects/engineering-design.html">Engineering Design</a></div>
+                    <div class="sub-nav-item"><a href="projects/probability.html">Probability & Statistics</a></div>
+                    <div class="sub-nav-item"><a href="projects/ai-intro.html">Introduction to AI</a></div>
+                    <div class="sub-nav-item"><a href="projects/software-design.html">Software Design</a></div>
+                    <div class="sub-nav-item"><a href="projects/linear-algebra.html">Linear Algebra</a></div>
+                    <div class="sub-nav-item"><a href="projects/product-design.html">Product Design</a></div>
+                    <div class="sub-nav-item"><a href="projects/humanities.html">Humanities</a></div>
+                </div>
+                
+                <!-- Publications subcategories -->
+                <div class="secondary-nav-items" id="publications-subnav">
+                    <div class="sub-nav-item"><a href="research/ccf-b.html">CCF-B Paper</a></div>
+                    <div class="sub-nav-item"><a href="research/ccf-a-llm.html">CCF-A LLM Sparsification</a></div>
+                    <div class="sub-nav-item"><a href="research/ccf-a-mamba.html">CCF-A Mamba+MoE</a></div>
+                    <div class="sub-nav-item"><a href="research/auto-charging.html">Charging Robotic Arm</a></div>
+                    <div class="sub-nav-item"><a href="research/zju-project.html">ZJU Data Science Project</a></div>
+                </div>
+                
+                <!-- Competitions subcategories -->
+                <div class="secondary-nav-items" id="competitions-subnav">
+                    <div class="sub-nav-item"><a href="competitions/ai-challenge.html">AI Challenge Cup</a></div>
+                    <div class="sub-nav-item"><a href="competitions/xbotpark.html">Xbotpark Israel Innovation</a></div>
+                    <div class="sub-nav-item"><a href="competitions/aircraft-design.html">Aircraft Design</a></div>
+                    <div class="sub-nav-item"><a href="competitions/startup-intern.html">Startup Internship</a></div>
+                    <div class="sub-nav-item"><a href="competitions/intelligent-manufacturing.html">Intelligent Manufacturing</a></div>
+                    <div class="sub-nav-item"><a href="competitions/coursera.html">Coursera</a></div>
+                    <div class="sub-nav-item"><a href="competitions/kaggle.html">Kaggle</a></div>
+                    <div class="sub-nav-item"><a href="competitions/hands-on-dl.html">Hands-on Deep Learning</a></div>
+                    <div class="sub-nav-item"><a href="competitions/srtp.html">SRTP</a></div>
+                </div>
+                
+                <!-- Activities subcategories -->
+                <div class="secondary-nav-items" id="activities-subnav">
+                    <div class="sub-nav-item"><a href="activities/football.html">Football</a></div>
+                    <div class="sub-nav-item"><a href="activities/badminton.html">Badminton</a></div>
+                    <div class="sub-nav-item"><a href="activities/cooking.html">Cooking</a></div>
+                    <div class="sub-nav-item"><a href="activities/teaching.html">Teaching Project</a></div>
+                    <div class="sub-nav-item"><a href="activities/art.html">Art</a></div>
+                    <div class="sub-nav-item"><a href="activities/music.html">Guitar & Singing</a></div>
+                    <div class="sub-nav-item"><a href="activities/outdoor.html">Cycling & Hiking</a></div>
+                </div>
+                
+                <!-- Study Materials subcategories -->
+                <div class="secondary-nav-items" id="materials-subnav">
+                    <div class="sub-nav-item"><a href="materials/math1.html">Mathematics I</a></div>
+                    <div class="sub-nav-item"><a href="materials/math2.html">Mathematics II</a></div>
+                    <div class="sub-nav-item"><a href="materials/probability.html">Probability & Statistics</a></div>
+                    <div class="sub-nav-item"><a href="materials/linear-algebra.html">Linear Algebra</a></div>
+                </div>
+                
+                <!-- Contact has no subcategories -->
+                <div class="secondary-nav-items" id="contact-subnav">
+                    <div class="sub-nav-item">Email</div>
+                    <div class="sub-nav-item">Academic Profile</div>
+                    <div class="sub-nav-item">Social Media</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-area">
+            <!-- About Content -->
+            <div class="content-section active" id="about-content">
+                <h2>About Me</h2>
+                <p>I'm Zhipeng Zhou, born on October 18, 2004, and currently a student in the X Innovation Experimental Class at Chongqing University. I have a strong interest in software development and technological innovation, with a current focus on research in artificial intelligence and deep learning.</p>
+                <p>My research interests are diverse, encompassing engineering principles, artificial intelligence, software design, linear algebra, and more. In my spare time, I actively participate in various competitions and research projects, and enjoy sports such as football and badminton, as well as hobbies like cooking and music.</p>
+
+                <h3>Education</h3>
+                <div class="mb-4">
+                    <div><span class="year">2023 - Present</span> <strong>Chongqing University</strong></div>
+                    <div>X Innovation Experimental Class</div>
+                    <div>B.Eng. in Computer Science and Technology</div>
+                </div>
+
+                <h3>Research Interests</h3>
+                <div class="mb-4">
+                    <span class="tag">Artificial Intelligence</span>
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">Natural Language Processing</span>
+                    <span class="tag">Robotics</span>
+                    <span class="tag">Software Engineering</span>
+                </div>
+            </div>
+
+            <!-- Projects Content -->
+            <div class="content-section" id="projects-content">
+                <h2>Projects</h2>
+                
+                <div class="row mb-4">
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/engineering.jpg" alt="Engineering Principles" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Engineering Principles</h3>
+                                        <div class="card-description">
+                                            <p>Digital and analog circuits, PCB design and manufacturing, board soldering, and embedded systems with LiDAR direction.</p>
+                                        </div>
+                                        <a href="projects/engineering.html" class="btn btn-sm btn-outline-primary mt-2">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/nature-design.jpg" alt="Nature & Design" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Nature & Design + Medical Engineering</h3>
+                                        <div class="card-description">
+                                            <p>Research in biology and natural systems, combined with innovative applications and design concepts in medical engineering.</p>
+                                        </div>
+                                        <a href="projects/nature-design.html" class="btn btn-sm btn-outline-primary mt-2">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/writing.jpg" alt="Academic Writing" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Academic Writing</h3>
+                                        <div class="card-description">
+                                            <p>Public articles, presentation skills, and other content showcasing my writing ability and communication techniques.</p>
+                                        </div>
+                                        <a href="projects/writing.html" class="btn btn-sm btn-outline-primary mt-2">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/math.jpg" alt="Mathematical Projects" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Mathematical Projects</h3>
+                                        <div class="card-description">
+                                            <p>Mathematical projects in presentation format, demonstrating the integration of mathematical theory with practical applications.</p>
+                                        </div>
+                                        <a href="projects/math-projects.html" class="btn btn-sm btn-outline-primary mt-2">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/robotics.jpg" alt="Robotics" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Robotics Fundamentals</h3>
+                                        <div class="card-description">
+                                            <p>Applications and research of vision and embedded technologies in the field of robotics.</p>
+                                        </div>
+                                        <a href="projects/robotics.html" class="btn btn-sm btn-outline-primary mt-2">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/qea1.jpg" alt="QEA1" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">QEA1</h3>
+                                        <div class="card-description">
+                                            <p>Ship building project research and practice, demonstrating design and engineering implementation capabilities.</p>
+                                        </div>
+                                        <a href="projects/qea1.html" class="btn btn-sm btn-outline-primary mt-2">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/qea2.jpg" alt="QEA2" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">QEA2</h3>
+                                        <div class="card-description">
+                                            <p>Signals and systems, research and development of ECG measurement devices.</p>
+                                        </div>
+                                        <a href="projects/qea2.html" class="btn btn-sm btn-outline-primary mt-2">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/engineering-design.jpg" alt="Engineering Design" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Engineering Design</h3>
+                                        <div class="card-description">
+                                            <p>Design, implementation, and iterative optimization of a Stirling engine.</p>
+                                        </div>
+                                        <a href="projects/engineering-design.html" class="btn btn-sm btn-outline-primary mt-2">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/probability.jpg" alt="Probability & Statistics" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Probability & Statistics</h3>
+                                        <div class="card-description">
+                                            <p>Two project tasks applying theoretical concepts of probability and statistics to practical problems.</p>
+                                        </div>
+                                        <a href="projects/probability.html" class="btn btn-sm btn-outline-primary mt-2">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/ai-intro.jpg" alt="Introduction to AI" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Introduction to AI</h3>
+                                        <div class="card-description">
+                                            <p>Comprehensive course notes and project implementations from Introduction to AI course.</p>
+                                        </div>
+                                        <a href="projects/ai-intro.html" class="btn btn-sm btn-outline-primary mt-2">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/software.jpg" alt="Software Design" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Software Design</h3>
+                                        <div class="card-description">
+                                            <p>Inventory management system, website development, and ROS (Robot Operating System) learning.</p>
+                                        </div>
+                                        <a href="projects/software-design.html" class="btn btn-sm btn-outline-primary mt-2">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/linear-algebra.jpg" alt="Linear Algebra" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Linear Algebra</h3>
+                                        <div class="card-description">
+                                            <p>Implementation of face recognition project using linear algebra principles.</p>
+                                        </div>
+                                        <a href="projects/linear-algebra.html" class="btn btn-sm btn-outline-primary mt-2">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/product-design.jpg" alt="Product Design" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Product Design</h3>
+                                        <div class="card-description">
+                                            <p>Startup product development with a focus on optimization and iterative improvement.</p>
+                                        </div>
+                                        <a href="projects/product-design.html" class="btn btn-sm btn-outline-primary mt-2">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/humanities.jpg" alt="Humanities" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Humanities</h3>
+                                        <div class="card-description">
+                                            <p>English-taught courses in history of technology, human civilization, and humanities & nature with presentations.</p>
+                                        </div>
+                                        <a href="projects/humanities.html" class="btn btn-sm btn-outline-primary mt-2">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Publications Content -->
+            <div class="content-section" id="publications-content">
+                <h2>Publications</h2>
+                
+                <div class="paper">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 card-img-container">
+                            <img src="images/mamba-moe.jpg" alt="Mamba+MoE" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-content">
+                                <div class="paper-title">CCF-A Mamba+MoE Time-Varying Load Prediction</div>
+                                <div class="paper-authors"><span class="highlight">Zhou, Z.</span>, et al.</div>
+                                <div class="paper-venue">AAAI Conference (2024)</div>
+                                <p>This temporal model research presented at the AAAI conference combines Mamba state space models with Mixture of Experts (MoE) for high-precision prediction of time-varying loads, achieving leading results in multiple benchmark tests.</p>
+                                <div class="paper-links">
+                                    <a href="research/ccf-a-mamba.html">[Project Page]</a>
+                                    <a href="#">[PDF]</a>
+                                    <a href="#">[Code]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="paper">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 card-img-container">
+                            <img src="images/llm-sparse.jpg" alt="LLM Sparsification" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-content">
+                                <div class="paper-title">CCF-A LLM Sparsification Research</div>
+                                <div class="paper-authors">Tsinghua-Lenovo, <span class="highlight">Zhou, Z.</span></div>
+                                <div class="paper-venue">AAAI Conference (2024)</div>
+                                <p>In collaboration with Tsinghua University and Lenovo Group, this research on large language model sparsification technology was presented at the AAAI conference, significantly improving model efficiency and reducing computational resource requirements.</p>
+                                <div class="paper-links">
+                                    <a href="research/ccf-a-llm.html">[Project Page]</a>
+                                    <a href="#">[PDF]</a>
+                                    <a href="#">[Code]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="paper">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 card-img-container">
+                            <img src="images/cogsci.jpg" alt="COGSCI Paper" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-content">
+                                <div class="paper-title">CCF-B Level Paper in Cognitive Science</div>
+                                <div class="paper-authors"><span class="highlight">Zhou, Z.</span>, et al.</div>
+                                <div class="paper-venue">COGSCI (2023)</div>
+                                <p>Published in COGSCI, the research focuses on innovative methods and applications in the field of cognitive science. Includes detailed GitHub code implementation, paper content, and explanations.</p>
+                                <div class="paper-links">
+                                    <a href="publications/cogsci.html">[Project Page]</a>
+                                    <a href="#">[PDF]</a>
+                                    <a href="#">[Code]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="paper">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 card-img-container">
+                            <img src="images/robotic-arm.jpg" alt="Charging Robotic Arm" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-content">
+                                <div class="paper-title">Automatic Charging Robotic Arm</div>
+                                <div class="paper-authors"><span class="highlight">Zhou, Z.</span></div>
+                                <div class="paper-venue">Patent (2023)</div>
+                                <p>Developed automatic charging robotic arm technology with patent protection. This project includes a complete solution design and engineering implementation, addressing key technical challenges in automatic electric vehicle charging.</p>
+                                <div class="paper-links">
+                                    <a href="research/auto-charging.html">[Project Page]</a>
+                                    <a href="#">[Patent]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 card-img-container">
+                            <img src="images/zju-project.jpg" alt="ZJU Project" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-content">
+                                <div class="paper-title">Zhejiang University Data Science Project</div>
+                                <div class="paper-authors">Zhejiang University, <span class="highlight">Zhou, Z.</span></div>
+                                <div class="paper-venue">Research Collaboration (2023)</div>
+                                <p>Data science research project in collaboration with Zhejiang University, focusing on innovative applications of big data analysis and processing technologies to provide efficient solutions for practical problems.</p>
+                                <div class="paper-links">
+                                    <a href="research/zju-project.html">[Project Page]</a>
+                                    <a href="#">[Report]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competitions Content -->
+            <div class="content-section" id="competitions-content">
+                <h2>Competitions & Internships</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/ai-challenge.jpg" alt="AI Challenge Cup" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">AI Challenge Cup</h3>
+                                        <div class="card-description">
+                                            <p>Participated in the AI Challenge Cup, developing a diffusion model-based image generation system with the goal of submitting to CVPR 2026.</p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="tag">AI Application</span>
+                                            <span class="tag">Diffusion</span>
+                                            <span class="tag">CVPR</span>
+                                        </div>
+                                        <a href="competitions/ai-challenge.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/xbotpark.jpg" alt="Xbotpark Innovation" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Xbotpark Innovation Park Summer Camp</h3>
+                                        <div class="card-description">
+                                            <p>Participated in a one-month market research, product development, and iterative optimization project at the Israel Innovation Park in Changzhou.</p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="tag">Innovation</span>
+                                            <span class="tag">Market Research</span>
+                                        </div>
+                                        <a href="competitions/xbotpark.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/aircraft.jpg" alt="Aircraft Design" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Aircraft Design Competition</h3>
+                                        <div class="card-description">
+                                            <p>Participated in the China University Aircraft Design Innovation Competition, responsible for visual algorithms, AI hardware, flight control system integration, and fixed-wing manufacturing.</p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="tag">Aircraft Design</span>
+                                            <span class="tag">Vision Algorithms</span>
+                                        </div>
+                                        <a href="competitions/aircraft-design.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/startup.jpg" alt="Startup Internship" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Startup Internship</h3>
+                                        <div class="card-description">
+                                            <p>During my internship at a startup, I focused on fixture design for products, gaining practical experience in industrial design and product development.</p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="tag">Product Design</span>
+                                            <span class="tag">Startup</span>
+                                        </div>
+                                        <a href="competitions/startup-intern.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/manufacturing.jpg" alt="Intelligent Manufacturing" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Intelligent Manufacturing Competition</h3>
+                                        <div class="card-description">
+                                            <p>Participated in the Intelligent Manufacturing Competition using PLC Siemens, demonstrating innovative thinking and teamwork.</p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="tag">PLC</span>
+                                            <span class="tag">Siemens</span>
+                                        </div>
+                                        <a href="competitions/intelligent-manufacturing.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/online-learning.jpg" alt="Online Learning" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Online Learning & Competitions</h3>
+                                        <div class="card-description">
+                                            <p>Completed machine learning and deep learning courses on Coursera with certification, participated in Kaggle competitions with awards, and completed the hands-on deep learning course by Amazon engineers.</p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="tag">Coursera</span>
+                                            <span class="tag">Kaggle</span>
+                                            <span class="tag">Deep Learning</span>
+                                        </div>
+                                        <div class="btn-group">
+                                            <a href="competitions/coursera.html" class="btn btn-sm btn-outline-primary">Coursera</a>
+                                            <a href="competitions/kaggle.html" class="btn btn-sm btn-outline-primary">Kaggle</a>
+                                            <a href="competitions/hands-on-dl.html" class="btn btn-sm btn-outline-primary">Deep Learning</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/srtp.jpg" alt="SRTP" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">SRTP Research Project</h3>
+                                        <div class="card-description">
+                                            <p>Completed SRTP research project with excellent conclusion, ranking in the top 5%.</p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="tag">Research</span>
+                                            <span class="tag">Top 5%</span>
+                                        </div>
+                                        <a href="competitions/srtp.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activities Content -->
+            <div class="content-section" id="activities-content">
+                <h2>Activities</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/football.jpg" alt="Football" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Football</h3>
+                                        <div class="card-description">
+                                            <p>Served as team captain, participated in Chongqing University's internal football competitions, demonstrating teamwork and leadership.</p>
+                                        </div>
+                                        <a href="activities/football.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/badminton.jpg" alt="Badminton" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Badminton</h3>
+                                        <div class="card-description">
+                                            <p>Participated in men's singles and doubles badminton competitions, maintaining physical fitness and competitive spirit.</p>
+                                        </div>
+                                        <a href="activities/badminton.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/cooking.jpg" alt="Cooking" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Cooking</h3>
+                                        <div class="card-description">
+                                            <p>Passionate about cooking, skilled in various cuisines, constantly exploring new cooking techniques and ingredient combinations.</p>
+                                        </div>
+                                        <a href="activities/cooking.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/teaching.jpg" alt="Teaching" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Teaching Project</h3>
+                                        <div class="card-description">
+                                            <p>Participated in the AI general education teaching project organized by Shanghai Jiao Tong University, spreading knowledge and giving back to society.</p>
+                                        </div>
+                                        <a href="activities/teaching.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/art.jpg" alt="Art" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Art</h3>
+                                        <div class="card-description">
+                                            <p>Studied drawing since childhood, continuously improving artistic skills, participating in various artistic creation activities including university courses.</p>
+                                        </div>
+                                        <a href="activities/art.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/music.jpg" alt="Music" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Music</h3>
+                                        <div class="card-description">
+                                            <p>Rich musical experience, playing guitar and singing, passionate about music creation with band experience.</p>
+                                        </div>
+                                        <a href="activities/music.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/outdoor.jpg" alt="Outdoor Activities" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Outdoor Activities</h3>
+                                        <div class="card-description">
+                                            <p>Enjoy cycling and hiking outdoor activities, challenging myself and demonstrating perseverance and determination.</p>
+                                        </div>
+                                        <a href="activities/outdoor.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Study Materials Content -->
+            <div class="content-section" id="materials-content">
+                <h2>Study Materials</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/math1.jpg" alt="Mathematics I" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Mathematics I</h3>
+                                        <div class="card-description">
+                                            <p>Compilation of study materials for Mathematics I, including class notes, exercise solutions, and key formula summaries to help you quickly grasp core concepts.</p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="tag">Calculus</span>
+                                            <span class="tag">Exercises</span>
+                                        </div>
+                                        <a href="materials/math1.html" class="btn btn-sm btn-outline-primary">View Materials</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/math2.jpg" alt="Mathematics II" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Mathematics II</h3>
+                                        <div class="card-description">
+                                            <p>Compilation of essential content for Mathematics II, covering advanced calculus, differential equations, and more, with detailed examples and solutions.</p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="tag">Differential Equations</span>
+                                            <span class="tag">Case Studies</span>
+                                        </div>
+                                        <a href="materials/math2.html" class="btn btn-sm btn-outline-primary">View Materials</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/probability-stat.jpg" alt="Probability & Statistics" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Probability & Statistics</h3>
+                                        <div class="card-description">
+                                            <p>Review materials for Probability and Statistics, covering probability distributions, random variables, statistical inference, and practical calculation methods.</p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="tag">Probability</span>
+                                            <span class="tag">Statistical Inference</span>
+                                        </div>
+                                        <a href="materials/probability.html" class="btn btn-sm btn-outline-primary">View Materials</a>
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+        </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/linear-algebra-materials.jpg" alt="Linear Algebra" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">Linear Algebra</h3>
+                                        <div class="card-description">
+                                            <p>Study materials for Linear Algebra, with in-depth explanations of matrix operations, eigenvalues, vector spaces, and more, combined with machine learning application cases.</p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="tag">Matrix Operations</span>
+                                            <span class="tag">ML Applications</span>
+                                        </div>
+                                        <a href="materials/linear-algebra.html" class="btn btn-sm btn-outline-primary">View Materials</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Content -->
+            <div class="content-section" id="contact-content">
+                <h2>Contact Me</h2>
+                <p class="lead mb-4">If you're interested in my research, projects, or collaboration opportunities, feel free to contact me through the following channels.</p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-4 mb-4 text-center">
+                        <div class="bg-light p-4 rounded mb-3">
+                            <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
+                        </div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:zhipeng.zhou@example.com">zhipeng.zhou@example.com</a></p>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4 text-center">
+                        <div class="bg-light p-4 rounded mb-3">
+                            <i class="fas fa-globe fa-2x text-primary mb-3"></i>
+                        </div>
+                        <h4>Academic Profile</h4>
+                        <p><a href="https://github.com/koooooooop">GitHub</a></p>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4 text-center">
+                        <div class="bg-light p-4 rounded mb-3">
+                            <i class="fas fa-comments fa-2x text-primary mb-3"></i>
+                        </div>
+                        <h4>Social Media</h4>
+                        <p>
+                            <a href="https://github.com/koooooooop" class="mr-3">GitHub</a>
+                            <a href="#">WeChat</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<footer>
+        <div class="container-fluid">
+            <p class="mb-0">&copy; 2024 Zhipeng Zhou. All rights reserved.</p>
+        </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Primary navigation click handler
+            $('.nav-item').on('click', function() {
+                // Get target content id
+                const target = $(this).data('target');
+                
+                // Hide all content sections
+                $('.content-section').removeClass('active');
+                
+                // Show the target content section
+                $(`#${target}-content`).addClass('active');
+                
+                // Update active state in primary nav
+                $('.nav-item').removeClass('active');
+                $(this).addClass('active');
+                
+                // Hide all sub-navigation menus
+                $('.secondary-nav-items').removeClass('active');
+                
+                // Show the corresponding sub-navigation menu
+                $(`#${target}-subnav`).addClass('active');
+            });
+            
+            // Mobile responsive adjustments
+            function adjustForMobile() {
+                if ($(window).width() < 768) {
+                    $('.primary-nav').css('height', 'auto');
+                    $('.secondary-nav').css('height', 'auto');
+                } else {
+                    $('.primary-nav, .secondary-nav').css('height', 'calc(100vh - 120px)');
+                }
+            }
+            
+            $(window).resize(adjustForMobile);
+            adjustForMobile();
         });
     </script>
 </body>
-</html> 
+</html>
