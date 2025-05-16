@@ -254,6 +254,27 @@
         .card-description {
             flex-grow: 1;
         }
+        .news-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .news-date {
+            font-weight: 600;
+            color: #4a6fa5;
+            margin-right: 10px;
+        }
+        .visitors-box {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 25px;
+        }
+        .visitors-map img {
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
         @media (max-width: 767.98px) {
             .main-container {
                 flex-direction: column;
@@ -296,13 +317,18 @@
                 </div>
                 <div class="col-md-9">
                     <h1>Zhipeng Zhou</h1>
-                    <p class="lead text-muted">Undergraduate Student, Computer Science and Technology</p>
+                    <p class="lead text-muted">Undergraduate Student, AI and Robotics Engineering</p>
                     <p class="mb-2">X Innovation Experimental Class, Chongqing University</p>
-                    <p class="mb-3"><i class="fas fa-envelope mr-2"></i>zhipeng.zhou@example.com</p>
+                    <p class="mb-3"><i class="fas fa-envelope mr-2"></i>chouzhipeng8@outlook.com | z.peng@stu.cqu.edu.cn</p>
                     <div class="social-icons">
-                        <a href="https://github.com/koooooooop" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="cv.png" target="_blank"><i class="fas fa-file-alt"></i></a>
+                        <a href="https://github.com/koooooooop" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank" title="WeChat"><i class="fab fa-weixin"></i></a>
+                        <a href="#" target="_blank" title="Twitter/X"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" title="Hugging Face"><i class="fas fa-hugs"></i></a>
+                        <a href="#" target="_blank" title="Feishu"><i class="fas fa-feather-alt"></i></a>
+                        <a href="cv.png" target="_blank" title="CV"><i class="fas fa-file-alt"></i></a>
                     </div>
                 </div>
             </div>
@@ -328,7 +354,6 @@
                     <div class="sub-nav-item">Biography</div>
                     <div class="sub-nav-item">Education</div>
                     <div class="sub-nav-item">Research Interests</div>
-                    <div class="sub-nav-item">Honors & Awards</div>
                 </div>
                 
                 <!-- Projects subcategories -->
@@ -402,18 +427,32 @@
         <div class="content-area">
             <!-- About Content -->
             <div class="content-section active" id="about-content">
-                <h2>About Me</h2>
+                <h2><i class="fas fa-user mr-2"></i>About Me</h2>
                 <p>I'm Zhipeng Zhou, born on October 18, 2004, and currently a student in the X Innovation Experimental Class at Chongqing University. I have a strong interest in software development and technological innovation, with a current focus on research in artificial intelligence and deep learning.</p>
                 <p>My research interests are diverse, encompassing engineering principles, artificial intelligence, software design, linear algebra, and more. In my spare time, I actively participate in various competitions and research projects, and enjoy sports such as football and badminton, as well as hobbies like cooking and music.</p>
 
-                <h3>Education</h3>
+                <h3><i class="far fa-newspaper mr-2"></i>News</h3>
+                <div class="news-item">
+                    <p><span class="news-date">2025.02:</span> 🎉 🎊 <a href="#">DiffSensei</a> is accepted by CVPR 2025!</p>
+                </div>
+                <!-- Add more news items as needed -->
+
+                <h3><i class="fas fa-graduation-cap mr-2"></i>Education</h3>
                 <div class="mb-4">
                     <div><span class="year">2023 - Present</span> <strong>Chongqing University</strong></div>
                     <div>X Innovation Experimental Class</div>
-                    <div>B.Eng. in Computer Science and Technology</div>
+                    <div>B.Eng. in AI and Robotics Engineering</div>
+                </div>
+                <div class="mb-4">
+                    <div><span class="year">2025 (Summer)</span> <strong>Zhejiang University</strong></div>
+                    <div>SDG Summer School</div>
+                </div>
+                <div class="mb-4">
+                    <div><span class="year">2017 - 2023</span> <strong>Chongqing Bachuan International High School</strong></div>
+                    <div>Six years of comprehensive education</div>
                 </div>
 
-                <h3>Research Interests</h3>
+                <h3><i class="fas fa-lightbulb mr-2"></i>Research Interests</h3>
                 <div class="mb-4">
                     <span class="tag">Artificial Intelligence</span>
                     <span class="tag">Deep Learning</span>
@@ -426,7 +465,7 @@
 
             <!-- Projects Content -->
             <div class="content-section" id="projects-content">
-                <h2>Projects</h2>
+                <h2><i class="fas fa-project-diagram mr-2"></i>Projects</h2>
                 
                 <div class="row mb-4">
                     <div class="col-md-6 mb-4">
@@ -699,7 +738,7 @@
 
             <!-- Publications Content -->
             <div class="content-section" id="publications-content">
-                <h2>Publications</h2>
+                <h2><i class="fas fa-book mr-2"></i>Publications</h2>
                 
                 <div class="paper">
                     <div class="row no-gutters">
@@ -807,7 +846,7 @@
 
             <!-- Competitions Content -->
             <div class="content-section" id="competitions-content">
-                <h2>Competitions & Internships</h2>
+                <h2><i class="fas fa-trophy mr-2"></i>Competitions & Internships</h2>
                 <div class="row">
                     <div class="col-md-6 mb-4">
                         <div class="project-card">
@@ -980,7 +1019,7 @@
 
             <!-- Activities Content -->
             <div class="content-section" id="activities-content">
-                <h2>Activities</h2>
+                <h2><i class="fas fa-running mr-2"></i>Activities</h2>
                 <div class="row">
                     <div class="col-md-6 mb-4">
                         <div class="project-card">
@@ -1119,7 +1158,7 @@
 
             <!-- Study Materials Content -->
             <div class="content-section" id="materials-content">
-                <h2>Study Materials</h2>
+                <h2><i class="fas fa-book-open mr-2"></i>Study Materials</h2>
                 <div class="row">
                     <div class="col-md-6 mb-4">
                         <div class="project-card">
@@ -1187,8 +1226,8 @@
                                     </div>
                                 </div>
                             </div>
-            </div>
-        </div>
+                        </div>
+                    </div>
                     
                     <div class="col-md-6 mb-4">
                         <div class="project-card">
@@ -1217,7 +1256,7 @@
 
             <!-- Contact Content -->
             <div class="content-section" id="contact-content">
-                <h2>Contact Me</h2>
+                <h2><i class="fas fa-envelope mr-2"></i>Contact Me</h2>
                 <p class="lead mb-4">If you're interested in my research, projects, or collaboration opportunities, feel free to contact me through the following channels.</p>
                 
                 <div class="row mt-4">
@@ -1226,7 +1265,8 @@
                             <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
                         </div>
                         <h4>Email</h4>
-                        <p><a href="mailto:zhipeng.zhou@example.com">zhipeng.zhou@example.com</a></p>
+                        <p><a href="mailto:chouzhipeng8@outlook.com">chouzhipeng8@outlook.com</a></p>
+                        <p><a href="mailto:z.peng@stu.cqu.edu.cn">z.peng@stu.cqu.edu.cn</a></p>
                     </div>
                     
                     <div class="col-md-4 mb-4 text-center">
@@ -1235,6 +1275,7 @@
                         </div>
                         <h4>Academic Profile</h4>
                         <p><a href="https://github.com/koooooooop">GitHub</a></p>
+                        <p><a href="#">Hugging Face</a></p>
                     </div>
                     
                     <div class="col-md-4 mb-4 text-center">
@@ -1243,20 +1284,22 @@
                         </div>
                         <h4>Social Media</h4>
                         <p>
-                            <a href="https://github.com/koooooooop" class="mr-3">GitHub</a>
-                            <a href="#">WeChat</a>
+                            <a href="#" class="mr-3">WeChat</a>
+                            <a href="#" class="mr-3">Twitter/X</a>
+                            <a href="#" class="mr-3">Instagram</a>
+                            <a href="#">Feishu</a>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-</div>
+    </div>
 
-<footer>
+    <footer>
         <div class="container-fluid">
             <p class="mb-0">&copy; 2024 Zhipeng Zhou. All rights reserved.</p>
         </div>
-</footer>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
