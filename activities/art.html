@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Activities - Zhipeng Zhou</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+        }
+        .header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .activity-header {
+            background-color: #e67e22;
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+        .activity-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .section {
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .section-title {
+            color: #e67e22;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .img-container {
+            overflow: hidden;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .img-container img {
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+        .img-container:hover img {
+            transform: scale(1.05);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 15px;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .btn-outline-primary {
+            color: #e67e22;
+            border-color: #e67e22;
+        }
+        .btn-outline-primary:hover {
+            background-color: #e67e22;
+            border-color: #e67e22;
+            color: white;
+        }
+        footer {
+            background-color: #f5f5f5;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1><a href="../index.html" class="text-dark text-decoration-none">Zhipeng Zhou</a></h1>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <a href="../index.html" class="btn btn-outline-primary"><i class="fas fa-arrow-left mr-2"></i>Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="activity-header">
+        <div class="container text-center">
+            <span class="activity-icon">🎨</span>
+            <h1>Art Activities</h1>
+            <p class="lead">Cultivating artistic expression and visual communication skills through various creative practices and design work.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="sketching" class="section">
+            <h2 class="section-title">✏️ Sketching</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="img-container">
+                        <img src="../images/sketching.jpg" alt="Sketching Work" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Sketching Practice</h3>
+                    <p>Sketching has been a fundamental way for me to explore ideas and develop visual thinking skills. I practice regularly to improve my observation, proportion, and rendering techniques.</p>
+                    
+                    <h4 class="mt-4">Skills & Techniques</h4>
+                    <ul>
+                        <li>Perspective drawing and spatial reasoning</li>
+                        <li>Portrait and figure sketching</li>
+                        <li>Technical and architectural sketching</li>
+                        <li>Quick conceptual sketches for engineering designs</li>
+                    </ul>
+                    
+                    <p class="mt-4">My sketching practice has proven valuable in engineering contexts, allowing me to quickly communicate ideas visually and explore design alternatives.</p>
+                </div>
+            </div>
+            
+            <div class="gallery mt-4">
+                <div class="gallery-item">
+                    <img src="../images/sketch1.jpg" alt="Sketch Example 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/sketch2.jpg" alt="Sketch Example 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/sketch3.jpg" alt="Sketch Example 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/sketch4.jpg" alt="Sketch Example 4">
+                </div>
+            </div>
+        </div>
+
+        <div id="design" class="section">
+            <h2 class="section-title">🖌️ Design</h2>
+            <div class="row">
+                <div class="col-md-6 order-md-2">
+                    <div class="img-container">
+                        <img src="../images/design.jpg" alt="Design Work" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h3>Design Projects</h3>
+                    <p>My interest in design extends beyond sketching to include digital design work, UI/UX concepts, and product visualization. I combine aesthetic sensibility with functional considerations to create effective designs.</p>
+                    
+                    <h4 class="mt-4">Design Areas</h4>
+                    <ul>
+                        <li>User interface design for software projects</li>
+                        <li>Poster and presentation design for academic work</li>
+                        <li>Product concept visualization</li>
+                        <li>Information design and data visualization</li>
+                    </ul>
+                    
+                    <p class="mt-4">Design thinking has influenced my approach to engineering problems, encouraging me to consider user experience and aesthetic aspects alongside technical requirements.</p>
+                </div>
+            </div>
+            
+            <div class="gallery mt-4">
+                <div class="gallery-item">
+                    <img src="../images/design1.jpg" alt="Design Example 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/design2.jpg" alt="Design Example 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/design3.jpg" alt="Design Example 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/design4.jpg" alt="Design Example 4">
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <p>Artistic pursuits have enhanced my creativity and visual thinking, complementing my technical education with different perspectives and problem-solving approaches.</p>
+            <a href="../index.html#activities-content" class="btn btn-outline-primary">Back to Activities</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Zhipeng Zhou. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

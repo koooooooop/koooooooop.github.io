@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CCF-B Level Paper in Cognitive Science | Zhipeng Zhou</title>
+    <title>Who Detects Better? A Comparative Study on Misinformation Detection | Zhipeng Zhou</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap">
@@ -176,18 +176,28 @@
     <!-- Header Section -->
     <header class="header-section">
         <div class="container">
-            <h1 class="paper-title">CCF-B Level Paper in Cognitive Science</h1>
+            <h1 class="paper-title">Who Detects Better? A Comparative Study on Misinformation Detection by Humans and Large Language Models</h1>
             <div class="authors">
-                <div class="author">Zhou, Z.</div>
-                <div class="author">et al.</div>
+                <div class="author"><strong>Zhipeng Zhou</strong></div>
+                <div class="author">Xiao Liu</div>
+                <div class="author">Huaicheng He</div>
+                <div class="author">Da Ding</div>
             </div>
             <div class="institution">
-                COGSCI (2023)
+                Chongqing University<br>
+                174 Shazheng St., Shapingba, Chongqing, 400044, China
+            </div>
+            <div class="authors mt-4">
+                <div class="author">Qianshi Qi</div>
+            </div>
+            <div class="institution">
+                Monash University<br>
+                Melbourne, Australia
             </div>
             <div class="paper-links">
                 <a href="#" class="paper-link">Project Page</a>
-                <a href="#" class="paper-link">PDF</a>
-                <a href="#" class="paper-link">Code</a>
+                <a href="cogsci-pdf.html" class="paper-link">PDF</a>
+                <a href="https://github.com/anonymous-submission8888" class="paper-link">Code</a>
             </div>
         </div>
     </header>
@@ -198,58 +208,60 @@
             <h2 class="section-title">Abstract</h2>
             <div class="abstract">
                 <p>
-                    Published in COGSCI, the research focuses on innovative methods and applications in the field of cognitive science. Includes detailed GitHub code implementation, paper content, and explanations.
+                    Large language models (LLMs) have demonstrated remarkable capabilities in natural language understanding and generation. However, their ability to detect and react to misinformation remains an open question, particularly in comparison to human cognitive mechanisms. This study investigates how LLMs and humans react to misinformation by analyzing their performance across five categories of errors: intellectual, common sense, reasoning, misleading, and logical errors. We construct the ErrorQuestionDataset, comprising 346 misinformation-related questions, and conduct an empirical study involving five state-of-the-art LLMs (ChatGPT-4o, Gemini-1.5-Flash, DeepSeek-v3, Hunyuan-Large, GLM-v4Flash) and 251 human participants. Our findings reveal distinct response patterns: while LLMs rely on statistical correlations and pattern recognition, humans leverage contextual reasoning and domain-specific knowledge. The results indicate that LLMs generally achieve higher accuracy than humans in error detection tasks, but their performances lack depth in reasoning-based assessments. Additionally, we identify five primary performance types—affirmation, negation, hesitation, questioning, and off-topic reactions—providing insights into the cognitive differences between LLMs and human cognition. Our study contributes to the broader understanding of misinformation detection and offers implications for enhancing the robustness and reliability of LLMs in real-world applications.
                 </p>
             </div>
 
             <h2 class="section-title">Gallery</h2>
             <div class="gallery row">
                 <div class="col-md-6">
-                    <img src="../images/cogsci-figure1.jpg" alt="COGSCI Paper Figure 1" class="gallery-image">
+                    <img src="../images/cogsci1.png" alt="Accuracy Comparison" class="gallery-image">
+                    <p class="text-center mt-2">Accuracy Comparison across Models and Human Participants</p>
                 </div>
                 <div class="col-md-6">
-                    <img src="../images/cogsci-figure2.jpg" alt="COGSCI Paper Figure 2" class="gallery-image">
+                    <img src="../images/cogsci2.png" alt="Error Type Analysis" class="gallery-image">
+                    <p class="text-center mt-2">Accuracy by Error Type: LLMs vs. Human Participants</p>
                 </div>
             </div>
 
             <h2 class="section-title">Research Highlights</h2>
             <p>
-                Our research in cognitive science explores innovative methods and applications in the field. Key aspects include:
+                Our comparative study on misinformation detection explores several key aspects:
             </p>
             <ul>
-                <li>Novel computational frameworks for cognitive modeling</li>
-                <li>Application of advanced statistical methods to understand cognitive processes</li>
-                <li>Integration of theoretical models with empirical data</li>
-                <li>Development of open-source tools for cognitive science research</li>
-                <li>Interdisciplinary approaches combining cognitive science with related fields</li>
+                <li><strong>ErrorQuestionDataset:</strong> Construction of a dataset with 346 misinformation-related questions across five error categories</li>
+                <li><strong>Human-AI Comparison:</strong> Analysis of how 5 state-of-the-art LLMs and 251 human participants detect and respond to misinformation</li>
+                <li><strong>Category-Based Analysis:</strong> Detailed comparison across intellectual, common sense, reasoning, misleading, and logical error types</li>
+                <li><strong>Response Pattern Identification:</strong> Classification of five primary performance types: affirmation, negation, hesitation, questioning, and off-topic reactions</li>
+                <li><strong>Cognitive Mechanism Analysis:</strong> Exploration of the fundamental differences in how LLMs and humans process and respond to errors</li>
             </ul>
 
             <p>
-                The research contributes to our understanding of cognitive processes and provides practical tools for further investigation in the field.
+                The research contributes to cognitive science by providing insights into the similarities and differences between artificial and human intelligence when confronted with misinformation, with implications for AI safety and reliability.
             </p>
 
             <h2 class="section-title">Implementation</h2>
             <p>
-                Our research includes detailed GitHub code implementation with comprehensive documentation:
+                Our study implementation includes:
             </p>
             <ol>
-                <li><strong>Data Processing:</strong> Scripts for preparing and preprocessing experimental data</li>
-                <li><strong>Model Implementation:</strong> Code for computational models described in the paper</li>
-                <li><strong>Analysis Tools:</strong> Statistical analysis scripts for evaluating results</li>
-                <li><strong>Visualization:</strong> Tools for generating figures and interactive visualizations</li>
+                <li><strong>Dataset Construction:</strong> Carefully designed questions across five error categories to test different aspects of error detection</li>
+                <li><strong>LLM Evaluation Framework:</strong> Systematic testing methodology for assessing LLM responses to misinformation</li>
+                <li><strong>Human Study Design:</strong> Controlled experiments with 251 participants to establish human baseline performance</li>
+                <li><strong>Statistical Analysis:</strong> Rigorous comparative analysis of performance metrics between LLMs and humans</li>
+                <li><strong>Response Classification:</strong> Framework for categorizing and analyzing different types of reactions to misinformation</li>
             </ol>
-            <img src="../images/cogsci-architecture.jpg" alt="Implementation Architecture" class="architecture-image">
             <p>
-                The codebase is designed to be modular and extensible, allowing researchers to build upon our work and adapt it to their specific research questions in cognitive science.
+                All experiment materials, code, and dataset are available on GitHub, allowing researchers to reproduce our findings and build upon this work for further research in misinformation detection.
             </p>
 
             <h2 class="section-title">BibTeX</h2>
             <div class="bibtex">
-                <pre>@inproceedings{zhou2023ccfb,
-  title={CCF-B Level Paper in Cognitive Science},
-  author={Zhou, Z. and others},
+                <pre>@inproceedings{zhou2025who,
+  title={Who Detects Better? A Comparative Study on Misinformation Detection by Humans and Large Language Models},
+  author={Zhou, Zhipeng and Liu, Xiao and He, Huaicheng and Ding, Da and Qi, Qianshi},
   booktitle={Proceedings of the Annual Meeting of the Cognitive Science Society},
-  year={2023}
+  year={2025}
 }</pre>
             </div>
         </div>

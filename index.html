@@ -306,6 +306,28 @@
                 padding-right: 20px;
             }
         }
+        .d-none {
+            display: none !important;
+        }
+        
+        /* Enhanced badge styles for activities */
+        .badge-pill.badge-light {
+            font-size: 0.95rem;
+            padding: 8px 15px;
+            margin: 4px;
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+        
+        .badge-pill.badge-light:hover {
+            background-color: #4a6fa5;
+            color: white;
+            border-color: #4a6fa5;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
@@ -313,7 +335,7 @@
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-md-3 text-center">
-                    <img src="my_photo.jpg" alt="Zhipeng Zhou" class="profile-img mb-3">
+                    <img src="images/my_photo.jpg" alt="Zhipeng Zhou" class="profile-img mb-3">
                 </div>
                 <div class="col-md-9">
                     <h1>Zhipeng Zhou</h1>
@@ -398,13 +420,10 @@
                 
                 <!-- Activities subcategories -->
                 <div class="secondary-nav-items" id="activities-subnav">
-                    <div class="sub-nav-item"><a href="activities/football.html">Football</a></div>
-                    <div class="sub-nav-item"><a href="activities/badminton.html">Badminton</a></div>
-                    <div class="sub-nav-item"><a href="activities/cooking.html">Cooking</a></div>
-                    <div class="sub-nav-item"><a href="activities/teaching.html">Teaching Project</a></div>
-                    <div class="sub-nav-item"><a href="activities/art.html">Art</a></div>
-                    <div class="sub-nav-item"><a href="activities/music.html">Guitar & Singing</a></div>
-                    <div class="sub-nav-item"><a href="activities/outdoor.html">Cycling & Hiking</a></div>
+                    <div class="sub-nav-item"><a href="activities/sports.html">🏅 Sports</a></div>
+                    <div class="sub-nav-item"><a href="activities/music.html">🎵 Music</a></div>
+                    <div class="sub-nav-item"><a href="activities/art.html">🎨 Art</a></div>
+                    <div class="sub-nav-item"><a href="activities/volunteer.html">❤️ Volunteer Activities</a></div>
                 </div>
                 
                 <!-- Study Materials subcategories -->
@@ -459,6 +478,32 @@
                         <div class="text-right"><span class="year">2017 - 2023</span></div>
                     </div>
                     <div>Six years of comprehensive education</div>
+                </div>
+
+                <h3><i class="fas fa-flask mr-2"></i>Research Experience</h3>
+                <div class="mb-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div><strong>Tsinghua University Shenzhen Graduate School</strong></div>
+                        <div class="text-right"><span class="year">Feb. 2025 - Present</span></div>
+                    </div>
+                    <div>Project Research Intern</div>
+                    <div>Research focus on [specific project details]</div>
+                </div>
+                <div class="mb-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div><strong>School of Big Data and Software, Chongqing University</strong></div>
+                        <div class="text-right"><span class="year">Mar. 2025 - Present</span></div>
+                    </div>
+                    <div>Research Intern under Professor Fan</div>
+                    <div>Research on [specific research topic]</div>
+                </div>
+                <div class="mb-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div><strong>AI Laboratory, National Outstanding Engineer Academy, Chongqing University</strong></div>
+                        <div class="text-right"><span class="year">2024</span></div>
+                    </div>
+                    <div>Research Intern</div>
+                    <div>Responsible for [specific responsibilities]</div>
                 </div>
 
                 <h3><i class="fas fa-lightbulb mr-2"></i>Research Interests</h3>
@@ -795,18 +840,18 @@
                 <div class="paper">
                     <div class="row no-gutters">
                         <div class="col-md-3 card-img-container">
-                            <img src="images/cogsci.jpg" alt="COGSCI Paper" class="img-fluid">
+                            <img src="images/cogscicover.png" alt="COGSCI Paper" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
                         </div>
                         <div class="col-md-9">
                             <div class="card-content">
-                                <div class="paper-title">CCF-B Level Paper in Cognitive Science</div>
-                                <div class="paper-authors"><span class="highlight">Zhou, Z.</span>, et al.</div>
-                                <div class="paper-venue">COGSCI (2023)</div>
-                                <p>Published in COGSCI, the research focuses on innovative methods and applications in the field of cognitive science. Includes detailed GitHub code implementation, paper content, and explanations.</p>
+                                <div class="paper-title">Who Detects Better? A Comparative Study on Misinformation Detection by Humans and Large Language Models</div>
+                                <div class="paper-authors"><span class="highlight">Zhou, Z.</span>, Liu, X., He, H., Ding, D., Qi, Q.</div>
+                                <div class="paper-venue">Proceedings of the Annual Meeting of the Cognitive Science Society (2025)</div>
+                                <p>This study investigates how LLMs and humans react to misinformation by analyzing their performance across five categories of errors: intellectual, common sense, reasoning, misleading, and logical errors. Our findings reveal distinct response patterns between LLMs and humans, with LLMs generally achieving higher accuracy but lacking depth in reasoning-based assessments.</p>
                                 <div class="paper-links">
                                     <a href="publications/cogsci.html">[Project Page]</a>
-                                    <a href="#">[PDF]</a>
-                                    <a href="#">[Code]</a>
+                                    <a href="publications/cogsci-pdf.html">[PDF]</a>
+                                    <a href="https://github.com/anonymous-submission8888">[Code]</a>
                                 </div>
                             </div>
                         </div>
@@ -1034,92 +1079,44 @@
                     <div class="col-md-6 mb-4">
                         <div class="project-card">
                             <div class="row no-gutters">
-                                <div class="col-md-4 card-img-container">
-                                    <img src="images/football.jpg" alt="Football" class="img-fluid">
+                                <div class="col-md-4 card-img-container" style="display: flex; flex-direction: column;">
+                                    <div style="flex: 2;">
+                                        <img src="images/hiking2.jpg" alt="Hiking Adventure" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover; margin-bottom: 8px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <img src="images/sking.jpg" alt="Skiing Activity" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                                    </div>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-content">
-                                        <h3 class="card-title">Football</h3>
+                                        <h3 class="card-title"><span style="font-size: 1.4rem; margin-right: 6px;">🏅</span> Sports</h3>
                                         <div class="card-description">
-                                            <p>Served as team captain, participated in Chongqing University's internal football competitions, demonstrating teamwork and leadership.</p>
+                                            <p style="line-height: 1.7; margin-bottom: 18px; color: #444;">Sports have been key for me. I've learned teamwork for group success, built the discipline and resilience to tackle tough academic challenges, and found it's the best way to stay focused and balanced. Sports shaped me into a determined and collaborative individual.</p>
                                         </div>
-                                        <a href="activities/football.html" class="btn btn-sm btn-outline-primary">View Details</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 mb-4">
-                        <div class="project-card">
-                            <div class="row no-gutters">
-                                <div class="col-md-4 card-img-container">
-                                    <img src="images/badminton.jpg" alt="Badminton" class="img-fluid">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-content">
-                                        <h3 class="card-title">Badminton</h3>
-                                        <div class="card-description">
-                                            <p>Participated in men's singles and doubles badminton competitions, maintaining physical fitness and competitive spirit.</p>
+                            <div class="row mt-2">
+                                <div class="col-12">
+                                    <div style="display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 10px; padding: 0 10px;">
+                                        <div style="text-align: center;">
+                                            <a href="activities/sports.html#football" class="badge badge-pill badge-light p-2 fs-6" style="transition: all 0.2s ease; border: 1px solid #e0e0e0; min-width: 110px; display: inline-block;">⚽ Football</a>
                                         </div>
-                                        <a href="activities/badminton.html" class="btn btn-sm btn-outline-primary">View Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 mb-4">
-                        <div class="project-card">
-                            <div class="row no-gutters">
-                                <div class="col-md-4 card-img-container">
-                                    <img src="images/cooking.jpg" alt="Cooking" class="img-fluid">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-content">
-                                        <h3 class="card-title">Cooking</h3>
-                                        <div class="card-description">
-                                            <p>Passionate about cooking, skilled in various cuisines, constantly exploring new cooking techniques and ingredient combinations.</p>
+                                        <div style="text-align: center;">
+                                            <a href="activities/sports.html#badminton" class="badge badge-pill badge-light p-2 fs-6" style="transition: all 0.2s ease; border: 1px solid #e0e0e0; min-width: 110px; display: inline-block;">🏸 Badminton</a>
                                         </div>
-                                        <a href="activities/cooking.html" class="btn btn-sm btn-outline-primary">View Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 mb-4">
-                        <div class="project-card">
-                            <div class="row no-gutters">
-                                <div class="col-md-4 card-img-container">
-                                    <img src="images/teaching.jpg" alt="Teaching" class="img-fluid">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-content">
-                                        <h3 class="card-title">Teaching Project</h3>
-                                        <div class="card-description">
-                                            <p>Participated in the AI general education teaching project organized by Shanghai Jiao Tong University, spreading knowledge and giving back to society.</p>
+                                        <div style="text-align: center;">
+                                            <a href="activities/sports.html#snooker" class="badge badge-pill badge-light p-2 fs-6" style="transition: all 0.2s ease; border: 1px solid #e0e0e0; min-width: 110px; display: inline-block;">🎱 Snooker</a>
                                         </div>
-                                        <a href="activities/teaching.html" class="btn btn-sm btn-outline-primary">View Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 mb-4">
-                        <div class="project-card">
-                            <div class="row no-gutters">
-                                <div class="col-md-4 card-img-container">
-                                    <img src="images/art.jpg" alt="Art" class="img-fluid">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-content">
-                                        <h3 class="card-title">Art</h3>
-                                        <div class="card-description">
-                                            <p>Studied drawing since childhood, continuously improving artistic skills, participating in various artistic creation activities including university courses.</p>
+                                        <div style="text-align: center;">
+                                            <a href="activities/sports.html#skiing" class="badge badge-pill badge-light p-2 fs-6" style="transition: all 0.2s ease; border: 1px solid #e0e0e0; min-width: 110px; display: inline-block;">🎿 Skiing</a>
                                         </div>
-                                        <a href="activities/art.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                                        <div style="text-align: center;">
+                                            <a href="activities/sports.html#hiking" class="badge badge-pill badge-light p-2 fs-6" style="transition: all 0.2s ease; border: 1px solid #e0e0e0; min-width: 110px; display: inline-block;">🏔️ Hiking</a>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <a href="activities/sports.html#cycling" class="badge badge-pill badge-light p-2 fs-6" style="transition: all 0.2s ease; border: 1px solid #e0e0e0; min-width: 110px; display: inline-block;">🚴 Cycling</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1134,11 +1131,22 @@
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-content">
-                                        <h3 class="card-title">Music</h3>
+                                        <h3 class="card-title">🎵 Music</h3>
                                         <div class="card-description">
-                                            <p>Rich musical experience, playing guitar and singing, passionate about music creation with band experience.</p>
+                                            <p>Rich musical experience developing creative expression through instrumental performance and vocal activities.</p>
                                         </div>
-                                        <a href="activities/music.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-12">
+                                    <div style="display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 10px; padding: 0 10px;">
+                                        <div style="text-align: center;">
+                                            <a href="activities/music.html#guitar" class="badge badge-pill badge-light p-2 fs-6" style="transition: all 0.2s ease; border: 1px solid #e0e0e0; min-width: 110px; display: inline-block;">🎸 Guitar</a>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <a href="activities/music.html#singing" class="badge badge-pill badge-light p-2 fs-6" style="transition: all 0.2s ease; border: 1px solid #e0e0e0; min-width: 110px; display: inline-block;">🎤 Singing</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1149,15 +1157,59 @@
                         <div class="project-card">
                             <div class="row no-gutters">
                                 <div class="col-md-4 card-img-container">
-                                    <img src="images/outdoor.jpg" alt="Outdoor Activities" class="img-fluid">
+                                    <img src="images/art.jpg" alt="Art" class="img-fluid">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-content">
-                                        <h3 class="card-title">Outdoor Activities</h3>
+                                        <h3 class="card-title">🎨 Art</h3>
                                         <div class="card-description">
-                                            <p>Enjoy cycling and hiking outdoor activities, challenging myself and demonstrating perseverance and determination.</p>
+                                            <p>Cultivating artistic expression and visual communication skills through various creative practices and design work.</p>
                                         </div>
-                                        <a href="activities/outdoor.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-12">
+                                    <div style="display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 10px; padding: 0 10px;">
+                                        <div style="text-align: center;">
+                                            <a href="activities/art.html#sketching" class="badge badge-pill badge-light p-2 fs-6" style="transition: all 0.2s ease; border: 1px solid #e0e0e0; min-width: 110px; display: inline-block;">✏️ Sketching</a>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <a href="activities/art.html#design" class="badge badge-pill badge-light p-2 fs-6" style="transition: all 0.2s ease; border: 1px solid #e0e0e0; min-width: 110px; display: inline-block;">🖌️ Design</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="row no-gutters">
+                                <div class="col-md-4 card-img-container">
+                                    <img src="images/volunteer.jpg" alt="Volunteer Activities" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-content">
+                                        <h3 class="card-title">❤️ Volunteer Activities</h3>
+                                        <div class="card-description">
+                                            <p>Contributing to society through educational outreach and community service, sharing knowledge and skills with others.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-12">
+                                    <div style="display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 10px; padding: 0 10px;">
+                                        <div style="text-align: center;">
+                                            <a href="activities/volunteer.html#teaching" class="badge badge-pill badge-light p-2 fs-6" style="transition: all 0.2s ease; border: 1px solid #e0e0e0; min-width: 110px; display: inline-block;">👨‍🏫 Teaching</a>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <a href="activities/volunteer.html#science" class="badge badge-pill badge-light p-2 fs-6" style="transition: all 0.2s ease; border: 1px solid #e0e0e0; min-width: 110px; display: inline-block;">🔬 Science Education</a>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <a href="activities/volunteer.html#elderly" class="badge badge-pill badge-light p-2 fs-6" style="transition: all 0.2s ease; border: 1px solid #e0e0e0; min-width: 110px; display: inline-block;">👴 Elderly Care</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1196,8 +1248,9 @@
                     <div class="col-md-6 mb-4">
                         <div class="project-card">
                             <div class="row no-gutters">
-                                <div class="col-md-4 card-img-container">
-                                    <img src="images/math2.jpg" alt="Mathematics II" class="img-fluid">
+                                <div class="col-md-4 card-img-container" style="display: flex; flex-direction: column;">
+                                    <img src="images/math2.1cover.png" alt="Mathematics II - Directional Derivative" class="img-fluid" style="flex: 1; object-fit: cover; margin-bottom: 4px;">
+                                    <img src="images/math2cover.png" alt="Mathematics II - Gauss Theorem" class="img-fluid" style="flex: 1; object-fit: cover; margin-top: 4px;">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-content">
@@ -1209,7 +1262,9 @@
                                             <span class="tag">Differential Equations</span>
                                             <span class="tag">Case Studies</span>
                                         </div>
-                                        <a href="materials/math2.html" class="btn btn-sm btn-outline-primary">View Materials</a>
+                                        <div class="btn-group">
+                                            <a href="materials/math2-pdf.html" class="btn btn-sm btn-outline-primary"><i class="fas fa-file-pdf mr-1"></i>View PDF</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

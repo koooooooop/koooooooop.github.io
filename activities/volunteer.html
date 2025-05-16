@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Activities - Zhipeng Zhou</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+        }
+        .header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .activity-header {
+            background-color: #e74c3c;
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+        .activity-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .section {
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .section-title {
+            color: #e74c3c;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .img-container {
+            overflow: hidden;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .img-container img {
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+        .img-container:hover img {
+            transform: scale(1.05);
+        }
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin-top: 30px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: #e74c3c;
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 25px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #e74c3c;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 2px #e74c3c;
+        }
+        .timeline-date {
+            font-weight: 700;
+            color: #e74c3c;
+            margin-bottom: 5px;
+        }
+        .btn-outline-primary {
+            color: #e74c3c;
+            border-color: #e74c3c;
+        }
+        .btn-outline-primary:hover {
+            background-color: #e74c3c;
+            border-color: #e74c3c;
+            color: white;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-gap: 20px;
+            margin: 30px 0;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            color: #777;
+        }
+        footer {
+            background-color: #f5f5f5;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1><a href="../index.html" class="text-dark text-decoration-none">Zhipeng Zhou</a></h1>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <a href="../index.html" class="btn btn-outline-primary"><i class="fas fa-arrow-left mr-2"></i>Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="activity-header">
+        <div class="container text-center">
+            <span class="activity-icon">❤️</span>
+            <h1>Volunteer Activities</h1>
+            <p class="lead">Contributing to society through educational outreach and community service, sharing knowledge and skills with others.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Hours Volunteered</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Organizations</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Students Tutored</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Community Events</div>
+            </div>
+        </div>
+
+        <div id="teaching" class="section">
+            <h2 class="section-title">👨‍🏫 Teaching</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="img-container">
+                        <img src="../images/teaching.jpg" alt="Teaching Volunteer Work" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Educational Outreach</h3>
+                    <p>I've volunteered as a tutor and teaching assistant in local educational programs, working with students who need additional support in STEM subjects. This experience has been rewarding both for the students and for my own development as a communicator and educator.</p>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2023 - Present</div>
+                            <h4>University Peer Tutor</h4>
+                            <p>Helping fellow students with challenging concepts in mathematics, physics, and programming.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2022 - 2023</div>
+                            <h4>High School Mentorship Program</h4>
+                            <p>Mentored high school students interested in engineering and technology careers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="science" class="section">
+            <h2 class="section-title">🔬 Science Education</h2>
+            <div class="row">
+                <div class="col-md-6 order-md-2">
+                    <div class="img-container">
+                        <img src="../images/science-education.jpg" alt="Science Education Volunteer Work" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h3>Making Science Accessible</h3>
+                    <p>I believe in the importance of making science and technology accessible to everyone. Through demonstrations, workshops, and outreach events, I've helped spark interest in STEM fields among younger students and the general public.</p>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2024</div>
+                            <h4>Science Fair Judge</h4>
+                            <p>Served as a judge for a local middle school science fair, providing feedback and encouragement to young scientists.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2023</div>
+                            <h4>Robotics Workshop Leader</h4>
+                            <p>Led introductory robotics workshops for elementary school students, demonstrating basic programming and engineering principles.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2022</div>
+                            <h4>Science Museum Volunteer</h4>
+                            <p>Assisted with interactive exhibits and demonstrations at a local science museum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="elderly" class="section">
+            <h2 class="section-title">👴 Elderly Care</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="img-container">
+                        <img src="../images/elderly-care.jpg" alt="Elderly Care Volunteer Work" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Supporting Older Generations</h3>
+                    <p>Volunteering with elderly care centers has given me valuable perspective and allowed me to connect with and learn from older generations. These experiences have taught me patience, empathy, and the importance of community across age groups.</p>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2023 - Present</div>
+                            <h4>Technology Assistance Program</h4>
+                            <p>Helping seniors learn to use digital devices and access online resources for communication and daily needs.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2022</div>
+                            <h4>Community Center Activities</h4>
+                            <p>Organized and facilitated social and recreational activities at a local senior community center.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <p>Volunteer work has been a meaningful way for me to apply my skills and knowledge while giving back to my community. These experiences have shaped my understanding of social responsibility and the impact I can have as an engineer and citizen.</p>
+            <a href="../index.html#activities-content" class="btn btn-outline-primary">Back to Activities</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Zhipeng Zhou. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

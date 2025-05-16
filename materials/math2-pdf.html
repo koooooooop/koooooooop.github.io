@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematics II - PDF Viewer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .navbar-brand {
+            font-family: 'Lora', serif;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .pdf-container {
+            width: 100%;
+            height: calc(100vh - 150px);
+            margin: 20px 0;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .btn-outline-primary {
+            color: #4a6fa5;
+            border-color: #4a6fa5;
+        }
+        .btn-outline-primary:hover {
+            background-color: #4a6fa5;
+            border-color: #4a6fa5;
+            color: #fff;
+        }
+        footer {
+            background-color: #f9f9f9;
+            padding: 15px 0;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="../index.html">Zhipeng Zhou</a>
+                <div class="ml-auto">
+                    <a href="../index.html" class="btn btn-sm btn-outline-primary">
+                        <i class="fas fa-arrow-left mr-1"></i>Back to Home
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Mathematics II</h2>
+        <p>Below is the comprehensive PDF document for Mathematics II, covering advanced calculus, differential equations, and more with detailed examples and solutions.</p>
+        
+        <div class="pdf-container">
+            <!-- PDF Viewer using iframe -->
+            <iframe src="../pdf/mathematics_ii.pdf" type="application/pdf"></iframe>
+        </div>
+        
+        <div class="mt-4">
+            <a href="../pdf/mathematics_ii.pdf" download class="btn btn-outline-primary">
+                <i class="fas fa-download mr-1"></i>Download PDF
+            </a>
+            <a href="math2.html" class="btn btn-outline-primary ml-2">
+                <i class="fas fa-book mr-1"></i>View Course Materials
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Zhipeng Zhou. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

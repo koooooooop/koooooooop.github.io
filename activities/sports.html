@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Activities | Zhipeng Zhou</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&family=SF+Pro+Text:wght@300;400;500;600&display=swap">
+    <style>
+        :root {
+            --primary-color: #0071e3;
+            --text-color: #1d1d1f;
+            --secondary-text: #86868b;
+            --section-bg: #f5f5f7;
+            --white: #ffffff;
+            --light-border: #d2d2d7;
+            --spacing-unit: 8px;
+        }
+        
+        body {
+            font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-color);
+            line-height: 1.5;
+            background-color: var(--white);
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 600;
+        }
+        
+        h1 {
+            font-size: 48px;
+            line-height: 1.1;
+            letter-spacing: -0.015em;
+        }
+        
+        h2 {
+            font-size: 32px;
+            line-height: 1.2;
+            margin-top: calc(var(--spacing-unit) * 8);
+            margin-bottom: calc(var(--spacing-unit) * 4);
+        }
+        
+        h3 {
+            font-size: 24px;
+            line-height: 1.25;
+            margin-top: calc(var(--spacing-unit) * 5);
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+        
+        p {
+            font-size: 17px;
+            line-height: 1.5;
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+        
+        .container-fluid {
+            max-width: 1200px;
+            padding: 0 calc(var(--spacing-unit) * 3);
+        }
+        
+        .hero-section {
+            padding: calc(var(--spacing-unit) * 16) 0;
+            text-align: center;
+            background-color: var(--section-bg);
+        }
+        
+        .hero-image {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            margin-top: calc(var(--spacing-unit) * 5);
+        }
+        
+        .section {
+            padding: calc(var(--spacing-unit) * 12) 0;
+            border-bottom: 1px solid var(--light-border);
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-alt {
+            background-color: var(--section-bg);
+        }
+        
+        .img-fluid {
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        .caption {
+            font-size: 14px;
+            color: var(--secondary-text);
+            text-align: center;
+            margin-top: calc(var(--spacing-unit) * 2);
+            margin-bottom: calc(var(--spacing-unit) * 6);
+        }
+        
+        .feature-box {
+            background-color: var(--white);
+            border-radius: 16px;
+            padding: calc(var(--spacing-unit) * 4);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0062c4;
+            border-color: #0062c4;
+        }
+        
+        .nav-bar {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--light-border);
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 3);
+        }
+        
+        .nav-brand {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+        
+        .nav-brand:hover {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .nav-link {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: calc(var(--spacing-unit) * 3);
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .sports-nav {
+            background-color: var(--white);
+            position: sticky;
+            top: 44px;
+            z-index: 900;
+            border-bottom: 1px solid var(--light-border);
+            padding: 12px 0;
+        }
+        
+        .sports-nav-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .sports-nav-link {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 16px;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 8px 0;
+            position: relative;
+        }
+        
+        .sports-nav-link:hover {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .sports-nav-link.active {
+            color: var(--primary-color);
+        }
+        
+        .sports-nav-link.active:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .stat-box {
+            background-color: var(--section-bg);
+            border-radius: 16px;
+            padding: calc(var(--spacing-unit) * 4);
+            margin-bottom: calc(var(--spacing-unit) * 3);
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: calc(var(--spacing-unit) * 1);
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            color: var(--secondary-text);
+        }
+        
+        footer {
+            background-color: var(--text-color);
+            color: var(--white);
+            padding: calc(var(--spacing-unit) * 6) 0;
+            text-align: center;
+        }
+        
+        @media (max-width: 991.98px) {
+            .container-fluid {
+                padding: 0 20px;
+            }
+            
+            h1 {
+                font-size: 36px;
+            }
+            
+            h2 {
+                font-size: 28px;
+            }
+            
+            .hero-section {
+                padding: calc(var(--spacing-unit) * 12) 0;
+            }
+            
+            .section {
+                padding: calc(var(--spacing-unit) * 8) 0;
+            }
+            
+            .sports-nav-link {
+                margin: 0 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="nav-bar">
+        <div class="container-fluid">
+            <div class="nav-content">
+                <a href="../index.html" class="nav-brand">Zhipeng Zhou</a>
+                <div>
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="../index.html#activities-content" class="nav-link">Activities</a>
+                    <a href="../index.html#contact-content" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container-fluid">
+            <h1>🏅 Sports Activities</h1>
+            <p class="lead text-center mb-5">Maintaining physical fitness and developing teamwork skills through various sports</p>
+            <img src="../images/sports-hero.jpg" alt="Sports Activities" class="hero-image">
+        </div>
+    </div>
+    
+    <!-- Sports Navigation -->
+    <div class="sports-nav">
+        <div class="container-fluid">
+            <div class="sports-nav-content">
+                <a href="#football" class="sports-nav-link">⚽ Football</a>
+                <a href="#badminton" class="sports-nav-link">🏸 Badminton</a>
+                <a href="#snooker" class="sports-nav-link">🎱 Snooker</a>
+                <a href="#skiing" class="sports-nav-link">🎿 Skiing</a>
+                <a href="#hiking" class="sports-nav-link">🏔️ Hiking</a>
+                <a href="#cycling" class="sports-nav-link">🚴 Cycling</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Football Section -->
+    <div id="football" class="section">
+        <div class="container-fluid">
+            <h2>⚽ Football</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>Football has been a significant part of my recreational activities throughout my university life. As team captain of my university team, I've developed both technical skills and leadership abilities through regular participation in Chongqing University's internal football competitions.</p>
+                    <p>The sport has taught me valuable lessons about teamwork, strategic thinking, and perseverance that extend beyond the field. Managing a team of diverse players with different strengths has enhanced my communication and leadership skills in a practical environment.</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <div class="stat-number">12+</div>
+                                <div class="stat-label">Tournaments</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <div class="stat-number">3</div>
+                                <div class="stat-label">Years as Captain</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <div class="stat-number">20+</div>
+                                <div class="stat-label">Team Members Led</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="../images/football-detail.jpg" alt="Football Team" class="img-fluid mb-4">
+                    <p class="caption">With my university football team after winning the departmental championship</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Badminton Section -->
+    <div id="badminton" class="section section-alt">
+        <div class="container-fluid">
+            <h2>🏸 Badminton</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="../images/badminton-detail.jpg" alt="Badminton Competition" class="img-fluid mb-4">
+                    <p class="caption">Competing in a men's doubles badminton tournament</p>
+                </div>
+                <div class="col-lg-6">
+                    <p>Badminton has been my go-to sport for maintaining physical fitness and developing reflexes. I've actively participated in both men's singles and doubles competitions, which has helped me balance academic pursuits with physical activity.</p>
+                    <p>The sport requires quick decision-making, agility, and endurance—all skills that translate well to other aspects of life. Regular badminton sessions have become an essential part of my weekly routine, providing both physical benefits and stress relief during intense academic periods.</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <div class="stat-number">8+</div>
+                                <div class="stat-label">Competitions</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <div class="stat-number">2</div>
+                                <div class="stat-label">Tournament Medals</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <div class="stat-number">3×</div>
+                                <div class="stat-label">Weekly Practice</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Snooker Section -->
+    <div id="snooker" class="section">
+        <div class="container-fluid">
+            <h2>🎱 Snooker</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>Snooker has become a passionate pursuit that has taught me the value of precision, patience, and strategic thinking. This mentally challenging sport has helped me develop focus and concentration skills that transfer to my academic work.</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <div class="stat-number">2023 - Present</div>
+                                <div class="stat-label">University Snooker Club</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <div class="stat-number">2022</div>
+                                <div class="stat-label">Local Snooker Tournament</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="../images/snooker.jpg" alt="Snooker Game" class="img-fluid mb-4">
+                    <p class="caption">Snooker game in a friendly competition</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skiing Section -->
+    <div id="skiing" class="section">
+        <div class="container-fluid">
+            <h2>🎿 Skiing</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>Winter sports have always fascinated me, and skiing has become a favorite seasonal activity. I've enjoyed developing this skill during winter breaks and holidays, challenging myself to improve on more difficult slopes each season.</p>
+                    <p>Skiing teaches valuable lessons about balancing caution with calculated risk-taking, providing a perfect mix of thrill and technical skill development. The sport has also given me the opportunity to appreciate natural mountain environments while engaging in an exhilarating physical activity.</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <div class="stat-number">5</div>
+                                <div class="stat-label">Ski Resorts Visited</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <div class="stat-number">4</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <div class="stat-number">Red</div>
+                                <div class="stat-label">Highest Run Level</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="../images/skiing-detail.jpg" alt="Skiing Activity" class="img-fluid mb-4">
+                    <p class="caption">Skiing in the mountains during winter vacation</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hiking Section -->
+    <div id="hiking" class="section section-alt">
+        <div class="container-fluid">
+            <h2>🏔️ Hiking</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="../images/hiking-detail.jpg" alt="Hiking Trip" class="img-fluid mb-4">
+                    <p class="caption">Hiking expedition to a mountain summit with friends</p>
+                </div>
+                <div class="col-lg-6">
+                    <p>Hiking has been a wonderful way to connect with nature while challenging my physical endurance. From day hikes to multi-day treks, I've explored various trails and terrains, developing a deep appreciation for natural landscapes.</p>
+                    <p>Each hiking expedition has taught me something about preparation, perseverance, and the rewards of sustained effort. These journeys have also provided unique opportunities for reflection and mindfulness, away from the constant connectivity of daily life.</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <div class="stat-number">15+</div>
+                                <div class="stat-label">Trails Completed</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <div class="stat-number">2,800m</div>
+                                <div class="stat-label">Highest Elevation</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <div class="stat-number">3</div>
+                                <div class="stat-label">Mountain Ranges</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cycling Section -->
+    <div id="cycling" class="section">
+        <div class="container-fluid">
+            <h2>🚴 Cycling</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>Cycling has become both a practical mode of transportation and a recreational activity that I enjoy regularly. From commuting around campus to weekend exploration rides, this activity has become integrated into my lifestyle.</p>
+                    <p>Beyond the obvious fitness benefits, cycling has given me a different perspective on my surroundings and the freedom to explore areas that would be inaccessible by other means. It also aligns with my environmental values by offering a sustainable transportation alternative.</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <div class="stat-number">1,200+</div>
+                                <div class="stat-label">Kilometers Ridden</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <div class="stat-number">120km</div>
+                                <div class="stat-label">Longest Single Ride</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-box">
+                                <div class="stat-number">2</div>
+                                <div class="stat-label">Charity Events</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="../images/cycling-detail.jpg" alt="Cycling Trip" class="img-fluid mb-4">
+                    <p class="caption">Weekend cycling adventure along a scenic route</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid">
+            <p>&copy; 2024 Zhipeng Zhou. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Handle smooth scrolling for page links
+        $(document).ready(function() {
+            $('.sports-nav-link').on('click', function(e) {
+                e.preventDefault();
+                
+                var target = $(this).attr('href');
+                var targetPos = $(target).offset().top - 120;
+                
+                $('html, body').animate({
+                    scrollTop: targetPos
+                }, 600);
+                
+                $('.sports-nav-link').removeClass('active');
+                $(this).addClass('active');
+            });
+            
+            // Set active nav item on scroll
+            $(window).on('scroll', function() {
+                var scrollPosition = $(window).scrollTop() + 150;
+                
+                $('.section').each(function() {
+                    var currentSection = $(this);
+                    var sectionTop = currentSection.offset().top;
+                    var sectionBottom = sectionTop + currentSection.outerHeight();
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                        var id = currentSection.attr('id');
+                        $('.sports-nav-link').removeClass('active');
+                        $('.sports-nav-link[href="#' + id + '"]').addClass('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
