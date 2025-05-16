@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工程原理 - 周志鹏的个人学术网站</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+        }
+        .article-content h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        .article-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #1f2937;
+        }
+        .article-content p {
+            margin-bottom: 1.25rem;
+            line-height: 1.7;
+        }
+        .article-content ul, .article-content ol {
+            margin-bottom: 1.25rem;
+            margin-left: 1.5rem;
+        }
+        .article-content ul li, .article-content ol li {
+            margin-bottom: 0.5rem;
+        }
+        .article-content ul {
+            list-style-type: disc;
+        }
+        .article-content ol {
+            list-style-type: decimal;
+        }
+        .article-content a {
+            color: #3b82f6;
+            text-decoration: underline;
+        }
+        .article-content a:hover {
+            color: #2563eb;
+        }
+        .article-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            font-style: italic;
+            margin: 1.5rem 0;
+            color: #4b5563;
+        }
+        .article-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.375rem;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        .article-content code {
+            font-family: monospace;
+            background-color: #f3f4f6;
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.25rem;
+        }
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.375rem;
+            margin: 1.5rem 0;
+        }
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .article-content table th, .article-content table td {
+            border: 1px solid #e5e7eb;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        .article-content table th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+    <!-- 导航栏 -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="../index.html" class="text-xl font-bold text-gray-800">周志鹏</a>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="../index.html#about" class="font-medium text-gray-700 hover:text-blue-500">关于我</a>
+                    <a href="../index.html#projects" class="font-medium text-gray-700 hover:text-blue-500">项目成果</a>
+                    <a href="../index.html#research" class="font-medium text-gray-700 hover:text-blue-500">科研成果</a>
+                    <a href="../index.html#competitions" class="font-medium text-gray-700 hover:text-blue-500">比赛与实习</a>
+                    <a href="../index.html#activities" class="font-medium text-gray-700 hover:text-blue-500">兴趣活动</a>
+                    <a href="../index.html#study-materials" class="font-medium text-gray-700 hover:text-blue-500">学习资料</a>
+                    <a href="../index.html#contact" class="font-medium text-gray-700 hover:text-blue-500">联系方式</a>
+                </nav>
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden">
+                    <button class="text-gray-700 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 文章头部 -->
+    <div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto">
+                <a href="../index.html" class="inline-flex items-center text-white mb-6 hover:text-blue-200 transition">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    返回首页
+                </a>
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">工程原理：数电模电、PCB设计与激光雷达开发</h1>
+                <div class="flex flex-wrap items-center text-sm md:text-base">
+                    <span class="mr-4 flex items-center">
+                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        发布日期: 2024-05-16
+                    </span>
+                    <span class="mr-4 flex items-center">
+                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
+                        分类: <a href="#" class="ml-1 underline hover:text-blue-200">工程原理</a>
+                    </span>
+                    <span class="flex items-center">
+                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        作者: 周志鹏
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 文章主体 -->
+    <div class="container mx-auto px-6 py-12">
+        <div class="max-w-3xl mx-auto">
+            <article class="bg-white rounded-xl shadow-sm p-8">
+                <!-- 文章内容 -->
+                <div class="article-content">
+                    <p>本文详细介绍了我在数字电路、模拟电路、PCB设计制作以及激光雷达嵌入式开发方面的项目经验和技术成果。通过这些项目，我系统地掌握了从电路原理到实际硬件实现的全过程，为后续的嵌入式系统开发和硬件设计奠定了坚实基础。</p>
+                    
+                    <h2>一、数字电路与模拟电路设计</h2>
+                    <p>在数字电路与模拟电路课程中，我完成了多个实验项目，涵盖了基础电路原理和高级电路设计技术：</p>
+                    
+                    <h3>1.1 数字电路项目</h3>
+                    <ul>
+                        <li>设计并实现了基于74系列芯片的8位计数器，具有复位和保持功能</li>
+                        <li>开发了数字时钟电路，实现了时间显示和设置功能</li>
+                        <li>使用FPGA实现了简单的状态机，用于交通灯控制系统</li>
+                        <li>完成了数字频率计的设计与实现，测量精度达到±0.1Hz</li>
+                    </ul>
+                    
+                    <h3>1.2 模拟电路项目</h3>
+                    <ul>
+                        <li>设计并搭建了多级放大电路，增益可调，失真度低</li>
+                        <li>实现了多种滤波器电路，包括低通、高通和带通滤波器</li>
+                        <li>开发了基于运算放大器的信号调理电路</li>
+                        <li>设计了电压稳定电源电路，输出电压可调，纹波系数小于1%</li>
+                    </ul>
+                    
+                    <h2>二、PCB设计与制作</h2>
+                    <p>在硬件设计方面，我熟练掌握了PCB设计的各个环节，并亲自参与了制板和焊接过程：</p>
+                    
+                    <h3>2.1 PCB设计工具与技能</h3>
+                    <ul>
+                        <li>熟练使用Altium Designer进行原理图设计和PCB布局</li>
+                        <li>掌握了多层板设计技术，包括电源层和地平面的规划</li>
+                        <li>理解并应用了高速信号布线原则，如阻抗控制和差分对布线</li>
+                        <li>能够根据EMC/EMI要求进行电路布局和屏蔽设计</li>
+                    </ul>
+                    
+                    <h3>2.2 焊接工艺</h3>
+                    <ul>
+                        <li>熟练使用烙铁进行通孔元件和SMD元件的焊接</li>
+                        <li>掌握了BGA和QFN等复杂封装的焊接技术</li>
+                        <li>能够使用热风枪和焊台进行元件拆卸和返修</li>
+                        <li>理解并应用了无铅焊接工艺标准</li>
+                    </ul>
+                    
+                    <h3>2.3 实际项目案例</h3>
+                    <p>我完成了一个多功能传感器接口板的设计与制作，该板具有以下特点：</p>
+                    <ul>
+                        <li>集成了多路ADC转换通道，支持模拟信号采集</li>
+                        <li>提供SPI、I2C和UART等多种通信接口</li>
+                        <li>板载电源管理电路，支持多电压供电</li>
+                        <li>预留了扩展接口，方便功能扩展</li>
+                    </ul>
+                    
+                    <h2>三、激光雷达嵌入式开发</h2>
+                    <p>在嵌入式系统方向，我专注于激光雷达技术的应用和开发：</p>
+                    
+                    <h3>3.1 激光雷达工作原理</h3>
+                    <p>深入研究了ToF（Time of Flight）和三角测量等激光测距原理，比较了不同技术在精度、距离和抗干扰能力方面的差异。理解了脉冲式激光雷达和相位式激光雷达的工作机制和信号处理流程。</p>
+                    
+                    <h3>3.2 硬件设计与接口</h3>
+                    <ul>
+                        <li>设计了激光雷达传感器的驱动电路和信号调理电路</li>
+                        <li>实现了基于STM32单片机的数据采集系统</li>
+                        <li>开发了与上位机通信的接口模块，支持USB和串口通信</li>
+                        <li>集成了电机控制电路，实现了激光雷达的扫描功能</li>
+                    </ul>
+                    
+                    <h3>3.3 软件开发</h3>
+                    <ul>
+                        <li>编写了底层驱动程序，实现了对激光测距模块的控制</li>
+                        <li>开发了数据处理算法，进行点云数据的滤波和特征提取</li>
+                        <li>实现了SLAM（同时定位与地图构建）算法的简化版本</li>
+                        <li>开发了基于Qt的上位机软件，用于数据可视化和参数配置</li>
+                    </ul>
+                    
+                    <h3>3.4 项目成果</h3>
+                    <p>基于上述工作，我成功开发了一套小型激光雷达系统，具有以下特点：</p>
+                    <ul>
+                        <li>测距范围达到0.1-10米，精度优于±2cm</li>
+                        <li>水平扫描角度360°，垂直视场角为30°</li>
+                        <li>扫描频率可达10Hz，单次扫描可采集1000个点</li>
+                        <li>系统功耗低于5W，适用于移动机器人平台</li>
+                    </ul>
+                    
+                    <h2>四、总结与展望</h2>
+                    <p>通过这些工程原理项目的实践，我不仅掌握了电路设计、PCB制作和嵌入式开发的技能，还锻炼了系统思维和解决复杂工程问题的能力。未来，我计划进一步研究深度学习在激光雷达点云处理中的应用，探索更高效的SLAM算法，并尝试将系统应用于自动驾驶和智能机器人领域。</p>
+                    
+                    <h2>参考资料</h2>
+                    <ul>
+                        <li>《数字电子技术基础》，阎石等著，高等教育出版社</li>
+                        <li>《模拟电子技术基础》，童诗白等著，高等教育出版社</li>
+                        <li>《Altium Designer电路设计》，武剑洁著，电子工业出版社</li>
+                        <li>《激光雷达原理与技术》，宋乐等著，国防工业出版社</li>
+                        <li>《STM32嵌入式系统开发实战指南》，杨继昌著，机械工业出版社</li>
+                    </ul>
+                </div>
+                
+                <!-- 文章元信息 -->
+                <div class="mt-12 pt-6 border-t border-gray-200">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">数字电路</span>
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">模拟电路</span>
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">PCB设计</span>
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">激光雷达</span>
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">嵌入式系统</span>
+                    </div>
+                </div>
+                
+                <!-- 分享和评论区 -->
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <h3 class="text-xl font-semibold mb-4">分享这篇文章</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-blue-600 hover:text-blue-800">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
+                        </a>
+                        <a href="#" class="text-blue-400 hover:text-blue-600">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.052 10.052 0 01-3.127 1.195 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"></path></svg>
+                        </a>
+                        <a href="#" class="text-green-600 hover:text-green-800">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"></path><path d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- 相关文章 -->
+            <div class="mt-12">
+                <h3 class="text-2xl font-bold mb-6">相关文章</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <a href="qea2.html" class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="p-6">
+                            <h4 class="text-lg font-semibold mb-2 text-gray-800">QEA2：信号与系统、心电信号测量仪</h4>
+                            <p class="text-gray-600 text-sm mb-3">探索信号处理和系统设计，深入研究心电信号测量与分析技术...</p>
+                            <div class="flex items-center text-blue-600">
+                                阅读更多
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="robotics.html" class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="p-6">
+                            <h4 class="text-lg font-semibold mb-2 text-gray-800">机器人基础：视觉与嵌入式技术</h4>
+                            <p class="text-gray-600 text-sm mb-3">了解机器人视觉系统和嵌入式控制技术的基础知识与实践应用...</p>
+                            <div class="flex items-center text-blue-600">
+                                阅读更多
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚部分 -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <p>&copy; 2024 周志鹏. 保留所有权利.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition duration-300">隐私政策</a>
+                    <a href="#" class="hover:text-white transition duration-300">条款声明</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 如果需要添加任何JavaScript功能，可以在这里添加
+    </script>
+</body>
+</html> 

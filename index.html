@@ -41,6 +41,35 @@
         .nav-link:hover::after {
             width: 100%;
         }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 8px;
+            top: 100%;
+            margin-top: 10px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.2s ease;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f5f9;
+            color: #3B82F6;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
@@ -49,11 +78,78 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="text-xl font-bold text-gray-800">周志鹏</div>
-                <nav class="hidden md:flex space-x-8">
+                <nav class="hidden md:flex space-x-6">
                     <a href="#about" class="nav-link font-medium text-gray-700 hover:text-blue-500">关于我</a>
-                    <a href="#research" class="nav-link font-medium text-gray-700 hover:text-blue-500">研究方向</a>
-                    <a href="#publications" class="nav-link font-medium text-gray-700 hover:text-blue-500">学术成果</a>
-                    <a href="#projects" class="nav-link font-medium text-gray-700 hover:text-blue-500">项目</a>
+                    
+                    <div class="dropdown">
+                        <a href="#projects" class="nav-link font-medium text-gray-700 hover:text-blue-500">项目成果</a>
+                        <div class="dropdown-content">
+                            <a href="projects/engineering.html">工程原理</a>
+                            <a href="projects/nature-design.html">自然与设计+医生工</a>
+                            <a href="projects/writing.html">写作</a>
+                            <a href="projects/math-projects.html">数理综合3项目</a>
+                            <a href="projects/robotics.html">机器人基础</a>
+                            <a href="projects/qea1.html">QEA1</a>
+                            <a href="projects/qea2.html">QEA2</a>
+                            <a href="projects/engineering-design.html">工程设计</a>
+                            <a href="projects/probability.html">概率论与数理统计</a>
+                            <a href="projects/ai-intro.html">人工智能导论</a>
+                            <a href="projects/software-design.html">软件设计</a>
+                            <a href="projects/linear-algebra.html">线性代数</a>
+                            <a href="projects/product-design.html">产品设计</a>
+                            <a href="projects/humanities.html">人文通识课程</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown">
+                        <a href="#research" class="nav-link font-medium text-gray-700 hover:text-blue-500">科研成果</a>
+                        <div class="dropdown-content">
+                            <a href="research/ccf-b.html">CCF-B论文</a>
+                            <a href="research/ccf-a-llm.html">CCF-A LLM稀疏化</a>
+                            <a href="research/ccf-a-mamba.html">CCF-A Mamba+MoE时变负载预测</a>
+                            <a href="research/auto-charging.html">自动充电机械臂</a>
+                            <a href="research/zju-project.html">浙江大学项目</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown">
+                        <a href="#competitions" class="nav-link font-medium text-gray-700 hover:text-blue-500">比赛与实习</a>
+                        <div class="dropdown-content">
+                            <a href="competitions/ai-challenge.html">挑战者杯AI应用赛</a>
+                            <a href="competitions/xbotpark.html">Xbotpark常州以色列创新园</a>
+                            <a href="competitions/aircraft-design.html">中国大学生飞行器设计创新大赛</a>
+                            <a href="competitions/startup-intern.html">初创公司实习</a>
+                            <a href="competitions/intelligent-manufacturing.html">智能制造大赛</a>
+                            <a href="competitions/coursera.html">Coursera</a>
+                            <a href="competitions/kaggle.html">Kaggle</a>
+                            <a href="competitions/hands-on-dl.html">动手学深度学习</a>
+                            <a href="competitions/srtp.html">SRTP大创</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown">
+                        <a href="#activities" class="nav-link font-medium text-gray-700 hover:text-blue-500">兴趣活动</a>
+                        <div class="dropdown-content">
+                            <a href="activities/football.html">足球比赛</a>
+                            <a href="activities/badminton.html">羽毛球比赛</a>
+                            <a href="activities/cooking.html">做菜</a>
+                            <a href="activities/teaching.html">上海交通大学支教项目</a>
+                            <a href="activities/art.html">美术</a>
+                            <a href="activities/music.html">吉他+唱歌</a>
+                            <a href="activities/outdoor.html">骑行+爬山</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown">
+                        <a href="#study-materials" class="nav-link font-medium text-gray-700 hover:text-blue-500">学习资料</a>
+                        <div class="dropdown-content">
+                            <a href="materials/math1.html">数理1</a>
+                            <a href="materials/math2.html">数理2</a>
+                            <a href="materials/probability.html">概率论与数理统计</a>
+                            <a href="materials/linear-algebra.html">线性代数</a>
+                        </div>
+                    </div>
+                    
                     <a href="#contact" class="nav-link font-medium text-gray-700 hover:text-blue-500">联系方式</a>
                 </nav>
                 <!-- 移动端菜单按钮 -->
@@ -92,7 +188,7 @@
                         我是周志鹏，2004年10月18日出生，就读于重庆大学23级X创新实验班。我对软件开发和技术创新有浓厚的兴趣，目前专注于人工智能和深度学习领域的研究。
                     </p>
                     <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        我的研究兴趣包括计算机视觉、自然语言处理以及机器学习模型的优化。我致力于开发能够解决实际问题的软件解决方案，有使用Python、JavaScript以及各种机器学习库的经验。
+                        我的研究兴趣广泛，涵盖工程原理、人工智能、软件设计、线性代数等多个领域。在课余时间，我积极参与各类竞赛和科研项目，并热爱足球、羽毛球等体育活动以及做菜、音乐等兴趣爱好。
                     </p>
                     <div class="flex space-x-4">
                         <a href="cv.png" target="_blank" class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition duration-300">
@@ -109,145 +205,363 @@
         </div>
     </section>
 
-    <!-- 研究方向 - 使用卡片布局和图标 -->
-    <section id="research" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">研究方向</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <!-- 研究方向卡片1 -->
-                <div class="bg-gray-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="bg-blue-100 text-blue-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">深度学习</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        探索神经网络架构的优化和应用，专注于卷积神经网络(CNN)和变换器(Transformer)模型的研究，以及它们在计算机视觉和自然语言处理中的应用。
-                    </p>
-                </div>
-                
-                <!-- 研究方向卡片2 -->
-                <div class="bg-gray-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="bg-green-100 text-green-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">自然语言处理</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        研究文本生成、情感分析和语言理解技术，开发能够理解和生成人类语言的模型，关注大型语言模型(LLM)的优化和应用。
-                    </p>
-                </div>
-                
-                <!-- 研究方向卡片3 -->
-                <div class="bg-gray-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="bg-purple-100 text-purple-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">计算机视觉</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        研究图像识别、目标检测和图像分割技术，开发能够理解和解读视觉信息的算法，探索多模态学习和跨模态理解。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 学术成果 - 类似论文列表 -->
-    <section id="publications" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">学术成果</h2>
-            <div class="space-y-6">
-                <!-- 学术论文1 -->
-                <div class="publication-card bg-white rounded-xl p-6 shadow-md">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-4/5">
-                            <h3 class="text-xl font-semibold mb-2 text-gray-800">深度学习在医疗图像分析中的应用</h3>
-                            <p class="text-gray-500 mb-3"><strong>周志鹏</strong>, 李明, 张伟</p>
-                            <p class="text-gray-600 mb-4">
-                                本研究探讨了深度学习技术在医疗图像分析领域的应用，提出了一种新的卷积神经网络架构，用于医学影像的病变检测和分割。实验结果表明，该方法在准确性和效率方面均优于传统方法。
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">深度学习</span>
-                                <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">医疗图像</span>
-                                <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">卷积神经网络</span>
-                            </div>
-                        </div>
-                        <div class="md:w-1/5 mt-4 md:mt-0 flex items-center justify-end">
-                            <a href="#" class="text-blue-600 hover:text-blue-800 flex items-center">
-                                <span class="mr-2">PDF</span>
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 学术论文2 -->
-                <div class="publication-card bg-white rounded-xl p-6 shadow-md">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="md:w-4/5">
-                            <h3 class="text-xl font-semibold mb-2 text-gray-800">基于注意力机制的自然语言处理模型研究</h3>
-                            <p class="text-gray-500 mb-3">王强, <strong>周志鹏</strong>, 陈雪</p>
-                            <p class="text-gray-600 mb-4">
-                                本文研究了注意力机制在自然语言处理任务中的应用，提出了一种改进的Transformer模型，该模型在多个NLP基准测试中表现出色，特别是在文本分类和情感分析任务中。
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">自然语言处理</span>
-                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">注意力机制</span>
-                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">Transformer</span>
-                            </div>
-                        </div>
-                        <div class="md:w-1/5 mt-4 md:mt-0 flex items-center justify-end">
-                            <a href="#" class="text-blue-600 hover:text-blue-800 flex items-center">
-                                <span class="mr-2">PDF</span>
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 项目部分 - 采用苹果风格的大图展示 -->
+    <!-- 项目成果部分 -->
     <section id="projects" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">研究项目</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <!-- 项目1 -->
-                <div class="transform transition-all duration-300 hover:scale-105">
-                    <div class="overflow-hidden rounded-xl shadow-lg">
-                        <div class="h-64 bg-gray-200 flex items-center justify-center">
-                            <svg class="w-24 h-24 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">项目成果</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 工程原理 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-blue-100 text-blue-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">工程原理</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        数电模电、PCB设计制作、焊板子、激光雷达嵌入式方向的项目成果与实践经验。
+                    </p>
+                    <a href="projects/engineering.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                        查看详情
+                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+                
+                <!-- 自然与设计+医生工 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-green-100 text-green-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">自然与设计+医生工</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        生物与自然方向的研究成果，结合医学工程的创新应用与设计理念。
+                    </p>
+                    <a href="projects/nature-design.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                        查看详情
+                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+                
+                <!-- 写作 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-purple-100 text-purple-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">写作</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        公众号文章、演讲技巧等内容，展示我的写作能力和表达技巧。
+                    </p>
+                    <a href="projects/writing.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                        查看详情
+                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+                
+                <!-- 数理综合3项目 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-red-100 text-red-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">数理综合3项目</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        PPT形式的数理综合项目，展示数学理论与实际应用的结合。
+                    </p>
+                    <a href="projects/math-projects.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                        查看详情
+                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+                
+                <!-- 机器人基础 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-yellow-100 text-yellow-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">机器人基础</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        视觉与嵌入式技术在机器人领域的应用与研究成果。
+                    </p>
+                    <a href="projects/robotics.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                        查看详情
+                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+                
+                <!-- 更多项目按钮 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300 flex flex-col justify-center items-center">
+                    <div class="bg-gray-200 text-gray-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800 text-center">查看更多项目</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed text-center">
+                        探索更多项目，包括QEA1、QEA2、工程设计、人工智能导论等。
+                    </p>
+                    <a href="#" id="showMoreProjects" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                        显示全部
+                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9l-7 7-7-7"></path></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 隐藏的额外项目 -->
+            <div id="extraProjects" class="hidden mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- QEA1 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-pink-100 text-pink-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">QEA1</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        做船项目研究与实践，展示设计和工程实现能力。
+                    </p>
+                    <a href="projects/qea1.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                        查看详情
+                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+                
+                <!-- QEA2 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">QEA2</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        信号与系统、心电信号测量仪的研究与开发。
+                    </p>
+                    <a href="projects/qea2.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                        查看详情
+                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+                
+                <!-- 更多项目... -->
+                <!-- 工程设计 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-blue-100 text-blue-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">工程设计</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        斯特林发动机的设计、实现与迭代优化。
+                    </p>
+                    <a href="projects/engineering-design.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                        查看详情
+                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+                
+                <!-- 概率论与数理统计 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-green-100 text-green-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">概率论与数理统计</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        两个项目任务的概率论与数理统计研究成果。
+                    </p>
+                    <a href="projects/probability.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                        查看详情
+                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+                
+                <!-- 人工智能导论 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-purple-100 text-purple-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">人工智能导论</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        课程笔记与人工智能领域研究心得。
+                    </p>
+                    <a href="projects/ai-intro.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                        查看详情
+                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+                
+                <!-- 软件设计 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-red-100 text-red-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">软件设计</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        进销存系统、网站搭建、ROS学习的软件开发经验。
+                    </p>
+                    <a href="projects/software-design.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                        查看详情
+                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+                
+                <!-- 线性代数 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-yellow-100 text-yellow-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">线性代数</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        人脸识别项目实现与线性代数理论的应用。
+                    </p>
+                    <a href="projects/linear-algebra.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                        查看详情
+                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+                
+                <!-- 产品设计 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-pink-100 text-pink-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">产品设计</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        创业产品开发与迭代优化的设计理念与实践。
+                    </p>
+                    <a href="projects/product-design.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                        查看详情
+                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+                
+                <!-- 人文通识课程 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">人文通识课程</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        科技发展史、人类文明史、人文与自然课程的学习心得。
+                    </p>
+                    <a href="projects/humanities.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                        查看详情
+                        <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 科研成果部分 -->
+    <section id="research" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">科研成果</h2>
+            <div class="space-y-6">
+                <!-- CCF-B论文 -->
+                <div class="publication-card bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-4/5">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">CCF-B级别论文</h3>
+                            <p class="text-gray-500 mb-3"><strong>周志鹏</strong>, 等</p>
+                            <p class="text-gray-600 mb-4">
+                                发表于COGSCI，主要研究内容涉及认知科学领域的创新方法与应用。包含详细的GitHub代码实现及论文内容和解释。
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">认知科学</span>
+                                <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">CCF-B</span>
+                                <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">GitHub</span>
+                            </div>
+                        </div>
+                        <div class="md:w-1/5 mt-4 md:mt-0 flex items-center justify-end">
+                            <a href="research/ccf-b.html" class="text-blue-600 hover:text-blue-800 flex items-center">
+                                <span class="mr-2">详情</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
                         </div>
                     </div>
-                    <div class="mt-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">智能医疗辅助诊断系统</h3>
-                        <p class="text-gray-600">
-                            基于深度学习的医学影像分析系统，能够自动检测和标记医学影像中的异常区域，辅助医生进行诊断。
-                        </p>
-                        <div class="mt-4 flex space-x-3">
-                            <a href="#" class="text-blue-600 hover:text-blue-800 flex items-center">
-                                <span class="mr-1">项目详情</span>
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </div>
+
+                <!-- CCF-A LLM稀疏化 -->
+                <div class="publication-card bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-4/5">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">CCF-A LLM稀疏化研究</h3>
+                            <p class="text-gray-500 mb-3">清华-联想AAAI, <strong>周志鹏</strong></p>
+                            <p class="text-gray-600 mb-4">
+                                与清华大学和联想集团合作，在AAAI会议上发表的大型语言模型稀疏化技术研究，显著提高了模型效率，减少了计算资源需求。
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">大型语言模型</span>
+                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">稀疏化</span>
+                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">CCF-A</span>
+                            </div>
+                        </div>
+                        <div class="md:w-1/5 mt-4 md:mt-0 flex items-center justify-end">
+                            <a href="research/ccf-a-llm.html" class="text-blue-600 hover:text-blue-800 flex items-center">
+                                <span class="mr-2">详情</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- 项目2 -->
-                <div class="transform transition-all duration-300 hover:scale-105">
-                    <div class="overflow-hidden rounded-xl shadow-lg">
-                        <div class="h-64 bg-gray-200 flex items-center justify-center">
-                            <svg class="w-24 h-24 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
+                <!-- CCF-A Mamba+MoE时变负载预测 -->
+                <div class="publication-card bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-4/5">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">CCF-A Mamba+MoE时变负载预测</h3>
+                            <p class="text-gray-500 mb-3">重庆大学实验室, <strong>周志鹏</strong>, AAAI</p>
+                            <p class="text-gray-600 mb-4">
+                                在AAAI会议上发表的时序模型研究，结合了Mamba状态空间模型和混合专家模型(MoE)，用于时变负载的高精度预测，在多个基准测试中取得领先结果。
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Mamba</span>
+                                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">混合专家模型</span>
+                                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">时序预测</span>
+                            </div>
+                        </div>
+                        <div class="md:w-1/5 mt-4 md:mt-0 flex items-center justify-end">
+                            <a href="research/ccf-a-mamba.html" class="text-blue-600 hover:text-blue-800 flex items-center">
+                                <span class="mr-2">详情</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
                         </div>
                     </div>
-                    <div class="mt-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">智能对话系统</h3>
-                        <p class="text-gray-600">
-                            基于大型语言模型的智能对话系统，能够理解自然语言并生成连贯、相关的回复，适用于客户服务和个人助手场景。
-                        </p>
-                        <div class="mt-4 flex space-x-3">
-                            <a href="#" class="text-blue-600 hover:text-blue-800 flex items-center">
-                                <span class="mr-1">项目详情</span>
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </div>
+                
+                <!-- 自动充电机械臂 -->
+                <div class="publication-card bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-4/5">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">自动充电机械臂</h3>
+                            <p class="text-gray-500 mb-3"><strong>周志鹏</strong>, 专利</p>
+                            <p class="text-gray-600 mb-4">
+                                开发的自动充电机械臂技术，已申请专利保护。该项目包含了完整的方案设计和工程实现，解决了电动汽车自动充电的关键技术难题。
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">专利</span>
+                                <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">机械臂</span>
+                                <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">自动化</span>
+                            </div>
+                        </div>
+                        <div class="md:w-1/5 mt-4 md:mt-0 flex items-center justify-end">
+                            <a href="research/auto-charging.html" class="text-blue-600 hover:text-blue-800 flex items-center">
+                                <span class="mr-2">详情</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 浙江大学项目 -->
+                <div class="publication-card bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-4/5">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">浙江大学数据科学项目</h3>
+                            <p class="text-gray-500 mb-3">浙江大学, <strong>周志鹏</strong></p>
+                            <p class="text-gray-600 mb-4">
+                                与浙江大学合作的数据科学研究项目，专注于大数据分析和处理技术的创新应用，为实际问题提供了高效的解决方案。
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">数据科学</span>
+                                <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">浙江大学</span>
+                                <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">合作研究</span>
+                            </div>
+                        </div>
+                        <div class="md:w-1/5 mt-4 md:mt-0 flex items-center justify-end">
+                            <a href="research/zju-project.html" class="text-blue-600 hover:text-blue-800 flex items-center">
+                                <span class="mr-2">详情</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                             </a>
                         </div>
                     </div>
@@ -256,13 +570,374 @@
         </div>
     </section>
 
-    <!-- 联系方式 - 简约而直接 -->
+    <!-- 比赛与实习部分 -->
+    <section id="competitions" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">比赛与实习</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- 挑战者杯AI应用赛 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-white">挑战者杯AI应用赛</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            参加挑战者杯AI应用赛，开发了基于diffusion模型的图像生成系统，项目目标是冲击CVPR 2026。
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">AI应用</span>
+                            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">Diffusion</span>
+                            <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">CVPR</span>
+                        </div>
+                        <a href="competitions/ai-challenge.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                            查看详情
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Xbotpark常州以色列创新园 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-teal-600 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-white">Xbotpark创新园夏令营</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            在常州以色列创新园参加为期一个月的市场调研、产品开发和迭代优化项目，积累了丰富的创业实践经验。
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">创新创业</span>
+                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">市场调研</span>
+                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">产品开发</span>
+                        </div>
+                        <a href="competitions/xbotpark.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                            查看详情
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 中国大学生飞行器设计创新大赛园赛 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-white">飞行器设计创新大赛</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            参加中国大学生飞行器设计创新大赛，负责视觉算法、硬件AI和飞控系统集成开发以及固定翼制作工作。
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">飞行器设计</span>
+                            <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">视觉算法</span>
+                            <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">飞控系统</span>
+                        </div>
+                        <a href="competitions/aircraft-design.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                            查看详情
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 初创公司实习 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-red-500 to-orange-600 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-white">初创公司实习</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            在初创公司实习期间，专注于产品的夹具设计工作，积累了实际工业设计和产品开发的经验。
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">产品设计</span>
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">夹具设计</span>
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">初创公司</span>
+                        </div>
+                        <a href="competitions/startup-intern.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                            查看详情
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 额外的比赛与课程 -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 智能制造大赛 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-blue-100 text-blue-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">智能制造大赛</h3>
+                    <p class="text-gray-600 mb-4">参加智能制造大赛，展示创新思维和团队合作能力。</p>
+                    <a href="competitions/intelligent-manufacturing.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                        查看详情
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+                
+                <!-- Coursera课程 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-green-100 text-green-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Coursera课程</h3>
+                    <p class="text-gray-600 mb-4">参加Coursera上的在线课程，提升专业技能和知识水平。</p>
+                    <a href="competitions/coursera.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                        查看详情
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+                
+                <!-- Kaggle竞赛 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="bg-purple-100 text-purple-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Kaggle竞赛</h3>
+                    <p class="text-gray-600 mb-4">参与Kaggle竞赛，提升数据分析和机器学习技能。</p>
+                    <a href="competitions/kaggle.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                        查看详情
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 兴趣活动部分 -->
+    <section id="activities" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">兴趣活动</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- 足球比赛 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <div class="bg-blue-500 h-full flex items-center justify-center transition-all duration-500 group-hover:scale-110">
+                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path></svg>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">足球比赛</h3>
+                        <p class="text-gray-600 text-sm mb-3">担任队长，参加重庆大学校内足球比赛，展现团队合作精神和领导能力。</p>
+                        <a href="activities/football.html" class="text-blue-600 hover:text-blue-800 text-sm inline-flex items-center">
+                            查看详情
+                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 羽毛球比赛 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <div class="bg-green-500 h-full flex items-center justify-center transition-all duration-500 group-hover:scale-110">
+                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">羽毛球比赛</h3>
+                        <p class="text-gray-600 text-sm mb-3">参加男单男双羽毛球比赛，保持健康的身体素质和竞技精神。</p>
+                        <a href="activities/badminton.html" class="text-blue-600 hover:text-blue-800 text-sm inline-flex items-center">
+                            查看详情
+                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 做菜 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <div class="bg-red-500 h-full flex items-center justify-center transition-all duration-500 group-hover:scale-110">
+                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">厨艺爱好</h3>
+                        <p class="text-gray-600 text-sm mb-3">热爱烹饪，擅长多种菜系，不断探索新的烹饪技巧和食材搭配。</p>
+                        <a href="activities/cooking.html" class="text-blue-600 hover:text-blue-800 text-sm inline-flex items-center">
+                            查看详情
+                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 上海交通大学支教项目 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <div class="bg-purple-500 h-full flex items-center justify-center transition-all duration-500 group-hover:scale-110">
+                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">支教项目</h3>
+                        <p class="text-gray-600 text-sm mb-3">参与上海交通大学组织的AI通识课支教项目，传播知识，回报社会。</p>
+                        <a href="activities/teaching.html" class="text-blue-600 hover:text-blue-800 text-sm inline-flex items-center">
+                            查看详情
+                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 美术 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <div class="bg-yellow-500 h-full flex items-center justify-center transition-all duration-500 group-hover:scale-110">
+                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">美术爱好</h3>
+                        <p class="text-gray-600 text-sm mb-3">从小学习绘画，持续提升美术技能，参与各种艺术创作活动。</p>
+                        <a href="activities/art.html" class="text-blue-600 hover:text-blue-800 text-sm inline-flex items-center">
+                            查看详情
+                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 吉他+唱歌 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <div class="bg-indigo-500 h-full flex items-center justify-center transition-all duration-500 group-hover:scale-110">
+                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">音乐爱好</h3>
+                        <p class="text-gray-600 text-sm mb-3">拥有丰富的音乐经历，弹奏吉他并演唱，热爱音乐创作。</p>
+                        <a href="activities/music.html" class="text-blue-600 hover:text-blue-800 text-sm inline-flex items-center">
+                            查看详情
+                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 骑行+爬山 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <div class="bg-pink-500 h-full flex items-center justify-center transition-all duration-500 group-hover:scale-110">
+                            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">户外活动</h3>
+                        <p class="text-gray-600 text-sm mb-3">喜爱骑行和爬山等户外活动，挑战自我，展现毅力和坚持。</p>
+                        <a href="activities/outdoor.html" class="text-blue-600 hover:text-blue-800 text-sm inline-flex items-center">
+                            查看详情
+                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 学习资料分享部分 -->
+    <section id="study-materials" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">学习资料分享</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- 数理1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
+                    <div class="h-40 bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center p-6 relative overflow-hidden">
+                        <h3 class="text-2xl font-bold text-white z-10">数理1</h3>
+                        <div class="absolute top-0 left-0 w-full h-full bg-white opacity-20 transform -skew-y-6 group-hover:skew-y-0 transition-all duration-500"></div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            数理1课程的学习资料整理，包含课堂笔记、习题解析和重点公式总结，帮助你快速掌握核心概念。
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">微积分</span>
+                                <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">习题</span>
+                            </div>
+                            <a href="materials/math1.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                                查看资料
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 数理2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
+                    <div class="h-40 bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center p-6 relative overflow-hidden">
+                        <h3 class="text-2xl font-bold text-white z-10">数理2</h3>
+                        <div class="absolute top-0 left-0 w-full h-full bg-white opacity-20 transform -skew-y-6 group-hover:skew-y-0 transition-all duration-500"></div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            数理2课程的精华内容整理，涵盖高等数学进阶部分、微分方程等内容，配有详细的例题和解答。
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">微分方程</span>
+                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">应用案例</span>
+                            </div>
+                            <a href="materials/math2.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                                查看资料
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 概率论与数理统计 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
+                    <div class="h-40 bg-gradient-to-r from-purple-500 to-violet-500 flex items-center justify-center p-6 relative overflow-hidden">
+                        <h3 class="text-2xl font-bold text-white z-10">概率论与数理统计</h3>
+                        <div class="absolute top-0 left-0 w-full h-full bg-white opacity-20 transform -skew-y-6 group-hover:skew-y-0 transition-all duration-500"></div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            概率论与数理统计课程复习资料，包含概率分布、随机变量、统计推断等主题，附有实用的计算方法。
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">概率分布</span>
+                                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">统计推断</span>
+                            </div>
+                            <a href="materials/probability.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                                查看资料
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 线性代数 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
+                    <div class="h-40 bg-gradient-to-r from-red-500 to-orange-500 flex items-center justify-center p-6 relative overflow-hidden">
+                        <h3 class="text-2xl font-bold text-white z-10">线性代数</h3>
+                        <div class="absolute top-0 left-0 w-full h-full bg-white opacity-20 transform -skew-y-6 group-hover:skew-y-0 transition-all duration-500"></div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">
+                            线性代数课程学习资料，深入讲解矩阵运算、特征值、向量空间等内容，结合机器学习应用案例。
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">矩阵运算</span>
+                                <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">机器学习应用</span>
+                            </div>
+                            <a href="materials/linear-algebra.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
+                                查看资料
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式部分 -->
     <section id="contact" class="py-20 bg-gray-800 text-white">
         <div class="container mx-auto px-6">
             <div class="max-w-2xl mx-auto text-center">
                 <h2 class="text-3xl md:text-4xl font-bold mb-8">联系方式</h2>
                 <p class="text-xl text-gray-300 mb-12">
-                    如果您对我的研究或合作机会有兴趣，请随时联系我
+                    如果您对我的研究、项目或合作机会有兴趣，请随时联系我
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="flex flex-col items-center">
@@ -277,7 +952,7 @@
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
                         <h3 class="text-lg font-semibold mb-2">学术主页</h3>
-                        <a href="https://scholar.example.com/zhipeng-zhou" class="text-blue-300 hover:text-blue-100">Google Scholar</a>
+                        <a href="https://github.com/koooooooop" class="text-blue-300 hover:text-blue-100">GitHub</a>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="bg-gray-700 p-4 rounded-full mb-4">
@@ -286,7 +961,7 @@
                         <h3 class="text-lg font-semibold mb-2">社交媒体</h3>
                         <div class="flex space-x-4">
                             <a href="https://github.com/koooooooop" class="text-blue-300 hover:text-blue-100">GitHub</a>
-                            <a href="https://twitter.com/zhipengzhou" class="text-blue-300 hover:text-blue-100">Twitter</a>
+                            <a href="#" class="text-blue-300 hover:text-blue-100">微信</a>
                         </div>
                     </div>
                 </div>
@@ -354,6 +1029,17 @@
                     });
                 }
             });
+        });
+        
+        // 显示更多项目
+        document.getElementById('showMoreProjects').addEventListener('click', function(e) {
+            e.preventDefault();
+            const extraProjects = document.getElementById('extraProjects');
+            extraProjects.classList.toggle('hidden');
+            
+            this.innerHTML = extraProjects.classList.contains('hidden') 
+                ? '显示全部 <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9l-7 7-7-7"></path></svg>' 
+                : '收起 <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15l7-7 7 7"></path></svg>';
         });
     </script>
 </body>
