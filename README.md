@@ -1,50 +1,53 @@
-# 周志鹏的个人学术网站
+# Zhipeng Zhou's Academic Portfolio
 
-这是我的个人学术网站，展示我的研究项目、学术成果和联系方式。该网站采用现代化的设计，参考了苹果官网的设计风格，提供了优雅的用户界面和流畅的浏览体验。
+This is my personal academic website showcasing my research projects, academic achievements, and contact information. The website features a modern design inspired by Apple's design style, providing an elegant user interface and smooth browsing experience.
 
-## 网站特点
+## Website Features
 
-- **响应式设计**：适配各种屏幕尺寸，从移动设备到桌面显示器
-- **现代化UI**：采用苹果风格的简约设计，强调内容的清晰呈现
-- **优化性能**：使用Tailwind CSS确保快速加载和平滑过渡
-- **交互体验**：平滑滚动、悬停效果和动画，提升用户体验
+- **Responsive Design**: Adapts to various screen sizes, from mobile devices to desktop displays
+- **Modern UI**: Adopts Apple-style minimalist design, emphasizing clear content presentation
+- **Optimized Performance**: Uses Tailwind CSS to ensure fast loading and smooth transitions
+- **Interactive Experience**: Smooth scrolling, hover effects, and animations enhance user experience
 
-## 内容板块
+## Content Sections
 
-- 个人简介
-- 研究方向（深度学习、自然语言处理、计算机视觉）
-- 学术成果（论文发表等）
-- 研究项目
-- 联系方式
+- Personal Introduction
+- Research Interests (Deep Learning, Natural Language Processing, Computer Vision)
+- Academic Achievements (Published Papers)
+- Research Projects
+- Competitions & Internships
+- Activities
+- Study Materials
+- Contact Information
 
-## 技术栈
+## Tech Stack
 
 - HTML5
 - CSS3 (Tailwind CSS)
 - JavaScript
-- 响应式设计
-- SVG图标
+- Responsive Design
+- SVG Icons
 
-## 本地开发
+## Local Development
 
-1. 克隆仓库：
+1. Clone the repository:
 ```
 git clone https://github.com/koooooooop/koooooooop.github.io.git
 ```
 
-2. 打开index.html文件即可在浏览器中查看网站
+2. Open the index.html file to view the website in your browser
 
-3. 修改内容：
-   - 编辑index.html文件更新网站内容
-   - 替换图片（my_photo.jpg, head.jpg）
-   - 更新联系方式和项目信息
+3. Modify content:
+   - Edit the index.html file to update website content
+   - Replace images (my_photo.jpg, head.jpg)
+   - Update contact information and project details
 
-## 部署
+## Deployment
 
-网站使用GitHub Pages托管，任何推送到main分支的更改都会自动部署到线上环境。
+The website is hosted using GitHub Pages, and any changes pushed to the main branch will automatically be deployed to the live environment.
 
-访问地址：https://koooooooop.github.io/
+Visit: https://koooooooop.github.io/
 
-## 更新日志
+## Changelog
 
-- 2024-05-16: 初始版本发布 
+- 2024-05-16: Initial release 
