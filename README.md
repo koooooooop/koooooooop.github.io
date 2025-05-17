@@ -1,53 +1,75 @@
-# Zhipeng Zhou's Academic Portfolio
+# Zhipeng Zhou - Personal Academic Portfolio
 
-This is my personal academic website showcasing my research projects, academic achievements, and contact information. The website features a modern design inspired by Apple's design style, providing an elegant user interface and smooth browsing experience.
+![Portfolio Preview](images/preview.jpg)
 
-## Website Features
+## Overview
 
-- **Responsive Design**: Adapts to various screen sizes, from mobile devices to desktop displays
-- **Modern UI**: Adopts Apple-style minimalist design, emphasizing clear content presentation
-- **Optimized Performance**: Uses Tailwind CSS to ensure fast loading and smooth transitions
-- **Interactive Experience**: Smooth scrolling, hover effects, and animations enhance user experience
+This repository contains the source code for my personal academic portfolio website. As a sophomore in AI and Robotics Engineering at the National School of Excellence in Engineering, Chongqing University, this site showcases my academic journey, research, publications, and projects.
 
-## Content Sections
+Visit my portfolio: [Website URL]
 
-- Personal Introduction
-- Research Interests (Deep Learning, Natural Language Processing, Computer Vision)
-- Academic Achievements (Published Papers)
-- Research Projects
-- Competitions & Internships
-- Activities
-- Study Materials
-- Contact Information
+## Features
 
-## Tech Stack
+- **Responsive Design**: Mobile-friendly layout that works on devices of all sizes
+- **Academic Publications**: Highlighting my research papers including work in CogSci 2025
+- **Research Projects**: Comprehensive overview of academic and engineering projects
+- **Competition & Internship Experiences**: Showcasing participation in AI challenges and professional experiences
+- **Interactive Navigation**: Easy-to-use sidebar navigation system
+- **PDF Document Integration**: Embedded CV and academic papers
 
-- HTML5
-- CSS3 (Tailwind CSS)
-- JavaScript
-- Responsive Design
-- SVG Icons
+## Technologies Used
 
-## Local Development
+- HTML5, CSS3, JavaScript
+- Bootstrap 4 framework
+- Font Awesome icons
+- jQuery for DOM manipulation
+- Responsive design techniques
+
+## Site Structure
+
+- **About**: Academic background, research interests, and experiences
+- **Publications**: Academic papers organized by conference/journal 
+- **Projects**: Academic and engineering projects with details and images
+- **Competitions & Internships**: Participation in AI challenges and internship experiences
+- **Activities**: Extracurricular activities including sports, music, and volunteer work
+- **Study Materials**: Educational resources and materials
+- **Contact**: Ways to connect including GitHub, email, and WeChat
+
+## Research Interests
+
+- Sparse Inference Acceleration of Large Models
+- 3D Vision-Language Models (3DVLLM)
+- Time-varying Workload Prediction
+- Machine Learning & Deep Learning Algorithms
+
+## Setup and Development
 
 1. Clone the repository:
-```
-git clone https://github.com/koooooooop/koooooooop.github.io.git
-```
+   ```
+   git clone https://github.com/koooooooop/koooooooop.github.io.git
+   ```
 
-2. Open the index.html file to view the website in your browser
+2. Open `index.html` in your browser to view the website locally
 
-3. Modify content:
-   - Edit the index.html file to update website content
-   - Replace images (my_photo.jpg, head.jpg)
-   - Update contact information and project details
+3. Make edits to HTML, CSS, or JavaScript files as needed
 
-## Deployment
+4. Push changes to deploy to GitHub Pages:
+   ```
+   git add .
+   git commit -m "Update website content"
+   git push origin main
+   ```
 
-The website is hosted using GitHub Pages, and any changes pushed to the main branch will automatically be deployed to the live environment.
+## License
 
-Visit: https://koooooooop.github.io/
+[MIT License](LICENSE)
 
-## Changelog
+## Contact
 
-- 2024-05-16: Initial release 
+- GitHub: [koooooooop](https://github.com/koooooooop)
+- Email: chouzhipeng8@outlook.com | z.peng@stu.cqu.edu.cn
+- WeChat: Chouz_peng
+
+---
+
+*For a Chinese version of this README, see [README.zh.md](README.zh.md)* 

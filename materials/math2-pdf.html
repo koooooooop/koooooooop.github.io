@@ -6,93 +6,162 @@
     <title>Mathematics II - PDF Viewer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap">
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #4a6fa5;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+            --border-color: #e5e5e5;
+        }
+        
         body {
-            font-family: 'Open Sans', sans-serif;
-            color: #333;
-            line-height: 1.6;
-            background-color: #f9f9f9;
+            font-family: 'Inter', 'Open Sans', sans-serif;
+            color: var(--text-color);
+            line-height: 1.7;
+            background-color: var(--background-color);
             margin: 0;
             padding: 0;
         }
+        
         header {
-            background-color: #fff;
-            padding: 20px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 15px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
         }
+        
         .navbar-brand {
             font-family: 'Lora', serif;
             font-weight: 700;
-            color: #2c3e50;
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            letter-spacing: -0.5px;
         }
+        
         .container {
-            max-width: 1200px;
+            max-width: 1140px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
         }
+        
+        .content-container {
+            padding: 40px 0;
+        }
+        
+        h2 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+            font-size: 2.2rem;
+            letter-spacing: -0.5px;
+        }
+        
+        p {
+            color: #555;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+        
         .pdf-container {
             width: 100%;
-            height: calc(100vh - 150px);
-            margin: 20px 0;
-            border: 1px solid #dee2e6;
-            border-radius: 5px;
+            height: calc(100vh - 180px);
+            margin: 0 0 30px 0;
+            border-radius: 8px;
             overflow: hidden;
             background-color: #fff;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-color);
         }
+        
         iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
+        
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+        
         .btn-outline-primary {
-            color: #4a6fa5;
-            border-color: #4a6fa5;
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            border-radius: 6px;
+            padding: 8px 18px;
+            font-weight: 500;
+            transition: all 0.2s ease;
         }
+        
         .btn-outline-primary:hover {
-            background-color: #4a6fa5;
-            border-color: #4a6fa5;
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
             color: #fff;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 5px rgba(74, 111, 165, 0.2);
         }
+        
+        .btn-back {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            padding: 6px 12px;
+        }
+        
+        .btn-back:hover {
+            transform: translateX(-2px);
+        }
+        
         footer {
-            background-color: #f9f9f9;
-            padding: 15px 0;
+            background-color: #fff;
+            padding: 20px 0;
             text-align: center;
-            border-top: 1px solid #e0e0e0;
+            border-top: 1px solid var(--border-color);
             font-size: 0.9rem;
-            color: #6c757d;
+            color: #777;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
                 <a class="navbar-brand" href="../index.html">Zhipeng Zhou</a>
                 <div class="ml-auto">
-                    <a href="../index.html" class="btn btn-sm btn-outline-primary">
-                        <i class="fas fa-arrow-left mr-1"></i>Back to Home
+                    <a href="../index.html" class="btn btn-sm btn-back">
+                        <i class="fas fa-arrow-left"></i>Back to Home
                     </a>
                 </div>
             </nav>
         </div>
     </header>
 
-    <div class="container">
+    <div class="container content-container">
         <h2>Mathematics II</h2>
         <p>Below is the comprehensive PDF document for Mathematics II, covering advanced calculus, differential equations, and more with detailed examples and solutions.</p>
         
         <div class="pdf-container">
-            <!-- PDF Viewer using iframe -->
             <iframe src="../pdf/mathematics_ii.pdf" type="application/pdf"></iframe>
         </div>
         
-        <div class="mt-4">
+        <div class="action-buttons">
             <a href="../pdf/mathematics_ii.pdf" download class="btn btn-outline-primary">
                 <i class="fas fa-download mr-1"></i>Download PDF
             </a>
-            <a href="math2.html" class="btn btn-outline-primary ml-2">
+            <a href="math2.html" class="btn btn-outline-primary">
                 <i class="fas fa-book mr-1"></i>View Course Materials
             </a>
         </div>
