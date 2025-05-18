@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics Fundamentals - Zhipeng Zhou's Academic Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        :root {
+            --deepmind-blue: #1a73e8;
+            --deepmind-dark-blue: #174ea6;
+            --deepmind-light-blue: #d2e3fc;
+            --deepmind-background: #f8f9fa;
+            --text-primary: #202124;
+            --text-secondary: #5f6368;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--deepmind-background);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        .nav-container {
+            background-color: white;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-link {
+            color: var(--text-secondary);
+            font-weight: 500;
+            padding: 1rem 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--deepmind-blue);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(120deg, var(--deepmind-blue), var(--deepmind-dark-blue));
+            color: white;
+            padding: 5rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .hero h1 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 800px;
+        }
+        
+        /* Content Sections */
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+            font-size: 2rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            width: 60px;
+            background-color: var(--deepmind-blue);
+        }
+        
+        /* Cards */
+        .card {
+            border: none;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-title {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+        
+        .card-text {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Buttons */
+        .btn-deepmind {
+            background-color: var(--deepmind-blue);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            border: none;
+        }
+        
+        .btn-deepmind:hover {
+            background-color: var(--deepmind-dark-blue);
+            color: white;
+        }
+        
+        .btn-outline-deepmind {
+            border: 1px solid var(--deepmind-blue);
+            color: var(--deepmind-blue);
+            background-color: transparent;
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-deepmind:hover {
+            background-color: var(--deepmind-blue);
+            color: white;
+        }
+        
+        /* Section Navigation */
+        .section-nav {
+            position: sticky;
+            top: 80px;
+            padding-top: 2rem;
+        }
+        
+        .section-nav-item {
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+        
+        .section-nav-item.active, .section-nav-item:hover {
+            background-color: var(--deepmind-light-blue);
+            color: var(--deepmind-blue);
+        }
+        
+        /* Featured Box */
+        .featured-box {
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+        
+        .featured-content {
+            background-color: white;
+            padding: 2rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #202124;
+            color: #e8eaed;
+            padding: 3rem 0;
+            margin-top: 5rem;
+        }
+        
+        .footer h5 {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-link {
+            color: #e8eaed;
+            opacity: 0.8;
+            display: block;
+            margin-bottom: 0.75rem;
+            text-decoration: none;
+        }
+        
+        .footer-link:hover {
+            opacity: 1;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="nav-container">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand font-weight-bold" href="../index.html">Zhipeng Zhou</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../index.html#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#publications">Publications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#competitions">Competitions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#activities">Activities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <a href="../index.html" class="text-white mb-3 d-inline-block">
+                        <i class="fas fa-arrow-left mr-2"></i>Back to Projects
+                    </a>
+                    <h1>Robotics Fundamentals</h1>
+                    <p class="mb-4">Exploring the intersection of machine vision, embedded systems, and intelligent control for autonomous robotic applications.</p>
+                    <div class="d-flex">
+                        <a href="#course-reports" class="btn btn-light mr-3">Course Reports</a>
+                        <a href="#project-reports" class="btn btn-outline-light">Project Reports</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Left sidebar for section navigation -->
+            <div class="col-lg-3">
+                <div class="section-nav">
+                    <h5 class="mb-3">Quick Navigation</h5>
+                    <div class="section-nav-item active" data-target="overview">Overview</div>
+                    <div class="section-nav-item" data-target="course-reports">Course Reports</div>
+                    <div class="section-nav-item" data-target="project-reports">Project Reports</div>
+                    <div class="section-nav-item" data-target="resources">Resources</div>
+                    <div class="section-nav-item" data-target="future-work">Future Work</div>
+                </div>
+            </div>
+            
+            <!-- Main content area -->
+            <div class="col-lg-9">
+                <!-- Overview Section -->
+                <div id="overview" class="tab-content active">
+                    <h2 class="section-title">Overview</h2>
+                    
+                    <div class="featured-box">
+                        <img src="../images/robot1.jpg" alt="Robotics Project Hardware" class="img-fluid w-100" style="max-height: 400px; object-fit: cover;">
+                        <div class="featured-content">
+                            <h3 class="mb-3">Vision-Guided Robotics Research</h3>
+                            <p>This project documents my exploration in the fields of robotics, embedded systems, and machine vision. Through practical applications and theoretical study, I've gained comprehensive knowledge in robotics fundamentals that bridges hardware design with software implementation.</p>
+                            <p>My research focuses on the integration of computer vision and machine learning techniques with robotic systems to enable perception and autonomous interaction with real-world environments.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-5">
+                        <div class="col-md-6">
+                            <h4>Key Research Areas</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> Computer Vision & Perception</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> Embedded Control Systems</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> Sensor Fusion & Integration</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> Autonomous Navigation</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success mr-2"></i> Robot Operating System (ROS)</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Skills Developed</h4>
+                            <div class="progress mb-3" style="height: 20px;">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;">Computer Vision</div>
+                            </div>
+                            <div class="progress mb-3" style="height: 20px;">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;">Embedded Programming</div>
+                            </div>
+                            <div class="progress mb-3" style="height: 20px;">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;">Machine Learning</div>
+                            </div>
+                            <div class="progress mb-3" style="height: 20px;">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;">Mechanical Design</div>
+                            </div>
+                            <div class="progress mb-3" style="height: 20px;">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;">System Integration</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="featured-box">
+                        <img src="../images/robot2.jpg" alt="Visual Target Detection System" class="img-fluid w-100" style="max-height: 400px; object-fit: cover;">
+                    </div>
+                </div>
+                
+                <!-- Course Reports Section -->
+                <div id="course-reports" class="tab-content">
+                    <h2 class="section-title">Course Reports</h2>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <img src="../images/robot1.jpg" class="card-img-top" alt="Computer Vision">
+                                <div class="card-body">
+                                    <h5 class="card-title">Computer Vision for Robotics</h5>
+                                    <p class="card-text">Implementation of vision algorithms for object detection, tracking, and recognition. Focus on real-time processing for robotic applications.</p>
+                                    <ul class="list-unstyled mb-4">
+                                        <li><i class="fas fa-code mr-2 text-muted"></i> OpenCV, YOLO, TensorFlow</li>
+                                        <li><i class="fas fa-calendar-alt mr-2 text-muted"></i> Spring 2024</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-deepmind">View Report</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card">
+                                <img src="../images/robot2.jpg" class="card-img-top" alt="Embedded Systems">
+                                <div class="card-body">
+                                    <h5 class="card-title">Embedded Systems Design</h5>
+                                    <p class="card-text">Coursework on microcontroller programming, sensor integration, and real-time operating systems for robotics applications.</p>
+                                    <ul class="list-unstyled mb-4">
+                                        <li><i class="fas fa-microchip mr-2 text-muted"></i> Arduino, STM32, ESP32</li>
+                                        <li><i class="fas fa-calendar-alt mr-2 text-muted"></i> Fall 2023</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-deepmind">View Report</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Robot Kinematics & Dynamics</h5>
+                                    <p class="card-text">Study of mathematical principles governing robot motion, including forward and inverse kinematics, Jacobians, and dynamics equations.</p>
+                                    <ul class="list-unstyled mb-4">
+                                        <li><i class="fas fa-calculator mr-2 text-muted"></i> MATLAB, Python, ROS</li>
+                                        <li><i class="fas fa-calendar-alt mr-2 text-muted"></i> Winter 2023</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-deepmind">View Report</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Autonomous Navigation</h5>
+                                    <p class="card-text">Course focused on algorithms for path planning, SLAM (Simultaneous Localization and Mapping), and autonomous navigation in unknown environments.</p>
+                                    <ul class="list-unstyled mb-4">
+                                        <li><i class="fas fa-map-marked-alt mr-2 text-muted"></i> ROS, Gazebo, Point Cloud Library</li>
+                                        <li><i class="fas fa-calendar-alt mr-2 text-muted"></i> Spring 2023</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-deepmind">View Report</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Reports Section -->
+                <div id="project-reports" class="tab-content">
+                    <h2 class="section-title">Project Reports</h2>
+                    
+                    <div class="row">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="../images/robot1.jpg" class="img-fluid h-100" style="object-fit: cover;" alt="Mobile Robot Platform">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Autonomous Mobile Robot Platform</h5>
+                                            <p class="card-text">Development of a wheeled mobile robot platform capable of autonomous navigation and obstacle avoidance using computer vision and sensor fusion.</p>
+                                            <ul class="list-unstyled mb-4">
+                                                <li><i class="fas fa-cog mr-2 text-muted"></i> Differential drive system with encoder feedback</li>
+                                                <li><i class="fas fa-map mr-2 text-muted"></i> SLAM implementation for environment mapping</li>
+                                                <li><i class="fas fa-route mr-2 text-muted"></i> Path planning algorithms for efficient navigation</li>
+                                                <li><i class="fas fa-eye mr-2 text-muted"></i> Object recognition for interaction with specific targets</li>
+                                            </ul>
+                                            <a href="#" class="btn btn-deepmind">Read Full Report</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-12 mb-4">
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="../images/robot2.jpg" class="img-fluid h-100" style="object-fit: cover;" alt="Robotic Arm">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Robotic Arm with Vision-Based Control</h5>
+                                            <p class="card-text">Design and construction of a 5-DOF robotic arm with computer vision integration for autonomous pick-and-place operations in dynamic environments.</p>
+                                            <ul class="list-unstyled mb-4">
+                                                <li><i class="fas fa-robot mr-2 text-muted"></i> Servo motor control with inverse kinematics</li>
+                                                <li><i class="fas fa-camera mr-2 text-muted"></i> Camera integration for object detection</li>
+                                                <li><i class="fas fa-hand-paper mr-2 text-muted"></i> Custom gripper design for various object shapes</li>
+                                                <li><i class="fas fa-desktop mr-2 text-muted"></i> User interface for both autonomous and manual control</li>
+                                            </ul>
+                                            <a href="#" class="btn btn-deepmind">Read Full Report</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-12 mb-4">
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4 bg-light d-flex align-items-center justify-content-center">
+                                        <i class="fas fa-microchip fa-5x text-primary"></i>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Sensor Fusion for Enhanced Perception</h5>
+                                            <p class="card-text">Implementation of sensor fusion algorithms combining data from cameras, LiDAR, and IMU for improved environmental perception and navigation accuracy.</p>
+                                            <ul class="list-unstyled mb-4">
+                                                <li><i class="fas fa-code mr-2 text-muted"></i> Kalman filtering for sensor fusion</li>
+                                                <li><i class="fas fa-chart-line mr-2 text-muted"></i> Performance analysis and optimization</li>
+                                                <li><i class="fas fa-cloud mr-2 text-muted"></i> Point cloud processing for 3D environment reconstruction</li>
+                                            </ul>
+                                            <a href="#" class="btn btn-deepmind">Read Full Report</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Resources Section -->
+                <div id="resources" class="tab-content">
+                    <h2 class="section-title">Resources</h2>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Code Repositories</h5>
+                                    <p class="card-text">Access to project code repositories, including algorithms, drivers, and system integration examples.</p>
+                                    <ul class="list-group list-group-flush mb-4">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            Vision Algorithms
+                                            <a href="#" class="btn btn-sm btn-outline-deepmind"><i class="fab fa-github mr-1"></i> GitHub</a>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            Embedded Firmware
+                                            <a href="#" class="btn btn-sm btn-outline-deepmind"><i class="fab fa-github mr-1"></i> GitHub</a>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            ROS Packages
+                                            <a href="#" class="btn btn-sm btn-outline-deepmind"><i class="fab fa-github mr-1"></i> GitHub</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Documentation</h5>
+                                    <p class="card-text">Technical documentation, tutorials, and guides for project implementation and extension.</p>
+                                    <ul class="list-group list-group-flush mb-4">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            System Architecture
+                                            <a href="#" class="btn btn-sm btn-outline-deepmind"><i class="fas fa-file-pdf mr-1"></i> PDF</a>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            API Reference
+                                            <a href="#" class="btn btn-sm btn-outline-deepmind"><i class="fas fa-book mr-1"></i> Docs</a>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            Hardware Schematics
+                                            <a href="#" class="btn btn-sm btn-outline-deepmind"><i class="fas fa-file-pdf mr-1"></i> PDF</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Future Work Section -->
+                <div id="future-work" class="tab-content">
+                    <h2 class="section-title">Future Work</h2>
+                    
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="mb-4">Research Roadmap</h3>
+                            <p>My ongoing and future research in robotics focuses on these key areas:</p>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100 bg-light">
+                                        <div class="card-body">
+                                            <h5 class="card-title d-flex align-items-center">
+                                                <i class="fas fa-brain text-primary mr-2"></i>
+                                                Deep Learning for Perception
+                                            </h5>
+                                            <p class="card-text">Exploring advanced deep learning approaches to improve robot perception and decision-making in complex environments.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100 bg-light">
+                                        <div class="card-body">
+                                            <h5 class="card-title d-flex align-items-center">
+                                                <i class="fas fa-robot text-primary mr-2"></i>
+                                                Reinforcement Learning
+                                            </h5>
+                                            <p class="card-text">Applying reinforcement learning techniques for adaptive robot control in dynamic and uncertain environments.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100 bg-light">
+                                        <div class="card-body">
+                                            <h5 class="card-title d-flex align-items-center">
+                                                <i class="fas fa-users text-primary mr-2"></i>
+                                                Human-Robot Interaction
+                                            </h5>
+                                            <p class="card-text">Developing intuitive interfaces and collaborative frameworks for effective human-robot interaction and teamwork.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <div class="card h-100 bg-light">
+                                        <div class="card-body">
+                                            <h5 class="card-title d-flex align-items-center">
+                                                <i class="fas fa-hand-holding text-primary mr-2"></i>
+                                                Soft Robotics
+                                            </h5>
+                                            <p class="card-text">Investigating soft robotic systems for safer human interaction, adaptable grasping, and operation in delicate environments.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-4">
+                                <a href="#" class="btn btn-deepmind">Collaborate on Research</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Zhipeng Zhou</h5>
+                    <p>Undergraduate Student<br>AI and Robotics Engineering<br>X Innovation Experimental Class<br>Chongqing University</p>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Navigation</h5>
+                    <a href="../index.html" class="footer-link">Home</a>
+                    <a href="../index.html#about" class="footer-link">About</a>
+                    <a href="../index.html#projects" class="footer-link">Projects</a>
+                    <a href="../index.html#publications" class="footer-link">Publications</a>
+                    <a href="../index.html#contact" class="footer-link">Contact</a>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5>Resources</h5>
+                    <a href="#" class="footer-link">GitHub Repositories</a>
+                    <a href="#" class="footer-link">Research Papers</a>
+                    <a href="#" class="footer-link">Documentation</a>
+                    <a href="#" class="footer-link">Tutorials</a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact</h5>
+                    <a href="mailto:chouzhipeng8@outlook.com" class="footer-link">chouzhipeng8@outlook.com</a>
+                    <a href="mailto:z.peng@stu.cqu.edu.cn" class="footer-link">z.peng@stu.cqu.edu.cn</a>
+                    <div class="mt-3">
+                        <a href="#" class="text-light mr-3"><i class="fab fa-github fa-lg"></i></a>
+                        <a href="#" class="text-light mr-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-light mr-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-weixin fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4" style="background-color: rgba(255,255,255,0.1);">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Zhipeng Zhou. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Tab navigation
+            $('.section-nav-item').click(function() {
+                const target = $(this).data('target');
+                $('.section-nav-item').removeClass('active');
+                $(this).addClass('active');
+                $('.tab-content').removeClass('active');
+                $('#' + target).addClass('active');
+            });
+            
+            // Smooth scrolling for anchor links
+            $('a[href^="#"]').on('click', function(e) {
+                e.preventDefault();
+                const target = $(this.getAttribute('href'));
+                if (target.length) {
+                    const targetId = this.getAttribute('href').substring(1);
+                    $('.section-nav-item').removeClass('active');
+                    $('.section-nav-item[data-target="' + targetId + '"]').addClass('active');
+                    $('.tab-content').removeClass('active');
+                    $('#' + targetId).addClass('active');
+                    
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - 80
+                    }, 1000);
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

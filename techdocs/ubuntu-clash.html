@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubuntu配置Clash Verge - Zhipeng Zhou</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+        }
+        .container {
+            max-width: 900px;
+            padding: 30px 20px;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #4a6fa5;
+            overflow-x: auto;
+        }
+        code {
+            color: #e83e8c;
+            background-color: #f8f9fa;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .step-box {
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: #4a6fa5;
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        img.screenshot {
+            max-width: 100%;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            margin: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .tag {
+            display: inline-block;
+            background-color: #f1f5fd;
+            color: #4a6fa5;
+            padding: 3px 10px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+        .alert-tip {
+            border-left: 4px solid #4a6fa5;
+        }
+        .alert-warning {
+            border-left: 4px solid #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Zhipeng Zhou</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html"><i class="fas fa-home mr-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.html#techdocs"><i class="fas fa-code mr-1"></i> Technical Docs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="mb-4">
+            <a href="../index.html#techdocs" class="text-decoration-none"><i class="fas fa-arrow-left mr-2"></i>Return to document list</a>
+        </div>
+
+        <h1><i class="fab fa-linux text-danger mr-2"></i>Ubuntu配置Clash Verge</h1>
+        
+        <div class="mb-4">
+            <span class="tag">Ubuntu</span>
+            <span class="tag">Clash Verge</span>
+            <span class="tag">Network Proxy</span>
+            <span class="tag">Linux</span>
+        </div>
+        
+        <div class="alert alert-secondary mb-4">
+            <p class="mb-0"><strong>Difficulty Level:</strong> Intermediate | <strong>Last Updated:</strong> 2023-10-15 | <strong>Author:</strong> Zhipeng Zhou</p>
+        </div>
+        
+        <h2>Overview</h2>
+        <p>Clash Verge is a cross-platform proxy tool built on Clash and Tauri, featuring high customizability and a user-friendly interface. This article will detail how to install and configure Clash Verge on Ubuntu to resolve network access restrictions.</p>
+        
+        <div class="alert alert-info alert-tip">
+            <p><strong><i class="fas fa-lightbulb mr-2"></i>Tip:</strong> This tutorial is suitable for Ubuntu 20.04 and above. Other Linux distributions may require slight adjustments.</p>
+        </div>
+        
+        <h2>Prerequisites</h2>
+        <ul>
+            <li>Ubuntu 20.04 or higher</li>
+            <li>Administrator privileges (sudo)</li>
+            <li>Stable internet connection (at least for the initial installation)</li>
+            <li>Subscription link or Clash configuration file (obtain from your service provider)</li>
+        </ul>
+        
+        <h2>Installation Steps</h2>
+        
+        <div class="step-box">
+            <h3><span class="step-number">1</span> Download Clash Verge</h3>
+            <p>Visit Clash Verge's GitHub releases page to download the latest version:</p>
+            <pre><code>wget https://github.com/zzzgydi/clash-verge/releases/download/v1.3.0/clash-verge_1.3.0_amd64.deb</code></pre>
+            <p>Note: Check for newer versions and adjust the URL and filename accordingly.</p>
+        </div>
+        
+        <div class="step-box">
+            <h3><span class="step-number">2</span> Install Clash Verge</h3>
+            <p>Use the dpkg command to install the downloaded .deb package:</p>
+            <pre><code>sudo dpkg -i clash-verge_1.3.0_amd64.deb</code></pre>
+            <p>If you encounter dependency issues, run the following command to fix them:</p>
+            <pre><code>sudo apt-get install -f</code></pre>
+        </div>
+        
+        <div class="step-box">
+            <h3><span class="step-number">3</span> Install Required Dependencies</h3>
+            <p>Ensure that necessary libraries are installed on your system:</p>
+            <pre><code>sudo apt install libayatana-appindicator3-1 libwebkit2gtk-4.0-37</code></pre>
+        </div>
+        
+        <div class="step-box">
+            <h3><span class="step-number">4</span> Launch Clash Verge</h3>
+            <p>Start Clash Verge from the application menu or using the command line:</p>
+            <pre><code>clash-verge</code></pre>
+            <p>On first launch, you may be asked to grant administrator privileges to configure system proxy settings.</p>
+        </div>
+        
+        <div class="step-box">
+            <h3><span class="step-number">5</span> Import Configuration File</h3>
+            <p>After launching, you need to import a configuration file:</p>
+            <ol>
+                <li>Click on the "Profiles" option in the left sidebar</li>
+                <li>Click the "+" button in the top right corner</li>
+                <li>Select "Import from URL"</li>
+                <li>Enter your subscription link</li>
+                <li>Click "Confirm" to complete the import</li>
+            </ol>
+        </div>
+        
+        <div class="step-box">
+            <h3><span class="step-number">6</span> Configure System Proxy</h3>
+            <p>To make your entire system use the Clash Verge proxy, you need to configure system proxy settings:</p>
+            <pre><code># Set HTTP proxy
+export http_proxy=http://127.0.0.1:7890
+export https_proxy=http://127.0.0.1:7890
+
+# Or use SOCKS proxy
+export all_proxy=socks5://127.0.0.1:7891</code></pre>
+            <p>To make these settings persistent, add them to your ~/.bashrc or ~/.profile file:</p>
+            <pre><code>echo 'export http_proxy=http://127.0.0.1:7890' >> ~/.bashrc
+echo 'export https_proxy=http://127.0.0.1:7890' >> ~/.bashrc
+source ~/.bashrc</code></pre>
+        </div>
+        
+        <div class="alert alert-warning mb-4">
+            <p><strong><i class="fas fa-exclamation-triangle mr-2"></i>Note:</strong> Clash Verge uses port 7890 for HTTP proxy and port 7891 for SOCKS proxy by default. If you've modified these ports, adjust the above commands accordingly.</p>
+        </div>
+        
+        <h2>Advanced Configuration</h2>
+        
+        <h3>Command Line Control</h3>
+        <p>Clash Verge provides command line control options for quickly switching proxy modes:</p>
+        <pre><code># Switch to global mode
+clash-verge-cli -m global
+
+# Switch to rule mode
+clash-verge-cli -m rule
+
+# Switch to direct mode
+clash-verge-cli -m direct
+
+# Check current status
+clash-verge-cli -s</code></pre>
+        
+        <h3>Create Desktop Shortcut</h3>
+        <p>If Clash Verge doesn't automatically create a desktop shortcut, you can create one manually:</p>
+        <pre><code>cat > ~/.local/share/applications/clash-verge.desktop << EOF
+[Desktop Entry]
+Name=Clash Verge
+Exec=/usr/bin/clash-verge
+Icon=/usr/share/icons/hicolor/128x128/apps/clash-verge.png
+Type=Application
+Categories=Network;
+EOF</code></pre>
+        
+        <h3>Auto-start at Boot</h3>
+        <p>Set Clash Verge to start automatically when your system boots:</p>
+        <ol>
+            <li>Open "Startup Applications" settings</li>
+            <li>Click the "Add" button</li>
+            <li>Enter "Clash Verge" for the name</li>
+            <li>Enter "/usr/bin/clash-verge" for the command</li>
+            <li>Click "Add" to confirm</li>
+        </ol>
+        
+        <h2>Troubleshooting Common Issues</h2>
+        
+        <div class="accordion" id="troubleshooting">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Unable to Connect to Proxy Server
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#troubleshooting">
+                    <div class="card-body">
+                        <ol>
+                            <li>Check if your subscription link is valid</li>
+                            <li>Ensure you have sufficient traffic and your account is active</li>
+                            <li>Verify that your system time is accurate (some proxy services have strict time synchronization requirements)</li>
+                            <li>Try different proxy nodes</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Application Fails to Start
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#troubleshooting">
+                    <div class="card-body">
+                        <pre><code>sudo apt update
+sudo apt install -f
+sudo apt install libayatana-appindicator3-1 libwebkit2gtk-4.0-37
+sudo dpkg -i clash-verge_1.3.0_amd64.deb</code></pre>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Specific Applications Cannot Use Proxy
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#troubleshooting">
+                    <div class="card-body">
+                        <p>Some applications may not follow system proxy settings and need to be configured separately:</p>
+                        <ul>
+                            <li>For command line applications, set proxy environment variables when launching:<br>
+                            <code>http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890 application-name</code></li>
+                            <li>Some applications have their own proxy configuration interface that needs to be set within the application</li>
+                            <li>Consider using the proxychains tool to force applications through the proxy:<br>
+                            <code>sudo apt install proxychains-ng</code><br>
+                            <code>proxychains4 application-name</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Conclusion</h2>
+        <p>With this tutorial, you should now have successfully installed and configured Clash Verge proxy tool on your Ubuntu system. Clash Verge offers rich features and flexible configuration options to meet most network proxy needs. If you have any questions or suggestions, please feel free to leave a comment.</p>
+        
+        <div class="alert alert-info mt-4">
+            <p><strong>Further Reading:</strong></p>
+            <ul class="mb-0">
+                <li><a href="#">Comparison of Linux Network Proxy Tools</a></li>
+                <li><a href="#">Command Line Proxy Configuration Guide</a></li>
+                <li><a href="#">Clash Verge Performance Optimization Tips</a></li>
+            </ul>
+        </div>
+        
+        <div class="text-center mt-5 mb-4">
+            <a href="../index.html#techdocs" class="btn btn-outline-primary mr-2"><i class="fas fa-list mr-1"></i> Return to Document List</a>
+            <a href="../techdocs/pytorch-install.html" class="btn btn-primary"><i class="fas fa-arrow-right mr-1"></i> Next: PyTorch环境配置</a>
+        </div>
+    </div>
+    
+    <footer class="bg-light py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 Zhipeng Zhou. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html> 

@@ -64,14 +64,14 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.05);
         }
         .nav-container {
-            width: 280px;
+            width: 320px;
             background-color: #fff;
             border-right: 1px solid #e0e0e0;
             display: flex;
             flex-direction: row;
         }
         .primary-nav {
-            width: 140px;
+            width: 180px;
             background-color: #f9f9f9;
             border-right: 1px solid #e0e0e0;
         }
@@ -87,6 +87,7 @@
             transition: all 0.2s ease;
             border-bottom: 1px solid transparent;
             border-left: 3px solid transparent;
+            text-align: center;
         }
         .nav-item:hover {
             background-color: #f1f5fd;
@@ -275,6 +276,38 @@
             border-radius: 5px;
             margin-top: 10px;
         }
+        
+        /* Theme color classes */
+        .bg-theme {
+            background-color: #4a6fa5 !important;
+        }
+        .text-theme {
+            color: #4a6fa5 !important;
+        }
+        .btn-outline-theme {
+            color: #4a6fa5;
+            border-color: #4a6fa5;
+        }
+        .btn-outline-theme:hover {
+            color: #fff;
+            background-color: #4a6fa5;
+            border-color: #4a6fa5;
+        }
+        .border-theme {
+            border-color: #4a6fa5 !important;
+        }
+        
+        .btn-theme {
+            color: #fff;
+            background-color: #4a6fa5;
+            border-color: #4a6fa5;
+        }
+        .btn-theme:hover {
+            color: #fff;
+            background-color: #3d5d8a;
+            border-color: #3d5d8a;
+        }
+        
         @media (max-width: 767.98px) {
             .main-container {
                 flex-direction: column;
@@ -328,6 +361,35 @@
             transform: translateY(-2px);
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
+        
+        .btn-social-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 80px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-social-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .qr-code-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .modal-content {
+            border-radius: 15px;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
@@ -360,12 +422,13 @@
     <div class="main-container">
         <div class="nav-container">
             <div class="primary-nav">
-                <div class="nav-section-title">Main</div>
-                <div class="nav-item active" data-target="about">About</div>
+                <div class="nav-section-title">🌏Navigation🌏</div>
+                <div class="nav-item active" data-target="about">About Me</div>
                 <div class="nav-item" data-target="projects">Projects</div>
                 <div class="nav-item" data-target="publications">Publications</div>
-                <div class="nav-item" data-target="competitions">Competitions</div>
-                <div class="nav-item" data-target="activities">Activities</div>
+                <div class="nav-item" data-target="competitions">Compe & Intern</div>
+                <div class="nav-item" data-target="activities">Hobbies</div>
+                <div class="nav-item" data-target="techdocs">Technical Docs</div>
                 <div class="nav-item" data-target="materials">Study Materials</div>
                 <div class="nav-item" data-target="contact">Contact</div>
             </div>
@@ -424,6 +487,16 @@
                     <div class="sub-nav-item"><a href="activities/music.html">🎵 Music</a></div>
                     <div class="sub-nav-item"><a href="activities/art.html">🎨 Art</a></div>
                     <div class="sub-nav-item"><a href="activities/volunteer.html">❤️ Volunteer Activities</a></div>
+                </div>
+                
+                <!-- Technical Docs subcategories -->
+                <div class="secondary-nav-items" id="techdocs-subnav">
+                    <div class="sub-nav-item"><a href="techdocs/ubuntu-clash.html">Ubuntu配置Clash Verge</a></div>
+                    <div class="sub-nav-item"><a href="techdocs/pytorch-install.html">PyTorch环境配置</a></div>
+                    <div class="sub-nav-item"><a href="techdocs/docker-setup.html">Docker快速入门</a></div>
+                    <div class="sub-nav-item"><a href="techdocs/cuda-config.html">CUDA配置指南</a></div>
+                    <div class="sub-nav-item"><a href="techdocs/raspberry-pi.html">树莓派开发环境</a></div>
+                    <div class="sub-nav-item"><a href="techdocs/all.html">查看全部文档</a></div>
                 </div>
                 
                 <!-- Study Materials subcategories -->
@@ -1221,9 +1294,107 @@
                 </div>
             </div>
 
+            <!-- Technical Docs Content -->
+            <div class="content-section" id="techdocs-content">
+                <h2><i class="fas fa-code mr-2"></i>Technical Documentation</h2>
+                
+                <!-- Search functionality -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="text" id="techdocs-search" class="form-control" placeholder="Search technical documents...">
+                            <div class="input-group-append">
+                                <button class="btn btn-theme" type="button" id="search-button"><i class="fas fa-search"></i> Search</button>
+                            </div>
+                        </div>
+                        <div class="mt-2 small text-muted">
+                            Try keywords like: Ubuntu, PyTorch, Docker, CUDA, etc.  (EAZY TO SEARCH,THE TITLE IS IN CHINESE.)
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technical Documents List -->
+                <div id="techdocs-list">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fab fa-linux text-danger mr-2"></i>Ubuntu配置Clash Verge</h4>
+                            <p class="card-text">A detailed guide on how to configure and use Clash Verge proxy tool on Ubuntu operating system to solve network access issues.</p>
+                            <div class="mb-2">
+                                <span class="tag">Ubuntu</span>
+                                <span class="tag">Clash</span>
+                                <span class="tag">Network Proxy</span>
+                            </div>
+                            <a href="techdocs/ubuntu-clash.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fab fa-python text-primary mr-2"></i>PyTorch环境配置</h4>
+                            <p class="card-text">PyTorch environment configuration guide for different operating systems and CUDA versions, including solutions to common problems.</p>
+                            <div class="mb-2">
+                                <span class="tag">PyTorch</span>
+                                <span class="tag">Deep Learning</span>
+                                <span class="tag">CUDA</span>
+                            </div>
+                            <a href="techdocs/pytorch-install.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fab fa-docker text-info mr-2"></i>Docker快速入门</h4>
+                            <p class="card-text">Docker basics, common commands, and detailed tutorials on creating containers and images, suitable for Docker beginners.</p>
+                            <div class="mb-2">
+                                <span class="tag">Docker</span>
+                                <span class="tag">Containers</span>
+                                <span class="tag">DevOps</span>
+                            </div>
+                            <a href="techdocs/docker-setup.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fas fa-microchip text-success mr-2"></i>CUDA配置指南</h4>
+                            <p class="card-text">Detailed NVIDIA CUDA configuration guide, including installation steps for different versions, compatibility issues, and performance optimization.</p>
+                            <div class="mb-2">
+                                <span class="tag">CUDA</span>
+                                <span class="tag">GPU</span>
+                                <span class="tag">NVIDIA</span>
+                            </div>
+                            <a href="techdocs/cuda-config.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fas fa-server text-danger mr-2"></i>树莓派开发环境</h4>
+                            <p class="card-text">A complete guide to Raspberry Pi system installation, development environment configuration, GPIO programming, and common application scenarios.</p>
+                            <div class="mb-2">
+                                <span class="tag">Raspberry Pi</span>
+                                <span class="tag">Embedded Systems</span>
+                                <span class="tag">GPIO</span>
+                            </div>
+                            <a href="techdocs/raspberry-pi.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="techdocs/all.html" class="btn btn-theme">View All Technical Documents <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+
             <!-- Study Materials Content -->
             <div class="content-section" id="materials-content">
                 <h2><i class="fas fa-book-open mr-2"></i>Study Materials</h2>
+                
+                <div class="alert alert-info mb-4">
+                    <h4><i class="fas fa-info-circle mr-2"></i>Usage Guide</h4>
+                    <p>This page primarily provides review materials for theoretical courses (requiring examinations) in the Moon X Innovation Class. These resources include my personal summaries and are available for download and online learning.</p>
+                </div>
+                
                 <div class="row">
                     <div class="col-md-6 mb-4">
                         <div class="project-card">
@@ -1328,36 +1499,234 @@
                 <p class="lead mb-4">If you're interested in my research, projects, or collaboration opportunities, feel free to contact me through the following channels.</p>
                 
                 <div class="row mt-4">
-                    <div class="col-md-4 mb-4 text-center">
-                        <div class="bg-light p-4 rounded mb-3">
-                            <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header bg-theme text-white text-center">
+                                <i class="fas fa-envelope fa-2x mb-2"></i>
+                                <h4 class="mb-0">Email</h4>
                         </div>
-                        <h4>Email</h4>
-                        <p><a href="mailto:chouzhipeng8@outlook.com">chouzhipeng8@outlook.com</a></p>
-                        <p><a href="mailto:z.peng@stu.cqu.edu.cn">z.peng@stu.cqu.edu.cn</a></p>
+                            <div class="card-body text-center">
+                                <p class="mb-2">chouzhipeng8@outlook.com</p>
+                                <p>z.peng@stu.cqu.edu.cn</p>
+                            </div>
+                        </div>
                     </div>
                     
-                    <div class="col-md-4 mb-4 text-center">
-                        <div class="bg-light p-4 rounded mb-3">
-                            <i class="fas fa-globe fa-2x text-primary mb-3"></i>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header bg-theme text-white text-center">
+                                <i class="fas fa-file-alt fa-2x mb-2"></i>
+                                <h4 class="mb-0">Curriculum Vitae</h4>
                         </div>
-                        <h4>Academic Profile</h4>
-                        <p><a href="https://github.com/koooooooop" target="_blank"><i class="fab fa-github mr-1"></i>GitHub</a></p>
-                        <p><a href="#">Hugging Face</a></p>
-                        <p><a href="pdf/Zhou'sCV.pdf" target="_blank"><i class="fas fa-file-alt mr-1"></i>Download CV</a></p>
+                            <div class="card-body text-center">
+                                <p class="mb-3">View or download my CV in PDF format</p>
+                                <button type="button" class="btn btn-outline-theme mr-2" data-toggle="modal" data-target="#cvModal">
+                                    <i class="fas fa-eye mr-1"></i> View CV
+                                </button>
+                                <a href="pdf/Zhou'sCV.pdf" download class="btn btn-outline-theme">
+                                    <i class="fas fa-download mr-1"></i> Download
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     
-                    <div class="col-md-4 mb-4 text-center">
-                        <div class="bg-light p-4 rounded mb-3">
-                            <i class="fas fa-comments fa-2x text-primary mb-3"></i>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header bg-theme text-white text-center">
+                                <i class="fas fa-share-alt fa-2x mb-2"></i>
+                                <h4 class="mb-0">Social Media</h4>
                         </div>
-                        <h4>Social Media</h4>
-                        <p>
-                            <a href="#" class="mr-3"><i class="fab fa-weixin mr-1"></i>WeChat: Chouz_peng</a>
-                            <a href="#" class="mr-3">Twitter/X</a>
-                            <a href="#" class="mr-3">Instagram</a>
-                            <a href="#">Feishu</a>
-                        </p>
+                            <div class="card-body text-center">
+                                <div class="row">
+                                    <div class="col-4 mb-3">
+                                        <button class="btn btn-sm btn-light btn-social-icon" data-toggle="modal" data-target="#wechatModal">
+                                            <i class="fab fa-weixin fa-2x text-success"></i>
+                                            <div class="small mt-1">WeChat</div>
+                                        </button>
+                    </div>
+                                    <div class="col-4 mb-3">
+                                        <button class="btn btn-sm btn-light btn-social-icon" data-toggle="modal" data-target="#qqModal">
+                                            <i class="fab fa-qq fa-2x text-theme"></i>
+                                            <div class="small mt-1">QQ</div>
+                                        </button>
+                </div>
+                                    <div class="col-4 mb-3">
+                                        <button class="btn btn-sm btn-light btn-social-icon" data-toggle="modal" data-target="#instagramModal">
+                                            <i class="fab fa-instagram fa-2x text-danger"></i>
+                                            <div class="small mt-1">Instagram</div>
+                                        </button>
+            </div>
+                                    <div class="col-4 mb-3">
+                                        <button class="btn btn-sm btn-light btn-social-icon" data-toggle="modal" data-target="#redNoteModal">
+                                            <i class="fas fa-bookmark fa-2x text-danger"></i>
+                                            <div class="small mt-1">RedNote</div>
+                                        </button>
+                                    </div>
+                                    <div class="col-4 mb-3">
+                                        <button class="btn btn-sm btn-light btn-social-icon" data-toggle="modal" data-target="#feishuModal">
+                                            <i class="fas fa-feather-alt fa-2x text-theme"></i>
+                                            <div class="small mt-1">Feishu</div>
+                                        </button>
+                                    </div>
+                                    <div class="col-4 mb-3">
+                                        <a href="https://github.com/koooooooop" target="_blank" class="btn btn-sm btn-light btn-social-icon">
+                                            <i class="fab fa-github fa-2x text-dark"></i>
+                                            <div class="small mt-1">GitHub</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sponsor Section -->
+                <h2 class="mt-5"><i class="fas fa-heart mr-2"></i>Sponsor</h2>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p class="lead text-center mb-4">If you find my work helpful or valuable, your support would be greatly appreciated. Your sponsorship helps me continue creating quality content and research.</p>
+                        
+                        <div class="row justify-content-center">
+                            <div class="col-md-5 mb-4 mb-md-0">
+                                <div class="card h-100 border-success">
+                                    <div class="card-header bg-success text-white text-center">
+                                        <i class="fab fa-weixin fa-2x mb-2"></i>
+                                        <h4 class="mb-0">WeChat Pay</h4>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <img src="images/pay_wx.jpg" alt="WeChat Pay QR Code" class="img-fluid qr-code-img" style="max-height: 300px;">
+                                        <p class="mt-3 mb-0">Scan to support via WeChat Pay</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-5">
+                                <div class="card h-100 border-info">
+                                    <div class="card-header bg-info text-white text-center">
+                                        <i class="fas fa-alipay fa-2x mb-2"></i>
+                                        <h4 class="mb-0">Alipay</h4>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <img src="images/pay_zfb.jpg" alt="Alipay QR Code" class="img-fluid qr-code-img" style="max-height: 300px;">
+                                        <p class="mt-3 mb-0">Scan to support via Alipay</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- QR Code Modals -->
+            <!-- WeChat Modal -->
+            <div class="modal fade" id="wechatModal" tabindex="-1" role="dialog" aria-labelledby="wechatModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success text-white">
+                            <h5 class="modal-title" id="wechatModalLabel"><i class="fab fa-weixin mr-2"></i>WeChat: Chouz_peng</h5>
+                            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="images/cweixin.jpg" alt="WeChat QR Code" class="img-fluid qr-code-img">
+                            <p class="mt-3 mb-0">Scan the QR code to add me on WeChat</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- QQ Modal -->
+            <div class="modal fade" id="qqModal" tabindex="-1" role="dialog" aria-labelledby="qqModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-theme text-white">
+                            <h5 class="modal-title" id="qqModalLabel"><i class="fab fa-qq mr-2"></i>QQ: 2794257474</h5>
+                            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="images/cqq.jpg" alt="QQ QR Code" class="img-fluid qr-code-img">
+                            <p class="mt-3 mb-0">Scan the QR code to add me on QQ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Instagram Modal -->
+            <div class="modal fade" id="instagramModal" tabindex="-1" role="dialog" aria-labelledby="instagramModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-danger text-white">
+                            <h5 class="modal-title" id="instagramModalLabel"><i class="fab fa-instagram mr-2"></i>Instagram: @zhipeng.chou</h5>
+                            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="images/cins.jpg" alt="Instagram QR Code" class="img-fluid qr-code-img">
+                            <p class="mt-3 mb-0">Scan the QR code to follow me on Instagram</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- RedNote Modal -->
+            <div class="modal fade" id="redNoteModal" tabindex="-1" role="dialog" aria-labelledby="redNoteModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-danger text-white">
+                            <h5 class="modal-title" id="redNoteModalLabel"><i class="fas fa-bookmark mr-2"></i>RedNote: Chouz_peng</h5>
+                            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="images/cxiaohongshu.jpg" alt="RedNote QR Code" class="img-fluid qr-code-img">
+                            <p class="mt-3 mb-0">Scan the QR code to follow me on RedNote</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feishu Modal -->
+            <div class="modal fade" id="feishuModal" tabindex="-1" role="dialog" aria-labelledby="feishuModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-theme text-white">
+                            <h5 class="modal-title" id="feishuModalLabel"><i class="fas fa-feather-alt mr-2"></i>Feishu</h5>
+                            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="images/cfeishu.jpg" alt="Feishu QR Code" class="img-fluid qr-code-img">
+                            <p class="mt-3 mb-0">Scan the QR code to add me on Feishu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CV Modal -->
+            <div class="modal fade" id="cvModal" tabindex="-1" role="dialog" aria-labelledby="cvModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-theme text-white">
+                            <h5 class="modal-title" id="cvModalLabel"><i class="fas fa-file-alt mr-2"></i>Curriculum Vitae</h5>
+                            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-center p-0">
+                            <img src="images/cv.png" alt="CV Preview" class="img-fluid">
+                        </div>
+                        <div class="modal-footer">
+                            <a href="pdf/Zhou'sCV.pdf" download class="btn btn-theme">
+                                <i class="fas fa-download mr-1"></i> Download CV
+                            </a>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1371,6 +1740,8 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function() {
             // Primary navigation click handler
@@ -1407,6 +1778,42 @@
             
             $(window).resize(adjustForMobile);
             adjustForMobile();
+            
+            // Technical Documentation Search Functionality
+            $('#techdocs-search').on('keyup', function(e) {
+                const searchTerm = $(this).val().toLowerCase();
+                
+                // If Enter key pressed, trigger search button
+                if (e.key === 'Enter') {
+                    $('#search-button').click();
+                    return;
+                }
+            });
+            
+            $('#search-button').on('click', function() {
+                const searchTerm = $('#techdocs-search').val().toLowerCase();
+                
+                // Filter documentation cards based on search term
+                $('#techdocs-list .card').each(function() {
+                    const cardText = $(this).text().toLowerCase();
+                    const tagText = $(this).find('.tag').text().toLowerCase();
+                    
+                    if (cardText.includes(searchTerm) || tagText.includes(searchTerm)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+                
+                // Show message if no results
+                if ($('#techdocs-list .card:visible').length === 0) {
+                    if ($('#no-results-message').length === 0) {
+                        $('#techdocs-list').append('<div id="no-results-message" class="alert alert-info">没有找到匹配的文档。请尝试其他关键词。</div>');
+                    }
+                } else {
+                    $('#no-results-message').remove();
+                }
+            });
         });
     </script>
 </body>

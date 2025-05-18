@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QEA1: Ship Design Project - Zhipeng Zhou</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <style>
+        :root {
+            --primary: #000000;
+            --secondary: #333333;
+            --accent: #555555;
+            --light-gray: #f6f6f6;
+            --mid-gray: #e0e0e0;
+            --dark-gray: #666666;
+            --white: #ffffff;
+            --off-white: #f9f9f9;
+        }
+        
+        body, html {
+            font-family: 'Inter', sans-serif;
+            color: var(--secondary);
+            line-height: 1.6;
+            background-color: var(--white);
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+        
+        /* Header styles */
+        .hero-section {
+            position: relative;
+            background: linear-gradient(to right, #000000, #333333);
+            color: white;
+            padding: 100px 0 70px;
+            text-align: center;
+            overflow: hidden;
+            margin-bottom: 0;
+        }
+        
+        .project-title {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.03em;
+        }
+        
+        .project-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.8;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+        
+        /* Download button */
+        .download-container {
+            background-color: var(--light-gray);
+            padding: 1.5rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--mid-gray);
+        }
+        
+        .btn-download {
+            background-color: var(--white);
+            color: var(--primary);
+            border: 1px solid var(--mid-gray);
+            padding: 0.7rem 1.5rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .btn-download i {
+            margin-right: 0.5rem;
+        }
+        
+        .btn-download:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+        }
+        
+        /* Content styles */
+        .content-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 2.5rem 0 1.5rem;
+            position: relative;
+        }
+        
+        .subsection-title {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin: 2rem 0 1rem;
+            font-weight: 500;
+        }
+        
+        p {
+            color: var(--secondary);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+        }
+        
+        strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* Card styles */
+        .content-card {
+            background-color: var(--white);
+            border-radius: 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--mid-gray);
+        }
+        
+        /* Image container styles */
+        .image-container {
+            margin: 2rem 0;
+            text-align: center;
+            border-radius: 0;
+            overflow: hidden;
+            position: relative;
+            background-color: var(--light-gray);
+            padding: 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        
+        .image-placeholder {
+            padding: 3rem;
+            background: var(--light-gray);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 220px;
+            position: relative;
+            border: 1px solid var(--mid-gray);
+        }
+        
+        .image-placeholder i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-gray);
+        }
+        
+        .image-caption {
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+            padding: 1rem;
+            background-color: var(--white);
+            border-top: 1px solid var(--mid-gray);
+        }
+        
+        /* Code block styles */
+        .code-block {
+            background-color: var(--light-gray);
+            border-radius: 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            overflow-x: auto;
+            border: 1px solid var(--mid-gray);
+            position: relative;
+        }
+        
+        .code-block::before {
+            content: "MATLAB";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            font-size: 0.75rem;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Navigation styles */
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            transition: color 0.2s ease;
+            padding: 0.5rem 0;
+            margin-bottom: 1rem;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        .nav-link i {
+            margin-right: 0.5rem;
+        }
+        
+        /* Button styles */
+        .btn-action {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            border-radius: 4px;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .btn-action i {
+            margin-right: 0.5rem;
+        }
+        
+        .btn-action:hover {
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Two-column layout */
+        .two-column {
+            display: flex;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .column {
+            flex: 1;
+        }
+        
+        /* Stats cards */
+        .stats-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-card {
+            flex: 1;
+            min-width: 180px;
+            background-color: var(--white);
+            padding: 1.5rem;
+            margin: 0.5rem;
+            text-align: center;
+            border: 1px solid var(--mid-gray);
+        }
+        
+        .stat-card h4 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .stat-card p {
+            color: var(--dark-gray);
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 45px;
+            height: 45px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            pointer-events: none;
+            z-index: 1000;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Timeline styling */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--mid-gray);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+        }
+        
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -2rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--white);
+            border: 2px solid var(--primary);
+        }
+        
+        .timeline-item h4 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        /* Call-to-action section */
+        .cta-section {
+            background-color: var(--light-gray);
+            padding: 2.5rem;
+            margin: 3rem 0;
+            text-align: center;
+            border: 1px solid var(--mid-gray);
+        }
+        
+        .cta-section h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        /* Responsive fixes */
+        @media (max-width: 768px) {
+            .two-column {
+                flex-direction: column;
+            }
+            
+            .project-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-section {
+                padding: 80px 0 50px;
+            }
+            
+            .content-card {
+                padding: 1.5rem;
+            }
+            
+            .image-placeholder {
+                min-height: 180px;
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .project-title {
+                font-size: 2rem;
+            }
+            
+            .project-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .content-wrapper {
+                padding: 0 15px;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to top button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <h1 class="project-title">Quantitative Engineering Analysis</h1>
+            <p class="project-subtitle">Ship Design Project: Mathematical Modeling and Practical Implementation</p>
+        </div>
+    </div>
+    
+    <!-- Download Button -->
+    <div class="download-container">
+        <a href="../docx/1qea1.markdown" download class="btn-download">
+            <i class="fas fa-download"></i> Download Markdown File
+        </a>
+    </div>
+
+    <div class="content-wrapper">
+        <!-- Navigation -->
+        <a href="../index.html" class="nav-link">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+
+        <!-- Introduction Card -->
+        <div class="content-card">
+            <h2 class="section-title">Project Overview</h2>
+            
+            <div class="stats-row">
+                <div class="stat-card">
+                    <h4>120-140°</h4>
+                    <p>Capsizing Angle</p>
+                </div>
+                <div class="stat-card">
+                    <h4>10kg</h4>
+                    <p>Load Capacity</p>
+                </div>
+                <div class="stat-card">
+                    <h4>5.8kg</h4>
+                    <p>Ship Weight</p>
+                </div>
+            </div>
+            
+            <p>This project documents the design, mathematical modeling and physical construction of a model ship with specific performance requirements. Our goal was to create a vessel capable of stable floating, carrying a 10kg load, and maintaining stability with a capsizing angle between 120-140 degrees.</p>
+            
+            <p>Through rigorous mathematical calculations in MATLAB and precise 3D modeling in SolidWorks, we were able to translate theoretical concepts into a functional physical prototype. The ship, nicknamed "Cheese Cream" due to its distinctive shape, successfully met all design criteria during testing.</p>
+
+            <div class="image-container">
+                <div class="image-placeholder">
+                    <i class="fas fa-ship"></i>
+                    <p>Electric ship research poster</p>
+                </div>
+                <div class="image-caption">
+                    <em>Figure 1: Electric ship research poster showcasing the project's highlights and technical specifications</em>
+                </div>
+            </div>
+        </div>
+
+        <!-- Abstract Section -->
+        <div class="content-card">
+            <h2 class="section-title">Abstract</h2>
+            <p>This report discusses the process of designing, simulating, and manufacturing a model ship that can meet specific performance requirements, including stable floating, carrying a 10kg load, and having a capsizing angle of 120-140 degrees. The technical background section explains basic concepts of ship electric propulsion, center of buoyancy, center of gravity, and righting moments.</p>
+            
+            <p>To define the surface equation for the hull, we iterated through many equations and diagrams, detailing the hull design layout. The mathematical calculations for the stability angle of the final design include calculating the ship's center of gravity, center of buoyancy, and the righting moment between these two points.</p>
+            
+            <p>After creating a model for the final hull design, we recreated the ship in engineering, then laser-cut the keel and assembled the hull. During testing, the ship successfully floated flat and was able to correct its capsizing angle.</p>
+        </div>
+
+        <!-- Technical Background Section -->
+        <div class="content-card">
+            <h2 class="section-title">Technical Background</h2>
+            
+            <h3 class="subsection-title">Electric Ship Propulsion</h3>
+            <p>The main components of a ship's electric propulsion system are the propeller, motor, power supply (generator, battery), prime mover, and its control and regulation devices. Electric propulsion can be classified differently according to its use, the type of prime mover adopted, and its control method. However, from an electrical concept, it can be divided into three categories: DC electric propulsion, AC electric propulsion, and AC/DC electric propulsion.</p>
+            
+            <p>Ship electric propulsion has a history of nearly a hundred years from development to application. Ships equipped with electric propulsion devices have obvious advantages over those with traditional mechanical propulsion methods in terms of maneuverability, reliability, and economy, which has led to their increasingly widespread use in modern shipbuilding.</p>
+
+            <h3 class="subsection-title">Mathematical Model Construction</h3>
+            <p>Our approach to designing the ship involved developing sophisticated mathematical models to predict and optimize its performance. We created diagrams of force distribution, torque analysis, and overall force interactions to understand how the ship would behave in water.</p>
+
+            <div class="two-column">
+                <div class="column">
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-project-diagram"></i>
+                            <p>Force analysis diagram (1)</p>
+                        </div>
+                        <div class="image-caption">
+                            <em>Figure 2: Force, torque and force analysis diagram showing theoretical calculations</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-balance-scale"></i>
+                            <p>Force analysis diagram (2)</p>
+                        </div>
+                        <div class="image-caption">
+                            <em>Figure 3: Secondary force analysis showing distribution across hull surfaces</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>We abstracted the ship's surface into curved surfaces and curves for visualization, calculating displacement, center of gravity, center of buoyancy, and other physical quantities. The ship body was constructed based on mathematical functions that defined its shape.</p>
+
+            <div class="image-container">
+                <div class="image-placeholder">
+                    <i class="fas fa-calculator"></i>
+                    <p>Function construction diagram</p>
+                </div>
+                <div class="image-caption">
+                    <em>Figure 4: Function construction thought process showing mathematical approach to hull design</em>
+                </div>
+            </div>
+
+            <p>Using MATLAB, we determined the object's center of gravity, modeled the 3D surface of the ship, and calculated the center of buoyancy. We applied calculus principles to analyze ship stability, the relationship between center of gravity and buoyancy, and calculated the critical righting moment.</p>
+
+            <h4>MATLAB Code Implementation</h4>
+            <div class="code-block">
+%Calculating 2D center of buoyancy
+for i=1:30 %X from 0 to 100, cut 30 times with each length of 3
+    Zjudge=Judge(i*3);
+    bili=(10-Zjudge)/20.0;  %Related scaling ratio 
+    if i>=5 && i<=25
+        bili=1; 
+    end
+    yyy=COB(1);%Y-coordinate of the center of gravity of the standard surface
+    zzz=COB(2);%X-coordinate of the center of gravity of the standard surface
+    ZMass(end+1)=Zjudge+(zzz+10)*bili; 
+    YMass(end+1)=yyy*bili;
+    XMass(end+1)=(i*3);
+    MMass(end+1)=mass*bili;
+    tot_mass=tot_mass+mass*bili;%Weight ratio for calculating total center of gravity
+    V=V+mass*3*bili;%Total volume
+end
+ANS=centerOfMass3(XMass,YMass,ZMass,MMass,tot_mass);%Calculate 3D center of buoyancy
+M=V*1 %Total weight
+%The center of gravity of the bare ship is calculated to be at (48, 0, -5.6).
+%Add two motors and one battery (800g), center of gravity at (65,0,-6)
+ANS(1)=ANS(1,1)*M/(M+800)+65*800/(M+800)
+ANs(2)=ANS(1,2)*M/(M+800)+0*800/(M+800)
+Ans(3)=ANS(1,3)*M/(M+800)+(-6)*800/(M+800)
+ANS
+M=M+800; 
+%Add load (800g), center of gravity at (50, 0, 6)
+ANS(1)=ANS(1)*M/(M+10000)+50*800/(M+10000)
+ANs(2)=ANS(2)*M/(M+10000)+0*800/(M+10000)
+Ans(3)=ANS(3)*M/(M+10000)+(6)*800/(M+10000)
+ANS
+M=M+10000
+%Center of gravity of the ship with a normal load of 800g:
+%(48.4, 0, -5.6)
+%Ship weight: 5800g
+            </div>
+
+            <div class="code-block">
+% Assumed ship parameters
+mass_ship = 5; % Assume ship mass is 5kg
+
+% Ship density
+density_ship = 110.5; % Ship density is 110.5kg/m³
+
+% Initialize angle and restore arm arrays
+angles = 0:1:180;
+restore_arms = zeros(size(angles));
+
+% Loop for each angle
+for i = 1:length(angles)
+    angle = angles(i);
+    % hull = Z > z1; % Generate hull underwater part, this is just an example, actual hull geometry should be defined
+    d = 0.01;
+    % z2 = tand(angle) .* Y + d; % Calculate waterline position based on angle, Y is hull lateral coordinate
+    % Omitting complex code for calculating center of buoyancy and center of stability
+    % Assume restore_arm_current has been calculated for current angle
+    % restore_arms(i) = restore_arm_current; % Store current restore arm
+
+    % For demonstration only, actual plotting and color settings require more complex logic
+    if angle<=90
+        % water = Z < z2;
+        % colormap([1,1,1; 0,0,1]);
+        % sub = water & hull;
+    end
+    if angle>90
+        % water = Z > z2;
+        % colormap([1,1,1; 0,0,1]);
+        % sub = water & hull;
+    end
+end
+            </div>
+
+            <div class="two-column">
+                <div class="column">
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-water"></i>
+                            <p>MATLAB simulation of capsizing</p>
+                        </div>
+                        <div class="image-caption">
+                            <em>Figure 5: MATLAB simulation showing ship capsizing at 130°-140° angle</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-wave-square"></i>
+                            <p>Waterline simulation</p>
+                        </div>
+                        <div class="image-caption">
+                            <em>Figure 6: Simulation of waterline position during the capsizing process</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Manufacturing Process Section -->
+        <div class="content-card">
+            <h2 class="section-title">Manufacturing Process</h2>
+            
+            <h3 class="subsection-title">Design Approach</h3>
+            <p>First, we determined the type of ship and the functional form we wanted to achieve—mimicking the features of a destroyer. We established multi-level modeling to make the ship's parameter conditions more intuitive. This included center of gravity and buoyancy (righting moment), force analysis model (ship speed dynamics), and three-dimensional solid model.</p>
+
+            <div class="two-column">
+                <div class="column">
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-cubes"></i>
+                            <p>3D hull model</p>
+                        </div>
+                        <div class="image-caption">
+                            <em>Figure 7: 3D model of the hull showing overall design</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-cut"></i>
+                            <p>Side view of 3D model</p>
+                        </div>
+                        <div class="image-caption">
+                            <em>Figure 8: Side profile view of the 3D hull model showing contours</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Detailed Modeling Process</h3>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Selection of Modeling Software</h4>
+                    <p>The project used Rhino software for 3D modeling, which can precisely simulate every detail of the hull, including curves, angles, and seams. The actual production referenced related product models of ship types.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>Hull Structure Material Planning</h4>
+                    <p>Foam board was selected as the material for the ship's external shape due to its higher density, greater hardness, and suitability for manufacturing architectural models. Its advantages included ease of manual cutting while ensuring hardness with some elasticity, allowing for better shaping of the ship's form.</p>
+                    
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-microscope"></i>
+                            <p>Foam board properties</p>
+                        </div>
+                        <div class="image-caption">
+                            <em>Figure 9: Research on physical and chemical properties of foam board</em>
+                        </div>
+                    </div>
+                    
+                    <p>SolidWorks was used to draw the flat shape, which was then laser-cut to make the ship's keel. The keel went through two design iterations:</p>
+                    
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-drafting-compass"></i>
+                            <p>Initial keel design (v1.0)</p>
+                        </div>
+                        <div class="image-caption">
+                            <em>Figure 10: First keel design with overly dense ribs causing assembly difficulties</em>
+                        </div>
+                    </div>
+                    
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-newspaper"></i>
+                            <p>Newspaper adhesion attempt</p>
+                        </div>
+                        <div class="image-caption">
+                            <em>Figure 11: Attempt to use newspaper to increase adhesion surface area</em>
+                        </div>
+                    </div>
+                    
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-drafting-compass"></i>
+                            <p>Improved keel design (v2.0)</p>
+                        </div>
+                        <div class="image-caption">
+                            <em>Figure 12: Revised keel design with optimized rib spacing and thickness</em>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>Keel Design Process</h4>
+                    <p><strong>Design Concept and Initial Sketches:</strong><br>
+                    The keel design began with a deep understanding of the ship's overall structure and functional requirements. We first established the basic dimensions and shape of the hull, then drew preliminary sketches of the keel design based on these parameters.</p>
+
+                    <p><strong>Detail Adjustment and Optimization:</strong><br>
+                    Based on the 3D model, we made multiple adjustments to the structural details of the keel, particularly optimizing the spacing, thickness, and connection methods of the ribs to improve the overall strength and stability of the structure.</p>
+
+                    <p><strong>Technical Challenges and Iterative Improvements:</strong><br>
+                    The initial keel design encountered issues of overly dense rib spacing, insufficient contact area between ribs and foam board, and inaccurate dimensions. To solve these problems, we went through design iterations, testing the feasibility of each design through actual assembly simulations.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>Motor Selection and Configuration</h4>
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-cogs"></i>
+                            <p>Motor specifications</p>
+                        </div>
+                        <div class="image-caption">
+                            <em>Figure 13: Selected motor specifications and configuration details</em>
+                        </div>
+                    </div>
+                    
+                    <p><strong>Motor Type and Parameter Selection:</strong><br>
+                    We selected high-efficiency DC motors for good speed regulation and torque output characteristics. When selecting motors, we considered rated power, speed, and torque to ensure they met the power requirements of the hull.</p>
+
+                    <p><strong>Motor Installation and Integration:</strong><br>
+                    After multiple experiments and adjustments, the motors were installed at the rear center axis position of the hull to maintain balance and improve drive efficiency.</p>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Fabrication Process</h3>
+            
+            <div class="two-column">
+                <div class="column">
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-laser"></i>
+                            <p>Laser cutting process</p>
+                        </div>
+                        <div class="image-caption">
+                            <em>Figure 14: Laser cutting basswood boards to create precision keel components</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-cut"></i>
+                            <p>Foam board preparation</p>
+                        </div>
+                        <div class="image-caption">
+                            <em>Figure 15: Cutting foam board into strips for hull exterior</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="two-column">
+                <div class="column">
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-tape"></i>
+                            <p>Hull assembly</p>
+                        </div>
+                        <div class="image-caption">
+                            <em>Figure 16: Using transparent tape for waterproofing and structure</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-fill-drip"></i>
+                            <p>Waterproofing</p>
+                        </div>
+                        <div class="image-caption">
+                            <em>Figure 17: Applying waterproof adhesive to seal joints and gaps</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="two-column">
+                <div class="column">
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-vial"></i>
+                            <p>Foam filler research</p>
+                        </div>
+                        <div class="image-caption">
+                            <em>Figure 18: Analysis of foam filler properties and applications</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-spray-can"></i>
+                            <p>Foam application</p>
+                        </div>
+                        <div class="image-caption">
+                            <em>Figure 19: Applying polyurethane foam to fill hull sections</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="two-column">
+                <div class="column">
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p>Design error</p>
+                        </div>
+                        <div class="image-caption">
+                            <em>Figure 20: Initial deck design with fitting issues due to insufficient tolerance</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-paint-roller"></i>
+                            <p>Final finishing</p>
+                        </div>
+                        <div class="image-caption">
+                            <em>Figure 21: Applying decorative paint finish to the completed hull</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="image-container">
+                <div class="image-placeholder">
+                    <i class="fas fa-tint"></i>
+                    <p>Testing phase</p>
+                </div>
+                <div class="image-caption">
+                    <em>Figure 22: Waterproof testing, ballast loading, and load capacity verification</em>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reflection Section -->
+        <div class="content-card">
+            <h2 class="section-title">Reflection and Conclusion</h2>
+            
+            <h3 class="subsection-title">Experiences and Gains</h3>
+            <p><strong>Technology Application and Innovation:</strong><br>
+            This project allowed us to become proficient with MATLAB and SolidWorks, integrating these tools to solve complex engineering problems. MATLAB's computational capabilities were essential for calculating stability parameters and simulating dynamic behavior, while SolidWorks facilitated precise visualization and structural testing.</p>
+            
+            <p>The exploration of laser cutting technology and various new materials (foam board, polyurethane foam) enhanced our manufacturing process, resulting in more precise components and improved physical properties like plasticity, waterproofing, and controllability.</p>
+
+            <h3 class="subsection-title">Challenges and Solutions</h3>
+            <p><strong>Design and Manufacturing Challenges:</strong><br>
+            The initial keel design presented significant assembly difficulties due to inaccurate parameters (rib spacing, dimensions). This experience highlighted the importance of thorough simulation and parameter testing before physical implementation.</p>
+            
+            <p>Waterproofing presented another challenge, as our initial approach using tape and foam fillers proved insufficient for long-term use. This led us to explore more robust waterproofing methods for future iterations.</p>
+
+            <h3 class="subsection-title">Results and Achievements</h3>
+            <p>The stability testing exceeded our expectations, with the ship maintaining balance at capsizing angles of 120-140 degrees. This validated both our mathematical model and physical design implementation, confirming the success of our engineering approach.</p>
+            
+            <p>Each iterative improvement was based on rigorous testing and evaluation, demonstrating the value of evidence-based methodology in engineering practice.</p>
+            
+            <div class="cta-section">
+                <h3>Key Project Achievements</h3>
+                <p>This project successfully combined theoretical modeling with practical implementation, resulting in a functional ship model that met all design requirements. Through iterative design and testing, we overcame numerous challenges to create a stable, load-bearing vessel with precisely calculated performance characteristics.</p>
+                <a href="../index.html" class="btn-action mt-3">
+                    <i class="fas fa-arrow-left"></i> Return to Portfolio
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    
+    <script>
+        // Back to top button functionality
+        const backToTopButton = document.getElementById("backToTop");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add("show");
+            } else {
+                backToTopButton.classList.remove("show");
+            }
+        });
+        
+        backToTopButton.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+</body>
+</html> 
