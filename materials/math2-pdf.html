@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathematics II - PDF Viewer</title>
+    <title>Mathematics II - Course Materials</title>
+    <meta name="description" content="Comprehensive Mathematics II course materials, including advanced calculus, differential equations, and multivariate calculus teaching materials.">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap">
@@ -63,6 +64,17 @@
             letter-spacing: -0.5px;
         }
         
+        h3 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 30px 0 15px 0;
+            font-size: 1.5rem;
+            letter-spacing: -0.3px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
         p {
             color: #555;
             font-size: 1.05rem;
@@ -73,8 +85,8 @@
         
         .pdf-container {
             width: 100%;
-            height: calc(100vh - 180px);
-            margin: 0 0 30px 0;
+            height: calc(100vh - 250px);
+            margin: 0 0 20px 0;
             border-radius: 8px;
             overflow: hidden;
             background-color: #fff;
@@ -133,6 +145,39 @@
             color: #777;
             margin-top: 20px;
         }
+        
+        .pdf-section {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .pdf-section h3 {
+            border-bottom: none;
+            margin-top: 0;
+            color: var(--secondary-color);
+        }
+        
+        .pdf-section .pdf-description {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .badge {
+            background-color: #f1f5fd;
+            color: var(--secondary-color);
+            padding: 5px 12px;
+            margin-right: 8px;
+            margin-bottom: 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(74, 111, 165, 0.15);
+        }
     </style>
 </head>
 <body>
@@ -151,19 +196,52 @@
 
     <div class="container content-container">
         <h2>Mathematics II</h2>
-        <p>Below is the comprehensive PDF document for Mathematics II, covering advanced calculus, differential equations, and more with detailed examples and solutions.</p>
+        <p>Below are comprehensive PDF documents for Mathematics II, covering advanced calculus, differential equations, and multivariate calculus with detailed examples and solutions.</p>
         
-        <div class="pdf-container">
-            <iframe src="../pdf/mathematics_ii.pdf" type="application/pdf"></iframe>
+        <div class="pdf-section">
+            <h3><i class="fas fa-graduation-cap mr-2"></i>Multivariate Calculus Teaching Material</h3>
+            <div class="pdf-description">
+                <p>This teaching guide provides in-depth explanations of multivariate calculus concepts, including partial derivatives, multiple integrals, vector calculus, and their applications in physics and engineering problems.</p>
+                <div class="mb-3">
+                    <span class="badge">Multivariate Calculus</span>
+                    <span class="badge">Partial Derivatives</span>
+                    <span class="badge">Multiple Integrals</span>
+                    <span class="badge">Vector Fields</span>
+                </div>
+            </div>
+            <div class="pdf-container">
+                <iframe src="../pdf/多变量微积分教案_Version_1 .pdf" type="application/pdf"></iframe>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="../pdf/多变量微积分教案_Version_1 .pdf" download class="btn btn-outline-primary">
+                    <i class="fas fa-download mr-1"></i>Download Multivariate Calculus PDF
+                </a>
+            </div>
         </div>
         
-        <div class="action-buttons">
-            <a href="../pdf/mathematics_ii.pdf" download class="btn btn-outline-primary">
-                <i class="fas fa-download mr-1"></i>Download PDF
-            </a>
-            <a href="math2.html" class="btn btn-outline-primary">
-                <i class="fas fa-book mr-1"></i>View Course Materials
-            </a>
+        <div class="pdf-section">
+            <h3><i class="fas fa-book-open mr-2"></i>Main Course Material</h3>
+            <div class="pdf-description">
+                <p>This comprehensive guide covers the core content of Mathematics II, including advanced calculus concepts, multi-variable functions, differential equations, and mathematical methods for engineering applications.</p>
+                <div class="mb-3">
+                    <span class="badge">Advanced Calculus</span>
+                    <span class="badge">Differential Equations</span>
+                    <span class="badge">Engineering Mathematics</span>
+                </div>
+            </div>
+            <div class="pdf-container">
+                <iframe src="../pdf/mathematics_ii.pdf" type="application/pdf"></iframe>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="../pdf/mathematics_ii.pdf" download class="btn btn-outline-primary">
+                    <i class="fas fa-download mr-1"></i>Download Main PDF
+                </a>
+                <a href="math2.html" class="btn btn-outline-primary">
+                    <i class="fas fa-book mr-1"></i>View Course Materials
+                </a>
+            </div>
         </div>
     </div>
 
