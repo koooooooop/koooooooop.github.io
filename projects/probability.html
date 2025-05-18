@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probability & Statistics - Zhipeng Zhou</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #445f84;
+            --secondary-color: #5f79a2;
+            --accent-color: #2e4361;
+            --text-primary: #444444;
+            --text-secondary: #666666;
+            --text-light: #888888;
+            --background-color: #f8f9fa;
+            --card-background: #ffffff;
+            --border-color: #e8e8e8;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
+            line-height: 1.7;
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar-brand {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .container {
+            max-width: 1140px;
+            padding: 0 20px;
+        }
+        
+        .content-section {
+            padding: 60px 0;
+        }
+        
+        h1, h2, h3, h4 {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 30px;
+            margin-bottom: 16px;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 25px;
+            margin-bottom: 14px;
+        }
+        
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .card {
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+        
+        .card-img-top {
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .card-title {
+            font-weight: 600;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+        
+        .btn {
+            border-radius: 8px;
+            font-weight: 500;
+            padding: 10px 20px;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            transform: translateY(-1px);
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: #fff;
+            transform: translateY(-1px);
+        }
+        
+        .tag {
+            display: inline-block;
+            background-color: #f1f5fd;
+            color: var(--secondary-color);
+            padding: 5px 12px;
+            margin-right: 8px;
+            margin-bottom: 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(74, 111, 165, 0.15);
+            transition: all 0.2s ease;
+        }
+        
+        .tag:hover {
+            background-color: rgba(74, 111, 165, 0.1);
+            transform: translateY(-1px);
+        }
+        
+        .project-header {
+            padding: 50px 0;
+            background-color: #f5f7fa;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .project-info {
+            margin-top: 30px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+        
+        .two-column {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .column {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        footer {
+            background-color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light p-0 py-3">
+                <a class="navbar-brand" href="../index.html">Zhipeng Zhou</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="project-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>Probability & Statistics</h1>
+                    <p class="lead">Review materials for Probability and Statistics, covering probability distributions, random variables, statistical inference, and practical calculation methods.</p>
+                    <div class="mb-4">
+                        <span class="tag"><i class="fas fa-calculator mr-1"></i>Probability</span>
+                        <span class="tag"><i class="fas fa-chart-bar mr-1"></i>Statistical Inference</span>
+                    </div>
+                    <a href="../materials/probability.html" class="btn btn-primary">View Materials</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container content-section">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2>Course Overview</h2>
+                <p>This comprehensive course covers the fundamental concepts of probability theory and statistical analysis, providing a solid foundation for understanding random phenomena and data-driven decision making.</p>
+                
+                <h2>Key Topics</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Probability Theory</h3>
+                                <p>Covers sample spaces, events, probability axioms, conditional probability, independence, random variables, and probability distributions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Statistical Inference</h3>
+                                <p>Explores sampling distributions, point estimation, confidence intervals, hypothesis testing, and Bayesian inference methods.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Random Variables</h3>
+                                <p>Examines discrete and continuous random variables, expectation, variance, moment generating functions, and common distributions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Practical Applications</h3>
+                                <p>Applies probability and statistics concepts to real-world problems in engineering, science, economics, and data analysis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <h3>Study Resources</h3>
+                    <p>Access comprehensive study materials including lecture notes, practice problems, and example applications in the materials section.</p>
+                    <a href="../materials/probability.html" class="btn btn-outline-primary">Access Materials</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="sticky-top" style="top: 100px;">
+                    <div class="card">
+                        <div class="card-img-top" style="height: 360px; display: flex; flex-direction: column;">
+                            <img src="../images/gailvlun1.png" alt="Probability & Statistics - Histogram" style="flex: 1; object-fit: cover; margin-bottom: 4px;">
+                            <img src="../images/gailvlun2.png" alt="Probability & Statistics - Set Theory" style="flex: 1; object-fit: cover; margin-top: 4px;">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Course Materials</h3>
+                            <p>Comprehensive review materials for mastering probability and statistics concepts.</p>
+                            <div class="d-grid">
+                                <a href="../materials/probability.html" class="btn btn-primary btn-block">View PDF Materials</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Zhipeng Zhou. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
