@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Manufacturing Competition - Zhipeng Zhou</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #445f84;
+            --secondary-color: #5f79a2;
+            --accent-color: #2e4361;
+            --text-primary: #444444;
+            --text-secondary: #666666;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #445f84 0%, #5f79a2 100%);
+            color: white;
+            padding: 7rem 0 5rem;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+        }
+        
+        .hero-title {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 2.5rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            width: 50px;
+            background-color: var(--primary-color);
+        }
+        
+        .main-content {
+            margin-bottom: 4rem;
+        }
+        
+        .content-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .content-img {
+            width: 100%;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -2rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            border: 2px solid white;
+        }
+        
+        .timeline-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+        
+        .tech-badge {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            background-color: #f0f4f8;
+            color: var(--primary-color);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            border: 1px solid rgba(68, 95, 132, 0.2);
+        }
+        
+        .tech-badge i {
+            margin-right: 5px;
+        }
+        
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: color 0.2s ease;
+            margin-bottom: 1rem;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        .nav-link i {
+            margin-right: 0.5rem;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .team-section {
+            margin-top: 3rem;
+        }
+        
+        .team-member {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .team-member h5 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-member p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+        }
+        
+        .footer {
+            background-color: #2e4361;
+            color: white;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+
+        .cta-section {
+            background-color: #f0f4f8;
+            padding: 3rem 0;
+            margin: 4rem 0;
+            border-top: 1px solid #e5e9f0;
+            border-bottom: 1px solid #e5e9f0;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to top button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title">Intelligent Manufacturing Competition</h1>
+                    <p class="hero-subtitle">Siemens PLC Programming and Automation Solutions</p>
+                    <div class="d-flex flex-wrap">
+                        <span class="tech-badge mr-2 mb-2"><i class="fas fa-microchip"></i> PLC</span>
+                        <span class="tech-badge mr-2 mb-2"><i class="fas fa-industry"></i> Siemens</span>
+                        <span class="tech-badge mr-2 mb-2"><i class="fas fa-cogs"></i> Automation</span>
+                        <span class="tech-badge mr-2 mb-2"><i class="fas fa-code"></i> Programming</span>
+                        <span class="tech-badge mr-2 mb-2"><i class="fas fa-users"></i> Teamwork</span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center">
+                        <img src="../images/competitions/zhinengzhizao.jpg" alt="Intelligent Manufacturing Competition" class="img-fluid rounded shadow" style="max-height: 350px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container main-content">
+        <!-- Navigation -->
+        <a href="../index.html" class="nav-link">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+        
+        <!-- Overview Section -->
+        <div class="content-card">
+            <h2 class="section-title">Competition Overview</h2>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>I participated in the First Chongqing University Intelligent Manufacturing Competition, which focused on Siemens PLC (Programmable Logic Controller) programming and automation solutions. This competition provided a valuable opportunity to apply theoretical knowledge in practical industrial automation scenarios.</p>
+                    
+                    <p>The competition challenged participants to design, program, and implement automation solutions for simulated manufacturing processes using Siemens PLC hardware and software. Our team demonstrated innovative thinking and strong teamwork throughout the competition phases.</p>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-md-4 text-center mb-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h4 class="feature-title">PLC Programming</h4>
+                    <p>Developed ladder logic programs for Siemens S7-1200/1500 PLCs to control simulated manufacturing processes</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h4 class="feature-title">HMI Design</h4>
+                    <p>Created user-friendly Human-Machine Interface designs using SIMATIC WinCC for process monitoring and control</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h4 class="feature-title">System Integration</h4>
+                    <p>Implemented integrated automation solutions connecting sensors, actuators, and control systems</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Technology Section -->
+        <div class="content-card">
+            <h2 class="section-title">Technologies Used</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="../images/competitions/zhinengzhizao.jpg" alt="Team at the competition" class="content-img">
+                </div>
+                <div class="col-lg-6">
+                    <h4>Siemens Automation Technology</h4>
+                    <ul>
+                        <li><strong>SIMATIC S7-1200/S7-1500 PLCs</strong> - For main control system programming</li>
+                        <li><strong>TIA Portal</strong> - Integrated development environment for PLC programming and HMI design</li>
+                        <li><strong>SIMATIC WinCC</strong> - For human-machine interface development</li>
+                        <li><strong>SIMATIC STEP 7</strong> - PLC programming software</li>
+                        <li><strong>PROFINET/PROFIBUS</strong> - Industrial network protocols for device communication</li>
+                    </ul>
+
+                    <h4>Programming Languages</h4>
+                    <ul>
+                        <li><strong>Ladder Logic (LAD)</strong> - Primary programming language for control logic</li>
+                        <li><strong>Function Block Diagram (FBD)</strong> - For complex function implementation</li>
+                        <li><strong>Structured Text (SCL)</strong> - Text-based programming for complex algorithms</li>
+                        <li><strong>Statement List (STL)</strong> - Low-level language for optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Development -->
+        <div class="content-card">
+            <h2 class="section-title">Project Development</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-title">Competition Registration and Preparation</div>
+                    <div class="timeline-date">2 weeks before the competition</div>
+                    <p>Our team registered for the competition and began preparing by studying Siemens PLC programming fundamentals, reviewing automation concepts, and practicing with TIA Portal software. We also analyzed previous competition challenges to understand the expected requirements.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-title">Preliminary Round</div>
+                    <div class="timeline-date">First day of the competition</div>
+                    <p>In the preliminary round, we were tasked with implementing basic automation logic for a simulated production line. Our team successfully programmed the PLC to control sequential operations, handle error conditions, and manage process timing, qualifying us for the next round.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-title">Main Competition Challenge</div>
+                    <div class="timeline-date">Second day of the competition</div>
+                    <p>The main challenge involved designing and implementing a complete automation solution for a complex manufacturing process. We developed a comprehensive control system with the following features:</p>
+                    <ul>
+                        <li>Multi-state machine control with automatic and manual modes</li>
+                        <li>Safety interlocks and emergency stop functionality</li>
+                        <li>Process visualization through a custom HMI interface</li>
+                        <li>Data logging and parameter adjustment capabilities</li>
+                        <li>Alarm management and system diagnostics</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-title">Final Presentation and Demonstration</div>
+                    <div class="timeline-date">Final day of the competition</div>
+                    <p>We presented our solution to the judges, explaining our design choices, implementation approach, and demonstrating the working system. The judges evaluated our solution based on functionality, innovation, reliability, and presentation quality.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Technical Challenges Section -->
+        <div class="content-card">
+            <h2 class="section-title">Technical Challenges and Solutions</h2>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>Challenge 1: State Machine Implementation</h4>
+                    <p><strong>Problem:</strong> Creating a reliable state machine to manage multiple operation modes and transitions between them.</p>
+                    <p><strong>Solution:</strong> Implemented a structured state machine using Function Block Diagram (FBD) programming, with clear state definitions, transition conditions, and fault handling logic.</p>
+                    
+                    <h4>Challenge 2: Communication Protocols</h4>
+                    <p><strong>Problem:</strong> Establishing stable communication between multiple devices in the automation network.</p>
+                    <p><strong>Solution:</strong> Used PROFINET protocol with properly configured addressing and timing parameters, implementing error detection and recovery mechanisms.</p>
+                    
+                    <h4>Challenge 3: User Interface Design</h4>
+                    <p><strong>Problem:</strong> Creating an intuitive operator interface that provides clear process information and control options.</p>
+                    <p><strong>Solution:</strong> Designed a hierarchical HMI structure with main overview, detailed process views, parameter screens, and alarm displays, following ergonomic design principles.</p>
+                    
+                    <h4>Challenge 4: Real-time Process Optimization</h4>
+                    <p><strong>Problem:</strong> Optimizing system performance to meet timing and efficiency requirements.</p>
+                    <p><strong>Solution:</strong> Analyzed program execution time, implemented optimized code structures, and used high-performance instructions to improve system responsiveness.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Skills Gained -->
+        <div class="content-card">
+            <h2 class="section-title">Skills Gained</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4><i class="fas fa-code mr-2 text-primary"></i>Technical Skills</h4>
+                    <ul>
+                        <li>PLC programming using multiple languages (LAD, FBD, SCL)</li>
+                        <li>HMI design and development with SIMATIC WinCC</li>
+                        <li>Industrial automation system architecture</li>
+                        <li>Troubleshooting and debugging complex control systems</li>
+                        <li>Industrial communication protocols (PROFINET/PROFIBUS)</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4><i class="fas fa-users mr-2 text-primary"></i>Soft Skills</h4>
+                    <ul>
+                        <li>Team collaboration under time constraints</li>
+                        <li>Problem-solving in high-pressure environments</li>
+                        <li>Technical communication and presentation</li>
+                        <li>Project planning and management</li>
+                        <li>Adaptability and quick learning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Reflection -->
+        <div class="content-card">
+            <h2 class="section-title">Reflection and Learning</h2>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Participating in the Intelligent Manufacturing Competition was an invaluable learning experience that bridged theoretical knowledge with practical application. The competition taught me several important lessons:</p>
+                    
+                    <h5 class="mt-4">1. Industry-Ready Skills</h5>
+                    <p>Working with industry-standard Siemens PLC equipment provided direct exposure to technologies used in real manufacturing environments. These hands-on skills are directly transferable to industrial automation careers.</p>
+                    
+                    <h5 class="mt-4">2. Systematic Problem Solving</h5>
+                    <p>The competition challenges required systematic approaches to problem decomposition, solution design, and implementation. I learned to tackle complex automation problems by breaking them down into manageable components.</p>
+                    
+                    <h5 class="mt-4">3. Real-time Adaptability</h5>
+                    <p>When facing unexpected issues during the competition, our team had to quickly adapt our approach and find alternative solutions. This experience improved my ability to think on my feet and make effective decisions under pressure.</p>
+                    
+                    <h5 class="mt-4">4. Interdisciplinary Integration</h5>
+                    <p>The competition demonstrated how different engineering disciplines converge in industrial automation, requiring knowledge of electronics, programming, mechanical systems, and human factors.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <div class="container text-center">
+                <h3>Interested in Industrial Automation?</h3>
+                <p class="mb-4">Connect with me to discuss PLC programming, automation solutions, or potential collaboration opportunities.</p>
+                <div>
+                    <a href="../index.html#contact" class="btn btn-primary mr-2">Contact Me</a>
+                    <a href="../projects/robotics.html" class="btn btn-outline-primary">Explore Related Projects</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h5>Zhipeng Zhou</h5>
+                    <p>Undergraduate Student<br>AI and Robotics Engineering<br>X Innovation Experimental Class<br>Chongqing University</p>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5>Navigation</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="text-white">Home</a></li>
+                        <li><a href="../index.html#projects" class="text-white">Projects</a></li>
+                        <li><a href="../index.html#publications" class="text-white">Publications</a></li>
+                        <li><a href="../index.html#competitions" class="text-white">Competitions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Connect</h5>
+                    <div class="d-flex">
+                        <a href="#" class="text-white mr-3"><i class="fab fa-github fa-lg"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-weixin fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4" style="background-color: rgba(255,255,255,0.2);">
+            <div class="text-center">
+                <p>&copy; 2024 Zhipeng Zhou. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    
+    <script>
+        // Back to top button functionality
+        const backToTopButton = document.getElementById("backToTop");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add("show");
+            } else {
+                backToTopButton.classList.remove("show");
+            }
+        });
+        
+        backToTopButton.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+</body>
+</html> 
