@@ -23,10 +23,12 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         .activity-header {
-            background-color: #e74c3c;
+            background: linear-gradient(to right, rgba(231, 76, 60, 0.9), rgba(192, 57, 43, 0.9)), url('../images/volunteer.jpg') no-repeat center center;
+            background-size: cover;
             color: white;
             padding: 60px 0;
             margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         .activity-icon {
             font-size: 2.5rem;
@@ -149,10 +151,35 @@
     </div>
 
     <div class="activity-header">
-        <div class="container text-center">
-            <span class="activity-icon">❤️</span>
-            <h1>Volunteer Activities</h1>
-            <p class="lead">Contributing to society through educational outreach and community service, sharing knowledge and skills with others.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <span class="activity-icon">❤️</span>
+                    <h1>Volunteer Activities</h1>
+                    <p class="lead">Contributing to society through educational outreach and community service, sharing knowledge and skills with others.</p>
+                    <div class="mt-4">
+                        <div class="d-inline-block mx-2">
+                            <a href="#teaching" class="btn btn-outline-light">👨‍🏫 Teaching</a>
+                        </div>
+                        <div class="d-inline-block mx-2">
+                            <a href="#science" class="btn btn-outline-light">🔬 Science Education</a>
+                        </div>
+                        <div class="d-inline-block mx-2">
+                            <a href="#elderly" class="btn btn-outline-light">👴 Elderly Care</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 d-none d-md-block">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="../images/sjtu.jpg" alt="SJTU Volunteer Program" class="img-fluid rounded shadow-lg mb-3" style="height: 180px; object-fit: cover; width: 100%;">
+                        </div>
+                        <div class="col-6">
+                            <img src="../images/kejiwenhua.jpg" alt="Science Education Volunteering" class="img-fluid rounded shadow-lg" style="height: 180px; object-fit: cover; width: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

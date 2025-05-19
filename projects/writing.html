@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Writing - Zhipeng Zhou's Academic Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+        }
+        .header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .writing-header {
+            background: linear-gradient(to right, rgba(52, 73, 94, 0.9), rgba(44, 62, 80, 0.9)), url('../images/writing.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .writing-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .section {
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .section-title {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .card {
+            border: none;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-body {
+            padding: 25px;
+        }
+        .card-title {
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .card-text {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #f1f5fd;
+            color: #4a6fa5;
+            padding: 4px 10px;
+            margin-right: 8px;
+            margin-bottom: 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+        }
+        .tag:hover {
+            background-color: #4a6fa5;
+            color: white;
+        }
+        .btn-outline-primary {
+            color: #4a6fa5;
+            border-color: #4a6fa5;
+        }
+        .btn-outline-primary:hover {
+            background-color: #4a6fa5;
+            border-color: #4a6fa5;
+            color: white;
+        }
+        footer {
+            background-color: #f5f5f5;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1><a href="../index.html" class="text-dark text-decoration-none">Zhipeng Zhou</a></h1>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <a href="../index.html" class="btn btn-outline-primary"><i class="fas fa-arrow-left mr-2"></i>Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="writing-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center">
+                    <span class="writing-icon">✒️</span>
+                    <h1 class="display-4">Academic Writing</h1>
+                    <p class="lead">Showcasing my writing across various domains including research papers, news articles, interviews, and creative projects.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="research-papers" class="section">
+            <h2 class="section-title"><i class="fas fa-scroll mr-2"></i>Research Papers</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="../images/research-paper1.jpg" class="card-img-top" alt="Research Paper Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Multi-Agent Reinforcement Learning for Autonomous Vehicles</h3>
+                            <p class="card-text">An exploration of multi-agent reinforcement learning techniques applied to autonomous driving scenarios, with emphasis on collision avoidance and traffic flow optimization.</p>
+                            <div class="mb-3">
+                                <span class="tag">Reinforcement Learning</span>
+                                <span class="tag">Autonomous Vehicles</span>
+                                <span class="tag">Multi-Agent Systems</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary">Read Paper</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="../images/research-paper2.jpg" class="card-img-top" alt="Research Paper Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Sparse Inference Optimization in Large Language Models</h3>
+                            <p class="card-text">A comprehensive study on techniques to optimize inference performance in large language models through sparsity and pruning methods without significant accuracy loss.</p>
+                            <div class="mb-3">
+                                <span class="tag">LLMs</span>
+                                <span class="tag">Inference Optimization</span>
+                                <span class="tag">Model Pruning</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary">Read Paper</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="news-interviews" class="section">
+            <h2 class="section-title"><i class="fas fa-newspaper mr-2"></i>News & Interviews</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="../images/news-interview1.jpg" class="card-img-top" alt="News Interview Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Innovation and Technology at Xbotpark</h3>
+                            <p class="card-text">A featured interview discussing my experience at the Xbotpark Innovation Park summer camp and the innovative technologies being developed there.</p>
+                            <div class="mb-3">
+                                <span class="tag">Innovation</span>
+                                <span class="tag">Technology</span>
+                                <span class="tag">Israel-China Cooperation</span>
+                            </div>
+                            <a href="writing/xbotpark-interview.html" class="btn btn-outline-primary">Read Interview</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="../images/news-interview2.jpg" class="card-img-top" alt="News Interview Image">
+                        <div class="card-body">
+                            <h3 class="card-title">The Future of AI Research</h3>
+                            <p class="card-text">A perspective piece on the direction of AI research and its potential impact on society, education, and technological development.</p>
+                            <div class="mb-3">
+                                <span class="tag">AI</span>
+                                <span class="tag">Future Technology</span>
+                                <span class="tag">Research Trends</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary">Read Article</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="../images/news-interview3.jpg" class="card-img-top" alt="News Interview Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Undergraduate Research Spotlight</h3>
+                            <p class="card-text">An interview featuring my undergraduate research projects and the unique challenges and rewards of conducting research as an undergraduate student.</p>
+                            <div class="mb-3">
+                                <span class="tag">Undergraduate Research</span>
+                                <span class="tag">Academic Journey</span>
+                                <span class="tag">Student Spotlight</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary">Read Interview</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="technical-writing" class="section">
+            <h2 class="section-title"><i class="fas fa-code mr-2"></i>Technical Writing</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="../images/technical-writing1.jpg" class="card-img-top" alt="Technical Writing Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Building Wall Heat Transfer Analysis</h3>
+                            <p class="card-text">A detailed technical report analyzing steady-state heat transfer in typical building wall structures, including mathematical modeling and practical implications for building design.</p>
+                            <div class="mb-3">
+                                <span class="tag">Heat Transfer</span>
+                                <span class="tag">Building Physics</span>
+                                <span class="tag">Energy Efficiency</span>
+                            </div>
+                            <a href="../pdf/典型建筑墙体的稳态传热分析报告 (3).pdf" class="btn btn-outline-primary" target="_blank">View Report</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="../images/technical-writing2.jpg" class="card-img-top" alt="Technical Writing Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Product Quality Management Project</h3>
+                            <p class="card-text">A comprehensive report on product quality management methodologies, implementation strategies, and case studies demonstrating quality control procedures and outcomes.</p>
+                            <div class="mb-3">
+                                <span class="tag">Quality Management</span>
+                                <span class="tag">Product Development</span>
+                                <span class="tag">Process Control</span>
+                            </div>
+                            <a href="../pdf/产品质量管理项目报告.docx" class="btn btn-outline-primary" target="_blank">View Report</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <div class="card">
+                        <img src="../images/technical-writing3.jpg" class="card-img-top" alt="Technical Writing Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Comprehensive Guide to PyTorch Implementation</h3>
+                            <p class="card-text">A detailed technical guide on implementing neural networks using PyTorch, with code examples, best practices, and optimization techniques.</p>
+                            <div class="mb-3">
+                                <span class="tag">PyTorch</span>
+                                <span class="tag">Deep Learning</span>
+                                <span class="tag">Implementation Guide</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary">Read Guide</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <div class="card">
+                        <img src="../images/technical-writing4.jpg" class="card-img-top" alt="Technical Writing Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Docker and Containerization for ML Projects</h3>
+                            <p class="card-text">A comprehensive tutorial on using Docker for machine learning projects, focusing on reproducibility, deployment, and scaling considerations.</p>
+                            <div class="mb-3">
+                                <span class="tag">Docker</span>
+                                <span class="tag">Containerization</span>
+                                <span class="tag">ML Deployment</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary">Read Tutorial</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="../index.html#projects-content" class="btn btn-outline-primary btn-lg">Back to Projects</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Zhipeng Zhou. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
