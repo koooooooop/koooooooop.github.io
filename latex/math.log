@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.6)  20 MAY 2025 09:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.6)  21 MAY 2025 13:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -498,69 +498,57 @@ File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 LaTeX Info: Redefining \AIcite on input line 350.
 ) (c:/texlive/2025/texmf-dist/tex/latex/psnfss/palatino.sty
 Package: palatino 2020/03/25 PSNFSS-v9.3 (SPQR) 
-) (c:/texlive/2025/texmf-dist/tex/latex/lipsum/lipsum.sty (c:/texlive/2025/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty (c:/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2025-04-14 L3 programming layer (loader) 
- (c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2025-04-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count335
-))
-Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
-)
-Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count336
-\l__lipsum_a_int=\count337
-\l__lipsum_b_int=\count338
- (c:/texlive/2025/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (c:/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.sty
+) (c:/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
  (c:/texlive/2025/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count339
+\lrq@indent=\count335
  (c:/texlive/2025/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count340
-\c@listtotal=\count341
-\c@listcount=\count342
-\c@liststart=\count343
-\c@liststop=\count344
-\c@citecount=\count345
-\c@citetotal=\count346
-\c@multicitecount=\count347
-\c@multicitetotal=\count348
-\c@instcount=\count349
-\c@maxnames=\count350
-\c@minnames=\count351
-\c@maxitems=\count352
-\c@minitems=\count353
-\c@citecounter=\count354
-\c@maxcitecounter=\count355
-\c@savedcitecounter=\count356
-\c@uniquelist=\count357
-\c@uniquename=\count358
-\c@refsection=\count359
-\c@refsegment=\count360
-\c@maxextratitle=\count361
-\c@maxextratitleyear=\count362
-\c@maxextraname=\count363
-\c@maxextradate=\count364
-\c@maxextraalpha=\count365
-\c@abbrvpenalty=\count366
-\c@highnamepenalty=\count367
-\c@lownamepenalty=\count368
-\c@maxparens=\count369
-\c@parenlevel=\count370
-\blx@tempcnta=\count371
-\blx@tempcntb=\count372
-\blx@tempcntc=\count373
-\c@blx@maxsection=\count374
-\blx@maxsegment@0=\count375
-\blx@notetype=\count376
-\blx@parenlevel@text=\count377
-\blx@parenlevel@foot=\count378
-\blx@sectionciteorder@0=\count379
-\blx@sectionciteorderinternal@0=\count380
-\blx@entrysetcounter=\count381
-\blx@biblioinstance=\count382
+\c@tabx@nest=\count336
+\c@listtotal=\count337
+\c@listcount=\count338
+\c@liststart=\count339
+\c@liststop=\count340
+\c@citecount=\count341
+\c@citetotal=\count342
+\c@multicitecount=\count343
+\c@multicitetotal=\count344
+\c@instcount=\count345
+\c@maxnames=\count346
+\c@minnames=\count347
+\c@maxitems=\count348
+\c@minitems=\count349
+\c@citecounter=\count350
+\c@maxcitecounter=\count351
+\c@savedcitecounter=\count352
+\c@uniquelist=\count353
+\c@uniquename=\count354
+\c@refsection=\count355
+\c@refsegment=\count356
+\c@maxextratitle=\count357
+\c@maxextratitleyear=\count358
+\c@maxextraname=\count359
+\c@maxextradate=\count360
+\c@maxextraalpha=\count361
+\c@abbrvpenalty=\count362
+\c@highnamepenalty=\count363
+\c@lownamepenalty=\count364
+\c@maxparens=\count365
+\c@parenlevel=\count366
+\blx@tempcnta=\count367
+\blx@tempcntb=\count368
+\blx@tempcntc=\count369
+\c@blx@maxsection=\count370
+\blx@maxsegment@0=\count371
+\blx@notetype=\count372
+\blx@parenlevel@text=\count373
+\blx@parenlevel@foot=\count374
+\blx@sectionciteorder@0=\count375
+\blx@sectionciteorderinternal@0=\count376
+\blx@entrysetcounter=\count377
+\blx@biblioinstance=\count378
 \labelnumberwidth=\skip88
 \labelalphawidth=\skip89
 \biblabelsep=\skip90
@@ -572,9 +560,9 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \blx@bcfin=\read3
 \blx@bcfout=\write4
 \blx@langwohyphens=\language90
-\c@mincomprange=\count383
-\c@maxcomprange=\count384
-\c@mincompwidth=\count385
+\c@mincomprange=\count379
+\c@maxcomprange=\count380
+\c@mincompwidth=\count381
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -584,74 +572,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'ieee.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count386
-\c@savedafterword=\count387
-\c@annotator=\count388
-\c@savedannotator=\count389
-\c@author=\count390
-\c@savedauthor=\count391
-\c@bookauthor=\count392
-\c@savedbookauthor=\count393
-\c@commentator=\count394
-\c@savedcommentator=\count395
-\c@editor=\count396
-\c@savededitor=\count397
-\c@editora=\count398
-\c@savededitora=\count399
-\c@editorb=\count400
-\c@savededitorb=\count401
-\c@editorc=\count402
-\c@savededitorc=\count403
-\c@foreword=\count404
-\c@savedforeword=\count405
-\c@holder=\count406
-\c@savedholder=\count407
-\c@introduction=\count408
-\c@savedintroduction=\count409
-\c@namea=\count410
-\c@savednamea=\count411
-\c@nameb=\count412
-\c@savednameb=\count413
-\c@namec=\count414
-\c@savednamec=\count415
-\c@translator=\count416
-\c@savedtranslator=\count417
-\c@shortauthor=\count418
-\c@savedshortauthor=\count419
-\c@shorteditor=\count420
-\c@savedshorteditor=\count421
-\c@labelname=\count422
-\c@savedlabelname=\count423
-\c@institution=\count424
-\c@savedinstitution=\count425
-\c@lista=\count426
-\c@savedlista=\count427
-\c@listb=\count428
-\c@savedlistb=\count429
-\c@listc=\count430
-\c@savedlistc=\count431
-\c@listd=\count432
-\c@savedlistd=\count433
-\c@liste=\count434
-\c@savedliste=\count435
-\c@listf=\count436
-\c@savedlistf=\count437
-\c@location=\count438
-\c@savedlocation=\count439
-\c@organization=\count440
-\c@savedorganization=\count441
-\c@origlocation=\count442
-\c@savedoriglocation=\count443
-\c@origpublisher=\count444
-\c@savedorigpublisher=\count445
-\c@publisher=\count446
-\c@savedpublisher=\count447
-\c@language=\count448
-\c@savedlanguage=\count449
-\c@origlanguage=\count450
-\c@savedoriglanguage=\count451
-\c@pageref=\count452
-\c@savedpageref=\count453
+\c@afterword=\count382
+\c@savedafterword=\count383
+\c@annotator=\count384
+\c@savedannotator=\count385
+\c@author=\count386
+\c@savedauthor=\count387
+\c@bookauthor=\count388
+\c@savedbookauthor=\count389
+\c@commentator=\count390
+\c@savedcommentator=\count391
+\c@editor=\count392
+\c@savededitor=\count393
+\c@editora=\count394
+\c@savededitora=\count395
+\c@editorb=\count396
+\c@savededitorb=\count397
+\c@editorc=\count398
+\c@savededitorc=\count399
+\c@foreword=\count400
+\c@savedforeword=\count401
+\c@holder=\count402
+\c@savedholder=\count403
+\c@introduction=\count404
+\c@savedintroduction=\count405
+\c@namea=\count406
+\c@savednamea=\count407
+\c@nameb=\count408
+\c@savednameb=\count409
+\c@namec=\count410
+\c@savednamec=\count411
+\c@translator=\count412
+\c@savedtranslator=\count413
+\c@shortauthor=\count414
+\c@savedshortauthor=\count415
+\c@shorteditor=\count416
+\c@savedshorteditor=\count417
+\c@labelname=\count418
+\c@savedlabelname=\count419
+\c@institution=\count420
+\c@savedinstitution=\count421
+\c@lista=\count422
+\c@savedlista=\count423
+\c@listb=\count424
+\c@savedlistb=\count425
+\c@listc=\count426
+\c@savedlistc=\count427
+\c@listd=\count428
+\c@savedlistd=\count429
+\c@liste=\count430
+\c@savedliste=\count431
+\c@listf=\count432
+\c@savedlistf=\count433
+\c@location=\count434
+\c@savedlocation=\count435
+\c@organization=\count436
+\c@savedorganization=\count437
+\c@origlocation=\count438
+\c@savedoriglocation=\count439
+\c@origpublisher=\count440
+\c@savedorigpublisher=\count441
+\c@publisher=\count442
+\c@savedpublisher=\count443
+\c@language=\count444
+\c@savedlanguage=\count445
+\c@origlanguage=\count446
+\c@savedoriglanguage=\count447
+\c@pageref=\count448
+\c@savedpageref=\count449
 \shorthandwidth=\skip96
 \shortjournalwidth=\skip97
 \shortserieswidth=\skip98
@@ -675,19 +663,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (c:/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
-\c@textcitecount=\count454
-\c@textcitetotal=\count455
-\c@textcitemaxnames=\count456
-\c@biburlbigbreakpenalty=\count457
-\c@biburlbreakpenalty=\count458
-\c@biburlnumpenalty=\count459
-\c@biburlucpenalty=\count460
-\c@biburllcpenalty=\count461
+\c@textcitecount=\count450
+\c@textcitetotal=\count451
+\c@textcitemaxnames=\count452
+\c@biburlbigbreakpenalty=\count453
+\c@biburlbreakpenalty=\count454
+\c@biburlnumpenalty=\count455
+\c@biburlucpenalty=\count456
+\c@biburllcpenalty=\count457
 \biburlbigskip=\muskip19
 \biburlnumskip=\muskip20
 \biburlucskip=\muskip21
 \biburllcskip=\muskip22
-\c@smartand=\count462
+\c@smartand=\count458
 )
 Package biblatex Info: Trying to load bibliography style 'ieee'...
 Package biblatex Info: ... file 'ieee.bbx' found.
@@ -705,8 +693,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (c:/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count463
-\c@bbx:relatedtotal=\count464
+\c@bbx:relatedcount=\count459
+\c@bbx:relatedtotal=\count460
 )))
 
 Package biblatex Warning: Macro 'volume+number' undefined.
@@ -739,6 +727,12 @@ File: biblatex.cfg
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
+ (c:/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-04-14 L3 programming layer (loader) 
+ (c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-04-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count461
+))
 Package biblatex Info: ... and expl3
 (biblatex)             2025-04-14 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
@@ -748,45 +742,45 @@ Package: xparse 2024-08-16 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
 ))
-\@quotelevel=\count465
-\@quotereset=\count466
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 39.
+\@quotelevel=\count462
+\@quotereset=\count463
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 38.
  (c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 ) (./math.aux)
 \openout1 = `math.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-\c@lstlisting=\count467
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+\c@lstlisting=\count464
  (c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count468
+\scratchcounter=\count465
 \scratchdimen=\dimen199
 \scratchbox=\box66
-\nofMPsegments=\count469
-\nofMParguments=\count470
+\nofMPsegments=\count466
+\nofMParguments=\count467
 \everyMPshowfont=\toks43
-\MPscratchCnt=\count471
+\MPscratchCnt=\count468
 \MPscratchDim=\dimen256
-\MPnumerator=\count472
-\makeMPintoPDFobject=\count473
+\MPnumerator=\count469
+\makeMPintoPDFobject=\count470
 \everyMPtoPDFconversion=\toks44
 )
 *geometry* driver: auto-detecting
@@ -823,14 +817,13 @@ LaTeX Font Info:    ... okay on input line 39.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 39.
-(./math.out) (./math.out)
+Package hyperref Info: Link coloring OFF on input line 38.
 \@outlinefile=\write5
 \openout5 = `math.out'.
 
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
- (c:/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+(c:/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
 )
 Package biblatex Info: Input encoding 'utf8' detected.
@@ -840,37 +833,62 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'math.bbl' found.
- (./math.bbl)
-Package biblatex Info: Reference section=0 on input line 39.
-Package biblatex Info: Reference segment=0 on input line 39.
+ (./math.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                falling-slinky
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                kinematics-slinky
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                strain-waves-cylindrical
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                strain-waves-numerical
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                torsion-springs
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
+Package biblatex Info: Reference section=0 on input line 38.
+Package biblatex Info: Reference segment=0 on input line 38.
 
 
 [1
 
 {c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 48.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 47.
  (c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
-) (./math.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
- (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
- (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
- (c:/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 2.
- (c:/texlive/2025/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
+No file math.toc.
+\tf@toc=\write6
+\openout6 = `math.toc'.
 
 
-LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 28.
+
+
+LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 51.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -883,11 +901,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.28 ...ation and Model Validation}{15}{section.5}
-                                                  % [1]
+l.51 \newpage
+               % 开始新的一页 [1]
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 62.
+ (c:/texlive/2025/texmf-dist/tex/latex/psnfss/ts1ppl.fd
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+)
 
 
-LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 53.
+LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 88.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -896,14 +918,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[2])
-\tf@toc=\write6
-\openout6 = `math.toc'.
+[2]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 88.
+ (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 88.
+ (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 88.
+ (c:/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 88.
+ (c:/texlive/2025/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
 
 
-
-
-LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 52.
+LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 128.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -913,13 +947,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [3]
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 58.
- (c:/texlive/2025/texmf-dist/tex/latex/psnfss/ts1ppl.fd
-File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-)
 
 
-LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 94.
+LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 156.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -929,24 +959,130 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [4]
-Package epstopdf Info: Source file: <example.eps>
-(epstopdf)                    date: 2025-05-20 01:18:14
-(epstopdf)                    size: 372 bytes
-(epstopdf)             Output file: <example-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-05-20 01:18:42
-(epstopdf)                    size: 2624 bytes
-(epstopdf)             Command: <repstopdf --outfile=example-eps-converted-to.pdf example.eps>
-(epstopdf)             \includegraphics on input line 98.
-Package epstopdf Info: Output file is already uptodate.
-<example-eps-converted-to.pdf, id=305, 597.23125pt x 845.1575pt>
-File: example-eps-converted-to.pdf Graphic file (type pdf)
-<use example-eps-converted-to.pdf>
-Package pdftex.def Info: example-eps-converted-to.pdf  used on input line 98.
-(pdftex.def)             Requested size: 341.43306pt x 483.17624pt.
+
+e:/desktop/Personal Website/latex/math.tex:184: LaTeX Error: Unicode character 弹 (U+5F39)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184 ...��图 (Initial Parameters of the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:184: LaTeX Error: Unicode character 簧 (U+7C27)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184 ...��图 (Initial Parameters of the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:184: LaTeX Error: Unicode character 初 (U+521D)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184 ...��图 (Initial Parameters of the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:184: LaTeX Error: Unicode character 始 (U+59CB)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184 ...��图 (Initial Parameters of the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:184: LaTeX Error: Unicode character 参 (U+53C2)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184 ...��图 (Initial Parameters of the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:184: LaTeX Error: Unicode character 数 (U+6570)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184 ...��图 (Initial Parameters of the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:184: LaTeX Error: Unicode character 示 (U+793A)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184 ...��图 (Initial Parameters of the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:184: LaTeX Error: Unicode character 意 (U+610F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184 ...��图 (Initial Parameters of the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:184: LaTeX Error: Unicode character 图 (U+56FE)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184 ...��图 (Initial Parameters of the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 108.
+
+LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 191.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -955,49 +1091,193 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[5 <./example-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <example.eps>
-(epstopdf)                    date: 2025-05-20 01:18:14
-(epstopdf)                    size: 372 bytes
-(epstopdf)             Output file: <example-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-05-20 01:18:42
-(epstopdf)                    size: 2624 bytes
-(epstopdf)             Command: <repstopdf --outfile=example-eps-converted-to.pdf example.eps>
-(epstopdf)             \includegraphics on input line 120.
-Package epstopdf Info: Output file is already uptodate.
-File: example-eps-converted-to.pdf Graphic file (type pdf)
-<use example-eps-converted-to.pdf>
-Package pdftex.def Info: example-eps-converted-to.pdf  used on input line 120.
-(pdftex.def)             Requested size: 199.16928pt x 281.84314pt.
-Package epstopdf Info: Source file: <example.eps>
-(epstopdf)                    date: 2025-05-20 01:18:14
-(epstopdf)                    size: 372 bytes
-(epstopdf)             Output file: <example-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-05-20 01:18:42
-(epstopdf)                    size: 2624 bytes
-(epstopdf)             Command: <repstopdf --outfile=example-eps-converted-to.pdf example.eps>
-(epstopdf)             \includegraphics on input line 126.
-Package epstopdf Info: Output file is already uptodate.
-File: example-eps-converted-to.pdf Graphic file (type pdf)
-<use example-eps-converted-to.pdf>
-Package pdftex.def Info: example-eps-converted-to.pdf  used on input line 126.
-(pdftex.def)             Requested size: 199.16928pt x 281.84314pt.
+[5]
 
-Underfull \hbox (badness 10000) in alignment at lines 137--145
-[][][][] 
- []
+e:/desktop/Personal Website/latex/math.tex:200: LaTeX Error: Unicode character 扭 (U+626D)
+               not set up for use with LaTeX.
 
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 163.
-(c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 ...rameters After Twisting and Helix Angle)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
 
 
+e:/desktop/Personal Website/latex/math.tex:200: LaTeX Error: Unicode character 转 (U+8F6C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 ...rameters After Twisting and Helix Angle)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
 
 
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 172.
+e:/desktop/Personal Website/latex/math.tex:200: LaTeX Error: Unicode character 后 (U+540E)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 ...rameters After Twisting and Helix Angle)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:200: LaTeX Error: Unicode character 弹 (U+5F39)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 ...rameters After Twisting and Helix Angle)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:200: LaTeX Error: Unicode character 簧 (U+7C27)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 ...rameters After Twisting and Helix Angle)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:200: LaTeX Error: Unicode character 参 (U+53C2)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 ...rameters After Twisting and Helix Angle)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:200: LaTeX Error: Unicode character 数 (U+6570)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 ...rameters After Twisting and Helix Angle)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:200: LaTeX Error: Unicode character 和 (U+548C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 ...rameters After Twisting and Helix Angle)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:200: LaTeX Error: Unicode character 螺 (U+87BA)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 ...rameters After Twisting and Helix Angle)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:200: LaTeX Error: Unicode character 旋 (U+65CB)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 ...rameters After Twisting and Helix Angle)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:200: LaTeX Error: Unicode character 角 (U+89D2)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 ...rameters After Twisting and Helix Angle)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:200: LaTeX Error: Unicode character 示 (U+793A)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 ...rameters After Twisting and Helix Angle)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:200: LaTeX Error: Unicode character 意 (U+610F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 ...rameters After Twisting and Helix Angle)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:200: LaTeX Error: Unicode character 图 (U+56FE)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 ...rameters After Twisting and Helix Angle)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+
+
+LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 226.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1008,12 +1288,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-
-
-LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 205.
+LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 253.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1025,7 +1301,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [7]
 
 
-LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 230.
+LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 287.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1036,12 +1312,152 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [8]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+e:/desktop/Personal Website/latex/math.tex:301: LaTeX Error: Unicode character 弹 (U+5F39)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.301 ...orsional Wave Propagation in the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:301: LaTeX Error: Unicode character 簧 (U+7C27)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.301 ...orsional Wave Propagation in the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:301: LaTeX Error: Unicode character 扭 (U+626D)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.301 ...orsional Wave Propagation in the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:301: LaTeX Error: Unicode character 转 (U+8F6C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.301 ...orsional Wave Propagation in the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:301: LaTeX Error: Unicode character 波 (U+6CE2)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.301 ...orsional Wave Propagation in the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:301: LaTeX Error: Unicode character 传 (U+4F20)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.301 ...orsional Wave Propagation in the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:301: LaTeX Error: Unicode character 播 (U+64AD)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.301 ...orsional Wave Propagation in the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:301: LaTeX Error: Unicode character 的 (U+7684)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.301 ...orsional Wave Propagation in the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:301: LaTeX Error: Unicode character 模 (U+6A21)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.301 ...orsional Wave Propagation in the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:301: LaTeX Error: Unicode character 拟 (U+62DF)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.301 ...orsional Wave Propagation in the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:301: LaTeX Error: Unicode character 图 (U+56FE)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.301 ...orsional Wave Propagation in the Slinky)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
 
 
 
 
-LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 267.
+LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 317.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1052,8 +1468,61 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [9]
 
+e:/desktop/Personal Website/latex/math.tex:341: LaTeX Error: Unicode character 实 (U+5B9E)
+               not set up for use with LaTeX.
 
-LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 298.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.341 ...验装置 (Experimental Apparatus Setup)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:341: LaTeX Error: Unicode character 验 (U+9A8C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.341 ...验装置 (Experimental Apparatus Setup)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:341: LaTeX Error: Unicode character 装 (U+88C5)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.341 ...验装置 (Experimental Apparatus Setup)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:341: LaTeX Error: Unicode character 置 (U+7F6E)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.341 ...验装置 (Experimental Apparatus Setup)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+
+
+LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 351.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1064,8 +1533,194 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [10]
 
+e:/desktop/Personal Website/latex/math.tex:377: LaTeX Error: Unicode character 不 (U+4E0D)
+               not set up for use with LaTeX.
 
-LaTeX Warning: Reference `LastPage' on page 11 undefined on input line 323.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.377 ...linky Amplitude at Various Twist Angles)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:377: LaTeX Error: Unicode character 同 (U+540C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.377 ...linky Amplitude at Various Twist Angles)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:377: LaTeX Error: Unicode character 扭 (U+626D)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.377 ...linky Amplitude at Various Twist Angles)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:377: LaTeX Error: Unicode character 转 (U+8F6C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.377 ...linky Amplitude at Various Twist Angles)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:377: LaTeX Error: Unicode character 角 (U+89D2)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.377 ...linky Amplitude at Various Twist Angles)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:377: LaTeX Error: Unicode character 下 (U+4E0B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.377 ...linky Amplitude at Various Twist Angles)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:377: LaTeX Error: Unicode character 弹 (U+5F39)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.377 ...linky Amplitude at Various Twist Angles)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:377: LaTeX Error: Unicode character 簧 (U+7C27)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.377 ...linky Amplitude at Various Twist Angles)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:377: LaTeX Error: Unicode character 振 (U+632F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.377 ...linky Amplitude at Various Twist Angles)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:377: LaTeX Error: Unicode character 幅 (U+5E45)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.377 ...linky Amplitude at Various Twist Angles)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:377: LaTeX Error: Unicode character 实 (U+5B9E)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.377 ...linky Amplitude at Various Twist Angles)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:377: LaTeX Error: Unicode character 验 (U+9A8C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.377 ...linky Amplitude at Various Twist Angles)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:377: LaTeX Error: Unicode character 结 (U+7ED3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.377 ...linky Amplitude at Various Twist Angles)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:377: LaTeX Error: Unicode character 果 (U+679C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.377 ...linky Amplitude at Various Twist Angles)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+
+LaTeX Warning: Reference `LastPage' on page 11 undefined on input line 384.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1077,7 +1732,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [11]
 
 
-LaTeX Warning: Reference `LastPage' on page 12 undefined on input line 360.
+LaTeX Warning: Reference `LastPage' on page 12 undefined on input line 411.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1089,7 +1744,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [12]
 
 
-LaTeX Warning: Reference `LastPage' on page 13 undefined on input line 392.
+LaTeX Warning: Reference `LastPage' on page 13 undefined on input line 462.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1101,7 +1756,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [13]
 
 
-LaTeX Warning: Reference `LastPage' on page 14 undefined on input line 418.
+LaTeX Warning: Reference `LastPage' on page 14 undefined on input line 495.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1112,8 +1767,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [14]
 
+LaTeX Warning: Citation 'falling-slinky' on page 15 undefined on input line 523.
 
-LaTeX Warning: Reference `LastPage' on page 15 undefined on input line 449.
+
+LaTeX Warning: Citation 'kinematics-slinky' on page 15 undefined on input line 523.
+
+
+LaTeX Warning: Citation 'torsion-springs' on page 15 undefined on input line 523.
+
+
+LaTeX Warning: Citation 'strain-waves-numerical' on page 15 undefined on input line 523.
+
+
+LaTeX Warning: Citation 'strain-waves-cylindrical' on page 15 undefined on input line 523.
+
+
+Overfull \hbox (68.87158pt too wide) in paragraph at lines 523--524
+\T1/ppl/m/n/12 springs[], and the prop-a-ga-tion of strain waves in he-li-cal springs[],
+ []
+
+
+
+
+LaTeX Warning: Reference `LastPage' on page 15 undefined on input line 524.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1123,9 +1799,157 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [15]
+Overfull \hbox (23.32692pt too wide) in paragraph at lines 531--531
+[]\T1/ppl/b/n/17.28 Physical In-ter-pre-ta-tion of the Slinky Wave Equa-
+ []
 
 
-LaTeX Warning: Reference `LastPage' on page 16 undefined on input line 482.
+e:/desktop/Personal Website/latex/math.tex:549: LaTeX Error: Unicode character 弹 (U+5F39)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.549 ...erpretation of the Slinky Wave Equation)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:549: LaTeX Error: Unicode character 簧 (U+7C27)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.549 ...erpretation of the Slinky Wave Equation)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:549: LaTeX Error: Unicode character 波 (U+6CE2)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.549 ...erpretation of the Slinky Wave Equation)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:549: LaTeX Error: Unicode character 动 (U+52A8)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.549 ...erpretation of the Slinky Wave Equation)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:549: LaTeX Error: Unicode character 方 (U+65B9)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.549 ...erpretation of the Slinky Wave Equation)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:549: LaTeX Error: Unicode character 程 (U+7A0B)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.549 ...erpretation of the Slinky Wave Equation)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:549: LaTeX Error: Unicode character 的 (U+7684)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.549 ...erpretation of the Slinky Wave Equation)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:549: LaTeX Error: Unicode character 物 (U+7269)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.549 ...erpretation of the Slinky Wave Equation)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:549: LaTeX Error: Unicode character 理 (U+7406)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.549 ...erpretation of the Slinky Wave Equation)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:549: LaTeX Error: Unicode character 解 (U+89E3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.549 ...erpretation of the Slinky Wave Equation)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:549: LaTeX Error: Unicode character 释 (U+91CA)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.549 ...erpretation of the Slinky Wave Equation)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+
+
+LaTeX Warning: Reference `LastPage' on page 16 undefined on input line 562.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1136,15 +1960,217 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [16]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+e:/desktop/Personal Website/latex/math.tex:592: LaTeX Error: Unicode character 弹 (U+5F39)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.592 ...� (Spring Parameter Diagram - Left Side)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+e:/desktop/Personal Website/latex/math.tex:592: LaTeX Error: Unicode character 簧 (U+7C27)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.592 ...� (Spring Parameter Diagram - Left Side)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:592: LaTeX Error: Unicode character 参 (U+53C2)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.592 ...� (Spring Parameter Diagram - Left Side)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:592: LaTeX Error: Unicode character 数 (U+6570)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.592 ...� (Spring Parameter Diagram - Left Side)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:592: LaTeX Error: Unicode character 图 (U+56FE)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.592 ...� (Spring Parameter Diagram - Left Side)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:592: LaTeX Error: Unicode character 解 (U+89E3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.592 ...� (Spring Parameter Diagram - Left Side)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:592: LaTeX Error: Unicode character 左 (U+5DE6)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.592 ...� (Spring Parameter Diagram - Left Side)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:592: LaTeX Error: Unicode character 侧 (U+4FA7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.592 ...� (Spring Parameter Diagram - Left Side)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:598: LaTeX Error: Unicode character 弹 (U+5F39)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.598 ... (Spring Parameter Diagram - Right Side)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:598: LaTeX Error: Unicode character 簧 (U+7C27)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.598 ... (Spring Parameter Diagram - Right Side)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:598: LaTeX Error: Unicode character 参 (U+53C2)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.598 ... (Spring Parameter Diagram - Right Side)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:598: LaTeX Error: Unicode character 数 (U+6570)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.598 ... (Spring Parameter Diagram - Right Side)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:598: LaTeX Error: Unicode character 图 (U+56FE)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.598 ... (Spring Parameter Diagram - Right Side)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:598: LaTeX Error: Unicode character 解 (U+89E3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.598 ... (Spring Parameter Diagram - Right Side)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:598: LaTeX Error: Unicode character 右 (U+53F3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.598 ... (Spring Parameter Diagram - Right Side)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:598: LaTeX Error: Unicode character 侧 (U+4FA7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.598 ... (Spring Parameter Diagram - Right Side)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
 
 
 
 
-LaTeX Warning: Reference `LastPage' on page 17 undefined on input line 537.
+LaTeX Warning: Reference `LastPage' on page 17 undefined on input line 620.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1156,7 +2182,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [17]
 
 
-LaTeX Warning: Reference `LastPage' on page 18 undefined on input line 575.
+LaTeX Warning: Reference `LastPage' on page 18 undefined on input line 665.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1167,12 +2193,113 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [18]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+e:/desktop/Personal Website/latex/math.tex:697: LaTeX Error: Unicode character 有 (U+6709)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.697 ...意图 (Finite Element Analysis Diagram)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:697: LaTeX Error: Unicode character 限 (U+9650)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.697 ...意图 (Finite Element Analysis Diagram)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:697: LaTeX Error: Unicode character 元 (U+5143)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.697 ...意图 (Finite Element Analysis Diagram)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:697: LaTeX Error: Unicode character 分 (U+5206)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.697 ...意图 (Finite Element Analysis Diagram)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:697: LaTeX Error: Unicode character 析 (U+6790)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.697 ...意图 (Finite Element Analysis Diagram)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:697: LaTeX Error: Unicode character 示 (U+793A)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.697 ...意图 (Finite Element Analysis Diagram)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:697: LaTeX Error: Unicode character 意 (U+610F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.697 ...意图 (Finite Element Analysis Diagram)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+e:/desktop/Personal Website/latex/math.tex:697: LaTeX Error: Unicode character 图 (U+56FE)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.697 ...意图 (Finite Element Analysis Diagram)}
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
 
 
 
 
-LaTeX Warning: Reference `LastPage' on page 19 undefined on input line 621.
+LaTeX Warning: Reference `LastPage' on page 19 undefined on input line 712.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1184,7 +2311,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [19]
 
 
-LaTeX Warning: Reference `LastPage' on page 20 undefined on input line 644.
+LaTeX Warning: Reference `LastPage' on page 20 undefined on input line 744.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1194,9 +2321,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [20]
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 749.
+ (c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Overfull \hbox (250.24467pt too wide) in paragraph at lines 842--842
+[]\T1/pcr/m/n/12 data = readmatrix("E:/my/course/physics/cupt/experiment_video/analysis/3circles/orginal_data.xlsx");[] 
+ []
 
 
-LaTeX Warning: Reference `LastPage' on page 21 undefined on input line 646.
+Overfull \hbox (99.04474pt too wide) in paragraph at lines 842--842
+[]\T1/pcr/m/n/12 b0 = [1000; 0.8; 7.85; 0]; % Initial values can be adjusted based on data range[] 
+ []
+
+
+Overfull \hbox (5.44478pt too wide) in paragraph at lines 842--842
+[]\T1/pcr/m/n/12 beta = lsqcurvefit(fun, b0, time, torsion_angle, [], [], options);[] 
+ []
+
+
+
+
+LaTeX Warning: Reference `LastPage' on page 21 undefined on input line 842.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1206,11 +2352,79 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [21]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 652.
- (./code/matlab.m) (./code/python.py
+Overfull \hbox (48.64476pt too wide) in paragraph at lines 842--842
+[]\T1/pcr/m/n/12 plot(time, torsion_angle_rad1, 'o', 'DisplayName', 'y=0 Original Data');[] 
+ []
 
 
-LaTeX Warning: Reference `LastPage' on page 22 undefined on input line 28.
+Overfull \hbox (48.64476pt too wide) in paragraph at lines 842--842
+[]\T1/pcr/m/n/12 plot(time, torsion_angle_rad2, '*', 'DisplayName', 'y=3 Original Data');[] 
+ []
+
+
+Overfull \hbox (48.64476pt too wide) in paragraph at lines 842--842
+[]\T1/pcr/m/n/12 plot(time, torsion_angle_rad3, '+', 'DisplayName', 'y=5 Original Data');[] 
+ []
+
+
+Overfull \hbox (63.04475pt too wide) in paragraph at lines 842--842
+[]\T1/pcr/m/n/12 plot(time, fitted_torsion_angle1, 'r', 'DisplayName', 'y=0 Fitted Curve');[] 
+ []
+
+
+Overfull \hbox (63.04475pt too wide) in paragraph at lines 842--842
+[]\T1/pcr/m/n/12 plot(time, fitted_torsion_angle2, 'b', 'DisplayName', 'y=3 Fitted Curve');[] 
+ []
+
+
+Overfull \hbox (63.04475pt too wide) in paragraph at lines 842--842
+[]\T1/pcr/m/n/12 plot(time, fitted_torsion_angle3, 'g', 'DisplayName', 'y=5 Fitted Curve');[] 
+ []
+
+
+Overfull \hbox (394.24461pt too wide) in paragraph at lines 842--842
+[]\T1/pcr/m/n/12 % expression_text = sprintf('y = %.2f * exp(-%.2f * x) * sin(%.2f * x + %.2f)', beta1(1), beta1(2), beta1(3), beta1(4));[] 
+ []
+
+
+Overfull \hbox (192.6447pt too wide) in paragraph at lines 842--842
+[]\T1/pcr/m/n/12 % text(0.05, 0.9, expression_text, 'Units', 'normalized', 'FontSize', 12, 'Color', 'black');[] 
+ []
+
+
+Overfull \hbox (703.84448pt too wide) in paragraph at lines 842--842
+[]\T1/pcr/m/n/12 omega_fun1 = @(x) beta1(3) * beta1(1) * exp(-beta1(2) * x).* cos(beta1(3) * x + beta1(4))- beta1(2) * beta1(1) * exp(-beta1(2) * x).* sin(beta1(3) * x + beta1(4));[] 
+ []
+
+
+Overfull \hbox (703.84448pt too wide) in paragraph at lines 842--842
+[]\T1/pcr/m/n/12 omega_fun2 = @(x) beta2(3) * beta2(1) * exp(-beta2(2) * x).* cos(beta2(3) * x + beta2(4))- beta2(2) * beta2(1) * exp(-beta2(2) * x).* sin(beta2(3) * x + beta2(4));[] 
+ []
+
+
+Overfull \hbox (703.84448pt too wide) in paragraph at lines 842--842
+[]\T1/pcr/m/n/12 omega_fun3 = @(x) beta3(3) * beta3(1) * exp(-beta3(2) * x).* cos(beta3(3) * x + beta3(4))- beta3(2) * beta3(1) * exp(-beta3(2) * x).* sin(beta3(3) * x + beta3(4));[] 
+ []
+
+
+Overfull \hbox (34.24477pt too wide) in paragraph at lines 842--842
+[]\T1/pcr/m/n/12 plot(time, omega_values1, 'r', 'DisplayName', 'y=0 Angular Velocity');[] 
+ []
+
+
+Overfull \hbox (34.24477pt too wide) in paragraph at lines 842--842
+[]\T1/pcr/m/n/12 plot(time, omega_values2, 'b', 'DisplayName', 'y=3 Angular Velocity');[] 
+ []
+
+
+Overfull \hbox (34.24477pt too wide) in paragraph at lines 842--842
+[]\T1/pcr/m/n/12 plot(time, omega_values3, 'g', 'DisplayName', 'y=5 Angular Velocity');[] 
+ []
+
+
+
+
+LaTeX Warning: Reference `LastPage' on page 22 undefined on input line 842.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1219,12 +2433,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[22
-
-])
+[22]
 
 
-LaTeX Warning: Reference `LastPage' on page 23 undefined on input line 660.
+LaTeX Warning: Reference `LastPage' on page 23 undefined on input line 845.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1242,25 +2454,39 @@ L3 programming layer <2025-04-14>
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `math.out' has not changed.
-(rerunfilecheck)             Checksum: 1664E0A81B7720A94AA7C9CC56E30B61;12119.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `math.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `math.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  BC7591F7529D7A4F2252DC214EAE11F3;12611.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                math
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'math.run.xml'.
 \openout1 = `math.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23876 strings out of 469608
- 398378 string characters out of 5474780
- 1638517 words of memory out of 5000000
- 50122 multiletter control sequences out of 15000+600000
- 669953 words of font info for 136 fonts, out of 8000000 for 9000
+ 22369 strings out of 469608
+ 376130 string characters out of 5474780
+ 1319919 words of memory out of 5000000
+ 48697 multiletter control sequences out of 15000+600000
+ 660896 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,13n,93p,1243b,2337s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on math.pdf (24 pages, 238113 bytes).
+ 90i,13n,93p,1243b,1245s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on math.pdf (24 pages, 253455 bytes).
 PDF statistics:
- 602 PDF objects out of 1000 (max. 8388607)
- 539 compressed objects within 6 object streams
- 174 named destinations out of 1000 (max. 500000)
- 446 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 331 PDF objects out of 1000 (max. 8388607)
+ 270 compressed objects within 3 object streams
+ 137 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,55 +1,56 @@
-\contentsline {section}{\numberline {1}Introduction}{4}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Other Assumptions}{4}{subsection.1.1}%
-\contentsline {section}{\numberline {2}Analysis of the Problem}{4}{section.2}%
-\contentsline {section}{\numberline {3}Preliminary Experiment}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Experimental Materials and Setup}{6}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Experimental Procedure}{7}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Observed Phenomena and Initial Analysis}{7}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Post-Experiment Reflections and Further Questions}{8}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Theoretical Analysis}{9}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Introduction to the Phenomenon}{9}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Basic Assumptions}{9}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Parameter Definitions and Derivations}{9}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Initial Slinky Parameters (Untwisted State)}{9}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Slinky Parameters After Twisting}{10}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Derivation of Radius and Length After Twisting}{10}{subsubsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.4}Torsional Load and Stiffness}{11}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Torsional Wave Equation and Wave Speed}{11}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Relationship between Transverse Displacement and Twist Angle}{12}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Solution of the Wave Equation}{12}{subsection.4.7}%
-\contentsline {subsubsection}{\numberline {4.7.1}Boundary Conditions and Spatial Solution}{12}{subsubsection.4.7.1}%
-\contentsline {subsubsection}{\numberline {4.7.2}Temporal Solution}{13}{subsubsection.4.7.2}%
-\contentsline {subsubsection}{\numberline {4.7.3}General Solution for Twist Angle}{13}{subsubsection.4.7.3}%
-\contentsline {subsubsection}{\numberline {4.7.4}Initial Conditions and Determination of Coefficients}{13}{subsubsection.4.7.4}%
-\contentsline {subsection}{\numberline {4.8}Final Expressions and Summary}{14}{subsection.4.8}%
-\contentsline {subsubsection}{\numberline {4.8.1}Final Expression for Twist Angle}{14}{subsubsection.4.8.1}%
-\contentsline {subsubsection}{\numberline {4.8.2}Final Expression for Transverse Displacement}{14}{subsubsection.4.8.2}%
-\contentsline {subsubsection}{\numberline {4.8.3}Summary of Derived Relationships}{14}{subsubsection.4.8.3}%
-\contentsline {section}{\numberline {5}Numerical Simulation and Model Validation}{15}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Simulation Setup}{15}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Simulation of Torsional Wave Propagation}{15}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Validation Against Observations}{15}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Experimental Investigation}{16}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Experimental Objectives}{16}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Experimental Apparatus}{16}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Experimental Procedure}{17}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Material Parameters and Data Acquisition}{17}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}Material Properties Lookup}{17}{subsubsection.6.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.2}Data Acquisition Method}{18}{subsubsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.5}Experimental Series 1: Investigating Influencing Factors}{18}{subsection.6.5}%
-\contentsline {subsubsection}{\numberline {6.5.1}Experiment 1: Amplitude - Time - Twist Angle - Length}{18}{subsubsection.6.5.1}%
-\contentsline {subsubsection}{\numberline {6.5.2}Experiment 2: Wavelength - Time - Twist Angle - Length}{19}{subsubsection.6.5.2}%
-\contentsline {subsubsection}{\numberline {6.5.3}Experiment 3: Radius - Twist Angle - Length}{19}{subsubsection.6.5.3}%
-\contentsline {subsection}{\numberline {6.6}Supplementary Experiment: Effect of Lubrication}{19}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}Experimental Series 2: Theoretical Validation (Further Work)}{20}{subsection.6.7}%
-\contentsline {section}{\numberline {7}Calculating and Simplifying the Model}{20}{section.7}%
-\contentsline {section}{\numberline {8}The Model Results}{20}{section.8}%
-\contentsline {section}{\numberline {9}Validating the Model}{20}{section.9}%
-\contentsline {section}{\numberline {10}Conclusions}{20}{section.10}%
-\contentsline {section}{\numberline {11}Summary}{20}{section.11}%
-\contentsline {section}{\numberline {12}Evaluate of the Mode}{20}{section.12}%
-\contentsline {section}{\numberline {13}Strengths and weaknesses}{20}{section.13}%
-\contentsline {subsection}{\numberline {13.1}Strengths}{20}{subsection.13.1}%
-\contentsline {section}{Appendices}{20}{section*.2}%
-\contentsline {section}{Appendix \numberline {A}First appendix}{22}{appendix.1.A}%
-\contentsline {section}{Appendix \numberline {B}Second appendix}{22}{appendix.1.B}%
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Other Assumptions}{2}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Analysis of the Problem}{2}{section.2}%
+\contentsline {section}{\numberline {3}Preliminary Experiment}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Experimental Materials and Setup}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Experimental Procedure}{3}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Observed Phenomena and Initial Analysis}{3}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Post-Experiment Reflections and Further Questions}{4}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Theoretical Analysis}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Introduction to the Phenomenon}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Basic Assumptions}{5}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Parameter Definitions and Derivations}{5}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Initial Slinky Parameters (Untwisted State)}{5}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Slinky Parameters After Twisting}{6}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Derivation of Radius and Length After Twisting}{6}{subsubsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.4}Torsional Load and Stiffness}{7}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Torsional Wave Equation and Wave Speed}{7}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Relationship between Transverse Displacement and Twist Angle}{8}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Solution of the Wave Equation}{8}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Final Expressions and Summary}{8}{subsection.4.8}%
+\contentsline {subsubsection}{\numberline {4.8.1}Final Expression for Twist Angle}{8}{subsubsection.4.8.1}%
+\contentsline {subsubsection}{\numberline {4.8.2}Final Expression for Transverse Displacement}{8}{subsubsection.4.8.2}%
+\contentsline {subsubsection}{\numberline {4.8.3}Summary of Derived Relationships}{8}{subsubsection.4.8.3}%
+\contentsline {section}{\numberline {5}Numerical Simulation and Model Validation}{9}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Simulation Setup}{9}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Simulation of Torsional Wave Propagation}{9}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Validation Against Observations}{9}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Experimental Investigation}{9}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Experimental Objectives}{9}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Experimental Apparatus}{10}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Experimental Procedure}{11}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Material Parameters and Data Acquisition}{11}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Material Properties Lookup}{11}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}Data Acquisition Method}{11}{subsubsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.5}Experimental Series 1: Investigating Influencing Factors}{11}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1}Experiment 1: Amplitude - Time - Twist Angle - Length}{11}{subsubsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.2}Experiment 2: Wavelength - Time - Twist Angle - Length}{12}{subsubsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.3}Experiment 3: Radius - Twist Angle - Length}{12}{subsubsection.6.5.3}%
+\contentsline {subsection}{\numberline {6.6}Supplementary Experiment: Effect of Lubrication}{12}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Experimental Series 2: Theoretical Validation}{12}{subsection.6.7}%
+\contentsline {subsubsection}{\numberline {6.7.1}Wave Speed Measurement and Analysis}{12}{subsubsection.6.7.1}%
+\contentsline {section}{\numberline {7}Error Analysis}{14}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Theoretical Errors}{14}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Experimental Errors}{15}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Major Influencing Factors}{15}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Calculating and Simplifying the Model}{15}{section.8}%
+\contentsline {section}{\numberline {9}The Model Results}{15}{section.9}%
+\contentsline {section}{\numberline {10}Validating the Model}{15}{section.10}%
+\contentsline {section}{\numberline {11}Conclusions}{15}{section.11}%
+\contentsline {section}{\numberline {12}Summary}{15}{section.12}%
+\contentsline {section}{Appendices}{16}{section*.2}%
+\contentsline {section}{Appendix \numberline {A}Physical Interpretation of the Slinky Wave Equation}{16}{appendix.1.A}%
+\contentsline {section}{Appendix \numberline {B}Parameter Interpretation of the Slinky Wave Equation}{16}{appendix.1.B}%
+\contentsline {section}{Appendix \numberline {C}Finite Element Analysis}{17}{appendix.1.C}%
+\contentsline {section}{Appendix \numberline {D}Slinky-Related Parameters}{19}{appendix.1.D}%
+\contentsline {section}{Appendix \numberline {E}MATLAB Code for Experimental Data Analysis}{21}{appendix.1.E}%

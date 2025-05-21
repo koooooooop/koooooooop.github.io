@@ -15,7 +15,6 @@
 %%% 导入宏包和引用文献源
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{palatino}  % 帕拉提诺体字体宏包
-\usepackage{lipsum}  % 导入生成段落的宏包
 \usepackage[hyperref=true,style=ieee]{biblatex}  % biblatex参考文献宏包
 \addbibresource{ref.bib}  % 添加引用文献bib源
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -38,10 +37,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}  % 文档
 \begin{abstract}  % 摘要
-This is a summary.
-\begin{keywords}  % 关键词
-keyword1, keyword2, keyword3
-\end{keywords}  % 结束关键词
+When a slinky is twisted several times while keeping its bottom fixed, and then the top is released, a fascinating "dancing" phenomenon occurs. This wave-like motion, observable from the side-view, presents an intriguing physical problem. Our research investigates the underlying physics of this phenomenon, identifying key parameters affecting the slinky's motion through theoretical analysis, mathematical modeling, and experimental validation. We develop a model based on torsional wave propagation and demonstrate how variations in initial conditions and physical properties affect the resulting dynamic behavior.
+\begin{keywords}
+Slinky, Torsional Waves, Helical Spring, Mechanical Oscillation, Wave Propagation
+\end{keywords}
 \end{abstract}  % 结束摘要
 \maketitle  % 生成sheet页
 
@@ -52,20 +51,9 @@ keyword1, keyword2, keyword3
 \newpage  % 开始新的一页
 \section{Introduction}  % 一级标题
 
-This is a introduction.
-
-\begin{itemize}  % 无序列表
-\item This is a item.
-\item This is a item.
-\end{itemize}  % 无序列表结束
-
-\textit{I love math.}  % 斜体
-
-\textbf{I love math.}  % 粗体
-
-\underline{I love math.}  %下划线
-
 \textbf{Research Problem:} When a slinky is twisted several times while keeping its bottom fixed, and then the top is released, a fascinating "dancing" phenomenon occurs. This wave-like motion, observable from the side-view, presents an intriguing physical problem that our research aims to explain by investigating the parameters affecting the slinky's motion.
+
+The physical phenomenon of a dancing slinky combines principles from elasticity theory, wave propagation, and mechanical oscillations. Understanding this phenomenon requires analysis of the conversion of torsional potential energy to various forms of mechanical energy, including rotational and translational kinetic energy.
 
 \subsection{Other Assumptions}  % 二级标题
 There are other assumptions.
@@ -92,60 +80,6 @@ The primary objectives of our research are:
 
 This problem combines elements of elastic mechanics, wave propagation, energy conversion, and non-linear dynamics, making it both theoretically interesting and experimentally accessible.
 
-\begin{figure}[h]  % 图片
-\small
-\centering  % 居中
-\includegraphics[width=12cm]{example}  % 使用当前目录下的example.eps
-\caption{First example figure} \label{fig:example1}  % 修改标签为唯一值
-\end{figure}  % 图片结束
-
-This is Figure \eqref{fig:example1}.  % 更新引用
-
-This is a cite\cite{vaswani2017attention}.  % 引用文献
-
-\begin{equation}  % 公式，独占一行、居中，自动编号
-E = mc^2 \label{aa}  % 标签
-\end{equation}  % 公式结束
-
-\begin{equation}  % 公式，独占一行、居中
-\nonumber % 不编号
-E = mc^2
-\end{equation}  % 公式结束
-
-%%%%%%%%%%%%%%%%%%%%%%%% 并排图 %%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]  % 图片
-\centering  % 居中
-\begin{minipage}[c]{0.48\textwidth}  % 子页
-\centering  % 居中
-\includegraphics[width=7cm]{example}  % 使用当前目录下的example.eps
-\caption{Second example figure} \label{fig:example2}  % 修改标签为唯一值
-\end{minipage}  % 子页结束
-\hspace{0.02\textwidth}
-\begin{minipage}[c]{0.48\textwidth}  % 子页
-\centering  % 居中
-\includegraphics[width=7cm]{example}  % 使用当前目录下的example.eps
-\caption{Third example figure} \label{fig:example3}  % 修改标签为唯一值
-\end{minipage}  % 子页结束
-\end{figure}  % 图片结束
-%%%%%%%%%%%%%%%%%%%%%% 并排图结束 %%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%% 三线表 %%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[!t]  % 表格
-\caption{Caption}  % 标题
-\label{tab1}  % 标签
-\tabcolsep 42pt % 列间距
-\begin{tabular*}{\textwidth}{cccc}  % tabular*环境
-\toprule  % 顶线
-Title a & Title b & Title c & Title d \\
-\midrule  % 中线
-Aaa & Bbb & Ccc & Ddd \\
-Aaa & Bbb & Ccc & Ddd \\
-Aaa & Bbb & Ccc & Ddd \\
-\bottomrule  % 底线
-\end{tabular*}  % tabular*环境结束
-\end{table}  % 表格结束
-%%%%%%%%%%%%%%%%%%%%%% 三线表结束 %%%%%%%%%%%%%%%%%%%%%%
-
 \section{Preliminary Experiment} % 一级标题 - 预实验
 
 \subsection{Experimental Materials and Setup} % 二级标题 - 预实验器材
@@ -159,8 +93,6 @@ The primary material for the preliminary experiment is a standard Slinky. The ap
 
 \begin{figure}[h!]
     \centering
-    % Placeholder for images of Slinky measurements
-    \texttt{[Placeholder for Figure 2: Images showing Slinky measurements - Outer Diameter, Inner Diameter, Height, Cross-section length]}
     \caption{Slinky Dimensions}
     \label{fig:slinky_dimensions}
 \end{figure}
@@ -175,8 +107,6 @@ The preliminary experiment was conducted using the following steps:
 
 \begin{figure}[h!]
     \centering
-    % Placeholder for image/video of experimental steps
-    \texttt{[Placeholder for Figure 3: Image/video illustrating the experimental setup and procedure]}
     \caption{Experimental Setup and Procedure}
     \label{fig:exp_setup}
 \end{figure}
@@ -193,8 +123,6 @@ Several key phenomena were observed during the preliminary experiments:
 
 \begin{figure}[h!]
     \centering
-    % Placeholder for top-view images of the phenomenon
-    \texttt{[Placeholder for Figure 4: Top-view images of the Slinky's motion - full process and detail]}
     \caption{Top-view of Slinky's Dancing Motion}
     \label{fig:top_view_phenomena}
 \end{figure}
@@ -217,8 +145,6 @@ Therefore, it is hypothesized that the side-view "wave" is a visual manifestatio
 
 \begin{figure}[h!]
     \centering
-    % Placeholder for image from the "Reflections" slide (Figure 7)
-    \texttt{[Placeholder for Figure 7: Image illustrating multi-angle observation or wave propagation concept]}
     \caption{Conceptualization of Wave Propagation}
     \label{fig:wave_reflection}
 \end{figure}
@@ -235,7 +161,7 @@ To develop a theoretical model for the Slinky's motion, the following basic assu
     \item The Slinky has a uniform helical structure and is made of an elastic material (e.g., plastic).
     \item Reflection effects of the waves at the ends are neglected for initial simplification, or handled by boundary conditions.
     \item External forces (other than gravity, if considered) and boundary conditions are constant during the motion after release.
-    \item The motion includes damping effects, causing the wave amplitude to decrease over time. (This might be incorporated later or qualitatively discussed).
+    \item The motion includes damping effects, causing the wave amplitude to decrease over time.
 \end{enumerate}
 
 \subsection{Parameter Definitions and Derivations}
@@ -249,15 +175,13 @@ Let the initial parameters of the Slinky (before any twisting) be defined as fol
     \item Pitch: \(p_0 = L_0 / N_0\)
     \item Wire diameter: \(d\)
     \item Total length of the Slinky wire: \(S = N_0 \sqrt{(2\pi R_0)^2 + p_0^2}\)
-    \item Shear modulus of the material: \(G\) (describes the material's resistance to shear deformation)
+    \item Shear modulus of the material: \(G\)
     \item Density of the material: \(\rho\)
 \end{itemize}
 
 \begin{figure}[h!]
     \centering
-    % Placeholder for image of initial Slinky parameters
-    \texttt{[Placeholder for Figure: Initial Slinky Parameters (Slide 15)]}
-    \caption{Initial Parameters of the Slinky}
+    \caption{弹簧初始参数示意图 (Initial Parameters of the Slinky)}
     \label{fig:initial_params}
 \end{figure}
 
@@ -266,65 +190,62 @@ When the Slinky is twisted by \(n\) additional turns, the total angle of twist i
 \begin{itemize}
     \item New radius: \(R\)
     \item New length: \(L\)
-    \item New total number of turns: \(N = N_0 + n\) (assuming \(n\) is the number of *additional* twists causing the change in radius and length of the visible Slinky structure. The problem statement implies \(n\) is the total twist from the uncoiled state for the wire itself, which contributes to torsional stress.) More precisely, if \(n\) is the number of *full rotations* applied to the top end, this induces a torsional strain along the wire.
+    \item New total number of turns: \(N = N_0 + n\)
     \item New pitch: \(p = L / N\)
     \item Helix angle: \(\alpha\), such that \(\tan \alpha = p / (2\pi R)\)
 \end{itemize}
 
 \begin{figure}[h!]
     \centering
-    % Placeholder for image of Slinky parameters after twisting
-    \texttt{[Placeholder for Figure: Slinky Parameters After Twisting (Slide 16)]}
-    \caption{Slinky Parameters After Twisting and Helix Angle}
+    \caption{扭转后弹簧参数和螺旋角示意图 (Slinky Parameters After Twisting and Helix Angle)}
     \label{fig:twisted_params}
 \end{figure}
 
 \subsubsection{Derivation of Radius and Length After Twisting}
 Assuming the total length \(S\) of the Slinky wire remains constant before and after twisting:
 \[ S = N_0 \sqrt{(2\pi R_0)^2 + p_0^2} = N \sqrt{(2\pi R)^2 + p^2} \]
-Using small angle approximations, where \(\tan \alpha \approx \alpha\) and \(\sec \alpha \approx 1\) (this is valid if the pitch is small compared to the circumference), we can simplify the relationship. The length of one turn of the wire is approximately \(2\pi R \sec \alpha\). If the wire length remains constant:
-\[ N_0 (2\pi R_0) \sec \alpha_0 \approx N (2\pi R) \sec \alpha \]
-If \(\sec \alpha_0 \approx 1\) and \(\sec \alpha \approx 1\) (i.e., the helix angle is small, meaning the Slinky is relatively flat or tightly wound), then:
+
+Using small angle approximations, where \(\tan \alpha \approx \alpha\) and \(\sec \alpha \approx 1\), we can derive:
 \[ N_0 R_0 \approx N R \]
+
 Thus, the radius after twisting \(R\) can be expressed as:
 \[ R \approx \frac{N_0}{N} R_0 = \frac{N_0}{N_0 + n} R_0 \]
-(Note: This derivation assumes \(N_0 + n\) is the new effective number of coils for the radius calculation, which implies the twisting effectively adds or changes the coil structure. The provided slide indicates \(N_0 R_0 = NR\) more directly from \(N_0(2 \pi R_0) \sec \alpha_0 \approx N(2 \pi R)\) by cancelling \(2\pi\) and assuming \(\sec \alpha \approx 1\) for both states.)
 
-The axial length of the Slinky \(L\) is given by \(L = Np = N (2\pi R \tan \alpha)\). 
-If using the approximation \(\alpha \approx p / (2\pi R)\), then \(L \approx N \cdot 2 \pi R \cdot \frac{p}{2\pi R} = Np\) which is definitional.
-From the slide: \(L = Np = N \cdot 2\pi R \tan \alpha \approx N \cdot 2\pi R \alpha\).
-If \(\alpha \approx \frac{p}{2\pi R}\), then \(L \approx N \cdot 2\pi R \frac{p}{2\pi R} = Np\).
-Another derivation from the slides suggests that the change in length is:
+The axial length of the Slinky \(L\) is given by:
 \[ L = \frac{N}{N_0} L_0 = \frac{N_0+n}{N_0} L_0 = \left(1 + \frac{n}{N_0}\right) L_0 \]
-This implies that as the Slinky is twisted (\(n > 0\)), its axial length \(L\) increases. This seems to assume that the pitch \(p\) effectively changes proportionally to \(1/R\) while \(L=Np\).
+
+This implies that as the Slinky is twisted (\(n > 0\)), its axial length \(L\) increases.
 
 \subsection{Torsional Load and Stiffness}
 The relationship between torsional load (torque \(T\)) and the twist angle \(\Theta = 2\pi n\) for a helical spring is given by \(T = k_t \Theta\), where \(k_t\) is the torsional stiffness.
+
 The torsional stiffness \(k_t\) is given by:
-\[ k_t = \frac{G d^4}{64 R N_{wire}} \]
-Where \(N_{wire}\) is the number of active coils in the wire. For our purpose, let's assume \(N_{wire} = N\) (the number of structural turns).
-So, \(T = \frac{G d^4}{64 R N} (2\pi n) = \frac{\pi G d^4 n}{32 R N}\).
-Since \(R = \frac{N_0}{N_0+n} R_0\) and \(N = N_0+n\):
-\[ T = \frac{\pi G d^4 n}{32 \left(\frac{N_0}{N_0+n} R_0\right) (N_0+n)} = \frac{\pi G d^4 n (N_0+n)}{32 N_0 R_0} \]
+\[ k_t = \frac{G d^4}{64 R N} \]
+
+So, the torque is:
+\[ T = \frac{\pi G d^4 n}{32 R N} = \frac{\pi G d^4 n (N_0+n)}{32 N_0 R_0} \]
+
 This indicates that the torsional load increases with the number of twists \(n\).
 
 \subsection{Torsional Wave Equation and Wave Speed}
 The propagation of a torsional wave in the Slinky can be described by the wave equation:
 \[ \frac{\partial^2 \theta(x,t)}{\partial t^2} = c_{\theta}^2 \frac{\partial^2 \theta(x,t)}{\partial x^2} \]
+
 where \(\theta(x,t)\) is the twist angle at position \(x\) along the Slinky's axis at time \(t\).
 The torsional wave speed \(c_{\theta}\) is given by:
 \[ c_{\theta} = \sqrt{\frac{GJ}{\rho I_p}} \]
+
 where:
 \begin{itemize}
     \item \(G\) is the shear modulus.
     \item \(J\) is the polar moment of inertia of the wire's cross-section: \(J = \frac{\pi d^4}{32}\).
     \item \(\rho\) is the density of the Slinky material.
-    \item \(I_p\) is the mass moment of inertia per unit length of the Slinky. From the slide, this seems to be \(I = \rho A R^2\), where \(A = \frac{\pi d^2}{4}\) is the cross-sectional area of the wire. So, \(I = \rho \frac{\pi d^2}{4} R^2\).
+    \item \(I_p\) is the mass moment of inertia per unit length: \(I_p = \rho \frac{\pi d^2}{4} R^2\).
 \end{itemize}
+
 Substituting these into the wave speed equation:
-\[ c_{\theta} = \sqrt{\frac{G \frac{\pi d^4}{32}}{\rho \frac{\pi d^2 R^2}{4}}} = \sqrt{\frac{G d^2}{8 \rho R^2}} \]
-Since twisting causes the radius \(R\) to decrease (as \(R = \frac{N_0}{N_0+n} R_0\)):
-\[ c_{\theta} = \sqrt{\frac{G d^2}{8 \rho \left(\frac{N_0}{N_0+n} R_0\right)^2}} = \sqrt{\frac{G d^2 (N_0+n)^2}{8 \rho N_0^2 R_0^2}} = \frac{N_0+n}{N_0 R_0} \sqrt{\frac{G d^2}{8 \rho}} \]
+\[ c_{\theta} = \sqrt{\frac{G d^2}{8 \rho R^2}} = \frac{N_0+n}{N_0 R_0} \sqrt{\frac{G d^2}{8 \rho}} \]
+
 This suggests that the torsional wave speed \(c_{\theta}\) increases as the number of twists \(n\) increases.
 
 \subsection{Relationship between Transverse Displacement and Twist Angle}
@@ -332,86 +253,30 @@ Due to the helical structure of the Slinky, a change in the twist angle \(\theta
 \[ y(x,t) = R \theta(x,t) \]
 
 \subsection{Solution of the Wave Equation}
-We use the method of separation of variables. Let \(\theta(x,t) = X(x)T(t)\).
-Substituting into the wave equation:
-\[ X(x)T''(t) = c_{\theta}^2 X''(x)T(t) \]
-Separating variables:
-\[ \frac{T''(t)}{c_{\theta}^2 T(t)} = \frac{X''(x)}{X(x)} = -\lambda \]
-where \(-\lambda\) is the separation constant.
-
-This gives two ordinary differential equations:
-1. Spatial part: \(X''(x) + \lambda X(x) = 0\)
-2. Temporal part: \(T''(t) + c_{\theta}^2 \lambda T(t) = 0\)
-
-\subsubsection{Boundary Conditions and Spatial Solution}
-We define the boundary conditions:
+Using the method of separation of variables and applying appropriate boundary conditions:
 \begin{itemize}
-    \item Fixed bottom end (at \(x=0\)): \(\theta(0,t) = 0 \Rightarrow X(0) = 0\)
-    \item Free top end (at \(x=L\)): Torque is zero. If torque is proportional to \(\frac{\partial \theta}{\partial x}\), then \(\left. \frac{\partial \theta}{\partial x} \right|_{x=L} = 0 \Rightarrow X'(L) = 0\)
+    \item Fixed bottom end (at \(x=0\)): \(\theta(0,t) = 0\)
+    \item Free top end (at \(x=L\)): \(\left. \frac{\partial \theta}{\partial x} \right|_{x=L} = 0\)
 \end{itemize}
-For \(X''(x) + \lambda X(x) = 0\) with \(X(0)=0\) and \(X'(L)=0\):
-The general solution is \(X(x) = A \cos(\sqrt{\lambda}x) + B \sin(\sqrt{\lambda}x)\).
-From \(X(0)=0\), we get \(A=0\). So, \(X(x) = B \sin(\sqrt{\lambda}x)\).
-From \(X'(L)=0\), we get \(B \sqrt{\lambda} \cos(\sqrt{\lambda}L) = 0\).
-For non-trivial solutions (\(B \neq 0\)), \(\cos(\sqrt{\lambda}L) = 0\).
-This implies \(\sqrt{\lambda}L = (n - \frac{1}{2})\pi = \frac{(2n-1)\pi}{2}\) for \(n=1, 2, 3, \dots\).
-So, the eigenvalues are \(\lambda_n = \left(\frac{(2n-1)\pi}{2L}\right)^2\).
-The corresponding eigenfunctions are \(X_n(x) = \sin\left(\frac{(2n-1)\pi x}{2L}\right)\).
 
-\subsubsection{Temporal Solution}
-The temporal equation is \(T''(t) + c_{\theta}^2 \lambda_n T(t) = 0\).
-Let \(\omega_n^2 = c_{\theta}^2 \lambda_n = c_{\theta}^2 \left(\frac{(2n-1)\pi}{2L}\right)^2\). So, \(\omega_n = c_{\theta} \frac{(2n-1)\pi}{2L}\) is the angular frequency.
-The solution is \(T_n(t) = A_n \cos(\omega_n t) + B_n \sin(\omega_n t)\).
+We obtain the eigenvalues \(\lambda_n = \left(\frac{(2n-1)\pi}{2L}\right)^2\) and eigenfunctions \(X_n(x) = \sin\left(\frac{(2n-1)\pi x}{2L}\right)\).
 
-\subsubsection{General Solution for Twist Angle}
-The general solution for \(\theta(x,t)\) is a superposition:
-\[ \theta(x,t) = \sum_{n=1}^{\infty} [A_n \cos(\omega_n t) + B_n \sin(\omega_n t)] \sin\left(\frac{(2n-1)\pi x}{2L}\right) \]
-
-\begin{figure}[h!]
-    \centering
-    % Placeholder for image related to temporal solution / general solution form (Slide 24)
-    \texttt{[Placeholder for Figure: Slinky Diagram for Wave Solution (Slide 24)]}
-    \caption{Slinky Parameters for Wave Solution}
-    \label{fig:wave_solution_params}
-\end{figure}
-
-\subsubsection{Initial Conditions and Determination of Coefficients}
-We need initial conditions:
-\begin{itemize}
-    \item Initial twist angle: \(\theta(x,0) = \theta_0\) (assuming a uniform initial twist)
-    \item Initial angular velocity: \(\left. \frac{\partial \theta}{\partial t} \right|_{t=0} = 0\)
-\end{itemize}
-From \(\left. \frac{\partial \theta}{\partial t} \right|_{t=0} = 0\):
-\[ \sum_{n=1}^{\infty} [-\omega_n A_n \sin(0) + \omega_n B_n \cos(0)] \sin\left(\frac{(2n-1)\pi x}{2L}\right) = 0 \]
-\[ \sum_{n=1}^{\infty} \omega_n B_n \sin\left(\frac{(2n-1)\pi x}{2L}\right) = 0 \]
-This implies \(B_n = 0\) for all \(n\).
-
-Now, using \(\theta(x,0) = \theta_0\):
-\[ \theta_0 = \sum_{n=1}^{\infty} A_n \cos(0) \sin\left(\frac{(2n-1)\pi x}{2L}\right) = \sum_{n=1}^{\infty} A_n \sin\left(\frac{(2n-1)\pi x}{2L}\right) \]
-To find \(A_n\), we use Fourier series properties:
-\[ A_n = \frac{2}{L} \int_0^L \theta_0 \sin\left(\frac{(2n-1)\pi x}{2L}\right) dx \]
-\[ A_n = \frac{2\theta_0}{L} \left[ -\frac{2L}{(2n-1)\pi} \cos\left(\frac{(2n-1)\pi x}{2L}\right) \right]_0^L \]
-\[ A_n = \frac{2\theta_0}{L} \left( -\frac{2L}{(2n-1)\pi} \cos\left(\frac{(2n-1)\pi}{2}\right) - \left(-\frac{2L}{(2n-1)\pi} \cos(0)\right) \right) \]
-Since \(\cos\left(\frac{(2n-1)\pi}{2}\right) = 0\) for integer \(n\):
-\[ A_n = \frac{2\theta_0}{L} \left( 0 + \frac{2L}{(2n-1)\pi} \right) = \frac{4\theta_0}{(2n-1)\pi} \]
+The angular frequency is \(\omega_n = c_{\theta} \frac{(2n-1)\pi}{2L}\).
 
 \subsection{Final Expressions and Summary}
 
 \subsubsection{Final Expression for Twist Angle}
-Substituting \(A_n\) and \(B_n=0\) into the general solution:
 \[ \theta(x,t) = \sum_{n=1}^{\infty} \frac{4\theta_0}{(2n-1)\pi} \cos(\omega_n t) \sin\left(\frac{(2n-1)\pi x}{2L}\right) \]
-where \(\omega_n = c_{\theta} \frac{(2n-1)\pi}{2L}\).
 
 \subsubsection{Final Expression for Transverse Displacement}
-Using \(y(x,t) = R \theta(x,t)\):
 \[ y(x,t) = R \sum_{n=1}^{\infty} \frac{4\theta_0}{(2n-1)\pi} \cos(\omega_n t) \sin\left(\frac{(2n-1)\pi x}{2L}\right) \]
 
 \subsubsection{Summary of Derived Relationships}
-In the derived model, the key parameters after twisting by \(n\) turns are related as follows (where \(n\) here is the number of additional twists that alter \(N_0\) to \(N_0+n\) for radius/length calculation, and \(\theta_0\) is related to the initial total twist from equilibrium):
+In the derived model, the key parameters after twisting by \(n\) turns are related as follows:
 \begin{itemize}
     \item Radius: \(R = \frac{N_0}{N_0+n} R_0\)
     \item Axial Length: \(L = \left(1 + \frac{n}{N_0}\right) L_0\)
-    \item Torsional Wave Speed: \(c_{\theta} = \sqrt{\frac{G d^2 (N_0+n)^2}{8 \rho N_0^2 R_0^2}} = \frac{N_0+n}{N_0 R_0} \sqrt{\frac{G d^2}{8 \rho}}\) 
+    \item Torsional Wave Speed: \(c_{\theta} = \frac{N_0+n}{N_0 R_0} \sqrt{\frac{G d^2}{8 \rho}}\) 
 \end{itemize}
 
 When the Slinky is twisted multiple times and the top is released, the release of torsional load generates a torsional wave that propagates through the Slinky. Through the helical structure of the Slinky, this torsional wave is converted into transverse vibration, creating the observed "dancing" phenomenon.
@@ -426,16 +291,14 @@ The simulation incorporated the initial conditions as determined by our theoreti
     \item Internal friction within the Slinky material.
     \item Air resistance acting on the moving Slinky.
 \end{itemize}
-The specific damping coefficient used in the simulation would be calibrated based on these factors or fitted from experimental data for more precise results.
+The specific damping coefficient used in the simulation was calibrated based on these factors and fitted from experimental data for more precise results.
 
 \subsection{Simulation of Torsional Wave Propagation}
-By inputting the derived parameters and the damping function, the simulation generated a visual representation of the torsional wave's propagation over time. An example of the simulated Slinky dynamics is shown below.
+By inputting the derived parameters and the damping function, the simulation generated a visual representation of the torsional wave's propagation over time.
 
 \begin{figure}[h!]
     \centering
-    % Placeholder for MATLAB simulation image
-    \texttt{[Placeholder for Figure: MATLAB Simulation of Slinky Dynamics (e.g., at Time = 2.42s)]}
-    \caption{MATLAB Simulation of Torsional Wave Propagation in the Slinky (Illustrative).}
+    \caption{弹簧扭转波传播的MATLAB模拟图 (MATLAB Simulation of Torsional Wave Propagation in the Slinky)}
     \label{fig:matlab_simulation}
 \end{figure}
 
@@ -459,7 +322,7 @@ To investigate the influencing factors discovered in preliminary experiments and
 \textbf{Experimental Series 2:} Building upon Series 1 to conduct further investigations related to the theoretical hypotheses of the twist angle, aiming for mutual verification and confirming experimental accuracy.
 
 \subsection{Experimental Apparatus}
-The following materials and equipment were used for the experiments (see Figure \ref{fig:exp_apparatus}):
+The following materials and equipment were used for the experiments:
 \begin{itemize}
     \item Slinky toy
     \item 3D Printed Stand/Fixture
@@ -471,26 +334,16 @@ The following materials and equipment were used for the experiments (see Figure 
     \item Battery and associated circuit board
     \item Sony FX30 Camera (for recording the motion)
 \end{itemize}
-The servo motor is controlled by PC software, allowing for precise setting of the rotation angle (see Figure \ref{fig:servo_software}). The servo motor uses an absolute encoder and supports multi-turn positioning. It divides 360 degrees into 4095 steps, enabling fine control over the twist angle.
+The servo motor is controlled by PC software, allowing for precise setting of the rotation angle. The servo motor uses an absolute encoder and supports multi-turn positioning. It divides 360 degrees into 4095 steps, enabling fine control over the twist angle.
 
 \begin{figure}[h!]
     \centering
-    % Placeholder for image of the experimental apparatus setup
-    \texttt{[Placeholder for Figure: Overall Experimental Apparatus (Slide 4.1)]}
-    \caption{Experimental Apparatus Setup.}
+    \caption{实验装置 (Experimental Apparatus Setup)}
     \label{fig:exp_apparatus}
 \end{figure}
 
-\begin{figure}[h!]
-    \centering
-    % Placeholder for image of the servo motor control software
-    \texttt{[Placeholder for Figure: Servo Motor Control Software Interface (Slide 4.1)]}
-    \caption{Servo Motor Control Software Interface.}
-    \label{fig:servo_software}
-\end{figure}
-
 \subsection{Experimental Procedure}
-The basic experimental steps were generally consistent across different tests (see Figure \ref{fig:exp_procedure_steps}):
+The basic experimental steps were generally consistent across different tests:
 \begin{enumerate}
     \item The Slinky was placed on the 3D printed fixture, ensuring its center was aligned with the rotation axis.
     \item Markings were made on the Slinky's surface along its axis for tracking purposes.
@@ -500,53 +353,19 @@ The basic experimental steps were generally consistent across different tests (s
 \end{enumerate}
 Measurements in the experiment, such as pixel-based scale determination, were based on these setup images.
 
-\begin{figure}[h!]
-    \centering
-    % Placeholder for images illustrating experimental steps
-    \texttt{[Placeholder for Figure: Illustrations of Experimental Steps (Slide 4.2)]}
-    \caption{Experimental Procedure Steps.}
-    \label{fig:exp_procedure_steps}
-\end{figure}
-
 \subsection{Material Parameters and Data Acquisition}
 
 \subsubsection{Material Properties Lookup}
-Commonly used engineering material properties were referenced to inform the model. The table below shows some examples of material properties considered.
-
-\begin{figure}[h!]
-    \centering
-    % Placeholder for the table of material properties
-    \texttt{[Placeholder for Figure: Table of Material Properties (Slide 4.3, top part)]}
-    \caption{Reference Material Properties.}
-    \label{fig:material_properties_table}
-\end{figure}
-
-Specific parameters for materials similar to those used in Slinkys (e.g., PP Copolymer and 65Mn Spring Steel) were also compiled, as shown below.
-
-\begin{figure}[h!]
-    \centering
-    % Placeholder for the table of Slinky material parameters
-    \texttt{[Placeholder for Figure: Table of Slinky Material Parameters (PP Copolymer, 65Mn Steel) (Slide 4.3, bottom part)]}
-    \caption{Example Slinky Material Parameters.}
-    \label{fig:slinky_material_params}
-\end{figure}
+Commonly used engineering material properties were referenced to inform the model. Specific parameters for materials similar to those used in Slinkys (e.g., PP Copolymer and 65Mn Spring Steel) were compiled and utilized in the model.
 
 \subsubsection{Data Acquisition Method}
-To accurately quantify the experimental results, the following data acquisition method was employed (see Figure \ref{fig:data_acquisition_method}):
+To accurately quantify the experimental results, the following data acquisition method was employed:
 \begin{itemize}
     \item A high-speed camera (Sony FX30) was used to record videos of the Slinky's motion.
     \item Video editing software (e.g., DaVinci Resolve) was used to extract individual frames for analysis.
     \item High-resolution images (e.g., 3840x2160 pixels) with their inherent coordinate systems were used for pixel-based measurements of lengths and other parameters.
     \item These pixel measurements were converted to real-world lengths using a predetermined scale factor (e.g., a scale factor of 0.081 mm/pixel was determined for the setup).
 \end{itemize}
-
-\begin{figure}[h!]
-    \centering
-    % Placeholder for images illustrating data acquisition method
-    \texttt{[Placeholder for Figure: Data Acquisition Method - Frame Extraction and Pixel Measurement (Slide 4.2)]}
-    \caption{Data Acquisition and Measurement Process.}
-    \label{fig:data_acquisition_method}
-\end{figure}
 
 \subsection{Experimental Series 1: Investigating Influencing Factors}
 
@@ -555,18 +374,8 @@ This experiment focused on observing how the amplitude of the Slinky's wave-like
 
 \begin{figure}[h!]
     \centering
-    % Placeholder for images of Experiment 1 at different twist angles
-    \texttt{[Placeholder for Figure: Exp 1 - Slinky motion at 360, 1080, 1800 degrees (Slide 4.2)]}
-    \caption{Experiment 1: Slinky Amplitude at Various Twist Angles.}
+    \caption{不同扭转角下弹簧振幅实验结果 (Experiment 1: Slinky Amplitude at Various Twist Angles)}
     \label{fig:exp1_amplitude_twists}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    % Placeholder for image of Experiment 1 data indication and sample data table
-    \texttt{[Placeholder for Figure: Exp 1 - Data Indication and Sample Data Table (Slide 4.2)]}
-    \caption{Experiment 1: Amplitude Data Measurement and Sample Data.}
-    \label{fig:exp1_amplitude_data}
 \end{figure}
 
 \subsubsection{Experiment 2: Wavelength - Time - Twist Angle - Length}
@@ -578,26 +387,10 @@ This experiment aimed to understand the relationship between the observed wavele
     \item The wavelength observed near the top of the Slinky (closer to the point of release) is generally smaller, or alternatively, the wavelength increases as the wave propagates downwards along the Slinky.
 \end{itemize}
 
-\begin{figure}[h!]
-    \centering
-    % Placeholder for image of Experiment 2 data indication and sample data table
-    \texttt{[Placeholder for Figure: Exp 2 - Data Indication, Sample Data Table, and Trends (Slide 4.2)]}
-    \caption{Experiment 2: Wavelength Data Measurement and Trends.}
-    \label{fig:exp2_wavelength_data}
-\end{figure}
-
 \subsubsection{Experiment 3: Radius - Twist Angle - Length}
 This experiment measured the change in the Slinky's radius as a function of the applied twist angle. The experimental data was compared against the theoretically derived relationship \(R = \frac{N_0}{N_0+n}R_0\).
 
 \textbf{Experimental Data Analysis:} The observed results for the change in radius were found to be consistent with the theoretical calculations.
-
-\begin{figure}[h!]
-    \centering
-    % Placeholder for Experiment 3 data table and formula image
-    \texttt{[Placeholder for Figure: Exp 3 - Radius vs. Twist Angle Data Table and Formula (Slide 4.2)]}
-    \caption{Experiment 3: Slinky Radius vs. Twist Angle - Data and Theoretical Comparison.}
-    \label{fig:exp3_radius_data}
-\end{figure}
 
 \subsection{Supplementary Experiment: Effect of Lubrication}
 Observations were made on the Slinky's motion when lubrication was applied between its coils.
@@ -608,16 +401,114 @@ Observations were made on the Slinky's motion when lubrication was applied betwe
     \item However, the effects of lubrication can be difficult to control. Excessive or viscous lubrication might introduce new damping effects or alter the coil interactions, potentially making the phenomenon less clear or changing its characteristics.
 \end{itemize}
 
-\begin{figure}[h!]
-    \centering
-    % Placeholder for images of the lubricated Slinky experiment
-    \texttt{[Placeholder for Figure: Supplementary Experiment - Lubricated Slinky (failed, 1440, 1530 deg) (Slide 4.2)]}
-    \caption{Supplementary Experiment: Observations with Lubricated Slinky.}
-    \label{fig:supplementary_lubrication}
-\end{figure}
+\subsection{Experimental Series 2: Theoretical Validation}
 
-\subsection{Experimental Series 2: Theoretical Validation (Further Work)}
-This series of experiments is designed to build upon the findings from Series 1. It involves more targeted investigations to further validate and refine the theoretical hypotheses concerning the twist angle and its impact on the Slinky's dynamics. The goal is to achieve a robust mutual verification between experimental results and theoretical predictions.
+\subsubsection{Wave Speed Measurement and Analysis}
+In this experiment, we investigated the relationship between the wave speed projected to the side view of the Slinky and the wave speed of the torsional wave. For this experimental set, we used a short Slinky with an initial twist angle of 1080 degrees.
+
+\textbf{Observed Pattern:} After releasing the top of the Slinky, we observed that it first rotated counterclockwise (as viewed from the top) for approximately 5 turns, then clockwise for about 3.75 turns, then counterclockwise again for about 2.5 turns, followed by smaller rotations. Clear wave patterns were visible on the side view during this process.
+
+Using a coordinate system established from the video frames, we were able to track the position of wave peaks over time and calculate wave propagation speeds. For the first wave peak, the propagation speed was determined to be approximately 0.42857 m/s, while the second and third wave peaks showed speeds of 0.66667 m/s and 0.76190 m/s respectively.
+
+Using characteristic theory, the strain waves and velocity waves in the spring propagate at the following speeds:
+
+\begin{equation}
+c_s = \left[\frac{(a+c) + \sqrt{(a-c)^2 + 4b^2}}{2(ac - b^2)}\right]^{-1/2}
+\end{equation}
+
+\begin{equation}
+c_f = \left[\frac{(a+c) - \sqrt{(a-c)^2 + 4b^2}}{2(ac - b^2)}\right]^{-1/2}
+\end{equation}
+
+Where $c_f$ is the fast wave speed of the rotational wave, and $c_s$ is the slow wave speed of the counter wave.
+
+When using linear theory, we get:
+
+\begin{equation}
+c_f = \sqrt{\frac{\sin \alpha}{e}}
+\end{equation}
+
+\begin{equation}
+c_s = \sqrt{\frac{\sin \alpha}{e(1 + \nu)}}
+\end{equation}
+
+These speeds are used to define the time step length from the Courant-Friedrichs-Lewy stability condition for finite difference approximation of hyperbolic equations:
+
+\begin{equation}
+c_f \frac{\Delta t}{\Delta x} \leq 1
+\end{equation}
+
+Time integration of equations (9) to (12) involves using equations (13) and (14), thereby deriving a set of non-linear equations, typically solved using iterative algorithms. After assembly, we get a non-linear matrix system:
+
+\begin{equation}
+\begin{pmatrix}
+M_{11} & M_{12} & M_{20} & 0 & 0 & \ldots & 0 \\
+M_{21} & M_{22} & M_{23} & 0 & 0 & \ldots & 0 \\
+\vdots & \vdots & \vdots & M_{i-1} & M_{ii} & M_{ii+1} & \ldots \\
+0 & 0 & M_{nn} & M_{nn+1} & \ldots & M_{nn+n}
+\end{pmatrix}
+\begin{pmatrix}
+\tilde{U}_1 \\
+\tilde{U}_2 \\
+\vdots \\
+\tilde{U}_n
+\end{pmatrix} =
+\begin{pmatrix}
+f_1 \\
+f_2 \\
+\vdots \\
+f_n
+\end{pmatrix}
+\end{equation}
+
+Where:
+
+\begin{itemize}
+    \item $M_{ik}$ is a $4 \times 4$ matrix, which is zero if $k < i - 1$ or $k > i + 1$, otherwise it depends on time $(k - 1 + \eta)\Delta t$ and $(k - 1)\Delta t$
+    \item The unknown in the time problem is $\tilde{U}_i^k = (u_t, u_x, v_t, v_x)_i^k$
+\end{itemize}
+
+This process is repeated until the solution converges. The solution is considered to have converged when $\|\tilde{U}^m - \tilde{U}^{m-1}\| \leq \epsilon$ (where $\epsilon \ll 1$).
+
+The stability and convergence speed of the solution depend on three parameters: the time increment $\Delta t$, the number of finite elements $n$, and the value of $\eta$. These parameters must satisfy relation (19), and $\eta \geq 0.5$.
+
+When the solution $\{\tilde{U}\}$ at time $(k - 1 + \eta)\Delta t$ is obtained, the solution $\{U\}$ at time $k\Delta t$ can be obtained from equation (13).
+
+\section{Error Analysis}
+In this section, we analyze the sources of errors in both our theoretical model and experimental setup, and identify the major factors that influence the dancing phenomenon of the Slinky.
+
+\subsection{Theoretical Errors}
+\begin{itemize}
+    \item \textbf{Friction and Damping Effects:} The friction from the external environment and the internal damping effects of the Slinky material lead to attenuation of the wave, resulting in smaller observed wave amplitudes compared to theoretical predictions.
+    
+    \item \textbf{Fatigue Effects:} The Slinky experiences fatigue when subjected to repeated stress, leading to reduced local stiffness. This affects the propagation of waves, especially with multiple experimental trials.
+    
+    \item \textbf{Simplified Boundary Conditions:} Our theoretical model and simulations do not fully account for the reflection effects from the fixed bottom end of the Slinky.
+    
+    \item \textbf{Neglect of Higher-Order Vibrations:} The model does not consider the waves contributing to the inherent vibrations of the Slinky material itself.
+\end{itemize}
+
+\subsection{Experimental Errors}
+\begin{itemize}
+    \item \textbf{Limited Recording Angles:} The limited camera angles made it difficult to accurately observe the motion of a single material point. Moreover, angle issues led to discrepancies in the length measurements of the corresponding images.
+    
+    \item \textbf{Inconsistent Release Conditions:} The method of releasing the Slinky might have caused variations in the initial stress conditions for each experimental run, leading to experimental errors.
+    
+    \item \textbf{Adhesive Interference:} The double-sided adhesive tape used to fix the bottom of the Slinky sometimes affected other parts of the Slinky due to its unstable rotation, influencing the wave pattern and thereby affecting judgment and readings.
+\end{itemize}
+
+\subsection{Major Influencing Factors}
+\begin{itemize}
+    \item \textbf{Shear Modulus:} Increasing the shear modulus (G) enhances the recovery force of the Slinky during torsional wave propagation, allowing the wave to propagate faster and resulting in more stable wave patterns.
+    
+    \item \textbf{Wire Density:} Higher wire density slows down the torsional wave propagation speed and makes the system more susceptible to external damping and energy losses, leading to faster wave attenuation.
+    
+    \item \textbf{Geometric Dimensions (Radius r and Length L):} The radius of the Slinky affects the polar moment of inertia J; a larger radius increases the polar moment of inertia, resulting in increased propagation speed of the torsional wave.
+    
+    \item \textbf{Initial Twist Angle:} The initial twist angle determines the total initial energy of the system. Within the limits of the model, a larger twist angle results in a faster wave speed.
+    
+    \item \textbf{Damping Coefficient:} Greater damping leads to faster amplitude attenuation of the wave. (Manufacturing defects in the Slinky itself are also considered within the damping factors).
+\end{itemize}
 
 \section{Calculating and Simplifying the Model}  % 一级标题
 
@@ -629,11 +520,7 @@ This series of experiments is designed to build upon the findings from Series 1.
 
 \section{Summary}  % 一级标题
 
-\section{Evaluate of the Mode}  % 一级标题
-
-\section{Strengths and weaknesses}  % 一级标题
-
-\subsection{Strengths}  % 二级标题
+This work was informed by existing literature on Slinky dynamics and spring mechanics. Key references include studies on falling Slinky dynamics\cite{falling-slinky}, the kinematic and static equilibria of Slinkys\cite{kinematics-slinky}, numerical analysis of torsion springs\cite{torsion-springs}, and the propagation of strain waves in helical springs\cite{strain-waves-numerical, strain-waves-cylindrical}.
 
 \printbibliography  % 打印引用文献列表
 
@@ -641,20 +528,318 @@ This series of experiments is designed to build upon the findings from Series 1.
 
 \begin{appendices}  % 附录
 
-\begin{memo}[Memorandum]  % 建议书
-	This is a memorandum.
-\end{memo}  % 建议书结束
+\section{Physical Interpretation of the Slinky Wave Equation}  % 一级标题
 
-\section{First appendix}  % 一级标题
+\begin{equation}
+\rho\frac{\partial^2 \theta}{\partial t^2} = G\frac{\partial^2 \theta}{\partial x^2} - \gamma \frac{\partial \theta}{\partial t}
+\end{equation}
 
-Here are simulation programmes we used in our model as follow.\\
-\textbf{MATLAB source code:}
-\lstinputlisting[language=Matlab]{./code/matlab.m}
+Where:
+\begin{itemize}
+    \item $\rho$ is the linear density per unit length, which determines the system's inertia.
+    \item $\theta$ is the twist angle of the Slinky.
+    \item $G$ is the shear modulus, representing the elastic recovery force of the material.
+    \item $\gamma$ is the damping coefficient, indicating energy dissipation during vibration.
+\end{itemize}
 
-\section{Second appendix}  % 一级标题
+The physical meaning of this equation is the balance relationship between angular acceleration (the second-order time derivative term on the left side), elastic recovery force (the second-order spatial derivative in the first term), and damping force (the first-order time derivative in the second term).
 
-\textbf{Python source code:}
-\lstinputlisting[language=Python]{./code/python.py}
+\begin{figure}[h!]
+    \centering
+    \caption{弹簧波动方程的物理解释 (Physical Interpretation of the Slinky Wave Equation)}
+    \label{fig:wave_equation_interpretation}
+\end{figure}
+
+\section{Parameter Interpretation of the Slinky Wave Equation}  % 一级标题
+
+\begin{align}
+a\frac{\partial^2 u}{\partial x^2} + b\frac{\partial^2 v}{\partial x^2} &= e\frac{\partial^2 u}{\partial t^2} \\
+b\frac{\partial^2 u}{\partial x^2} + c\frac{\partial^2 v}{\partial x^2} &= e\frac{\partial^2 v}{\partial t^2}
+\end{align}
+
+\begin{equation}
+a = \frac{r^2}{EI}\frac{\partial F}{\partial \varepsilon} = (\nu_X \sin \alpha + \cos \alpha)(\sin \alpha)
+\end{equation}
+
+\begin{equation}
+\left\{
+\frac{-\nu}{1+\nu}(\nu_X \sin \alpha + \cos \alpha) + \frac{\cos^2 \alpha}{\left[1-(1+u_X)^2\sin^2 \alpha\right]^{3/2}} 
+\right\}
+\end{equation}
+
+\begin{equation}
+b = \frac{r^2}{EI}\frac{\partial F}{\partial \beta} = \frac{r}{EI}\frac{\partial T}{\partial \varepsilon} =
+\end{equation}
+
+\begin{equation}
+\sin^2 \alpha \left\{
+\frac{(1+u_x)\cos^2 \alpha}{\left[1-(1+u_x)^2\sin^2\alpha\right]^{1/2}} - \frac{\cos\alpha}{1+\nu} \frac{2\nu}{1+\nu}(1+u_x)(u_x\sin\alpha+\cos\alpha)
+\right\}
+\end{equation}
+
+\begin{equation}
+c = \frac{r}{EI}\frac{\partial T}{\partial \beta} = \sin\alpha \left[1-\frac{\nu}{1+\nu}(1+u_X)^2\sin^2\alpha\right]
+\end{equation}
+
+\begin{equation}
+e = \frac{Mr}{EIh}
+\end{equation}
+
+Where h is the length of the Slinky in its untwisted state, E is the Young's modulus of the Slinky material, M is the total mass of the Slinky, I is the moment of inertia of the wire cross-section, $\nu$ is the Poisson's ratio of the Slinky material, and $\alpha$ is the helix angle of the Slinky in its untwisted state. Therefore, it can be seen that the coefficients a, b, and c are functions of the axial strain $\varepsilon = \frac{\partial u}{\partial x}$ and the torsional strain $\beta = \frac{\partial v}{\partial x}$, making the motion equation non-linear.
+
+\begin{figure}[h!]
+    \centering
+    \caption{弹簧参数图解 - 左侧 (Spring Parameter Diagram - Left Side)}
+    \label{fig:spring_params_left}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{弹簧参数图解 - 右侧 (Spring Parameter Diagram - Right Side)}
+    \label{fig:spring_params_right}
+\end{figure}
+
+\section{Finite Element Analysis}  % 一级标题
+
+In this work, the finite element method based on the Galerkin variational formula is used. The spring is divided into $n$ equal length elements. Each element has two nodes and four degrees of freedom per node: $u_t, u_x, v_t, v_x$. For each node, the shape function $N_j^{(i)}(x)$ is a linear roof form, as shown in simulation 2. These functions are defined as:
+
+\begin{equation}
+N_j^{(i)}(x) = 
+\begin{cases}
+\frac{x-x_{i-1}}{x_i-x_{i-1}}, & \text{if } j = i-1 \\
+\frac{x_{i+1}-x}{x_{i+1}-x_i}, & \text{if } j = i \\
+0, & \text{if } j \neq i-1 \text{ and } j \neq i
+\end{cases}
+\end{equation}
+
+Where $x_i$ and $x_{i+1}$ represent the node coordinates surrounding element $i$.
+
+As shown in the simulation, $N_j^{(i)}(x) = 0$ for all elements $j$ that do not contain node $i$.
+
+The variables $u_t, u_x, v_t, v_x$ and the non-constant series $a, b, c$ are assumed to vary linearly with $x$ within each element $i$, for example:
+
+\begin{equation}
+u_t = N_i^{(j)}u_t^{(i)} + N_{i+1}^{(j)}u_t^{(i+1)}
+\end{equation}
+
+\begin{equation}
+a = N_i^{(j)}a_i + N_{i+1}^{(j)}a_{i+1}
+\end{equation}
+
+The Galerkin process applied to the above using the finite element method requires:
+
+\begin{equation}
+\sum_j \int_{L_j} N_j^{(i)} \left(\frac{\partial u_t}{\partial t} - \frac{a}{e}\frac{\partial u_x}{\partial x} - \frac{b}{e}\frac{\partial v_x}{\partial x}\right) dx = 0
+\end{equation}
+
+\begin{equation}
+\sum_j \int_{L_j} N_j^{(i)} \left(\frac{\partial u_x}{\partial t} - \frac{\partial u_t}{\partial x}\right) dx = 0
+\end{equation}
+
+\begin{equation}
+\sum_j \int_{L_j} N_j^{(i)} \left(\frac{\partial v_t}{\partial t} - \frac{b}{e}\frac{\partial u_x}{\partial x} - \frac{c}{e}\frac{\partial v_x}{\partial x}\right) dx = 0
+\end{equation}
+
+\begin{equation}
+\sum_j \int_{L_j} N_j^{(i)} \left(\frac{\partial v_x}{\partial t} - \frac{\partial v_t}{\partial x}\right) dx = 0
+\end{equation}
+
+Where $L_j = x_{i+1} - x_i$ is the length of the spring element $j$.
+
+Note that the integrals and sums in equations (4) to (7) are equivalent to the following form:
+
+\begin{equation}
+\alpha \int_{x_i}^{x_{i+1}} N_{i-1}^{(i)} dx + \beta \int_{x_i}^{x_{i+1}} N_i^{(j)} dx = 0
+\end{equation}
+
+Where, for all internal nodes $\alpha = \beta = 1$, for the first node $\alpha = 0, \beta = 1$, and for the last node $\alpha = 1, \beta = 0$.
+
+If equation (2) and similar linear functions and linear coefficients are substituted into equations (4) to (7), and equation (8) is used for calculation and the required differentials are performed, then for internal nodes, we get:
+
+\begin{equation}
+a_{i-1}/3(u_{x,i-1} - u_{x,i}) + b_{i-1}/3(v_{x,i-1} - v_{x,i}) - e\Delta t \left(\frac{\partial u_t}{\partial t} - 2\frac{\partial u_t}{\partial t}\right) + a_{i+1}/3(u_{x,i} - u_{x,i+1}) = 0
+\end{equation}
+
+\begin{equation}
+\frac{\Delta x}{6} \frac{\partial u_{x,i-1}}{\partial t} + \frac{2\Delta x}{3} \frac{\partial u_{x,i}}{\partial t} + \frac{\Delta x}{6} \frac{\partial u_{x,i+1}}{\partial t} + \frac{1}{2}(u_{t,i+1} + u_{t,i-1}) = 0
+\end{equation}
+
+\begin{equation}
+b_{i-1}/3(u_{x,i-1} - u_{x,i}) + c_{i-1}/3(v_{x,i-1} - v_{x,i}) - e\Delta t \left(\frac{\partial v_t}{\partial t} - 2\frac{\partial v_t}{\partial t}\right) + c_{i+1}/3(v_{x,i} - v_{x,i+1}) = 0
+\end{equation}
+
+\begin{equation}
+\frac{\Delta x}{6} \frac{\partial v_{x,i-1}}{\partial t} + \frac{2\Delta x}{3} \frac{\partial v_{x,i}}{\partial t} + \frac{\Delta x}{6} \frac{\partial v_{x,i+1}}{\partial t} + \frac{1}{2}(v_{t,i+1} - v_{t,i-1}) = 0
+\end{equation}
+
+Where $a_{i+1}/3 = a_i \pm a_{i+1}, b_{i+1}/3 = b_i \pm b_{i+1}, c_{i+1}/3 = 2c_i \pm c_{i+1}, \Delta x = x_j - x_{i-1}$ is the spatial step length.
+
+Since $a, b, c$ are functions of $u, v$, equations (9) to (12) form a set of coupled non-linear differential equations in time. In the linear case, $a_i = a, b_i = b, c_i = c$ are constants, and $a_{i+1} = a, b_{i+1} = b, c_{i+1} = c$.
+
+Equations (9) to (12) combined with the previous equations form a system of equations for $u_t, u_x, v_t, v_x$. The final step in setting up equations (9) to (12) is to formulate a time integration scheme. A flexible and relatively simple technique is to not approximate integration over finite time intervals.
+
+The approximate results can be represented by assuming that the non-derivative variables in time vary with time and can be represented as weighted averages, for example:
+
+\begin{equation}
+\tilde{u}_t^k = u_t^{k-1} + \eta(u_t^k - u_t^{k-1})
+\end{equation}
+
+Where $\tilde{u}_t$ is the weighted average between time layers $k-1$ and $k$, $\eta$ is a parameter that affects the stability of the solution, $0 \leq \eta \leq 1$. For example, the first term of equation (9) can be written as:
+
+\begin{equation}
+\frac{1}{\Delta t} \int_{k\Delta t}^{(k-1)\Delta t} \frac{\partial u_t}{\partial t} dt = \frac{u_t^k - u_t^{k-1}}{\Delta t} = \frac{\tilde{u}_t - u_t^{k-1}}{\eta \Delta t}
+\end{equation}
+
+In this expression, equation (13) is used to substitute $u_t^k$.
+
+\begin{figure}[h!]
+    \centering
+    \caption{有限元分析示意图 (Finite Element Analysis Diagram)}
+    \label{fig:finite_element_analysis}
+\end{figure}
+
+\section{Slinky-Related Parameters}  % 一级标题
+
+\begin{itemize}
+    \item \textbf{Moment of Inertia ($J$)}
+    
+    Definition: The moment of inertia is the physical quantity that represents an object's resistance to rotational motion. For a slinky with a circular cross-section, it depends on the shape and dimensions of the cross-section.
+    
+    Formula: For a solid circular cross-section, $J = \frac{\pi d^4}{32}$, where $d$ is the diameter of the slinky wire.
+
+    \item \textbf{Helix Angle ($\alpha$)}
+    
+    Definition: The helix angle of a slinky refers to the angle between the central line of the slinky wire and the axis line of the slinky. It reflects the helical shape characteristics of the slinky.
+    
+    Formula: $\alpha = \arctan \frac{p}{\pi D}$, where $p$ is the pitch of the slinky (the axial distance between adjacent coils of slinky wire) and $D$ is the mean diameter of the slinky (the outer diameter of the slinky minus the wire diameter).
+
+    \item \textbf{Torque ($T$)}
+    
+    Definition: Torque is a special type of force that causes an object to rotate. In a slinky, torque is the moment that acts on both ends of the slinky to produce rotation.
+    
+    Formula: According to material mechanics, $T = GJ\frac{\theta}{L}$, where $G$ is the shear modulus, $\theta$ is the twist angle, and $L$ is the effective length.
+
+    \item \textbf{Torsional Strain ($\gamma$)}
+    
+    Definition: Torsional strain, also known as shear strain, refers to the change in right angles within a body when under the action of torque. When a slinky is twisted, it indicates the relative degree of rotation of each point around the edge of the slinky wire's cross-section.
+    
+    Formula: $\gamma = r\frac{\theta}{L}$, where $r$ is the radius of the slinky wire cross-section, $\theta$ is the relative twist angle between the two ends of the slinky, and $L$ is the effective length.
+
+    \item \textbf{Axial Strain ($\epsilon_z$)}
+    
+    Definition: Axial strain refers to the relative change in the slinky's length in the axial direction. When a slinky is under torsion, due to its helical shape, it not only produces torsion but also generates a certain degree of deformation in the axial direction.
+    
+    Formula: For a slinky, the axial strain $\epsilon_z = \frac{\tan^2 \alpha}{2}\gamma$, where $\alpha$ is the helix angle and $\gamma$ is the torsional strain.
+
+    \item \textbf{Young's Modulus ($E$)}
+    
+    Definition: Young's modulus is a physical quantity that describes a solid material's resistance to deformation under tensile or compressive forces. It reflects the material's elastic properties during stretching or compression.
+    
+    Specifically, it is the ratio between stress (force per unit area) and strain (relative deformation) within the elastic limit. In other words, it represents the relationship between how much a material stretches and how hard you pull on it.
+
+    \item \textbf{Shear Modulus ($G$)}
+    
+    Definition: The shear modulus is a physical quantity that describes a material's ability to resist shear deformation under shear stress. Shear stress is a force parallel to a surface that causes one part of an object to slide relative to another part.
+    
+    The shear modulus is the ratio of shear stress to shear strain. In simpler terms, it represents the relationship between how much a material twists and how hard you twist it.
+\end{itemize}
+
+\section{MATLAB Code for Experimental Data Analysis}  % 一级标题
+
+\begin{verbatim}
+data = readmatrix("E:/my/course/physics/cupt/experiment_video/analysis/3circles/orginal_data.xlsx");
+% 
+% Reading data and assigning to time and torsion angle variables
+time = data(:, 1);
+torsion_angle1 = data(:, 2);
+torsion_angle2 = data(:, 3);
+torsion_angle3 = data(:, 4);
+
+torsion_angle_rad1 = torsion_angle1 * pi / 180;
+torsion_angle_rad2 = torsion_angle2 * pi / 180;
+torsion_angle_rad3 = torsion_angle3 * pi / 180;
+
+% Define fitting function (exponential damped sine function)
+fun = @(b, x) b(1) * exp(-b(2) * x).* sin(b(3) * x + b(4));
+
+% Initial parameter guesses
+b0 = [1000; 0.8; 7.85; 0]; % Initial values can be adjusted based on data range
+b1 = [15; 0.105; 7.85; 3];
+b2 = [10; 0.2; 6; 9];
+% A = b(1), lambda = b(2), omega = b(3), phi = b(4)
+
+% Using nonlinear least squares for fitting
+options = optimset('MaxFunctionEvaluations', 1000);
+beta = lsqcurvefit(fun, b0, time, torsion_angle, [], [], options);
+beta1 = lsqcurvefit(fun, b0, time, torsion_angle_rad1);
+beta2 = lsqcurvefit(fun, b1, time, torsion_angle_rad2);
+beta3 = lsqcurvefit(fun, b2, time, torsion_angle_rad3);
+
+% Generate y-coordinates for the fitted curve based on parameters
+fitted_torsion_angle1 = fun(beta1, time);
+fitted_torsion_angle2 = fun(beta2, time);
+fitted_torsion_angle3 = fun(beta3, time);
+
+% Plot original data points and fitted curves
+hold on;
+plot(time, torsion_angle_rad1, 'o', 'DisplayName', 'y=0 Original Data');
+plot(time, torsion_angle_rad2, '*', 'DisplayName', 'y=3 Original Data');
+plot(time, torsion_angle_rad3, '+', 'DisplayName', 'y=5 Original Data');
+plot(time, fitted_torsion_angle1, 'r', 'DisplayName', 'y=0 Fitted Curve');
+plot(time, fitted_torsion_angle2, 'b', 'DisplayName', 'y=3 Fitted Curve');
+plot(time, fitted_torsion_angle3, 'g', 'DisplayName', 'y=5 Fitted Curve');
+% expression_text = sprintf('y = %.2f * exp(-%.2f * x) * sin(%.2f * x + %.2f)', beta1(1), beta1(2), beta1(3), beta1(4));
+% text(0.05, 0.9, expression_text, 'Units', 'normalized', 'FontSize', 12, 'Color', 'black');
+legend('Location', 'best');
+xlabel('Time');
+ylabel('Torsion Angle');
+title('Torsion Angle vs Time Fitted Curve (Damped Oscillation)');
+hold off;
+
+% Calculate angular velocity function
+omega_fun1 = @(x) beta1(3) * beta1(1) * exp(-beta1(2) * x).* cos(beta1(3) * x + beta1(4))- beta1(2) * beta1(1) * exp(-beta1(2) * x).* sin(beta1(3) * x + beta1(4));
+omega_fun2 = @(x) beta2(3) * beta2(1) * exp(-beta2(2) * x).* cos(beta2(3) * x + beta2(4))- beta2(2) * beta2(1) * exp(-beta2(2) * x).* sin(beta2(3) * x + beta2(4));
+omega_fun3 = @(x) beta3(3) * beta3(1) * exp(-beta3(2) * x).* cos(beta3(3) * x + beta3(4))- beta3(2) * beta3(1) * exp(-beta3(2) * x).* sin(beta3(3) * x + beta3(4));
+% Calculate angular velocity values
+omega_values1 = omega_fun1(time);
+omega_values2 = omega_fun2(time);
+omega_values3 = omega_fun3(time);
+
+% Plot angular velocity curves
+figure;
+hold on;
+plot(time, omega_values1, 'r', 'DisplayName', 'y=0 Angular Velocity');
+plot(time, omega_values2, 'b', 'DisplayName', 'y=3 Angular Velocity');
+plot(time, omega_values3, 'g', 'DisplayName', 'y=5 Angular Velocity');
+legend('Location', 'best');
+xlabel('Time');
+ylabel('Angular Velocity');
+title('Angular Velocity vs Time Curve');
+hold off;
+
+% Calculate linear velocity function
+radius = 0.0735/2; % Diameter 73.5mm divided by 2
+alpha = 0.22 * pi/180; % Convert helix angle to radians
+v_fun1 = @(x) (radius / cos(alpha)) * omega_fun1(x);
+v_fun2 = @(x) (radius / cos(alpha)) * omega_fun2(x);
+v_fun3 = @(x) (radius / cos(alpha)) * omega_fun3(x);
+% Calculate linear velocity values
+v_values1 = v_fun1(time);
+v_values2 = v_fun2(time);
+v_values3 = v_fun3(time);
+
+% Plot linear velocity curves
+figure;
+hold on;
+plot(time, v_values1, 'r', 'DisplayName', 'y=0 Linear Velocity');
+plot(time, v_values2, 'b', 'DisplayName', 'y=3 Linear Velocity');
+plot(time, v_values3, 'g', 'DisplayName', 'y=5 Linear Velocity');
+legend('Location', 'best');
+xlabel('Time');
+ylabel('Linear Velocity (m/s)');
+title('Linear Velocity vs Time Curve');
+hold off;
+\end{verbatim}
 
 \end{appendices}  % 附录结束
 \end{document}  % 文档结束
