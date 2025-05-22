@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber math"] 0 "math.bcf" "math.bbl" "math" 1747804116.46809 -1
-  "math.bcf" 1747804116 108101 fbb36147488dd58b9a471608a57e1f65 "pdflatex"
-  "ref.bib" 1747675723 2403 c33bd307b66c899e7246498c5f1a9490 ""
+["biber math"] 1747876264.91869 "math.bcf" "math.bbl" "math" 1747876281.93258 0
+  "math.bcf" 1747876281 108101 fbb36147488dd58b9a471608a57e1f65 "pdflatex"
+  "ref.bib" 1747876264 3781 76655f42120663e89847fdd6b7d796ca ""
   (generated)
   "math.bbl"
   "math.blg"
   (rewritten before read)
-["pdflatex"] 1747804114.41337 "e:/desktop/Personal Website/latex/math.tex" "math.pdf" "math" 1747804116.46894 2
+["pdflatex"] 1747876279.30575 "e:/desktop/Personal Website/latex/math.tex" "math.pdf" "math" 1747876281.9336 0
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1746525364 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1746525868 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm" 1746525002 1292 bd42be2f344128bff6d35d98474adfe3 ""
@@ -20,6 +20,7 @@
   "c:/texlive/2025/texmf-dist/fonts/tfm/adobe/palatino/pplr8c.tfm" 1746527942 1348 0e8eb69b4437626c0f6c9bed4a4e373c ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm" 1746527942 2796 d37c29814a6717720ee1a7c9a0b2c3b8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm" 1746527942 3820 ee5b9d58608ae328e43c6e2bfd4ff851 ""
+  "c:/texlive/2025/texmf-dist/fonts/tfm/adobe/palatino/pplrc8t.tfm" 1746527942 6396 8f2d6400481d3b17b3e6693d0adfe2c9 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm" 1746527942 2720 70000d5e623e601132eab3cded5b819b ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/adobe/palatino/pplri8t.tfm" 1746527942 3684 929c666381f7272e81481908b735ccba ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1746530205 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -78,6 +79,7 @@
   "c:/texlive/2025/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf" 1746527942 2316 c3899bd8afb459a9a5a9a546bf3029a2 ""
   "c:/texlive/2025/texmf-dist/fonts/vf/adobe/palatino/pplr8c.vf" 1746527942 3504 f65f653e1ad318a9d01b4af15300683a ""
   "c:/texlive/2025/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf" 1746527942 2324 a163806de13ddf37313d2ee968aa0a98 ""
+  "c:/texlive/2025/texmf-dist/fonts/vf/adobe/palatino/pplrc8t.vf" 1746527942 3612 c9f70b808a41736c70babe50fdb9f79c ""
   "c:/texlive/2025/texmf-dist/fonts/vf/adobe/palatino/pplri8t.vf" 1746527942 2308 5bc0a90b83a3fd7d37d34ef3b64d7e8a ""
   "c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1746527579 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "c:/texlive/2025/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1746523994 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -202,12 +204,13 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1746531840 5567782 00e0fb0c7cc9c7361a97e3a2230dfbe7 ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1746532280 3567523 84b41c56a9f32711f7022cf0f5bddd3c ""
   "c:/texlive/2025/texmf.cnf" 1746531797 713 e69b156964470283e0530f5060668171 ""
-  "e:/desktop/Personal Website/latex/math.tex" 1747804113 47081 9935a17f802b4f6be4b2d3d950699303 ""
-  "math.aux" 1747804116 12300 63ceee9cc33b085bf08dface4dfd1f80 "pdflatex"
-  "math.bbl" 1747724200 3394 ea660d3e7812076ef88e6a2007293d25 "biber math"
-  "math.out" 1747804116 12611 bc7591f7529d7a4f2252dc214eae11f3 "pdflatex"
-  "math.tex" 1747804113 47081 9935a17f802b4f6be4b2d3d950699303 ""
-  "math.toc" 1747804116 5462 f4bde4829d268f768bd50ae2a51c727e "pdflatex"
+  "e:/desktop/Personal Website/latex/math.tex" 1747876270 47098 bfc91fdbbddaa789731f4f632e88b47c ""
+  "math.aux" 1747876281 12057 7ec5721c63446f9473afdb0a6804aefc "pdflatex"
+  "math.bbl" 1747876268 7451 e4836a6b0bbc2350daae5ff720dd7b7f "biber math"
+  "math.out" 1747876281 12611 bc7591f7529d7a4f2252dc214eae11f3 "pdflatex"
+  "math.run.xml" 1747876281 2395 74950c70e6533291a2f24ee321d2d29c "pdflatex"
+  "math.tex" 1747876270 47098 bfc91fdbbddaa789731f4f632e88b47c ""
+  "math.toc" 1747876281 5474 de42a218472de796e8e522c4a5afe00c "pdflatex"
   (generated)
   "math.aux"
   "math.bcf"

@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass{mcmthesis}  % 文档类型
-\mcmsetup{CTeX = false,   % 使用 CTeX 套装时，设置为 true
+\mcmsetup{CTeX = true,   % 使用 CTeX 套装时，设置为 true，这有助于支持中文
         tcn = Zhipeng Zhou,   % 队伍控制号
         problem = Dancing Slinky,  % 选题
         sheet = true,   % sheet页
@@ -17,6 +17,17 @@
 \usepackage{palatino}  % 帕拉提诺体字体宏包
 \usepackage[hyperref=true,style=ieee]{biblatex}  % biblatex参考文献宏包
 \addbibresource{ref.bib}  % 添加引用文献bib源
+
+% 删除之前添加的hyperref包，因为mcmthesis类或biblatex已经加载了它
+% \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+% 相反，我们可以设置hyperref参数
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  filecolor=black,
+  urlcolor=blue
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -181,7 +192,7 @@ Let the initial parameters of the Slinky (before any twisting) be defined as fol
 
 \begin{figure}[h!]
     \centering
-    \caption{弹簧初始参数示意图 (Initial Parameters of the Slinky)}
+    \caption{Initial Parameters of the Slinky}
     \label{fig:initial_params}
 \end{figure}
 
@@ -197,7 +208,7 @@ When the Slinky is twisted by \(n\) additional turns, the total angle of twist i
 
 \begin{figure}[h!]
     \centering
-    \caption{扭转后弹簧参数和螺旋角示意图 (Slinky Parameters After Twisting and Helix Angle)}
+    \caption{Slinky Parameters After Twisting and Helix Angle}
     \label{fig:twisted_params}
 \end{figure}
 
@@ -298,7 +309,7 @@ By inputting the derived parameters and the damping function, the simulation gen
 
 \begin{figure}[h!]
     \centering
-    \caption{弹簧扭转波传播的MATLAB模拟图 (MATLAB Simulation of Torsional Wave Propagation in the Slinky)}
+    \caption{MATLAB Simulation of Torsional Wave Propagation in the Slinky}
     \label{fig:matlab_simulation}
 \end{figure}
 
@@ -338,7 +349,7 @@ The servo motor is controlled by PC software, allowing for precise setting of th
 
 \begin{figure}[h!]
     \centering
-    \caption{实验装置 (Experimental Apparatus Setup)}
+    \caption{Experimental Apparatus Setup}
     \label{fig:exp_apparatus}
 \end{figure}
 
@@ -374,7 +385,7 @@ This experiment focused on observing how the amplitude of the Slinky's wave-like
 
 \begin{figure}[h!]
     \centering
-    \caption{不同扭转角下弹簧振幅实验结果 (Experiment 1: Slinky Amplitude at Various Twist Angles)}
+    \caption{Experiment 1: Slinky Amplitude at Various Twist Angles}
     \label{fig:exp1_amplitude_twists}
 \end{figure}
 
@@ -546,7 +557,7 @@ The physical meaning of this equation is the balance relationship between angula
 
 \begin{figure}[h!]
     \centering
-    \caption{弹簧波动方程的物理解释 (Physical Interpretation of the Slinky Wave Equation)}
+    \caption{Physical Interpretation of the Slinky Wave Equation}
     \label{fig:wave_equation_interpretation}
 \end{figure}
 
@@ -589,13 +600,13 @@ Where h is the length of the Slinky in its untwisted state, E is the Young's mod
 
 \begin{figure}[h!]
     \centering
-    \caption{弹簧参数图解 - 左侧 (Spring Parameter Diagram - Left Side)}
+    \caption{Spring Parameter Diagram - Left Side}
     \label{fig:spring_params_left}
 \end{figure}
 
 \begin{figure}[h!]
     \centering
-    \caption{弹簧参数图解 - 右侧 (Spring Parameter Diagram - Right Side)}
+    \caption{Spring Parameter Diagram - Right Side}
     \label{fig:spring_params_right}
 \end{figure}
 
@@ -694,7 +705,7 @@ In this expression, equation (13) is used to substitute $u_t^k$.
 
 \begin{figure}[h!]
     \centering
-    \caption{有限元分析示意图 (Finite Element Analysis Diagram)}
+    \caption{Finite Element Analysis Diagram}
     \label{fig:finite_element_analysis}
 \end{figure}
 
