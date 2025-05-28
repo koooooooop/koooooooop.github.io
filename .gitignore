@@ -4,14 +4,6 @@
 *.gif
 *.pptx
 
-# 中文路径文件夹
-markdown/数理/
-markdown/概率论与数理统计/
-markdown/清深/
-markdown/大二下/
-论文/
-pdf/
-
 # LaTeX编译文件
 *.aux
 *.bbl
