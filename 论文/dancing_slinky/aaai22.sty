@@ -1,0 +1,64 @@
+% AAAI22 style file - simplified version
+% This is a simplified style file for AAAI format
+% Created for use with Dancing Slinky paper
+
+\ProvidesPackage{aaai22}
+
+% Required packages
+\RequirePackage{booktabs}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{graphicx}
+\RequirePackage{hyperref}
+
+% Page formatting
+\setlength{\topmargin}{-0.25in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\textheight}{9.0in}
+\setlength{\textwidth}{7.0in}
+
+% Title formatting
+\renewcommand{\maketitle}{%
+  \begin{center}
+  {\LARGE \bf \@title \par}
+  \bigskip
+  {\large \@author \par}
+  \end{center}
+}
+
+% Section formatting
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                     {-3.5ex \@plus -1ex \@minus -.2ex}%
+                     {2.3ex \@plus .2ex}%
+                     {\normalfont\Large\bfseries}}
+                     
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                     {1.5ex \@plus .2ex}%
+                     {\normalfont\large\bfseries}}
+
+% Affiliation command
+\newcommand{\affiliations}[1]{
+  \vspace{-1ex}
+  \begin{center}
+  {\small #1 \par}
+  \end{center}
+  \vspace{-1ex}
+}
+
+% References section name
+\renewcommand{\refname}{References}
+
+% Figure and table captions
+\RequirePackage{caption}
+\DeclareCaptionLabelSeparator{colon}{: }
+\captionsetup{labelsep=colon,font=small}
+
+% Hyperlinks setup
+\hypersetup{
+  colorlinks = true,
+  linkcolor = blue,
+  citecolor = blue,
+  urlcolor = blue
+} 

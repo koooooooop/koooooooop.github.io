@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Sparse Inference Acceleration - Zhipeng Zhou</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700;900&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Section */
+        .header {
+            text-align: center;
+            padding: 60px 0 40px 0;
+            background-color: #ffffff;
+        }
+        
+        .title {
+            font-family: 'Lato', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+        
+        .subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            font-weight: 400;
+            margin-bottom: 35px;
+            line-height: 1.4;
+        }
+        
+        .authors {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: #333;
+        }
+        
+        .author-name {
+            font-weight: 600;
+            margin-right: 25px;
+        }
+        
+        .affiliation {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+        
+        /* Navigation Links */
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+        
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8f9fa;
+            color: #333;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            border: 1px solid #e9ecef;
+        }
+        
+        .nav-link:hover {
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+        
+        .nav-link i {
+            margin-right: 6px;
+        }
+        
+        /* Sections */
+        .section {
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        
+        /* Abstract */
+        .abstract {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #444;
+            text-align: justify;
+        }
+        
+        /* Figure */
+        .figure {
+            text-align: center;
+            margin: 40px 0;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .figure-caption {
+            color: #666;
+            font-size: 0.95rem;
+            margin-top: 15px;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Method Grid */
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .method-item {
+            background-color: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 25px;
+            transition: all 0.2s ease;
+        }
+        
+        .method-item:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        
+        .method-item h4 {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .method-item h4 i {
+            color: #007bff;
+            margin-right: 8px;
+        }
+        
+        .method-item p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        /* Math Formulas */
+        .math-section {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .math-formula {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 15px 0;
+            border: 1px solid #e9ecef;
+            color: #333;
+        }
+        
+        /* Results Grid */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .metric-card {
+            background-color: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 25px 20px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        
+        .metric-card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .metric-value {
+            font-family: 'Lato', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #007bff;
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+        
+        .metric-label {
+            font-weight: 600;
+            color: #333;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        
+        .metric-desc {
+            color: #666;
+            font-size: 0.8rem;
+        }
+        
+        /* Highlight Box */
+        .highlight {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 25px 0;
+            color: #856404;
+        }
+        
+        /* Citation */
+        .citation {
+            background-color: #2d3748;
+            color: #e2e8f0;
+            padding: 25px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            line-height: 1.4;
+        }
+        
+        /* Back Button */
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 10px rgba(0,123,255,0.3);
+        }
+        
+        .back-btn:hover {
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(0,123,255,0.4);
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e9ecef;
+            padding: 40px 0;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .method-grid,
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-btn">
+        <i class="fas fa-arrow-left mr-1"></i> Back
+    </a>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="title">
+                Sparse Inference Acceleration for Large Language Models
+            </h1>
+            <p class="subtitle">
+                Training-Free Activation Sparsity Optimization with Dynamic Threshold Allocation and Importance-Aware Pruning
+            </p>
+            
+            <div class="authors">
+                <span class="author-name">Zhipeng Zhou</span>
+            </div>
+            
+            <div class="affiliation">
+                Tsinghua University Shenzhen International Graduate School<br>
+                Research Intern
+            </div>
+            
+            <div class="nav-links">
+                <a href="../markdown/清深/sparsitynew.markdown" class="nav-link" target="_blank">
+                    <i class="fas fa-file-alt"></i> Technical Report
+                </a>
+                <a href="https://github.com/koooooooop" class="nav-link" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                </a>
+                <a href="../index.html#publications" class="nav-link">
+                    <i class="fas fa-book"></i> Related Work
+                </a>
+            </div>
+        </div>
+
+        <!-- Abstract -->
+        <div class="section">
+            <h2 class="section-title">Abstract</h2>
+            <div class="abstract">
+                As Large Language Models (LLMs) grow in scale, inference computational and memory overhead becomes a primary bottleneck. During Transformer decoding, each inference step requires constant weight loading from memory to compute units, making the process memory-bound. We propose a <strong>training-free activation sparsification framework</strong> for Transformer-based models (LLaMA, Mistral) that dynamically skips redundant computations based on input characteristics. Our approach introduces three complementary strategies: (1) <strong>Dynamic threshold allocation</strong> with calibration set optimization, (2) <strong>Importance-aware pruning</strong> combining activation magnitude with weight norms, and (3) <strong>Layer-wise heterogeneous sparsity allocation</strong> using logarithmic distribution. Experimental results demonstrate that our method achieves over <strong>50% activation sparsity</strong> with minimal performance degradation, delivering <strong>1.5-1.8× inference speedup</strong> compared to dense models while maintaining competitive accuracy on downstream tasks.
+            </div>
+        </div>
+
+        <!-- Gallery -->
+        <div class="section">
+            <h2 class="section-title">Architecture Overview</h2>
+            <div class="figure">
+                <img src="../markdown/清深/teal.png" alt="TEAL Sparsity Framework">
+                <div class="figure-caption">
+                    <strong>Figure 1:</strong> Sparsity pattern visualization showing activation importance distribution. Non-zero salient activations (dark teal) carry critical information, while non-zero non-salient (light teal) and zero activations (gray) can be pruned with minimal impact on model performance.
+                </div>
+            </div>
+            
+            <div class="figure">
+                <img src="../markdown/清深/goal.png" alt="Research Objectives">
+                <div class="figure-caption">
+                    <strong>Figure 2:</strong> Our three-pronged optimization strategy: (1) Calibration set construction for dynamic threshold allocation, (2) Weight-importance scoring for activation pruning, and (3) Layer-wise sparsity optimization with logarithmic distribution for heterogeneous allocation across transformer blocks.
+                </div>
+            </div>
+        </div>
+
+        <!-- Methodology -->
+        <div class="section">
+            <h2 class="section-title">Methodology</h2>
+            <div class="method-grid">
+                <div class="method-item">
+                    <h4><i class="fas fa-adjust"></i>Dynamic Threshold Allocation</h4>
+                    <p>Adaptive threshold determination based on input distribution characteristics, utilizing calibration datasets to establish base thresholds and real-time distribution analysis for dynamic adjustment.</p>
+                </div>
+                
+                <div class="method-item">
+                    <h4><i class="fas fa-weight-hanging"></i>Importance-Aware Pruning</h4>
+                    <p>Fusion of activation magnitude with corresponding weight norms to compute comprehensive importance scores, enabling more accurate identification of critical neurons.</p>
+                </div>
+                
+                <div class="method-item">
+                    <h4><i class="fas fa-layer-group"></i>Layer-wise Sparsity Allocation</h4>
+                    <p>Heterogeneous sparsity distribution across transformer blocks using logarithmic allocation strategy, accounting for varying sensitivity of different layers to pruning.</p>
+                </div>
+                
+                <div class="method-item">
+                    <h4><i class="fas fa-tachometer-alt"></i>Memory-Bound Optimization</h4>
+                    <p>Specialized optimization for memory-bandwidth limited scenarios, leveraging sparse matrix operations and custom kernels for maximum inference acceleration.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mathematical Framework -->
+        <div class="section">
+            <h2 class="section-title">Mathematical Framework</h2>
+            <div class="math-section">
+                <h4>Importance Score Computation</h4>
+                <div class="math-formula">
+                    I<sub>i</sub> = |h<sub>i</sub>| × ||W<sub>down</sub>(:,i)||<sub>2</sub>
+                </div>
+                <p>Where h<sub>i</sub> is the activation value and ||W<sub>down</sub>(:,i)||<sub>2</sub> is the L2 norm of corresponding output weights.</p>
+
+                <h4>Dynamic Threshold Calculation</h4>
+                <div class="math-formula">
+                    T<sup>l</sup><sub>dyn</sub> = Quantile(I<sup>l</sup>, q = 1-p)
+                </div>
+                <p>Dynamic threshold determined by the (1-p) quantile of importance scores for preserving top p% activations.</p>
+
+                <h4>Layer-wise Sparsity Distribution</h4>
+                <div class="math-formula">
+                    r<sub>i</sub> = r<sub>0</sub> + (r<sub>n-1</sub> - r<sub>0</sub>) × log(i+1)/log(n)
+                </div>
+                <p>Logarithmic sparsity allocation from initial rate r<sub>0</sub> to final rate r<sub>n-1</sub> across n transformer blocks.</p>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div class="section">
+            <h2 class="section-title">Performance Results</h2>
+            <div class="results-grid">
+                <div class="metric-card">
+                    <div class="metric-value">50%+</div>
+                    <div class="metric-label">Activation Sparsity</div>
+                    <div class="metric-desc">Achieved without fine-tuning</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value">1.8×</div>
+                    <div class="metric-label">Inference Speedup</div>
+                    <div class="metric-desc">Memory-bound scenarios</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value">&lt; 15%</div>
+                    <div class="metric-label">Perplexity Increase</div>
+                    <div class="metric-desc">LLaMA-3-8B WikiText</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value">Zero</div>
+                    <div class="metric-label">Training Required</div>
+                    <div class="metric-desc">Post-training optimization</div>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <strong>Key Advantages:</strong> Our approach achieves training-free deployment, maintains model accuracy with minimal degradation, provides plug-and-play compatibility with existing frameworks, and enables significant memory bandwidth savings through activation sparsity.
+            </div>
+        </div>
+
+        <!-- Comparison Analysis -->
+        <div class="section">
+            <h2 class="section-title">Comparison with State-of-the-Art Methods</h2>
+            
+            <div class="method-grid">
+                <div class="method-item">
+                    <h4>vs. TEAL</h4>
+                    <p><strong>Improvement:</strong> Our dynamic threshold and importance-aware pruning achieve lower perplexity increase (< 15% vs. ~14% reported by TEAL) at similar sparsity levels. Enhanced robustness across diverse input complexities.</p>
+                </div>
+                
+                <div class="method-item">
+                    <h4>vs. EvoPress</h4>
+                    <p><strong>Trade-off:</strong> While EvoPress achieves optimal layer-wise allocation through evolutionary search, our logarithmic strategy provides comparable performance with significantly lower computational overhead.</p>
+                </div>
+                
+                <div class="method-item">
+                    <h4>vs. ReLUfication</h4>
+                    <p><strong>Advantage:</strong> No retraining required unlike ReLUfication methods that need extensive re-training to achieve 85-90% sparsity. Direct applicability to pre-trained models.</p>
+                </div>
+                
+                <div class="method-item">
+                    <h4>vs. Uniform Pruning</h4>
+                    <p><strong>Performance:</strong> At 70% sparsity, our heterogeneous allocation maintains significantly lower perplexity compared to uniform pruning strategies across all transformer layers.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Implementation -->
+        <div class="section">
+            <h2 class="section-title">Technical Implementation</h2>
+            
+            <div class="method-grid">
+                <div class="method-item">
+                    <h4>Calibration Phase</h4>
+                    <ul style="text-align: left; color: #666; font-size: 0.95rem;">
+                        <li>Representative dataset selection for threshold initialization</li>
+                        <li>Statistical analysis of activation distributions per layer</li>
+                        <li>Base threshold computation for target sparsity rates</li>
+                    </ul>
+                </div>
+                
+                <div class="method-item">
+                    <h4>Runtime Optimization</h4>
+                    <ul style="text-align: left; color: #666; font-size: 0.95rem;">
+                        <li>Quantile-based dynamic threshold adjustment</li>
+                        <li>Importance score computation with pre-cached weight norms</li>
+                        <li>Sparse matrix multiplication with custom CUDA kernels</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Citation -->
+        <div class="section">
+            <h2 class="section-title">BibTeX</h2>
+            <div class="citation">@article{zhou2024sparse,
+  title={Sparse Inference Acceleration for Large Language Models: Training-Free Activation Sparsity Optimization},
+  author={Zhipeng Zhou},
+  journal={Technical Report},
+  year={2024},
+  institution={Tsinghua University Shenzhen International Graduate School},
+  note={Research Internship on LLM Optimization}
+}</div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>This research is conducted during internship at Tsinghua University Shenzhen International Graduate School.</p>
+            <p>© 2024 Zhipeng Zhou. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html> 

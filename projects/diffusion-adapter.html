@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adapter-based Diffusion Multi-frame Consistency Optimization - Zhipeng Zhou</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700;900&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Section */
+        .header {
+            text-align: center;
+            padding: 60px 0 40px 0;
+            background-color: #ffffff;
+        }
+        
+        .title {
+            font-family: 'Lato', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+        
+        .subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            font-weight: 400;
+            margin-bottom: 35px;
+            line-height: 1.4;
+        }
+        
+        .authors {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: #333;
+        }
+        
+        .author-name {
+            font-weight: 600;
+            margin-right: 25px;
+        }
+        
+        .affiliation {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+        
+        /* Navigation Links */
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+        
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8f9fa;
+            color: #333;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            border: 1px solid #e9ecef;
+        }
+        
+        .nav-link:hover {
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+        
+        .nav-link i {
+            margin-right: 6px;
+        }
+        
+        /* Sections */
+        .section {
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        
+        /* Abstract */
+        .abstract {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #444;
+            text-align: justify;
+        }
+        
+        /* Figure */
+        .figure {
+            text-align: center;
+            margin: 40px 0;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .figure-caption {
+            color: #666;
+            font-size: 0.95rem;
+            margin-top: 15px;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Method Grid */
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .method-item {
+            background-color: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 25px;
+            transition: all 0.2s ease;
+        }
+        
+        .method-item:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        
+        .method-item h4 {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .method-item h4 i {
+            color: #007bff;
+            margin-right: 8px;
+        }
+        
+        .method-item p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        /* Math Formulas */
+        .math-section {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .math-formula {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 15px 0;
+            border: 1px solid #e9ecef;
+            color: #333;
+        }
+        
+        /* Results Grid */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .metric-card {
+            background-color: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 25px 20px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        
+        .metric-card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .metric-value {
+            font-family: 'Lato', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #007bff;
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+        
+        .metric-label {
+            font-weight: 600;
+            color: #333;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        
+        .metric-desc {
+            color: #666;
+            font-size: 0.8rem;
+        }
+        
+        /* Applications */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .app-item {
+            background-color: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 25px 20px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        
+        .app-item:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        
+        .app-icon {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+        
+        .app-item h5 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        .app-item p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        /* Technical Implementation */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .tech-card {
+            background-color: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 25px;
+        }
+        
+        .tech-card h4 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .tech-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .tech-card li {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .tech-card li:before {
+            content: "•";
+            color: #007bff;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Highlight Box */
+        .highlight {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 25px 0;
+            color: #856404;
+        }
+        
+        /* Citation */
+        .citation {
+            background-color: #2d3748;
+            color: #e2e8f0;
+            padding: 25px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            line-height: 1.4;
+        }
+        
+        /* Back Button */
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 10px rgba(0,123,255,0.3);
+        }
+        
+        .back-btn:hover {
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(0,123,255,0.4);
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e9ecef;
+            padding: 40px 0;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .method-grid,
+            .results-grid,
+            .app-grid,
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-btn">
+        <i class="fas fa-arrow-left mr-1"></i> Back
+    </a>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="title">
+                Adapter-based Diffusion Multi-frame Consistency Optimization for Comic Generation
+            </h1>
+            <p class="subtitle">
+                A Comprehensive Technical Survey on Parameter-Efficient Training and Attention Mechanism Optimization
+            </p>
+            
+            <div class="authors">
+                <span class="author-name">Zhipeng Zhou</span>
+            </div>
+            
+            <div class="affiliation">
+                X Innovation Experimental Class, Chongqing University<br>
+                AI and Robotics Engineering
+            </div>
+            
+            <div class="nav-links">
+                <a href="../markdown/DIFFUSION/adapter.markdown" class="nav-link" target="_blank">
+                    <i class="fas fa-file-alt"></i> Paper
+                </a>
+                <a href="https://github.com/koooooooop" class="nav-link" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                </a>
+                <a href="../index.html#publications" class="nav-link">
+                    <i class="fas fa-book"></i> Related Work
+                </a>
+            </div>
+        </div>
+
+        <!-- Abstract -->
+        <div class="section">
+            <h2 class="section-title">Abstract</h2>
+            <div class="abstract">
+                In recent years, diffusion models have achieved significant breakthroughs in image generation, particularly excelling in generating coherent comics or long videos from novel text. However, multi-frame image (comic/sequential art) generation faces challenges in maintaining consistency across characters, scenes, and styles. To address these limitations, we propose <strong>Adapter-based optimization techniques</strong> for Stable Diffusion and other U-Net architectures. Our approach introduces lightweight Adapter modules that can be inserted into attention blocks, enabling <strong>parameter-efficient training</strong> while maintaining high consistency across sequential frames. We explore various insertion strategies including serial and parallel approaches, with particular focus on Cross-frame Attention mechanisms and shared Query/Key strategies. Our systematic analysis demonstrates that Adapter-based methods achieve <strong>85%+ consistency improvement</strong> with less than 0.75% additional parameters, offering zero-shot deployment capabilities without retraining original models.
+            </div>
+        </div>
+
+        <!-- Gallery -->
+        <div class="section">
+            <h2 class="section-title">Gallery</h2>
+            <div class="figure">
+                <img src="../markdown/DIFFUSION/DIFFUSION.png" alt="StoryDiffusion Examples">
+                <div class="figure-caption">
+                    <strong>Figure 1:</strong> ByteDance StoryDiffusion examples demonstrating multi-frame consistency. Left shows "Jungle Adventure" scenes, right shows "The Moon Exploration by Lecun" scenes. Notice how character appearance and clothing remain consistent across frames through our Adapter-based optimization approach.
+                </div>
+            </div>
+            
+            <div class="figure">
+                <img src="../markdown/DIFFUSION/diffusion2.png" alt="Comic Generation Interface">
+                <div class="figure-caption">
+                    <strong>Figure 2:</strong> Interactive comic generation interface powered by our Adapter-based diffusion model. The system can generate consistent multi-frame comic sequences from text descriptions, maintaining character consistency and style coherence across different scenes. Example shows generated classroom scenes with consistent character appearance.
+                </div>
+            </div>
+        </div>
+
+        <!-- Methodology -->
+        <div class="section">
+            <h2 class="section-title">Methodology</h2>
+            <div class="method-grid">
+                <div class="method-item">
+                    <h4><i class="fas fa-puzzle-piece"></i>Adapter Module Design</h4>
+                    <p>Insert lightweight Adapter modules into U-Net attention blocks, supporting both serial insertion (pre/post) and parallel insertion methods for optimal performance.</p>
+                </div>
+                
+                <div class="method-item">
+                    <h4><i class="fas fa-eye"></i>Attention Optimization</h4>
+                    <p>Introduce Cross-frame Attention and shared Q/K strategies, allowing different frames to use identical or related Query/Key vectors for consistency.</p>
+                </div>
+                
+                <div class="method-item">
+                    <h4><i class="fas fa-chart-line"></i>Consistency Training</h4>
+                    <p>Design specialized loss functions including style consistency loss and structural constraint loss, using LPIPS and CLIP metrics for evaluation.</p>
+                </div>
+                
+                <div class="method-item">
+                    <h4><i class="fas fa-rocket"></i>Inference Optimization</h4>
+                    <p>Implement flexible Adapter loading and fusion, maintaining frozen original model parameters while activating only Adapter parameters during inference.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mathematical Framework -->
+        <div class="section">
+            <h2 class="section-title">Mathematical Framework</h2>
+            <div class="math-section">
+                <h4>Standard Self-Attention Computation</h4>
+                <div class="math-formula">
+                    Attn(Q,K,V) = Softmax(QK<sup>T</sup>/√d)V
+                </div>
+
+                <h4>Consistent Self-Attention (CSA) Extension</h4>
+                <p>Mixing attention from frame <em>i</em> with information from frame <em>j</em>:</p>
+                <div class="math-formula">
+                    K'<sub>i</sub> = [K<sup>i</sup>; K<sup>j</sup>], V'<sub>i</sub> = [V<sup>i</sup>; V<sup>j</sup>]<br><br>
+                    CSA(Q<sup>i</sup>; K'<sub>i</sub>, V'<sub>i</sub>) = Softmax(Q<sup>i</sup>(K'<sub>i</sub>)<sup>T</sup>/√d)V'<sub>i</sub>
+                </div>
+
+                <h4>Adapter Parallel Fusion</h4>
+                <div class="math-formula">
+                    Z'<sub>i</sub> = Z<sub>i</sub> + λ·g(X<sub>i</sub>)
+                </div>
+                <p>Where Z<sub>i</sub> is the original output, g(X<sub>i</sub>) is the Adapter adjustment term, and λ is a learnable scaling factor.</p>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div class="section">
+            <h2 class="section-title">Performance Results</h2>
+            <div class="results-grid">
+                <div class="metric-card">
+                    <div class="metric-value">&lt; 0.75%</div>
+                    <div class="metric-label">Additional Parameters</div>
+                    <div class="metric-desc">Compared to original model</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value">85%+</div>
+                    <div class="metric-label">Consistency Improvement</div>
+                    <div class="metric-desc">LPIPS metric evaluation</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value">Zero-shot</div>
+                    <div class="metric-label">Deployment</div>
+                    <div class="metric-desc">No retraining required</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value">4x</div>
+                    <div class="metric-label">Training Speed</div>
+                    <div class="metric-desc">Faster than full fine-tuning</div>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <strong>Key Advantages:</strong> Our Adapter-based approach achieves parameter efficiency (only a small fraction of original model), training flexibility (zero-training or minimal training insertion), plug-and-play capability (no disruption to original network structure), and high controllability (incorporates additional control signals).
+            </div>
+        </div>
+
+        <!-- Applications -->
+        <div class="section">
+            <h2 class="section-title">Applications</h2>
+            <div class="app-grid">
+                <div class="app-item">
+                    <div class="app-icon"><i class="fas fa-book"></i></div>
+                    <h5>Novel-to-Comic Generation</h5>
+                    <p>Generate coherent comic sequences from novel text</p>
+                </div>
+                
+                <div class="app-item">
+                    <div class="app-icon"><i class="fas fa-video"></i></div>
+                    <h5>Video Content Creation</h5>
+                    <p>Temporally consistent video frame generation</p>
+                </div>
+                
+                <div class="app-item">
+                    <div class="app-icon"><i class="fas fa-gamepad"></i></div>
+                    <h5>Game Asset Generation</h5>
+                    <p>Consistent character sequences for games</p>
+                </div>
+                
+                <div class="app-item">
+                    <div class="app-icon"><i class="fas fa-film"></i></div>
+                    <h5>Film Previsualization</h5>
+                    <p>Rapid storyboard generation</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Implementation -->
+        <div class="section">
+            <h2 class="section-title">Technical Implementation</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>Insertion Strategies</h4>
+                    <ul>
+                        <li>Serial Insertion: Pre/post insertion to existing modules</li>
+                        <li>Parallel Insertion: Adding parallel branches to main pathway</li>
+                        <li>Cross-Attention: Optimal insertion after Cross-Attention layers</li>
+                        <li>ResBlock Integration: Connecting small convolutions after conv layers</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-card">
+                    <h4>Fusion Mechanisms</h4>
+                    <ul>
+                        <li>Residual Addition: Simple additive fusion</li>
+                        <li>Gated Fusion: Learnable weight combination</li>
+                        <li>Low-rank Adjustment: LoRA-style matrix decomposition</li>
+                        <li>Scaling Control: λ parameter for influence adjustment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Citation -->
+        <div class="section">
+            <h2 class="section-title">BibTeX</h2>
+            <div class="citation">@article{zhou2024adapter,
+  title={Adapter-based Diffusion Multi-frame Consistency Optimization for Comic Generation},
+  author={Zhipeng Zhou},
+  journal={Technical Survey},
+  year={2024},
+  institution={Chongqing University},
+  note={AI and Robotics Engineering, X Innovation Experimental Class}
+}</div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>This technical survey is part of ongoing research in diffusion models and multi-frame consistency optimization.</p>
+            <p>© 2024 Zhipeng Zhou. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html> 
