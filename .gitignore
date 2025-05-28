@@ -1,0 +1,29 @@
+# 大文件
+*.pdf
+*.docx
+*.gif
+*.pptx
+
+# 中文路径文件夹
+markdown/数理/
+markdown/概率论与数理统计/
+markdown/清深/
+markdown/大二下/
+论文/
+pdf/
+
+# LaTeX编译文件
+*.aux
+*.bbl
+*.bcf
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# 临时文件
+*.tmp
+*.temp 
